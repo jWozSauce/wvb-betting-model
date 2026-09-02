@@ -477,9 +477,39 @@ with tab_best:
                 edited = st.data_editor(
                     bets_show, width="stretch", key="best_editor",
                     disabled=[c for c in bets_show.columns if c != "log"])
-                bc = st.columns([2, 2, 4])
+                bc = st.columns([2, 2, 2, 2])
                 book_b = bc[0].text_input("Book", value=cfg.get(
                     "last_book", "betonline"), key="best_book")
+                paper_date = bc[2].date_input(
+                    "Game date (for tracking)",
+                    value=pd.Timestamp.now(tz="America/New_York").date(),
+                    key="paper_date")
+                if bc[3].button("📋 Track full card (paper)",
+                                help="Logs EVERY qualifying bet to the "
+                                     "Vball_Paper_Log worksheet so model "
+                                     "performance is tracked even for bets "
+                                     "you don't place. Re-pasting the same "
+                                     "slate won't double-log."):
+                    now = pd.Timestamp.now(tz="America/New_York")
+                    recs = [dict(
+                        logged_at=now.strftime("%Y-%m-%d %H:%M"),
+                        game_date=str(paper_date),
+                        matchup=r.matchup, home_team=r.home_team,
+                        away_team=r.away_team, bet=r.bet,
+                        market=r.market, side=r.side, point=r.point,
+                        book=book_b, odds=r.odds, stake=r.stake,
+                        edge=r.edge, model_prob=r.model_prob,
+                        model_fair=r.fair_odds, status="pending",
+                        profit="", graded_at="")
+                        for r in bets.itertuples()]
+                    try:
+                        n_ = bet_log.log_bets(
+                            recs, worksheet=bet_log.PAPER_WORKSHEET,
+                            dedupe=True)
+                        st.success(f"Tracking {n_} new paper bets "
+                                   f"({len(recs) - n_} already tracked).")
+                    except Exception as e:
+                        st.error(f"Paper logging failed: {e}")
                 if bc[1].button("Log selected bets", type="primary",
                                 key="best_log"):
                     picks = bets.reset_index(drop=True)[edited["log"].values]
@@ -581,13 +611,16 @@ with tab_log:
     if lc[0].button("↻ Refresh log"):
         st.session_state.pop("bet_log_df", None)
     if lc[1].button("Grade pending bets", type="primary",
-                    help="Settles pending bets against the results table "
-                         "(update ratings first so recent finals are in)."):
+                    help="Settles pending bets in BOTH logs (real + paper) "
+                         "against the results table."):
         try:
             with st.spinner("Grading…"):
-                n_graded, msg = bet_log.grade_pending(load_results())
-            st.success(msg)
+                n1, msg1 = bet_log.grade_pending(load_results())
+                n2, msg2 = bet_log.grade_pending(
+                    load_results(), worksheet=bet_log.PAPER_WORKSHEET)
+            st.success(f"real: {msg1} | paper: {msg2}")
             st.session_state.pop("bet_log_df", None)
+            st.session_state.pop("paper_log_df", None)
         except Exception as e:
             st.error(f"Grading failed: {e}")
 
@@ -616,3 +649,49 @@ with tab_log:
                      hide_index=True)
     else:
         st.info("No bets logged yet — log one from the pricing tab.")
+
+    st.subheader("Paper-trade tracker (model performance)")
+    st.caption("Every qualifying bet from Best bets cards you chose to "
+               "track — placed or not. This is the model's honest scoreboard.")
+    if "paper_log_df" not in st.session_state:
+        try:
+            st.session_state.paper_log_df = bet_log.read_log(
+                worksheet=bet_log.PAPER_WORKSHEET)
+        except Exception as e:
+            st.error(f"Could not read the paper log: {e}")
+            st.session_state.paper_log_df = pd.DataFrame()
+    paper = st.session_state.paper_log_df
+
+    if len(paper):
+        settled = paper[paper.status.isin(["won", "lost", "push"])]
+        profit = pd.to_numeric(settled.profit, errors="coerce").sum() \
+            if len(settled) else 0.0
+        staked = pd.to_numeric(settled.stake, errors="coerce").sum() \
+            if len(settled) else 0.0
+        pc = st.columns(4)
+        pc[0].metric("Tracked bets", len(paper))
+        pc[1].metric("Record", f"{(settled.status == 'won').sum()}-"
+                               f"{(settled.status == 'lost').sum()}-"
+                               f"{(settled.status == 'push').sum()}")
+        pc[2].metric("Paper profit", f"${profit:,.2f}")
+        pc[3].metric("Paper ROI", f"{profit / staked:+.1%}" if staked else "—")
+        if len(settled) >= 10:
+            g = settled.copy()
+            g["edge_bucket"] = pd.cut(
+                pd.to_numeric(g.edge, errors="coerce"),
+                [0, 0.03, 0.06, 0.10, 1.0],
+                labels=["2-3%", "3-6%", "6-10%", "10%+"])
+            by = g.groupby("edge_bucket", observed=True).apply(
+                lambda d: pd.Series({
+                    "n": len(d),
+                    "win%": (d.status == "won").mean(),
+                    "roi": pd.to_numeric(d.profit, errors="coerce").sum()
+                    / max(pd.to_numeric(d.stake, errors="coerce").sum(), 1e-9),
+                }), include_groups=False)
+            st.caption("ROI by claimed edge — if the model is honest, bigger "
+                       "claimed edges should earn more:")
+            st.dataframe(by.round(3), width="stretch")
+        st.dataframe(paper.iloc[::-1], width="stretch", height=400)
+    else:
+        st.info("Nothing tracked yet — use '📋 Track full card (paper)' on "
+                "the Best bets tab after parsing a slate.")

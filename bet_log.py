@@ -20,6 +20,7 @@ import os
 import pandas as pd
 
 WORKSHEET = "Vball_Bet_Log"
+PAPER_WORKSHEET = "Vball_Paper_Log"  # model-tracking: every qualifying bet
 LOCAL_KEY = ("/Volumes/Samsung T7/.CloudStorage/Data/Dropbox/Annual_Sports_Main/"
              "NBA_Folder/Claude_Pregame_NBA_Quarters/"
              "dogwood-keep-395516-c4b3e7bd811c.json")
@@ -52,28 +53,38 @@ def _client():
     return gspread.authorize(creds)
 
 
-def _ws():
+def _ws(worksheet=WORKSHEET):
     import gspread
     from app_config import _sheet_id
     ss = _client().open_by_key(_sheet_id())
     try:
-        return ss.worksheet(WORKSHEET)
+        return ss.worksheet(worksheet)
     except gspread.exceptions.WorksheetNotFound:
-        ws = ss.add_worksheet(title=WORKSHEET, rows=2000, cols=len(HEADER))
+        ws = ss.add_worksheet(title=worksheet, rows=2000, cols=len(HEADER))
         ws.update([HEADER], "A1")
         return ws
 
 
-def log_bets(rows):
-    """Append bet dicts (keys from HEADER) to the sheet."""
-    ws = _ws()
+def log_bets(rows, worksheet=WORKSHEET, dedupe=False):
+    """Append bet dicts (keys from HEADER) to the sheet. With dedupe=True,
+    rows whose (game_date, matchup, bet) already exist are skipped — so
+    re-pasting the same slate doesn't double-track."""
+    ws = _ws(worksheet)
+    if dedupe:
+        existing = {(str(r.get("game_date")), r.get("matchup"), r.get("bet"))
+                    for r in ws.get_all_records()}
+        rows = [r for r in rows
+                if (str(r.get("game_date")), r.get("matchup"), r.get("bet"))
+                not in existing]
+    if not rows:
+        return 0
     values = [[str(r.get(h, "")) for h in HEADER] for r in rows]
     ws.append_rows(values, value_input_option="USER_ENTERED")
     return len(values)
 
 
-def read_log():
-    return pd.DataFrame(_ws().get_all_records())
+def read_log(worksheet=WORKSHEET):
+    return pd.DataFrame(_ws(worksheet).get_all_records())
 
 
 def _find_result(results, home, away, date):
@@ -104,9 +115,9 @@ def _settle(market, side, point, home_sets, away_sets):
     raise ValueError(f"unknown market {market!r}")
 
 
-def grade_pending(results: pd.DataFrame):
+def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
     """Grade pending bets against the results table. Returns (n, message)."""
-    ws = _ws()
+    ws = _ws(worksheet)
     recs = ws.get_all_records()
     if not recs:
         return 0, "log is empty"
