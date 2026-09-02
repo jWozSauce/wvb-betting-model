@@ -181,7 +181,7 @@ with tab_price:
 
         h_overall = float(overall_rating(pd.DataFrame([h])).iloc[0])
         a_overall = float(overall_rating(pd.DataFrame([a])).iloc[0])
-        gap = h_overall - a_overall
+        gap = a_overall - h_overall  # away perspective, matches column order
         gap_color = "#09ab3b" if gap >= 0 else "#ff4b4b"
 
         def _cell(label, value):
@@ -190,19 +190,20 @@ with tab_price:
                     f"<div style='font-size:1.05rem;font-weight:600'>{value}"
                     f"</div></div>")
 
+        # away team first, mirroring the away-then-home picker order above
         st.markdown(
             "<div style='display:flex;gap:1.4rem;flex-wrap:wrap;"
             "margin:0.25rem 0 0.75rem 0'>"
-            + _cell(f"{home_team} overall",
-                    f"{h_overall:.0f} <span style='font-size:0.75rem;"
+            + _cell(f"{away_team} overall",
+                    f"{a_overall:.0f} <span style='font-size:0.75rem;"
                     f"color:{gap_color}'>{gap:+.0f} vs opp</span>")
-            + _cell(f"{home_team} serve / receive",
-                    f"{h.serve_elo:.0f} / {h.receive_elo:.0f}")
-            + _cell(f"{home_team} conf ({h.conf})", f"{h.conf_elo:+.0f}")
-            + _cell(f"{away_team} overall", f"{a_overall:.0f}")
             + _cell(f"{away_team} serve / receive",
                     f"{a.serve_elo:.0f} / {a.receive_elo:.0f}")
             + _cell(f"{away_team} conf ({a.conf})", f"{a.conf_elo:+.0f}")
+            + _cell(f"{home_team} overall", f"{h_overall:.0f}")
+            + _cell(f"{home_team} serve / receive",
+                    f"{h.serve_elo:.0f} / {h.receive_elo:.0f}")
+            + _cell(f"{home_team} conf ({h.conf})", f"{h.conf_elo:+.0f}")
             + "</div>",
             unsafe_allow_html=True)
 
