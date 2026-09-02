@@ -88,14 +88,20 @@ def read_log(worksheet=WORKSHEET):
 
 
 def _find_result(results, home, away, date):
-    """Result row for this matchup with a date within one day of game_date."""
-    hit = results[(results.home_seo == home) & (results.away_seo == away)]
-    if not len(hit):
-        return None
+    """Result row for this matchup within one day of game_date. Matches the
+    fixture in either orientation (bets sometimes get logged with home/away
+    swapped); returns (row, flipped) — flipped=True means the bet's
+    'home_team' was actually the away team in the result."""
     d0 = pd.Timestamp(date)
-    hit = hit.assign(dd=(pd.to_datetime(hit.date) - d0).abs().dt.days)
-    hit = hit[hit.dd <= 1].sort_values("dd")
-    return hit.iloc[0] if len(hit) else None
+    for flipped, (h, a) in ((False, (home, away)), (True, (away, home))):
+        hit = results[(results.home_seo == h) & (results.away_seo == a)]
+        if not len(hit):
+            continue
+        hit = hit.assign(dd=(pd.to_datetime(hit.date) - d0).abs().dt.days)
+        hit = hit[hit.dd <= 1].sort_values("dd")
+        if len(hit):
+            return hit.iloc[0], flipped
+    return None, False
 
 
 def _settle(market, side, point, home_sets, away_sets):
@@ -126,12 +132,15 @@ def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
     for i, r in enumerate(recs):
         if str(r.get("status", "")).lower() != "pending":
             continue
-        g = _find_result(results, r["home_team"], r["away_team"],
-                         str(r["game_date"]))
+        g, flipped = _find_result(results, r["home_team"], r["away_team"],
+                                  str(r["game_date"]))
         if g is None:
             continue
+        # sets in the bet's own frame: hs = sets won by the bet's home_team
+        hs, as_ = ((int(g.away_sets), int(g.home_sets)) if flipped
+                   else (int(g.home_sets), int(g.away_sets)))
         won, push = _settle(str(r["market"]), str(r["side"]).lower(),
-                            r["point"], int(g.home_sets), int(g.away_sets))
+                            r["point"], hs, as_)
         odds = float(r["odds"])
         stake = float(r["stake"]) if str(r["stake"]) not in ("", "nan") else 0.0
         profit = 0.0 if push else (
