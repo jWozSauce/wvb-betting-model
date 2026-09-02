@@ -62,11 +62,14 @@ def main():
 
     for day in daterange(start, end):
         day_path = contests_dir / f"{day.isoformat()}.json"
-        # Re-fetch the daily file only if it doesn't exist yet; days in the
-        # past are stable once all games are final.
+        # Use the cached daily file only once every game in it is final —
+        # a file fetched while games were pending must be refreshed.
+        contests = None
         if day_path.exists():
-            contests = json.loads(day_path.read_text())
-        else:
+            cached = json.loads(day_path.read_text())
+            if all(c.get("gameState") == "F" for c in cached):
+                contests = cached
+        if contests is None:
             try:
                 contests = client.contests(day, args.season, args.division)
             except Exception as e:

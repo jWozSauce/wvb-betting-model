@@ -45,7 +45,7 @@ def main():
     team_conf = {seo: max(v, key=v.get) for seo, v in conf_votes.items()}
 
     point_rows, match_rows = [], []
-    n_no_pbp = 0
+    n_no_pbp = n_nonreg = 0
     recon_sets_ok = recon_sets_bad = 0
 
     for path in sorted(games_dir.glob("*.json")):
@@ -76,6 +76,12 @@ def main():
             "venue_state": loc.get("stateUsps"),
             "has_pbp": bool(pbp and pbp.get("periods")),
         }
+        # Exhibitions (e.g. the 2026 AVCA Spike Challenge: 21-point sets,
+        # 2-0 format) are not regulation matches — a valid final has a team
+        # with exactly 3 sets. Exclude them from ratings and results.
+        if max(match["home_sets"], match["away_sets"]) != 3:
+            n_nonreg += 1
+            continue
         match_rows.append(match)
 
         if not match["has_pbp"]:
@@ -136,6 +142,9 @@ def main():
         total = recon_sets_ok + recon_sets_bad
         print(f"reconstructed sets matching official linescores: "
               f"{recon_sets_ok}/{total} ({recon_sets_ok/total:.1%})")
+    if n_nonreg:
+        print(f"excluded {n_nonreg} non-regulation matches (exhibitions / "
+              f"invalid finals)")
     print(f"matches: {len(matches)} ({n_no_pbp} without pbp) -> {m_path}")
     print(f"points:  {len(points)} -> {p_path}")
     if not points.empty:
