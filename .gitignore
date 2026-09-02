@@ -1,0 +1,14 @@
+.venv/
+data/raw/
+# processed parquets ARE committed (needed by the cloud update workflow);
+# only the bulky raw game files stay local / in the Actions cache
+data/processed/elo_matches.parquet
+data/processed/elo_final.parquet
+__pycache__/
+*.pyc
+.DS_Store
+config.json
+streamlit.log
+backfill_*.log
+.streamlit/secrets.toml
+sheet_id.txt

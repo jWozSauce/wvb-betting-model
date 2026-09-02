@@ -1,0 +1,62 @@
+name: Update ratings
+
+on:
+  schedule:
+    # 07:30 UTC = 3:30am ET, after even late West Coast matches go final
+    - cron: "30 7 * * *"
+  workflow_dispatch: {}  # manual "Run workflow" button on github.com
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ratings
+  cancel-in-progress: false
+
+env:
+  SEASON: "2026"
+  ALL_SEASONS: "2021 2022 2023 2024 2025 2026"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install deps
+        run: pip install requests pandas pyarrow scipy numpy
+
+      # Raw current-season game files persist between runs in the cache, so
+      # each night only the new games are downloaded from the NCAA API.
+      - name: Restore raw game cache
+        uses: actions/cache@v4
+        with:
+          path: data/raw/${{ env.SEASON }}
+          key: raw-${{ env.SEASON }}-${{ github.run_id }}
+          restore-keys: raw-${{ env.SEASON }}-
+
+      - name: Download new games
+        run: python scripts/backfill.py --season $SEASON
+
+      - name: Rebuild season points
+        run: python scripts/build_points.py --season $SEASON
+
+      - name: Rebuild ratings chain
+        run: python scripts/build_elo.py --seasons $ALL_SEASONS
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "ratings-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add app_data data/processed/matches_${SEASON}.parquet \
+                  data/processed/points_${SEASON}.parquet
+          if git diff --cached --quiet; then
+            echo "No changes — no new final games."
+          else
+            git commit -m "ratings update $(date -u +%F)"
+            git push
+          fi

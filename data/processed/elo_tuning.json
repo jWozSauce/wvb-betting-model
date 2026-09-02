@@ -1,0 +1,6 @@
+{
+ "k": 1.0,
+ "carryover": 0.8,
+ "conf_weight": 0.1,
+ "val_logloss": 0.46043491608136844
+}
