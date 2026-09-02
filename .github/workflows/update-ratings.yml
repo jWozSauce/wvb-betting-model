@@ -58,5 +58,7 @@ jobs:
             echo "No changes — no new final games."
           else
             git commit -m "ratings update $(date -u +%F)"
+            # branch may have moved during the run (human pushes); replay on top
+            git pull --rebase origin main
             git push
           fi
