@@ -391,6 +391,15 @@ with tab_best:
             "(Cmd+Opt+J) and run `copy(document.body.innerText)`.")
     paste = st.text_area("Pasted board", height=200,
                          placeholder="Paste the sportsbook page text here…")
+    venue_b = st.selectbox(
+        "Venue for ALL games on this slate", ["Home court",
+        "Neutral (host/label matters)", "True toss-up (symmetrized)"],
+        key="best_venue",
+        help="Applied to every parsed game on the next Parse & evaluate. "
+             "Home court is right for normal slates; use toss-up for "
+             "tournament days where the book's home label is arbitrary.")
+    neutral_b = venue_b != "Home court"
+    tossup_b = venue_b.startswith("True toss-up")
     if st.button("Parse & evaluate", type="primary") and paste.strip():
         games, unparsed, n_oddsless = paste_odds.parse_board(paste)
         if not games and n_oddsless >= 2:
@@ -415,11 +424,24 @@ with tab_best:
                 "home_receive_elo": h.receive_elo, "home_conf_elo": h.conf_elo,
                 "away_serve_elo": a.serve_elo,
                 "away_receive_elo": a.receive_elo, "away_conf_elo": a.conf_elo,
-                "is_neutral": False,
+                "is_neutral": neutral_b,
             }]))
-            probs_pt = model.set_score_probs(Xg, params)[0]
-            draws_g = np.stack(
-                [model.set_score_probs(Xg, d)[0] for d in param_draws])
+            Xgf = model.features(pd.DataFrame([{
+                "home_serve_elo": a.serve_elo,
+                "home_receive_elo": a.receive_elo, "home_conf_elo": a.conf_elo,
+                "away_serve_elo": h.serve_elo,
+                "away_receive_elo": h.receive_elo, "away_conf_elo": h.conf_elo,
+                "is_neutral": neutral_b,
+            }]))
+
+            def probs6_b(pv):
+                p = model.set_score_probs(Xg, pv)[0]
+                if tossup_b:
+                    p = 0.5 * (p + model.set_score_probs(Xgf, pv)[0][::-1])
+                return p
+
+            probs_pt = probs6_b(params)
+            draws_g = np.stack([probs6_b(d) for d in param_draws])
             for mkt in g["markets"]:
                 p = paste_odds.price_market(probs_pt, mkt["market"],
                                             mkt["side"], mkt["point"])
