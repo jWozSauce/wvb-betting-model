@@ -472,6 +472,8 @@ with tab_best:
                               if mkt["market"] == "spread" else
                               f"{mkt['side'].title()} {mkt['point']:g} sets")
                 card_rows.append({
+                    "game_#": g.get("board_pos"),
+                    "time": g.get("time", ""),
                     "matchup": f"{a_match} @ {h_match}",
                     "bet": bet_label_, "odds": mkt["odds"],
                     "model_prob": round(p, 4),
@@ -495,13 +497,19 @@ with tab_best:
             st.warning("Could not match teams for: "
                        + "; ".join(st.session_state.best_unmatched))
         if len(card):
-            bets = card[card.stake > 0].sort_values("edge", ascending=False)
+            sort_by = st.radio("Order card by", ["edge", "game order"],
+                               horizontal=True, key="best_sort")
+            bets = card[card.stake > 0]
+            bets = (bets.sort_values("edge", ascending=False)
+                    if sort_by == "edge"
+                    else bets.sort_values(["game_#", "edge"],
+                                          ascending=[True, False]))
             if len(bets):
                 st.success(f"{len(bets)} qualifying bets | total stake "
                            f"${bets.stake.sum():,.2f}")
-                show_cols = ["matchup", "bet", "odds", "model_prob",
-                             f"p{CONSERVATIVE_Q}", "edge", "stake",
-                             "fair_odds"]
+                show_cols = ["game_#", "time", "matchup", "bet", "odds",
+                             "model_prob", f"p{CONSERVATIVE_Q}", "edge",
+                             "stake", "fair_odds"]
                 bets_show = bets[show_cols].reset_index(drop=True)
                 bets_show.insert(0, "log", False)
                 edited = st.data_editor(

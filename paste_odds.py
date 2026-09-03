@@ -49,6 +49,10 @@ def _preprocess(text: str) -> str:
 
 
 OU_POINT = re.compile(r"^[OUou]\s*(\d+(?:\.5)?)$")
+TIMEISH = re.compile(
+    r"^(starts in\b.*|today\b.*|tomorrow\b.*|"
+    r"(mon|tue|wed|thu|fri|sat|sun)[a-z]*[, ].*|"
+    r"\d{1,2}:\d{2}(:\d{2})?\s*(am|pm)?)$", re.I)
 
 
 def _parse_blocks(lines: list[str]) -> tuple[list[dict], list[str], int]:
@@ -66,14 +70,19 @@ def _parse_blocks(lines: list[str]) -> tuple[list[dict], list[str], int]:
     raw: dict[str, list[str]] = {}
     mode = None
     expect_team = False
+    pending_time = []   # time-ish lines seen before the next game block
+    cur_time = ""       # game time for the block being built
+    board_pos = 0       # ordinal on the book's board, counting ALL games
 
     def flush():
-        nonlocal cur_teams, raw, mode, n_oddsless
+        nonlocal cur_teams, raw, mode, n_oddsless, board_pos
         if len(cur_teams) == 2:
+            board_pos += 1
             markets = _assemble_markets(raw)
             if markets:
                 games.append(dict(away=cur_teams[0], home=cur_teams[1],
-                                  markets=markets))
+                                  markets=markets, time=cur_time,
+                                  board_pos=board_pos))
             else:
                 n_oddsless += 2
         cur_teams, raw, mode = [], {}, None
@@ -82,6 +91,9 @@ def _parse_blocks(lines: list[str]) -> tuple[list[dict], list[str], int]:
         if ROTATION.match(line):
             if len(cur_teams) >= 2:
                 flush()
+            if not cur_teams:  # first rotation of a new block
+                cur_time = " ".join(pending_time).strip()
+                pending_time = []
             expect_team, mode = True, None
             continue
         if expect_team:
@@ -97,7 +109,9 @@ def _parse_blocks(lines: list[str]) -> tuple[list[dict], list[str], int]:
                      or OU_POINT.match(line)):
             raw[mode].append(line)
             continue
-        mode = None  # any other line (time header, junk) ends the section
+        mode = None  # any other line ends the market section
+        if TIMEISH.match(line):
+            pending_time.append(line.rstrip(","))
     flush()
     return games, unparsed, n_oddsless
 
@@ -231,7 +245,7 @@ def parse_board(text: str) -> tuple[list[dict], list[str]]:
                                     side="over" if ou == "o" else "under",
                                     point=point, odds=odds))
         games.append(dict(away=away["name"], home=home["name"],
-                          markets=markets))
+                          markets=markets, time="", board_pos=i // 2 + 1))
     return games, unparsed, n_oddsless
 
 
