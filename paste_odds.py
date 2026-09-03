@@ -275,23 +275,73 @@ ALIASES = {
     "tcu": "tcu",
     "smu": "smu",
     "ucf": "ucf",
+    "uic": "ill-chicago",
+    "uab": "uab",
+    "vcu": "vcu",
+    "uta": "texas-arlington",
+    "sfa": "stephen-f-austin",
+    "etsu": "east-tenn-st",
+    "uncw": "unc-wilmington",
+    "fgcu": "fgcu",
+    "umbc": "umbc",
+    "umkc": "umkc",
+    "utrgv": "utrgv",
+    "lmu": "loyola-marymount",
+    "slu": "saint-louis",
+    "csun": "cal-st-northridge",
+    "ucsd": "uc-san-diego",
+    "ucsb": "uc-santa-barbara",
+    "uci": "uc-irvine",
+    "ucd": "uc-davis",
+    "usd": "san-diego",
+    "usf": "south-fla",
+    "unf": "north-florida",
+    "uno": "new-orleans",
+    "ulm": "la-monroe",
+    "ull": "la-lafayette",
+    "iupui": "iu-indy",
 }
 
 
 def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
-    """Fuzzy-match a book team name (school + mascot) to a seoname."""
+    """Fuzzy-match a book team name (school + mascot) to a seoname.
+
+    Short names (<=4 letters) are treated as acronyms: they match only via
+    the alias table or exact equality — generic fuzzy similarity between
+    acronyms is meaningless (UIC vs UCF share 2 of 3 letters and are
+    totally different schools).
+    """
     n = _norm(name)
+    first_word = _norm(name.split()[0]) if name.split() else n
+    for alias, seo in ALIASES.items():
+        if (n == alias or first_word == alias) and seo in seonames:
+            return seo, 1.0
     for alias, seo in ALIASES.items():
         if n.startswith(alias) and seo in seonames:
             return seo, 1.0
+    if len(n) <= 4:  # unknown acronym: exact match only, never fuzzy
+        return (n, 1.0) if n in seonames else (None, 0.0)
     best, score = None, 0.0
     for seo in seonames:
         s = _norm(seo)
         r = difflib.SequenceMatcher(None, s, n).ratio()
         if s and n.startswith(s):  # 'nebraska' prefix of 'nebraskacornhuskers'
             r = max(r, 0.5 + 0.5 * len(s) / len(n))
+        # mascot-stripping heuristic: match against the first two words, but
+        # penalized so a full-name match always beats a truncated one
+        # ("South Dakota State" must not lose to "South Dakota"'s exact
+        # match on its truncation)
         words = _norm("".join(name.split()[:2]))
-        r = max(r, difflib.SequenceMatcher(None, s, words).ratio())
+        if len(words) > 4:
+            r = max(r, 0.85 * difflib.SequenceMatcher(None, s, words).ratio())
+        # exact school match once a trailing mascot word is removed is nearly
+        # certain ("Kansas Jayhawks" -> kansas) — but never strip structural
+        # words ("Ohio State" must not become ohio)
+        parts = name.split()
+        if (len(parts) > 1 and parts[-1].lower().strip(".") not in
+                ("state", "st", "tech", "university", "college")
+                and _norm(" ".join(parts[:-1])) == s):
+            r = max(r, 0.88)
         if r > score:
             best, score = seo, r
     return (best, score) if score >= 0.62 else (None, score)

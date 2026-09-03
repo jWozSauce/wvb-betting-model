@@ -445,7 +445,7 @@ with tab_best:
                 "Use the bookmarklet in the instructions expander below, "
                 "then paste what it puts on your clipboard.")
         seos = ratings.team.tolist()
-        card_rows, unmatched = [], []
+        card_rows, unmatched, low_conf = [], [], []
         for g in games:
             h_match, hs = paste_odds.match_team(g["home"], seos)
             a_match, as_ = paste_odds.match_team(g["away"], seos)
@@ -453,6 +453,11 @@ with tab_best:
                 unmatched.append(f"{g['away']} @ {g['home']} "
                                  f"(match scores {as_:.2f}/{hs:.2f})")
                 continue
+            match_conf = round(min(hs, as_), 2)
+            if match_conf < 0.8:
+                low_conf.append(f"“{g['away']}”→{a_match} / "
+                                f"“{g['home']}”→{h_match} "
+                                f"(confidence {match_conf:.2f})")
             h = ratings[ratings.team == h_match].iloc[0]
             a = ratings[ratings.team == a_match].iloc[0]
             Xg = model.features(pd.DataFrame([{
@@ -501,6 +506,8 @@ with tab_best:
                               f"{mkt['side'].title()} {mkt['point']:g} sets")
                 vi = venue_info.get((a_match, h_match), {})
                 card_rows.append({
+                    "⚠": "⚠️" if match_conf < 0.8 else "",
+                    "match_conf": match_conf,
                     "game_#": g.get("board_pos"),
                     "time": g.get("time", ""),
                     "matchup": f"{a_match} @ {h_match}",
@@ -517,6 +524,7 @@ with tab_best:
                 })
         st.session_state.best_card = pd.DataFrame(card_rows)
         st.session_state.best_unmatched = unmatched
+        st.session_state.best_low_conf = low_conf
         st.session_state.best_unparsed = unparsed
         st.session_state.best_n_games = len(games)
 
@@ -527,6 +535,9 @@ with tab_best:
         if st.session_state.best_unmatched:
             st.warning("Could not match teams for: "
                        + "; ".join(st.session_state.best_unmatched))
+        if st.session_state.get("best_low_conf"):
+            st.warning("⚠️ LOW-CONFIDENCE team matches — verify before "
+                       "betting: " + "; ".join(st.session_state.best_low_conf))
         if len(card):
             sort_by = st.radio("Order card by", ["edge", "game order"],
                                horizontal=True, key="best_sort")
@@ -538,8 +549,8 @@ with tab_best:
             if len(bets):
                 st.success(f"{len(bets)} qualifying bets | total stake "
                            f"${bets.stake.sum():,.2f}")
-                show_cols = ["game_#", "time", "matchup", "site", "venue",
-                             "bet", "odds", "model_prob",
+                show_cols = ["⚠", "game_#", "time", "matchup", "site",
+                             "venue", "bet", "odds", "model_prob",
                              f"p{CONSERVATIVE_Q}", "edge", "stake",
                              "fair_odds"]
                 bets_show = bets[show_cols].reset_index(drop=True)
