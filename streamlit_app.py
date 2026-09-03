@@ -528,6 +528,16 @@ with tab_best:
         st.session_state.best_unparsed = unparsed
         st.session_state.best_n_games = len(games)
 
+    # a card parsed before an app update may lack newer columns — drop it
+    if "best_card" in st.session_state:
+        _card = st.session_state.best_card
+        if len(_card) and not {"game_#", "site", "⚠"} <= set(_card.columns):
+            for k in ("best_card", "best_unmatched", "best_low_conf",
+                      "best_unparsed", "best_n_games"):
+                st.session_state.pop(k, None)
+            st.info("The app was updated since this card was parsed — "
+                    "paste and Parse & evaluate again.")
+
     if "best_card" in st.session_state:
         card = st.session_state.best_card
         st.caption(f"{st.session_state.best_n_games} games parsed, "
