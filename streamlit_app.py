@@ -415,10 +415,17 @@ with tab_best:
         try:
             hv = pd.read_parquet(f"{HERE}/app_data/home_venues.parquet")
             hv_map = dict(zip(hv.team, hv.home_venue))
+            if "n" in hv.columns:  # venue owner = team with most home games there
+                own = hv.sort_values("n", ascending=False).drop_duplicates(
+                    "home_venue")
+                owner_map = dict(zip(own.home_venue, own.team))
+            else:
+                owner_map = None
         except Exception:
-            hv_map = {}
+            hv_map, owner_map = {}, None
         try:
-            return slate_venues(list(pairs_tuple), hv_map)
+            return slate_venues(list(pairs_tuple), hv_map,
+                                venue_owner=owner_map)
         except Exception:
             return {}
 

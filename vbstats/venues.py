@@ -14,7 +14,8 @@ from vbstats.ncaa import NCAAClient
 
 
 def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
-                 season: int | None = None, progress=lambda m: None) -> dict:
+                 season: int | None = None, progress=lambda m: None,
+                 venue_owner: dict | None = None) -> dict:
     """pairs: iterable of (away_seo, home_seo).
 
     Returns {(away, home): {"venue": str, "site": label}} where site is one
@@ -25,7 +26,8 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
     season = season or (today.year if today.month >= 6 else today.year - 1)
     client = NCAAClient(delay=0.25)
     wanted = {frozenset(p) for p in pairs}
-    venue_owner = {v: t for t, v in home_venue_map.items()}
+    if venue_owner is None:  # fallback; caller should pass a count-weighted map
+        venue_owner = {v: t for t, v in home_venue_map.items()}
 
     contest_for = {}
     for d in range(days_ahead + 1):

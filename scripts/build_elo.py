@@ -93,7 +93,7 @@ def main():
     modal = (hv.groupby(["home_seo", "venue"]).size().rename("n")
              .reset_index().sort_values("n", ascending=False)
              .drop_duplicates("home_seo"))
-    modal[["home_seo", "venue"]].rename(
+    modal[["home_seo", "venue", "n"]].rename(
         columns={"home_seo": "team", "venue": "home_venue"}
     ).to_parquet(app_dir / "home_venues.parquet", index=False)
     print(f"home venues for {len(modal)} teams -> "
