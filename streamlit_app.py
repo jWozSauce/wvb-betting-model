@@ -116,6 +116,14 @@ with st.sidebar:
 
 
 # ------------------------------------------------------------------ helpers
+def away_first(df):
+    """Reorder columns so away_team displays before home_team."""
+    cols = list(df.columns)
+    if "home_team" in cols and "away_team" in cols:
+        cols.insert(cols.index("home_team"), cols.pop(cols.index("away_team")))
+    return df[cols]
+
+
 def overall_rating(df):
     """Regression-weighted overall rating on the Elo scale.
 
@@ -472,7 +480,7 @@ with tab_best:
                     "fair_odds": kelly.prob_to_american(p),
                     "market": mkt["market"], "side": mkt["side"],
                     "point": mkt["point"],
-                    "home_team": h_match, "away_team": a_match,
+                    "away_team": a_match, "home_team": h_match,
                 })
         st.session_state.best_card = pd.DataFrame(card_rows)
         st.session_state.best_unmatched = unmatched
@@ -667,8 +675,8 @@ with tab_log:
                                   f"{(settled.status == 'push').sum()}")
         mcols[2].metric("Profit", f"${profit:,.2f}")
         mcols[3].metric("ROI", f"{profit / staked:+.1%}" if staked else "—")
-        st.dataframe(log_df.iloc[::-1], width="stretch", height=500,
-                     hide_index=True)
+        st.dataframe(away_first(log_df).iloc[::-1], width="stretch",
+                     height=500, hide_index=True)
     else:
         st.info("No bets logged yet — log one from the pricing tab.")
 
@@ -713,7 +721,7 @@ with tab_log:
             st.caption("ROI by claimed edge — if the model is honest, bigger "
                        "claimed edges should earn more:")
             st.dataframe(by.round(3), width="stretch")
-        st.dataframe(paper.iloc[::-1], width="stretch", height=400)
+        st.dataframe(away_first(paper).iloc[::-1], width="stretch", height=400)
     else:
         st.info("Nothing tracked yet — use '📋 Track full card (paper)' on "
                 "the Best bets tab after parsing a slate.")
