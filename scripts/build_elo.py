@@ -87,6 +87,18 @@ def main():
     print(f"current ratings for {len(current)} active teams -> "
           f"{app_dir / 'elo_current.parquet'}")
 
+    # Each team's usual home venue (modal, last 2 seasons), for classifying
+    # upcoming games as true-home vs neutral in the app.
+    hv = out[out.venue.notna() & (out.season >= out.season.max() - 1)]
+    modal = (hv.groupby(["home_seo", "venue"]).size().rename("n")
+             .reset_index().sort_values("n", ascending=False)
+             .drop_duplicates("home_seo"))
+    modal[["home_seo", "venue"]].rename(
+        columns={"home_seo": "team", "venue": "home_venue"}
+    ).to_parquet(app_dir / "home_venues.parquet", index=False)
+    print(f"home venues for {len(modal)} teams -> "
+          f"{app_dir / 'home_venues.parquet'}")
+
     # Current-season results for the app's Results tab.
     cur_season = int(out.season.max())
     season_rows = out[out.season == cur_season]

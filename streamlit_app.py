@@ -408,8 +408,29 @@ with tab_best:
              "tournament days where the book's home label is arbitrary.")
     neutral_b = venue_b != "Home court"
     tossup_b = venue_b.startswith("True toss-up")
+    @st.cache_data(ttl=3600, show_spinner="Looking up venues on the NCAA "
+                                          "schedule…")
+    def cached_venues(pairs_tuple):
+        from vbstats.venues import slate_venues
+        try:
+            hv = pd.read_parquet(f"{HERE}/app_data/home_venues.parquet")
+            hv_map = dict(zip(hv.team, hv.home_venue))
+        except Exception:
+            hv_map = {}
+        try:
+            return slate_venues(list(pairs_tuple), hv_map)
+        except Exception:
+            return {}
+
     if st.button("Parse & evaluate", type="primary") and paste.strip():
         games, unparsed, n_oddsless = paste_odds.parse_board(paste)
+        matched_pairs = []
+        for g in games:
+            hm_, _ = paste_odds.match_team(g["home"], ratings.team.tolist())
+            am_, _ = paste_odds.match_team(g["away"], ratings.team.tolist())
+            if hm_ and am_:
+                matched_pairs.append((am_, hm_))
+        venue_info = cached_venues(tuple(sorted(matched_pairs)))
         if not games and n_oddsless >= 2:
             st.error(
                 f"Found ~{n_oddsless // 2} games but NO odds in the paste — "
@@ -471,10 +492,13 @@ with tab_best:
                               f"{side_team} {mkt['point']:+g} sets"
                               if mkt["market"] == "spread" else
                               f"{mkt['side'].title()} {mkt['point']:g} sets")
+                vi = venue_info.get((a_match, h_match), {})
                 card_rows.append({
                     "game_#": g.get("board_pos"),
                     "time": g.get("time", ""),
                     "matchup": f"{a_match} @ {h_match}",
+                    "site": vi.get("site", ""),
+                    "venue": vi.get("venue", ""),
                     "bet": bet_label_, "odds": mkt["odds"],
                     "model_prob": round(p, 4),
                     f"p{CONSERVATIVE_Q}": round(p_lo, 4),
@@ -507,9 +531,10 @@ with tab_best:
             if len(bets):
                 st.success(f"{len(bets)} qualifying bets | total stake "
                            f"${bets.stake.sum():,.2f}")
-                show_cols = ["game_#", "time", "matchup", "bet", "odds",
-                             "model_prob", f"p{CONSERVATIVE_Q}", "edge",
-                             "stake", "fair_odds"]
+                show_cols = ["game_#", "time", "matchup", "site", "venue",
+                             "bet", "odds", "model_prob",
+                             f"p{CONSERVATIVE_Q}", "edge", "stake",
+                             "fair_odds"]
                 bets_show = bets[show_cols].reset_index(drop=True)
                 bets_show.insert(0, "log", False)
                 edited = st.data_editor(
