@@ -2,8 +2,11 @@ name: Update ratings
 
 on:
   schedule:
-    # 07:30 UTC = 3:30am ET, after even late West Coast matches go final
-    - cron: "30 7 * * *"
+    # GitHub cron drifts hours under load; run twice with odd minutes so at
+    # least one lands before US mornings. 07:23 UTC = 3:23am ET (after late
+    # West Coast finals); 11:43 UTC = 7:43am ET backstop.
+    - cron: "23 7 * * *"
+    - cron: "43 11 * * *"
   workflow_dispatch: {}  # manual "Run workflow" button on github.com
 
 permissions:
