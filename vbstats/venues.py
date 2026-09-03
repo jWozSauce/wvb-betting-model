@@ -25,6 +25,7 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
     season = season or (today.year if today.month >= 6 else today.year - 1)
     client = NCAAClient(delay=0.25)
     wanted = {frozenset(p) for p in pairs}
+    venue_owner = {v: t for t, v in home_venue_map.items()}
 
     contest_for = {}
     for d in range(days_ahead + 1):
@@ -57,12 +58,13 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
             continue
         label = ", ".join(x for x in (venue, loc.get("city"),
                                       loc.get("stateUsps")) if x)
+        owner = venue_owner.get(venue)  # whose usual home gym is this?
         if venue == home_venue_map.get(home):
             site = "true home"
         elif venue == home_venue_map.get(away):
             site = "AWAY team's gym"
         elif home in home_venue_map:
-            site = "NEUTRAL?"
+            site = f"neutral ({owner}'s gym)" if owner else "neutral (3rd site)"
         else:
             site = "?"
         out[(away, home)] = {"venue": label, "site": site}
