@@ -130,7 +130,12 @@ def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
     now = pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d %H:%M")
     updates, graded = [], 0
     for i, r in enumerate(recs):
-        if str(r.get("status", "")).lower() != "pending":
+        status = str(r.get("status", "")).lower()
+        # grade pending rows, and repair rows a past partial write left with
+        # a settled status but no profit
+        half_written = (status in ("won", "lost", "push")
+                        and str(r.get("profit", "")).strip() == "")
+        if status != "pending" and not half_written:
             continue
         g, flipped = _find_result(results, r["home_team"], r["away_team"],
                                   str(r["game_date"]))
@@ -148,9 +153,13 @@ def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
         status = "push" if push else ("won" if won else "lost")
         updates.append((i + 2, status, round(profit, 2), now))
         graded += 1
-    for row_ix, status, profit, ts in updates:
+    if updates:
+        # single batched write — per-cell writes trip the Sheets API's
+        # 60-writes/minute quota on any decent-sized card
+        from gspread.utils import rowcol_to_a1
         c = HEADER.index("status") + 1
-        ws.update_cell(row_ix, c, status)
-        ws.update_cell(row_ix, c + 1, profit)
-        ws.update_cell(row_ix, c + 2, ts)
+        data = [{"range": f"{rowcol_to_a1(rix, c)}:{rowcol_to_a1(rix, c + 2)}",
+                 "values": [[status, profit, ts]]}
+                for rix, status, profit, ts in updates]
+        ws.batch_update(data, value_input_option="USER_ENTERED")
     return graded, f"graded {graded} pending bets"
