@@ -2,11 +2,10 @@ name: Update ratings
 
 on:
   schedule:
-    # GitHub cron drifts hours under load; run twice with odd minutes so at
-    # least one lands before US mornings. 07:23 UTC = 3:23am ET (after late
-    # West Coast finals); 11:43 UTC = 7:43am ET backstop.
-    - cron: "23 7 * * *"
-    - cron: "43 11 * * *"
+    # GitHub cron drifts by hours, so don't aim at one precise time: run
+    # every 3 hours and let no-op runs (no new finals) exit cheaply. There
+    # is always a recent update no matter how far any one slot drifts.
+    - cron: "17 */3 * * *"
   workflow_dispatch: {}  # manual "Run workflow" button on github.com
 
 permissions:
