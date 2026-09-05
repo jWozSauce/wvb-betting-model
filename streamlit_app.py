@@ -580,8 +580,13 @@ with tab_best:
                                      "Vball_Paper_Log worksheet so model "
                                      "performance is tracked even for bets "
                                      "you don't place. Re-pasting the same "
-                                     "slate won't double-log."):
+                                     "slate won't double-log. Games not "
+                                     "found on the NCAA schedule are "
+                                     "skipped (unverifiable fixtures can't "
+                                     "be graded)."):
                     now = pd.Timestamp.now(tz="America/New_York")
+                    trackable = bets[bets.site != "not on NCAA sched"]
+                    n_skipped_sched = len(bets) - len(trackable)
                     recs = [dict(
                         logged_at=now.strftime("%Y-%m-%d %H:%M"),
                         game_date=str(paper_date),
@@ -592,13 +597,17 @@ with tab_best:
                         edge=r.edge, model_prob=r.model_prob,
                         model_fair=r.fair_odds, status="pending",
                         profit="", graded_at="")
-                        for r in bets.itertuples()]
+                        for r in trackable.itertuples()]
                     try:
                         n_ = bet_log.log_bets(
                             recs, worksheet=bet_log.PAPER_WORKSHEET,
                             dedupe=True)
-                        st.success(f"Tracking {n_} new paper bets "
-                                   f"({len(recs) - n_} already tracked).")
+                        msg = (f"Tracking {n_} new paper bets "
+                               f"({len(recs) - n_} already tracked")
+                        if n_skipped_sched:
+                            msg += (f"; {n_skipped_sched} skipped — game "
+                                    f"not on NCAA schedule")
+                        st.success(msg + ").")
                     except Exception as e:
                         st.error(f"Paper logging failed: {e}")
                 if bc[1].button("Log selected bets", type="primary",
