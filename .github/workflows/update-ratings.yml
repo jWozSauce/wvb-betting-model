@@ -50,6 +50,9 @@ jobs:
       - name: Rebuild ratings chain
         run: python scripts/build_elo.py --seasons $ALL_SEASONS
 
+      - name: Rebuild player availability
+        run: python scripts/build_players.py --season $SEASON
+
       - name: Commit and push updates
         run: |
           git config user.name "ratings-bot"

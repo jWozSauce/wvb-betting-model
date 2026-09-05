@@ -66,6 +66,22 @@ def load_results():
 
 
 @st.cache_data
+def load_availability():
+    try:
+        df = pd.read_parquet(f"{HERE}/app_data/availability.parquet")
+    except Exception:
+        return {}
+    core = df[(df.team_matches >= 3)
+              & (df.matches_started / df.team_matches >= 0.5)]
+    miss = core[~core.appeared_last]
+    out = {}
+    for r in miss.itertuples():
+        out.setdefault(r.team, []).append(
+            f"{r.player} (started {r.matches_started}/{r.team_matches})")
+    return out
+
+
+@st.cache_data
 def load_model():
     blob = json.load(open(f"{HERE}/app_data/model_params.json"))
     params = np.array(blob["params"])
@@ -177,6 +193,13 @@ with tab_price:
                 st.warning(f"{r.team} has only {int(r.games)} rated games this "
                            f"season — rating still leans on last season's "
                            f"carryover.")
+        absents = load_availability()
+        for team in (home_team, away_team):
+            if team in absents:
+                st.warning(f"⚕ {team} — core starter(s) absent from their "
+                           f"last match: {', '.join(absents[team])}. The "
+                           f"rating doesn't know; verify status before "
+                           f"betting.")
 
         df = pd.DataFrame([{
             "home_serve_elo": h.serve_elo, "home_receive_elo": h.receive_elo,
@@ -505,8 +528,13 @@ with tab_best:
                               if mkt["market"] == "spread" else
                               f"{mkt['side'].title()} {mkt['point']:g} sets")
                 vi = venue_info.get((a_match, h_match), {})
+                absents_map = load_availability()
+                absent_note = "; ".join(
+                    f"{t}: {', '.join(n.split(' (')[0] for n in absents_map[t])}"
+                    for t in (a_match, h_match) if t in absents_map)
                 card_rows.append({
                     "⚠": "⚠️" if match_conf < 0.8 else "",
+                    "⚕ absent": absent_note,
                     "match_conf": match_conf,
                     "game_#": g.get("board_pos"),
                     "time": g.get("time", ""),
@@ -560,9 +588,10 @@ with tab_best:
                 st.success(f"{len(bets)} qualifying bets | total stake "
                            f"${bets.stake.sum():,.2f}")
                 show_cols = ["⚠", "game_#", "time", "matchup", "site",
-                             "venue", "bet", "odds", "model_prob",
-                             f"p{CONSERVATIVE_Q}", "edge", "stake",
-                             "fair_odds"]
+                             "venue", "⚕ absent", "bet", "odds",
+                             "model_prob", f"p{CONSERVATIVE_Q}", "edge",
+                             "stake", "fair_odds"]
+                show_cols = [c for c in show_cols if c in bets.columns]
                 bets_show = bets[show_cols].reset_index(drop=True)
                 bets_show.insert(0, "log", False)
                 edited = st.data_editor(
