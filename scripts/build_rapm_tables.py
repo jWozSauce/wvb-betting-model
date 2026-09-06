@@ -59,26 +59,50 @@ def main():
         epoch = int(game.get("startTimeEpoch") or 0)
         n_games += 1
 
+        # roster per team from the boxscore: canonical names + normalized
+        # variants ("firstlast" and "lastfirst") for format-proof matching
+        # of starter lines (feeds vary: "First Last; ...", "Last, First, ...",
+        # duplicated lines — substring roster matching sidesteps all of it)
+        box = blob.get("boxscore")
+        roster: dict[str, list] = {}
+        if box and box.get("teamBoxscore"):
+            id2seo_r = {int(t["teamId"]): t["seoname"]
+                        for t in box.get("teams", [])}
+            for tb in box["teamBoxscore"]:
+                seo = id2seo_r.get(int(tb["teamId"]))
+                for p in tb.get("playerStats") or []:
+                    fn = re.sub(r"[^a-z]", "", str(p.get("firstName", "")).lower())
+                    ln = re.sub(r"[^a-z]", "", str(p.get("lastName", "")).lower())
+                    if seo and (fn or ln):
+                        roster.setdefault(seo, []).append(
+                            (clean_name(f"{p.get('firstName','')} "
+                                        f"{p.get('lastName','')}"),
+                             fn + ln, ln + fn))
+
         if pbp and pbp.get("periods"):
             id2seo = {int(t["teamId"]): t["seoname"] for t in pbp["teams"]}
             for per in pbp["periods"]:
+                seen: set = set()
                 for blk in per["playbyplayStats"]:
                     seo = id2seo.get(int(blk["teamId"]))
                     for play in blk["plays"]:
                         m = STARTERS_RE.search(play.get("playText") or "")
-                        if m and seo:
-                            for name in re.split(r"[;,]", m.group(1)):
-                                name = clean_name(name)
-                                if len(name) >= 4:
+                        if not (m and seo and seo in roster):
+                            continue
+                        line = re.sub(r"[^a-z]", "", m.group(1).lower())
+                        for canon, fl, lf in roster[seo]:
+                            if (fl and fl in line) or (lf and lf in line):
+                                key = (seo, per["periodNumber"], canon)
+                                if key not in seen:
+                                    seen.add(key)
                                     starter_rows.append({
                                         "contest_id": cid,
                                         "start_epoch": epoch,
                                         "set": per["periodNumber"],
                                         "team": seo,
-                                        "player": name,
+                                        "player": canon,
                                     })
 
-        box = blob.get("boxscore")
         if box and box.get("teamBoxscore"):
             n_with_box += 1
             id2seo_b = {int(t["teamId"]): t["seoname"]
