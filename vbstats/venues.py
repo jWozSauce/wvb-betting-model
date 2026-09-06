@@ -30,17 +30,22 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
         venue_owner = {v: t for t, v in home_venue_map.items()}
 
     contest_for = {}
-    for d in range(days_ahead + 1):
-        day = today + dt.timedelta(days=d)
-        try:
-            contests = client.contests(day, season)
-        except Exception as e:
-            progress(f"{day}: schedule fetch failed ({e})")
-            continue
-        for c in contests:
-            key = frozenset(t["seoname"] for t in c["teams"])
-            if key in wanted and key not in contest_for:
-                contest_for[key] = c["contestId"]
+    days = [today + dt.timedelta(days=d) for d in range(days_ahead + 1)]
+    # search D1 first; fall back to D2/D3 only for games still unmatched
+    # (books list cross-division and non-D1 matches too)
+    for division in (1, 2, 3):
+        if len(contest_for) == len(wanted):
+            break
+        for day in days:
+            try:
+                contests = client.contests(day, season, division=division)
+            except Exception as e:
+                progress(f"{day} d{division}: schedule fetch failed ({e})")
+                continue
+            for c in contests:
+                key = frozenset(t["seoname"] for t in c["teams"])
+                if key in wanted and key not in contest_for:
+                    contest_for[key] = c["contestId"]
 
     out = {}
     for away, home in pairs:
