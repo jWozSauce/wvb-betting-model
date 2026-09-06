@@ -66,6 +66,13 @@ def load_results():
 
 
 @st.cache_data
+def load_rapm():
+    df = pd.read_parquet(f"{HERE}/app_data/rapm.parquet")
+    meta = json.load(open(f"{HERE}/app_data/rapm_meta.json"))
+    return df, meta
+
+
+@st.cache_data
 def load_availability():
     try:
         df = pd.read_parquet(f"{HERE}/app_data/availability.parquet")
@@ -238,25 +245,79 @@ with tab_price:
             + "</div>",
             unsafe_allow_html=True)
 
-        Xf = model.features(pd.DataFrame([{
-            "home_serve_elo": a.serve_elo, "home_receive_elo": a.receive_elo,
-            "home_conf_elo": a.conf_elo,
-            "away_serve_elo": h.serve_elo, "away_receive_elo": h.receive_elo,
-            "away_conf_elo": h.conf_elo, "is_neutral": neutral,
-        }]))
+        model_mode = st.radio(
+            "Pricing model", ["Team Elo", "Player (RAPM)"], horizontal=True,
+            help="Team Elo: the season-long team ratings. Player (RAPM): "
+                 "the match is priced from the two selected lineups' player "
+                 "impacts — edit the lineups to remove injured/absent "
+                 "players and the whole board reprices.")
 
-        def probs6(param_vec):
-            """Set-score distribution; toss-up mode averages both label
-            orientations (flipped one reversed back to home perspective)."""
-            p = model.set_score_probs(X, param_vec)[0]
-            if tossup:
-                pf = model.set_score_probs(Xf, param_vec)[0]
-                p = 0.5 * (p + pf[::-1])
-            return p
+        if model_mode == "Player (RAPM)":
+            rapm_df, rapm_meta = load_rapm()
+            from vbstats import rapm_price
 
-        probs = probs6(params)[None, :]
-        mk_point = {k: v[0] for k, v in model.markets(probs).items()}
-        draw_probs = np.stack([probs6(d) for d in param_draws])
+            def lineup_ui(team, col):
+                tr = (rapm_df[rapm_df.team == team]
+                      .sort_values(["sets_started_cur", "recv"],
+                                   ascending=False))
+                if not len(tr):
+                    col.error(f"No roster data for {team}.")
+                    return None, []
+                default = tr[tr.in_last_lineup].player.tolist() \
+                    or tr.player.head(6).tolist()
+                sel = col.multiselect(
+                    f"{team} lineup (remove injured/absent)",
+                    tr.player.tolist(), default=default,
+                    key=f"lineup_{team}")
+                return tr.to_dict("records"), sel
+
+            lc = st.columns(2)
+            a_rows, a_sel = lineup_ui(away_team, lc[0])
+            h_rows, h_sel = lineup_ui(home_team, lc[1])
+            if not (a_sel and h_sel):
+                st.warning("Empty lineup — that side is priced as an exactly "
+                           "average team.")
+            h_sv, h_rc, cov_h = rapm_price.lineup_strength(h_rows, set(h_sel))
+            a_sv, a_rc, cov_a = rapm_price.lineup_strength(a_rows, set(a_sel))
+            base = rapm_meta["intercept"]
+            hadv = rapm_meta["home_serve"] if venue_mode == "Home court" else 0.0
+            p1 = base + hadv + h_sv - a_rc     # home wins rally, home serving
+            p2 = 1 - (base - hadv + a_sv - h_rc)  # home wins rally, away serving
+            sigma = float(np.exp(params[5]))
+            probs_pt = rapm_price.set_score_probs6(p1, p2, sigma)
+            st.caption(
+                f"Rally probabilities — {home_team} serving: {p1:.1%}, "
+                f"{home_team} receiving: {p2:.1%}. Fitted-player coverage: "
+                f"{away_team} {cov_a:.0%}, {home_team} {cov_h:.0%} "
+                f"(unfitted players count as exactly average). No posterior "
+                f"draws in player mode — conservative p20 equals the point "
+                f"estimate, so gate with extra care.")
+            probs = probs_pt[None, :]
+            mk_point = {k: v[0] for k, v in model.markets(probs).items()}
+            draw_probs = np.tile(probs_pt, (2, 1))
+        else:
+            Xf = model.features(pd.DataFrame([{
+                "home_serve_elo": a.serve_elo,
+                "home_receive_elo": a.receive_elo,
+                "home_conf_elo": a.conf_elo,
+                "away_serve_elo": h.serve_elo,
+                "away_receive_elo": h.receive_elo,
+                "away_conf_elo": h.conf_elo, "is_neutral": neutral,
+            }]))
+
+            def probs6(param_vec):
+                """Set-score distribution; toss-up mode averages both label
+                orientations (flipped one reversed back to home
+                perspective)."""
+                p = model.set_score_probs(X, param_vec)[0]
+                if tossup:
+                    pf = model.set_score_probs(Xf, param_vec)[0]
+                    p = 0.5 * (p + pf[::-1])
+                return p
+
+            probs = probs6(params)[None, :]
+            mk_point = {k: v[0] for k, v in model.markets(probs).items()}
+            draw_probs = np.stack([probs6(d) for d in param_draws])
 
         def draw_markets(dp):
             return {
@@ -380,20 +441,15 @@ with tab_price:
             except Exception as e:
                 st.error(f"Logging failed: {e}")
 
-        with st.expander("Flip check (price as if the other team were 'home')"):
-            Xf = model.features(pd.DataFrame([{
-                "home_serve_elo": a.serve_elo,
-                "home_receive_elo": a.receive_elo, "home_conf_elo": a.conf_elo,
-                "away_serve_elo": h.serve_elo,
-                "away_receive_elo": h.receive_elo, "away_conf_elo": h.conf_elo,
-                "is_neutral": neutral,
-            }]))
-            pf = model.set_score_probs(Xf, params)
-            ml_flip = 1 - model.markets(pf)["home_ml"][0]
-            st.write(f"{home_team} ML priced normally: "
-                     f"**{mk_point['home_ml']:.1%}** — with labels flipped: "
-                     f"**{ml_flip:.1%}**. The 'True toss-up' venue option "
-                     f"prices at the average of the two.")
+        if model_mode == "Team Elo":
+            with st.expander("Flip check (price as if the other team were "
+                             "'home')"):
+                pf = model.set_score_probs(Xf, params)
+                ml_flip = 1 - model.markets(pf)["home_ml"][0]
+                st.write(f"{home_team} ML priced normally: "
+                         f"**{mk_point['home_ml']:.1%}** — with labels "
+                         f"flipped: **{ml_flip:.1%}**. The 'True toss-up' "
+                         f"venue option prices at the average of the two.")
     else:
         st.info("Pick two different teams to price the match.")
 

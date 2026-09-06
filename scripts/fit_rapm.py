@@ -96,25 +96,77 @@ def build_design(g, player_ix=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--train", type=int, nargs="+", required=True)
-    ap.add_argument("--test", type=int, required=True)
+    ap.add_argument("--test", type=int, default=None)
     ap.add_argument("--alphas", type=float, nargs="+",
                     default=[1000, 3000, 10000])
+    ap.add_argument("--save-production", action="store_true",
+                    help="fit once (first alpha) with recency weighting and "
+                         "write app_data/rapm.parquet + rapm_meta.json")
+    ap.add_argument("--recency", type=float, default=0.75,
+                    help="per-year weight decay for older seasons")
     args = ap.parse_args()
 
     train_parts = []
     for s in args.train:
         m, p, st = load_season(s)
-        train_parts.append(phase_table(m, p, st))
+        t = phase_table(m, p, st)
+        t["season"] = s
+        train_parts.append(t)
     tr = pd.concat(train_parts, ignore_index=True)
     print(f"train: {len(tr)} phase-rows across {args.train}")
 
     X, player_ix = build_design(tr)
     y = (tr.w / tr.n).to_numpy()
     wgt = tr.n.to_numpy().astype(float)
+    cur = max(args.train)
+    wgt = wgt * (args.recency ** (cur - tr.season.to_numpy()))
     print(f"design: {X.shape[0]} rows x {X.shape[1]} cols "
           f"({len(player_ix)} player-team entities)")
 
     from sklearn.linear_model import Ridge
+
+    if args.save_production:
+        import json
+        alpha = args.alphas[0]
+        model = Ridge(alpha=alpha, solver="sparse_cg")
+        model.fit(X, y, sample_weight=wgt)
+        coefs = model.coef_
+        rows = [{"team": t, "player": p,
+                 "serve": coefs[2 * ix], "recv": coefs[2 * ix + 1]}
+                for (t, p), ix in player_ix.items()]
+        rapm = pd.DataFrame(rows)
+        # current-season participation for lineup defaults in the app
+        st_cur = pd.read_parquet(D / f"set_starters_{cur}.parquet")
+        box_cur = pd.read_parquet(D / f"player_box_{cur}.parquet")
+        sets_cur = (st_cur.groupby(["team", "player"]).size()
+                    .rename("sets_started_cur").reset_index())
+        last_cid = (st_cur.sort_values("start_epoch")
+                    .groupby("team").contest_id.last())
+        last_lineup = set()
+        for team, cid in last_cid.items():
+            sub = st_cur[(st_cur.team == team) & (st_cur.contest_id == cid)
+                         & (st_cur["set"] == 1)]
+            for p in sub.player:
+                last_lineup.add((team, p))
+        roster = (box_cur[["team", "player"]].drop_duplicates())
+        roster = roster.merge(rapm, on=["team", "player"], how="left")
+        roster = roster.merge(sets_cur, on=["team", "player"], how="left")
+        roster["serve"] = roster.serve.fillna(0.0)
+        roster["recv"] = roster.recv.fillna(0.0)
+        roster["sets_started_cur"] = roster.sets_started_cur.fillna(0).astype(int)
+        roster["in_last_lineup"] = [
+            (t, p) in last_lineup for t, p in zip(roster.team, roster.player)]
+        out = Path("app_data")
+        roster.to_parquet(out / "rapm.parquet", index=False)
+        json.dump({"intercept": float(model.intercept_),
+                   "home_serve": float(coefs[-1]), "alpha": alpha,
+                   "recency": args.recency, "seasons": args.train,
+                   "current_season": cur},
+                  open(out / "rapm_meta.json", "w"), indent=1)
+        print(f"production RAPM: {len(rapm)} fitted entities, "
+              f"{len(roster)} current-roster rows -> app_data/rapm.parquet | "
+              f"intercept {model.intercept_:.4f} home {coefs[-1]:+.4f}")
+        return
 
     # test-season data & lineups (set-1 starters as the match lineup)
     m_t, p_t, s_t = load_season(args.test)
