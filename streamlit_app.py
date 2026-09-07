@@ -540,6 +540,48 @@ with tab_price:
     else:
         st.info("Pick two different teams to price the match.")
 
+    # ---------------------------------------------------- AI injury analysis
+    st.divider()
+    st.subheader("🩺 AI injury analysis")
+    st.caption("Sends ONE selected team's recent headlines + participation "
+               "data to Claude (claude-sonnet-5) — checks the flagged absent "
+               "players against the news and looks for other availability "
+               "risks. Only that team's articles are sent, to keep token "
+               "spend minimal.")
+    ai_cols = st.columns([3, 2])
+    ai_team = ai_cols[0].selectbox("Team to analyze", ratings.team.tolist(),
+                                   index=None, format_func=team_label,
+                                   placeholder="Search team…", key="ai_team")
+    if ai_cols[1].button("Send injury analysis to API", type="primary",
+                         disabled=not ai_team):
+        try:
+            key = None
+            try:
+                key = st.secrets.get("ANTHROPIC_API_KEY")
+            except Exception:
+                pass
+            from vbstats.injury_ai import analyze_team
+            rp_all, _ = load_rapm()
+            tr_ = rp_all[rp_all.team == ai_team].sort_values(
+                "sets_started_cur", ascending=False)
+            core_list = [f"{r.player} ({r.position}, "
+                         f"{r.sets_started_cur} sets)"
+                         for r in tr_.head(12).itertuples()]
+            absent_list = load_availability().get(ai_team, [])
+            arts = cached_news(ai_team)
+            with st.spinner("Analyzing with Claude…"):
+                verdict = analyze_team(ai_team, arts, absent_list,
+                                       core_list, api_key=key)
+            st.markdown(verdict)
+        except Exception as e:
+            if "auth" in str(e).lower() or "api_key" in str(e).lower() \
+                    or "401" in str(e):
+                st.error("No Anthropic API key found — add "
+                         "ANTHROPIC_API_KEY to Streamlit secrets (cloud) "
+                         "or your environment (local).")
+            else:
+                st.error(f"Analysis failed: {e}")
+
 # ================================================================== best bets
 with tab_best:
     st.subheader("Best bets from a pasted board")
@@ -675,8 +717,19 @@ with tab_best:
                 absent_note = "; ".join(
                     f"{t}: {', '.join(n.split(' (')[0] for n in absents_map[t])}"
                     for t in (a_match, h_match) if t in absents_map)
+                # betting AGAINST a shorthanded team measured -33% ROI in
+                # the paper log: the book prices the absence before Elo does
+                if mkt["side"] == "home":
+                    vs_short = a_match in absents_map
+                elif mkt["side"] == "away":
+                    vs_short = h_match in absents_map
+                else:  # totals: risky if either lineup is shorthanded
+                    vs_short = (a_match in absents_map
+                                or h_match in absents_map)
                 card_rows.append({
                     "⚠": "⚠️" if match_conf < 0.8 else "",
+                    "⚕opp": "⚕" if vs_short else "",
+                    "vs_shorthanded": vs_short,
                     "⚕ absent": absent_note,
                     "match_conf": match_conf,
                     "game_#": g.get("board_pos"),
@@ -730,8 +783,8 @@ with tab_best:
             if len(bets):
                 st.success(f"{len(bets)} qualifying bets | total stake "
                            f"${bets.stake.sum():,.2f}")
-                show_cols = ["⚠", "game_#", "time", "matchup", "site",
-                             "venue", "⚕ absent", "bet", "odds",
+                show_cols = ["⚠", "⚕opp", "game_#", "time", "matchup",
+                             "site", "venue", "⚕ absent", "bet", "odds",
                              "model_prob", f"p{CONSERVATIVE_Q}", "edge",
                              "stake", "fair_odds"]
                 show_cols = [c for c in show_cols if c in bets.columns]
@@ -759,6 +812,11 @@ with tab_best:
                     now = pd.Timestamp.now(tz="America/New_York")
                     trackable = bets[bets.site != "not on NCAA sched"]
                     n_skipped_sched = len(bets) - len(trackable)
+                    if "vs_shorthanded" in trackable.columns:
+                        n_skipped_short = int(trackable.vs_shorthanded.sum())
+                        trackable = trackable[~trackable.vs_shorthanded]
+                    else:
+                        n_skipped_short = 0
                     recs = [dict(
                         logged_at=now.strftime("%Y-%m-%d %H:%M"),
                         game_date=str(paper_date),
@@ -779,6 +837,9 @@ with tab_best:
                         if n_skipped_sched:
                             msg += (f"; {n_skipped_sched} skipped — game "
                                     f"not on NCAA schedule")
+                        if n_skipped_short:
+                            msg += (f"; {n_skipped_short} skipped — bet "
+                                    f"against a shorthanded team (⚕opp)")
                         st.success(msg + ").")
                     except Exception as e:
                         st.error(f"Paper logging failed: {e}")

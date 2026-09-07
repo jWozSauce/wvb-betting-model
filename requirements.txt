@@ -6,3 +6,4 @@ pyarrow
 requests
 gspread
 google-auth
+anthropic
