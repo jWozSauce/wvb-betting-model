@@ -65,6 +65,28 @@ def load_results():
     return df
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_news(seo):
+    from vbstats.news import team_news
+    return team_news(seo)
+
+
+def render_news(teams):
+    any_items = False
+    for seo in teams:
+        items = cached_news(seo)
+        flagged = [i for i in items if i["flagged"]]
+        rest = [i for i in items if not i["flagged"]]
+        for i in flagged:
+            st.markdown(f"🚨 **[{i['title']}]({i['link']})** — {i['date']}")
+            any_items = True
+        for i in rest[:3]:
+            st.markdown(f"[{i['title']}]({i['link']}) — {i['date']}")
+            any_items = True
+    if not any_items:
+        st.caption("No recent news found for these teams.")
+
+
 @st.cache_data
 def load_rapm():
     df = pd.read_parquet(f"{HERE}/app_data/rapm.parquet")
@@ -201,6 +223,10 @@ with tab_price:
                 st.warning(f"{r.team} has only {int(r.games)} rated games this "
                            f"season — rating still leans on last season's "
                            f"carryover.")
+        with st.expander("📰 Injury / lineup news scan (beat-writer articles, "
+                         "last 7 days)"):
+            render_news([away_team, home_team])
+
         absents = load_availability()
         for team in (home_team, away_team):
             if team in absents:
@@ -790,6 +816,14 @@ with tab_best:
             with st.expander(
                     f"Unparsed tokens ({len(st.session_state.best_unparsed)})"):
                 st.write(st.session_state.best_unparsed[:100])
+        if len(card) and st.button("📰 Scan injury news for all slate teams",
+                                   help="Beat-writer articles from the last "
+                                        "7 days via Google News, one query "
+                                        "per team (cached 1h). 🚨 = title "
+                                        "matches injury language."):
+            slate_teams = sorted(set(card.home_team) | set(card.away_team))
+            with st.spinner(f"Scanning news for {len(slate_teams)} teams…"):
+                render_news(slate_teams)
 
 # ================================================================== rankings
 with tab_rank:
