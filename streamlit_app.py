@@ -766,18 +766,22 @@ with tab_rank:
 # ============================================================== player ranks
 with tab_players:
     st.subheader("Player rankings (RAPM)")
-    st.caption("impact = serve + receive RAPM per 100 rallies — points added "
-               "vs an average player, adjusted for teammates and opponents "
-               "(ridge-regularized, all seasons with recency weighting). "
-               "Unfitted players (no rally history) sit at 0. Click column "
-               "headers to sort.")
+    st.caption("impact_per_set = points a player adds per set vs an average "
+               "player (sets go to 25; an average set has ~41 rallies, ~20 "
+               "in each serve/receive phase), adjusted for teammates and "
+               "opponents via ridge-regularized RAPM over all seasons with "
+               "recency weighting. serve/recv show where the value comes "
+               "from. Unfitted players (no rally history) sit at 0. Click "
+               "column headers to sort.")
     rp, rp_meta = load_rapm()
     rp = rp.copy()
     rp["conf"] = rp.team.map(ratings.set_index("team").conf)
-    rp["serve_100"] = (100 * rp.serve).round(2)
-    rp["recv_100"] = (100 * rp.recv).round(2)
-    rp["impact_100"] = (rp.serve_100 + rp.recv_100).round(2)
-    rp = rp.sort_values("impact_100", ascending=False).reset_index(drop=True)
+    PHASE_RALLIES_PER_SET = 20.4  # empirical: 40.8 rallies/set, half per phase
+    rp["serve_per_set"] = (PHASE_RALLIES_PER_SET * rp.serve).round(2)
+    rp["recv_per_set"] = (PHASE_RALLIES_PER_SET * rp.recv).round(2)
+    rp["impact_per_set"] = (rp.serve_per_set + rp.recv_per_set).round(2)
+    rp = rp.sort_values("impact_per_set",
+                        ascending=False).reset_index(drop=True)
     rp.insert(0, "rank", rp.index + 1)
 
     pf = st.columns([3, 2, 2, 2, 2])
@@ -807,8 +811,9 @@ with tab_players:
 
     st.caption(f"{len(pv)} players shown of {len(rp)}")
     st.dataframe(
-        pv[["rank", "player", "team", "conf", "position", "impact_100",
-            "serve_100", "recv_100", "sets_started_cur", "in_last_lineup"]],
+        pv[["rank", "player", "team", "conf", "position", "impact_per_set",
+            "serve_per_set", "recv_per_set", "sets_started_cur",
+            "in_last_lineup"]],
         width="stretch", height=600, hide_index=True)
 
 # ================================================================== results
