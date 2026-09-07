@@ -161,8 +161,9 @@ def overall_rating(df):
             + b_receive * (df.receive_elo + df.conf_elo)) / w
 
 
-tab_price, tab_best, tab_rank, tab_results, tab_log = st.tabs(
-    ["Price a match", "Best bets", "Rankings", "Results", "Bet log"])
+tab_price, tab_best, tab_rank, tab_players, tab_results, tab_log = st.tabs(
+    ["Price a match", "Best bets", "Rankings", "Player ranks", "Results",
+     "Bet log"])
 
 # ================================================================== pricing
 with tab_price:
@@ -760,6 +761,54 @@ with tab_rank:
         view[["rank", "team", "conf", "overall", "serve_elo", "receive_elo",
               "conf_elo", "games"]].round(
             {"serve_elo": 1, "receive_elo": 1, "conf_elo": 1}),
+        width="stretch", height=600, hide_index=True)
+
+# ============================================================== player ranks
+with tab_players:
+    st.subheader("Player rankings (RAPM)")
+    st.caption("impact = serve + receive RAPM per 100 rallies — points added "
+               "vs an average player, adjusted for teammates and opponents "
+               "(ridge-regularized, all seasons with recency weighting). "
+               "Unfitted players (no rally history) sit at 0. Click column "
+               "headers to sort.")
+    rp, rp_meta = load_rapm()
+    rp = rp.copy()
+    rp["conf"] = rp.team.map(ratings.set_index("team").conf)
+    rp["serve_100"] = (100 * rp.serve).round(2)
+    rp["recv_100"] = (100 * rp.recv).round(2)
+    rp["impact_100"] = (rp.serve_100 + rp.recv_100).round(2)
+    rp = rp.sort_values("impact_100", ascending=False).reset_index(drop=True)
+    rp.insert(0, "rank", rp.index + 1)
+
+    pf = st.columns([3, 2, 2, 2, 2])
+    p_search = pf[0].text_input("Search player or team", "", key="pr_search")
+    positions = sorted(x for x in rp.position.dropna().unique() if x)
+    p_pos = pf[1].multiselect("Position", positions, key="pr_pos")
+    p_conf = pf[2].multiselect("Conference",
+                               sorted(rp.conf.dropna().unique()),
+                               key="pr_conf")
+    p_min_sets = pf[3].number_input("Min sets (this season)", value=5, step=1,
+                                    key="pr_minsets")
+    p_starters = pf[4].checkbox("Last-lineup only", value=False,
+                                key="pr_lastlineup")
+
+    pv = rp
+    if p_search:
+        pv = pv[pv.player.str.contains(p_search, case=False, na=False)
+                | pv.team.str.contains(p_search, case=False, na=False)]
+    if p_pos:
+        pv = pv[pv.position.isin(p_pos)]
+    if p_conf:
+        pv = pv[pv.conf.isin(p_conf)]
+    if p_min_sets:
+        pv = pv[pv.sets_started_cur >= p_min_sets]
+    if p_starters:
+        pv = pv[pv.in_last_lineup]
+
+    st.caption(f"{len(pv)} players shown of {len(rp)}")
+    st.dataframe(
+        pv[["rank", "player", "team", "conf", "position", "impact_100",
+            "serve_100", "recv_100", "sets_started_cur", "in_last_lineup"]],
         width="stretch", height=600, hide_index=True)
 
 # ================================================================== results

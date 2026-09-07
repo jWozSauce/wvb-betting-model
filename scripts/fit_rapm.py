@@ -148,7 +148,11 @@ def main():
                          & (st_cur["set"] == 1)]
             for p in sub.player:
                 last_lineup.add((team, p))
+        pos = (box_cur.groupby(["team", "player"]).position
+               .agg(lambda s: s.mode().iloc[0] if len(s.mode()) else "")
+               .reset_index())
         roster = (box_cur[["team", "player"]].drop_duplicates())
+        roster = roster.merge(pos, on=["team", "player"], how="left")
         roster = roster.merge(rapm, on=["team", "player"], how="left")
         roster = roster.merge(sets_cur, on=["team", "player"], how="left")
         roster["serve"] = roster.serve.fillna(0.0)
