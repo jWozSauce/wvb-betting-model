@@ -278,8 +278,18 @@ with tab_price:
             if not (a_sel and h_sel):
                 st.warning("Empty lineup — that side is priced as an exactly "
                            "average team.")
-            h_sv, h_rc, cov_h = rapm_price.lineup_strength(h_rows, set(h_sel))
-            a_sv, a_rc, cov_a = rapm_price.lineup_strength(a_rows, set(a_sel))
+            pt_weight = st.checkbox(
+                "Weight lineup by playing time", value=True,
+                help="The selection always normalizes to six on-court "
+                     "bodies. Checked: each player's share of those six "
+                     "slots is proportional to sets started this season, so "
+                     "selecting a full roster still prices like the real "
+                     "rotation. Unchecked: everyone selected counts "
+                     "equally (6/n each).")
+            h_sv, h_rc, cov_h = rapm_price.lineup_strength(
+                h_rows, set(h_sel), playtime_weighted=pt_weight)
+            a_sv, a_rc, cov_a = rapm_price.lineup_strength(
+                a_rows, set(a_sel), playtime_weighted=pt_weight)
             base = rapm_meta["intercept"]
             hadv = rapm_meta["home_serve"] if venue_mode == "Home court" else 0.0
             p1 = base + hadv + h_sv - a_rc     # home wins rally, home serving

@@ -77,13 +77,25 @@ def set_score_probs6(p1: float, p2: float, sigma: float) -> np.ndarray:
     return per_node.T @ w
 
 
-def lineup_strength(rapm_rows, selected, weight_key=None):
-    """(serve_sum, recv_sum, coverage) for a selected lineup, weighted 6/n."""
+def lineup_strength(rapm_rows, selected, playtime_weighted=True):
+    """(serve_sum, recv_sum, coverage) for a selected lineup.
+
+    The selection is always normalized to SIX on-court bodies. With
+    playtime_weighted, each selected player's share of those six slots is
+    proportional to their sets started this season (+1 smoothing, so a
+    deliberately added no-history player still gets a share); otherwise
+    everyone gets an equal 6/n share.
+    """
     rows = [r for r in rapm_rows if r["player"] in selected]
     if not rows:
         return 0.0, 0.0, 0.0
-    w = 6.0 / len(rows)
-    sv = w * sum(r["serve"] for r in rows)
-    rc = w * sum(r["recv"] for r in rows)
+    if playtime_weighted:
+        raw = [r.get("sets_started_cur", 0) + 1.0 for r in rows]
+    else:
+        raw = [1.0] * len(rows)
+    tot = sum(raw)
+    weights = [6.0 * x / tot for x in raw]
+    sv = sum(w * r["serve"] for w, r in zip(weights, rows))
+    rc = sum(w * r["recv"] for w, r in zip(weights, rows))
     fitted = sum(1 for r in rows if r["serve"] or r["recv"])
     return sv, rc, fitted / len(rows)
