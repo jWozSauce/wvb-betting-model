@@ -30,7 +30,7 @@ jobs:
           python-version: "3.13"
 
       - name: Install deps
-        run: pip install requests pandas pyarrow scipy numpy
+        run: pip install requests pandas pyarrow scipy numpy scikit-learn
 
       # Raw current-season game files persist between runs in the cache, so
       # each night only the new games are downloaded from the NCAA API.
@@ -42,7 +42,7 @@ jobs:
           restore-keys: raw-${{ env.SEASON }}-
 
       - name: Download new games
-        run: python scripts/backfill.py --season $SEASON
+        run: python scripts/backfill.py --season $SEASON --boxscores
 
       - name: Rebuild season points
         run: python scripts/build_points.py --season $SEASON
@@ -53,12 +53,19 @@ jobs:
       - name: Rebuild player availability
         run: python scripts/build_players.py --season $SEASON
 
+      - name: Refit player RAPM (unfrozen — learns all season)
+        run: |
+          python scripts/build_rapm_tables.py --season $SEASON
+          python scripts/fit_rapm.py --train $ALL_SEASONS --alphas 1000 --save-production
+
       - name: Commit and push updates
         run: |
           git config user.name "ratings-bot"
           git config user.email "actions@users.noreply.github.com"
           git add app_data data/processed/matches_${SEASON}.parquet \
-                  data/processed/points_${SEASON}.parquet
+                  data/processed/points_${SEASON}.parquet \
+                  data/processed/set_starters_${SEASON}.parquet \
+                  data/processed/player_box_${SEASON}.parquet
           if git diff --cached --quiet; then
             echo "No changes — no new final games."
           else

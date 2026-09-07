@@ -247,13 +247,16 @@ with tab_price:
             unsafe_allow_html=True)
 
         model_mode = st.radio(
-            "Pricing model", ["Team Elo", "Player (RAPM)"], horizontal=True,
-            help="Team Elo: the season-long team ratings. Player (RAPM): "
-                 "the match is priced from the two selected lineups' player "
-                 "impacts — edit the lineups to remove injured/absent "
-                 "players and the whole board reprices.")
+            "Pricing model",
+            ["Team Elo", "Hybrid (Elo + lineup adjust)", "Player (RAPM)"],
+            horizontal=True,
+            help="Team Elo: season-long team ratings. Hybrid: Elo baseline, "
+                 "shifted by the RAPM-measured impact of your lineup edits "
+                 "vs the usual lineup — untouched lineups price exactly like "
+                 "Team Elo. Player (RAPM): priced purely from the selected "
+                 "lineups' player impacts.")
 
-        if model_mode == "Player (RAPM)":
+        if model_mode != "Team Elo":
             rapm_df, rapm_meta = load_rapm()
             from vbstats import rapm_price
 
@@ -290,6 +293,18 @@ with tab_price:
                 h_rows, set(h_sel), playtime_weighted=pt_weight)
             a_sv, a_rc, cov_a = rapm_price.lineup_strength(
                 a_rows, set(a_sel), playtime_weighted=pt_weight)
+
+        if model_mode != "Player (RAPM)":
+            Xf = model.features(pd.DataFrame([{
+                "home_serve_elo": a.serve_elo,
+                "home_receive_elo": a.receive_elo,
+                "home_conf_elo": a.conf_elo,
+                "away_serve_elo": h.serve_elo,
+                "away_receive_elo": h.receive_elo,
+                "away_conf_elo": h.conf_elo, "is_neutral": neutral,
+            }]))
+
+        if model_mode == "Player (RAPM)":
             base = rapm_meta["intercept"]
             hadv = rapm_meta["home_serve"] if venue_mode == "Home court" else 0.0
             p1 = base + hadv + h_sv - a_rc     # home wins rally, home serving
@@ -306,16 +321,7 @@ with tab_price:
             probs = probs_pt[None, :]
             mk_point = {k: v[0] for k, v in model.markets(probs).items()}
             draw_probs = np.tile(probs_pt, (2, 1))
-        else:
-            Xf = model.features(pd.DataFrame([{
-                "home_serve_elo": a.serve_elo,
-                "home_receive_elo": a.receive_elo,
-                "home_conf_elo": a.conf_elo,
-                "away_serve_elo": h.serve_elo,
-                "away_receive_elo": h.receive_elo,
-                "away_conf_elo": h.conf_elo, "is_neutral": neutral,
-            }]))
-
+        elif model_mode == "Team Elo":
             def probs6(param_vec):
                 """Set-score distribution; toss-up mode averages both label
                 orientations (flipped one reversed back to home
@@ -329,6 +335,50 @@ with tab_price:
             probs = probs6(params)[None, :]
             mk_point = {k: v[0] for k, v in model.markets(probs).items()}
             draw_probs = np.stack([probs6(d) for d in param_draws])
+        else:  # Hybrid: Elo baseline + RAPM set-logit shift for lineup edits
+            base = rapm_meta["intercept"]
+
+            def rally_eta(sv_h, rc_h, sv_a, rc_a):
+                p1 = base + sv_h - rc_a
+                p2 = 1 - (base + sv_a - rc_h)
+                ps = min(max(rapm_price.set_win_prob(p1, p2, 25), 1e-6),
+                         1 - 1e-6)
+                return float(np.log(ps / (1 - ps)))
+
+            def default_sel(rows):
+                if not rows:
+                    return set()
+                d = {r["player"] for r in rows if r["in_last_lineup"]}
+                return d or {r["player"] for r in rows[:6]}
+
+            hd_sv, hd_rc, _ = rapm_price.lineup_strength(
+                h_rows, default_sel(h_rows), playtime_weighted=pt_weight)
+            ad_sv, ad_rc, _ = rapm_price.lineup_strength(
+                a_rows, default_sel(a_rows), playtime_weighted=pt_weight)
+            delta = (rally_eta(h_sv, h_rc, a_sv, a_rc)
+                     - rally_eta(hd_sv, hd_rc, ad_sv, ad_rc))
+
+            def probs6_h(pv):
+                X1 = np.array([[1.0, 0, 0, 0]])
+                eta = float(X[0] @ pv[:4]) + delta
+                p = model.set_score_probs(
+                    X1, np.array([eta, 0, 0, 0, pv[4], pv[5]]))[0]
+                if tossup:
+                    etaf = float(Xf[0] @ pv[:4]) - delta
+                    pf = model.set_score_probs(
+                        X1, np.array([etaf, 0, 0, 0, pv[4], pv[5]]))[0]
+                    p = 0.5 * (p + pf[::-1])
+                return p
+
+            st.caption(
+                f"Hybrid: team-Elo baseline with a lineup adjustment of "
+                f"{delta:+.3f} on the set-win logit (0.000 = lineups "
+                f"unchanged from each team's usual six — prices exactly "
+                f"like Team Elo). Adjustment is the RAPM-measured impact "
+                f"of your edits.")
+            probs = probs6_h(params)[None, :]
+            mk_point = {k: v[0] for k, v in model.markets(probs).items()}
+            draw_probs = np.stack([probs6_h(d) for d in param_draws])
 
         def draw_markets(dp):
             return {
