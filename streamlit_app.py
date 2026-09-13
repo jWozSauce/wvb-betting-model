@@ -52,7 +52,7 @@ if not gate():
 
 
 # ------------------------------------------------------------------ data
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_ratings():
     return pd.read_parquet(f"{HERE}/app_data/elo_current.parquet")
 
@@ -101,14 +101,14 @@ def render_news(teams):
         st.caption("No recent news found for these teams.")
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_rapm():
     df = pd.read_parquet(f"{HERE}/app_data/rapm.parquet")
     meta = json.load(open(f"{HERE}/app_data/rapm_meta.json"))
     return df, meta
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_availability():
     try:
         df = pd.read_parquet(f"{HERE}/app_data/availability.parquet")
@@ -124,7 +124,7 @@ def load_availability():
     return out
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def load_model():
     blob = json.load(open(f"{HERE}/app_data/model_params.json"))
     params = np.array(blob["params"])
