@@ -538,9 +538,13 @@ with tab_price:
             tz="America/New_York").date(), key="log_date")
         book = lg[1].text_input("Book", value=cfg.get("last_book", "betonline"),
                                 key="log_book")
-        stake_actual = lg[2].number_input("Stake placed ($)",
-                                          value=float(stake), step=1.0,
-                                          key="log_stake")
+        # context-keyed so the box follows the freshest Kelly recommendation
+        # whenever the pick/odds/model change, while a manual edit sticks
+        # until the recommendation itself changes
+        stake_actual = lg[2].number_input(
+            "Stake placed ($)", value=float(stake), step=1.0,
+            key=f"log_stake|{away_team}@{home_team}|{pick}|{book_odds}|"
+                f"{other_odds}|{round(stake, 2)}")
         if lg[3].button("Log this bet", type="primary",
                         help="Appends to the Vball_Bet_Log worksheet of the "
                              "Constants Google Sheet."):
