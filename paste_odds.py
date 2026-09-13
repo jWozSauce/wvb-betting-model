@@ -300,6 +300,18 @@ ALIASES = {
     "ulm": "la-monroe",
     "ull": "la-lafayette",
     "iupui": "iu-indy",
+    "ncstate": "north-carolina-st",   # else fuzzy grabs nc-at (NC A&T)
+    "ncst": "north-carolina-st",
+    "northcarolinastate": "north-carolina-st",
+    "northcarolinaat": "nc-at",
+    "ncat": "nc-at",
+    "unc": "north-carolina",           # longest-alias-wins protects campuses
+    "uncwilmington": "unc-wilmington",
+    "uncasheville": "unc-asheville",
+    "unca": "unc-asheville",
+    "uncgreensboro": "unc-greensboro",
+    "uncg": "unc-greensboro",
+    "liu": "long-island",
 }
 
 
@@ -313,12 +325,17 @@ def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
     """
     n = _norm(name)
     first_word = _norm(name.split()[0]) if name.split() else n
+    # longest matching alias wins, so "UNC Wilmington" prefers the campus
+    # alias over the bare "unc" first-word match
+    best_alias = None
     for alias, seo in ALIASES.items():
-        if (n == alias or first_word == alias) and seo in seonames:
-            return seo, 1.0
-    for alias, seo in ALIASES.items():
-        if n.startswith(alias) and seo in seonames:
-            return seo, 1.0
+        if seo not in seonames:
+            continue
+        if n == alias or n.startswith(alias) or first_word == alias:
+            if best_alias is None or len(alias) > len(best_alias[0]):
+                best_alias = (alias, seo)
+    if best_alias:
+        return best_alias[1], 1.0
     if len(n) <= 4:  # unknown acronym: exact match only, never fuzzy
         return (n, 1.0) if n in seonames else (None, 0.0)
     best, score = None, 0.0
