@@ -57,9 +57,23 @@ def load_ratings():
     return pd.read_parquet(f"{HERE}/app_data/elo_current.parquet")
 
 
-@st.cache_data
+RAW_RESULTS_URL = ("https://raw.githubusercontent.com/jWozSauce/"
+                   "wvb-betting-model/main/app_data/results_current.parquet")
+
+
+@st.cache_data(ttl=600)
 def load_results():
-    df = pd.read_parquet(f"{HERE}/app_data/results_current.parquet")
+    """Live results from the repo (the bot's freshest commit), so grading
+    never depends on this app instance having redeployed; local file as
+    fallback. Short TTL so long-lived sessions stay current."""
+    import io
+    import requests as _rq
+    try:
+        r = _rq.get(RAW_RESULTS_URL, timeout=15)
+        r.raise_for_status()
+        df = pd.read_parquet(io.BytesIO(r.content))
+    except Exception:
+        df = pd.read_parquet(f"{HERE}/app_data/results_current.parquet")
     df["date"] = (pd.to_datetime(df.start_epoch, unit="s", utc=True)
                   .dt.tz_convert("America/New_York").dt.strftime("%Y-%m-%d"))
     return df
@@ -1008,11 +1022,14 @@ with tab_log:
                     help="Settles pending bets in BOTH logs (real + paper) "
                          "against the results table."):
         try:
+            load_results.clear()  # always grade against the freshest results
+            res = load_results()
             with st.spinner("Grading…"):
-                n1, msg1 = bet_log.grade_pending(load_results())
+                n1, msg1 = bet_log.grade_pending(res)
                 n2, msg2 = bet_log.grade_pending(
-                    load_results(), worksheet=bet_log.PAPER_WORKSHEET)
-            st.success(f"real: {msg1} | paper: {msg2}")
+                    res, worksheet=bet_log.PAPER_WORKSHEET)
+            st.success(f"real: {msg1} | paper: {msg2} — graded against "
+                       f"results through {res.date.max()} ({len(res)} games)")
             st.session_state.pop("bet_log_df", None)
             st.session_state.pop("paper_log_df", None)
         except Exception as e:
