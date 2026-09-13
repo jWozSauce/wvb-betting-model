@@ -45,15 +45,18 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
             for c in contests:
                 key = frozenset(t["seoname"] for t in c["teams"])
                 if key in wanted and key not in contest_for:
-                    contest_for[key] = c["contestId"]
+                    ncaa_home = next((t["seoname"] for t in c["teams"]
+                                      if t.get("isHome")), None)
+                    contest_for[key] = (c["contestId"], ncaa_home)
 
     out = {}
     for away, home in pairs:
         key = frozenset((away, home))
-        cid = contest_for.get(key)
-        if cid is None:
+        hit = contest_for.get(key)
+        if hit is None:
             out[(away, home)] = {"venue": "", "site": "not on NCAA sched"}
             continue
+        cid, ncaa_home = hit
         try:
             g = client.game(cid)
             loc = (g or {}).get("location") or {}
@@ -74,5 +77,10 @@ def slate_venues(pairs, home_venue_map: dict, days_ahead: int = 2,
             site = f"neutral ({owner}'s gym)" if owner else "neutral (3rd site)"
         else:
             site = "?"
+        # NCAA and the book disagreeing on which team is home is the
+        # signature of special-event games with placeholder venue data
+        # (e.g. Vandy/UNC at Hammerstein Ballroom listed as Memorial Gym)
+        if ncaa_home and ncaa_home != home:
+            site += " ⚠home-mismatch: verify venue"
         out[(away, home)] = {"venue": label, "site": site}
     return out
