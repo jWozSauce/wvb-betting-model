@@ -554,7 +554,9 @@ with tab_price:
                 point=row["point"], book=book, odds=book_odds,
                 stake=stake_actual, edge=round(edge, 4),
                 model_prob=row["prob"], model_fair=row["fair_odds"],
-                status="pending", profit="", graded_at="")
+                status="pending", profit="", graded_at="",
+                mkt_prob=round(p_mkt_side, 4) if other_odds else "",
+                blend_prob=round(p_stake, 4) if other_odds else "")
             try:
                 bet_log.log_bets([rec])
                 app_config.update(last_book=book)
@@ -874,7 +876,9 @@ with tab_best:
                         book=book_b, odds=r.odds, stake=r.stake,
                         edge=r.edge, model_prob=r.model_prob,
                         model_fair=r.fair_odds, status="pending",
-                        profit="", graded_at="")
+                        profit="", graded_at="",
+                        mkt_prob=getattr(r, "mkt_prob", ""),
+                        blend_prob=getattr(r, "blend_prob", ""))
                         for r in trackable.itertuples()]
                     try:
                         n_ = bet_log.log_bets(
