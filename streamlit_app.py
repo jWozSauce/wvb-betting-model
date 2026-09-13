@@ -183,6 +183,11 @@ with st.sidebar:
 
 
 # ------------------------------------------------------------------ helpers
+VENUE_SHORT = {"Home court": "home",
+               "Neutral (host/label matters)": "neutral-host",
+               "True toss-up (symmetrized)": "toss-up"}
+
+
 def away_first(df):
     """Reorder columns so away_team displays before home_team."""
     cols = list(df.columns)
@@ -560,7 +565,8 @@ with tab_price:
                 model_prob=row["prob"], model_fair=row["fair_odds"],
                 status="pending", profit="", graded_at="",
                 mkt_prob=round(p_mkt_side, 4) if other_odds else "",
-                blend_prob=round(p_stake, 4) if other_odds else "")
+                blend_prob=round(p_stake, 4) if other_odds else "",
+                venue_mode=VENUE_SHORT.get(venue_mode, venue_mode))
             try:
                 bet_log.log_bets([rec])
                 app_config.update(last_book=book)
@@ -882,7 +888,8 @@ with tab_best:
                         model_fair=r.fair_odds, status="pending",
                         profit="", graded_at="",
                         mkt_prob=getattr(r, "mkt_prob", ""),
-                        blend_prob=getattr(r, "blend_prob", ""))
+                        blend_prob=getattr(r, "blend_prob", ""),
+                        venue_mode=VENUE_SHORT.get(venue_b, venue_b))
                         for r in trackable.itertuples()]
                     try:
                         n_ = bet_log.log_bets(
@@ -917,7 +924,8 @@ with tab_best:
                             model_fair=r.fair_odds, status="pending",
                             profit="", graded_at="",
                             mkt_prob=getattr(r, "mkt_prob", ""),
-                            blend_prob=getattr(r, "blend_prob", ""))
+                            blend_prob=getattr(r, "blend_prob", ""),
+                            venue_mode=VENUE_SHORT.get(venue_b, venue_b))
                             for r in picks.itertuples()]
                         try:
                             n_ = bet_log.log_bets(recs)

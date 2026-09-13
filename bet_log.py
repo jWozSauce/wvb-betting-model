@@ -30,7 +30,7 @@ SCOPES = ["https://spreadsheets.google.com/feeds",
 HEADER = ["logged_at", "game_date", "matchup", "home_team", "away_team",
           "bet", "market", "side", "point", "book", "odds", "stake",
           "edge", "model_prob", "model_fair", "status", "profit", "graded_at",
-          "mkt_prob", "blend_prob"]  # devig + blend appended 2026-09-13
+          "mkt_prob", "blend_prob", "venue_mode"]  # blend 2026-09-13; venue_mode 2026-09-13
 
 
 def _client():
