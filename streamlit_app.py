@@ -915,7 +915,9 @@ with tab_best:
                             book=book_b, odds=r.odds, stake=r.stake,
                             edge=r.edge, model_prob=r.model_prob,
                             model_fair=r.fair_odds, status="pending",
-                            profit="", graded_at="")
+                            profit="", graded_at="",
+                            mkt_prob=getattr(r, "mkt_prob", ""),
+                            blend_prob=getattr(r, "blend_prob", ""))
                             for r in picks.itertuples()]
                         try:
                             n_ = bet_log.log_bets(recs)
