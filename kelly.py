@@ -17,6 +17,26 @@ def prob_to_american(p):
     return round(-100 * p / (1 - p)) if p >= 0.5 else round(100 * (1 - p) / p)
 
 
+def vig_free_probs(odds_a, odds_b):
+    """Two-way vig-free probabilities, WPO method (same as the NCAAF model /
+    R `implied` package)."""
+    da, db = american_to_decimal(odds_a), american_to_decimal(odds_b)
+    n, margin = 2, (1 / da + 1 / db - 1)
+    pa = (n - margin * da) / (n * da)
+    pb = (n - margin * db) / (n * db)
+    return pa, pb
+
+
+def blend_prob(p_model, p_market, w_model):
+    """Shrink the model probability toward the market's, in logit space."""
+    import math
+    def lg(p):
+        p = min(max(p, 1e-6), 1 - 1e-6)
+        return math.log(p / (1 - p))
+    z = w_model * lg(p_model) + (1 - w_model) * lg(p_market)
+    return 1 / (1 + math.exp(-z))
+
+
 def kelly_stake(bankroll, kelly_fraction, odds_bet, my_prob, edge_cap):
     """Stake at odds_bet given my_prob; edge above edge_cap is clamped
     (my_prob pulled down to implied + cap). 0 when there is no edge."""

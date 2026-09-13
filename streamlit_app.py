@@ -172,6 +172,14 @@ with st.sidebar:
         f"Conservative (p{CONSERVATIVE_Q} of posterior)", value=True,
         help="Gate and size bets off the low end of the model's parameter "
              "uncertainty instead of the point estimate.")
+    w_model = st.number_input(
+        "Model weight in market blend", value=0.30, min_value=0.0,
+        max_value=1.0, step=0.05,
+        help="Probabilities are shrunk toward the DE-VIGGED book price "
+             "(WPO devig, same as the NCAAF model) in logit space: "
+             "blend = w×model + (1−w)×market. Fitted on the paper log "
+             "(n=125): the market dominated on high-disagreement bets, so "
+             "the default is 0.30. 1.0 = pure model (old behavior).")
 
 
 # ------------------------------------------------------------------ helpers
@@ -491,19 +499,32 @@ with tab_price:
                      width="stretch", height=600)
 
         st.subheader("Kelly stake")
-        kc = st.columns(3)
+        kc = st.columns(4)
         pick = kc[0].selectbox("Outcome", board.outcome.tolist())
         book_odds = kc[1].number_input("Book odds", value=-110, step=5)
+        other_odds = kc[2].number_input(
+            "Other side's odds (0 = skip blend)", value=0, step=5,
+            help="Enter the book's price on the opposite side to enable the "
+                 "market blend: the pair is de-vigged (WPO) and the model "
+                 "probability is shrunk toward the market per the sidebar "
+                 "weight. Leave 0 to price on the model alone.")
         row = board[board.outcome == pick].iloc[0]
         p_stake = (row[f"prob_p{CONSERVATIVE_Q}"] if conservative
                    else row["prob"])
         implied = kelly.american_to_prob(book_odds)
+        if other_odds:
+            p_mkt_side = kelly.vig_free_probs(book_odds, other_odds)[0]
+            p_stake_raw = p_stake
+            p_stake = kelly.blend_prob(p_stake, p_mkt_side, w_model)
+            st.caption(f"Blend: model {p_stake_raw:.1%} × {w_model:.2f} + "
+                       f"market (devig) {p_mkt_side:.1%} × {1-w_model:.2f} "
+                       f"→ {p_stake:.1%}")
         edge = p_stake - implied
         edge_point = row["prob"] - implied
         stake = (kelly.kelly_stake(bankroll, kfrac, book_odds, p_stake, edge_cap)
                  if edge >= value_req else 0.0)
         basis = f"p{CONSERVATIVE_Q}" if conservative else "point"
-        kc[2].metric("Stake", f"${stake:,.2f}", delta=f"edge {edge:+.1%} ({basis})",
+        kc[3].metric("Stake", f"${stake:,.2f}", delta=f"edge {edge:+.1%} ({basis})",
                      help=f"Gated and sized on the {basis} probability "
                           f"{p_stake:.1%} vs vig-included implied {implied:.1%}."
                           f" $0 means that edge < min edge ({value_req:.1%}).")
@@ -705,7 +726,8 @@ with tab_best:
 
             probs_pt = probs6_b(params)
             draws_g = np.stack([probs6_b(d) for d in param_draws])
-            for mkt in g["markets"]:
+            mkt_devigs = paste_odds.market_devig(g["markets"])
+            for mkt_i, mkt in enumerate(g["markets"]):
                 p = paste_odds.price_market(probs_pt, mkt["market"],
                                             mkt["side"], mkt["point"])
                 if p is None:
@@ -714,8 +736,17 @@ with tab_best:
                     paste_odds.price_market(dp, mkt["market"], mkt["side"],
                                             mkt["point"]) for dp in draws_g])
                 p_lo = float(np.percentile(p_draws, CONSERVATIVE_Q))
-                p_basis = p_lo if conservative else p
                 implied = kelly.american_to_prob(mkt["odds"])
+                # market blend: shrink model toward the de-vigged book price
+                # (WPO); unpaired markets shrink toward the vig-included
+                # implied instead (more conservative)
+                p_mkt = mkt_devigs[mkt_i]
+                mkt_paired = p_mkt is not None
+                if not mkt_paired:
+                    p_mkt = implied
+                p_blend = kelly.blend_prob(p, p_mkt, w_model)
+                p_lo_blend = kelly.blend_prob(p_lo, p_mkt, w_model)
+                p_basis = p_lo_blend if conservative else p_blend
                 edge = p_basis - implied
                 stake_ = (kelly.kelly_stake(bankroll, kfrac, mkt["odds"],
                                             p_basis, edge_cap)
@@ -753,9 +784,12 @@ with tab_best:
                     "venue": vi.get("venue", ""),
                     "bet": bet_label_, "odds": mkt["odds"],
                     "model_prob": round(p, 4),
+                    "mkt_prob": round(p_mkt, 4),
+                    "blend_prob": round(p_blend, 4),
+                    "devig": "wpo" if mkt_paired else "one-sided",
                     f"p{CONSERVATIVE_Q}": round(p_lo, 4),
                     "edge": round(edge, 4), "stake": stake_,
-                    "fair_odds": kelly.prob_to_american(p),
+                    "fair_odds": kelly.prob_to_american(p_blend),
                     "market": mkt["market"], "side": mkt["side"],
                     "point": mkt["point"],
                     "away_team": a_match, "home_team": h_match,
@@ -799,7 +833,7 @@ with tab_best:
                            f"${bets.stake.sum():,.2f}")
                 show_cols = ["⚠", "⚕opp", "game_#", "time", "matchup",
                              "site", "venue", "⚕ absent", "bet", "odds",
-                             "model_prob", f"p{CONSERVATIVE_Q}", "edge",
+                             "model_prob", "mkt_prob", "blend_prob", "edge",
                              "stake", "fair_odds"]
                 show_cols = [c for c in show_cols if c in bets.columns]
                 bets_show = bets[show_cols].reset_index(drop=True)

@@ -347,6 +347,39 @@ def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
     return (best, score) if score >= 0.62 else (None, score)
 
 
+def market_devig(markets: list[dict]) -> list:
+    """Per-market vig-free probability by pairing complements within one
+    game's parsed markets (ml home/away; spread ±point; total o/u at the
+    same point). Unpaired markets get None. Parallel to the input list."""
+    from kelly import vig_free_probs
+    out = [None] * len(markets)
+    used = set()
+    for i, m in enumerate(markets):
+        if i in used:
+            continue
+        for j in range(i + 1, len(markets)):
+            if j in used:
+                continue
+            n = markets[j]
+            if m["market"] != n["market"]:
+                continue
+            ok = False
+            if m["market"] == "ml":
+                ok = {m["side"], n["side"]} == {"home", "away"}
+            elif m["market"] == "spread":
+                ok = ({m["side"], n["side"]} == {"home", "away"}
+                      and float(m["point"]) == -float(n["point"]))
+            elif m["market"] == "total":
+                ok = ({m["side"], n["side"]} == {"over", "under"}
+                      and float(m["point"]) == float(n["point"]))
+            if ok:
+                pa, pb = vig_free_probs(m["odds"], n["odds"])
+                out[i], out[j] = pa, pb
+                used.update((i, j))
+                break
+    return out
+
+
 def price_market(probs6, market: str, side: str, point) -> float | None:
     """Model probability of a market from the home-perspective 6-outcome
     distribution [3-0, 3-1, 3-2, 2-3, 1-3, 0-3]. Returns None for lines we
