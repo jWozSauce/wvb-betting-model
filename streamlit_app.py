@@ -1006,6 +1006,9 @@ with tab_players:
     rp["serve_per_set"] = (PHASE_RALLIES_PER_SET * rp.serve).round(2)
     rp["recv_per_set"] = (PHASE_RALLIES_PER_SET * rp.recv).round(2)
     rp["impact_per_set"] = (rp.serve_per_set + rp.recv_per_set).round(2)
+    # total contribution this season = rate x sets actually played; the
+    # "biggest absence" view, vs impact_per_set's "best player" view
+    rp["season_impact"] = (rp.impact_per_set * rp.sets_started_cur).round(1)
     rp = rp.sort_values("impact_per_set",
                         ascending=False).reset_index(drop=True)
     rp.insert(0, "rank", rp.index + 1)
@@ -1038,8 +1041,8 @@ with tab_players:
     st.caption(f"{len(pv)} players shown of {len(rp)}")
     st.dataframe(
         pv[["rank", "player", "team", "conf", "position", "impact_per_set",
-            "serve_per_set", "recv_per_set", "sets_started_cur",
-            "in_last_lineup"]],
+            "season_impact", "serve_per_set", "recv_per_set",
+            "sets_started_cur", "in_last_lineup"]],
         width="stretch", height=600, hide_index=True)
 
 # ================================================================== results
