@@ -398,16 +398,19 @@ with tab_price:
                          1 - 1e-6)
                 return float(np.log(ps / (1 - ps)))
 
-            def default_sel(rows):
-                if not rows:
-                    return set()
-                d = {r["player"] for r in rows if r["in_last_lineup"]}
-                return d or {r["player"] for r in rows[:6]}
+            # Reference = the SEASON-TYPICAL rotation (full roster, weighted
+            # by season playing time) — the personnel mix the Elo rating was
+            # actually earned with. Comparing tonight's expected lineup to
+            # it makes a season regular's absence produce an automatic
+            # negative delta even when she also missed the last match
+            # (which Elo has barely digested).
+            def season_reference(rows):
+                return {r["player"] for r in rows} if rows else set()
 
             hd_sv, hd_rc, _ = rapm_price.lineup_strength(
-                h_rows, default_sel(h_rows), playtime_weighted=pt_weight)
+                h_rows, season_reference(h_rows), playtime_weighted=True)
             ad_sv, ad_rc, _ = rapm_price.lineup_strength(
-                a_rows, default_sel(a_rows), playtime_weighted=pt_weight)
+                a_rows, season_reference(a_rows), playtime_weighted=True)
             delta = (rally_eta(h_sv, h_rc, a_sv, a_rc)
                      - rally_eta(hd_sv, hd_rc, ad_sv, ad_rc))
 
@@ -425,10 +428,12 @@ with tab_price:
 
             st.caption(
                 f"Hybrid: team-Elo baseline with a lineup adjustment of "
-                f"{delta:+.3f} on the set-win logit (0.000 = lineups "
-                f"unchanged from each team's usual six — prices exactly "
-                f"like Team Elo). Adjustment is the RAPM-measured impact "
-                f"of your edits.")
+                f"{delta:+.3f} on the set-win logit. The reference is each "
+                f"team's SEASON rotation (playtime-weighted) — the personnel "
+                f"the Elo rating was earned with — so a season regular "
+                f"missing from tonight's lineup lowers the price "
+                f"automatically, even if she also missed the last match. "
+                f"Add her back to the lineup if news says she returns.")
             probs = probs6_h(params)[None, :]
             mk_point = {k: v[0] for k, v in model.markets(probs).items()}
             draw_probs = np.stack([probs6_h(d) for d in param_draws])
