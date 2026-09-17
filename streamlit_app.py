@@ -101,6 +101,45 @@ def render_news(teams):
         st.caption("No recent news found for these teams.")
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_injury_analysis(team, absents_key):
+    """One Claude call per team per hour (absents_key busts the cache when
+    the availability flags change). Raises on API/auth errors."""
+    key = None
+    try:
+        key = st.secrets.get("ANTHROPIC_API_KEY")
+    except Exception:
+        pass
+    from vbstats.injury_ai import analyze_team
+    rp_all, _ = load_rapm()
+    tr_ = rp_all[rp_all.team == team].sort_values("sets_started_cur",
+                                                  ascending=False)
+    core_list = [f"{r.player} ({r.position}, {r.sets_started_cur} sets)"
+                 for r in tr_.head(12).itertuples()]
+    return analyze_team(team, cached_news(team), list(absents_key),
+                        core_list, api_key=key)
+
+
+def render_injury_analysis(teams):
+    """Auto-run the AI injury check for each team; cached per team/hour."""
+    absents = load_availability()
+    for t in teams:
+        try:
+            with st.spinner(f"🩺 Injury analysis: {t}…"):
+                verdict = cached_injury_analysis(
+                    t, tuple(absents.get(t, [])))
+        except Exception as e:
+            if any(s in str(e).lower() for s in ("auth", "api_key", "401")):
+                st.info("Auto injury analysis needs ANTHROPIC_API_KEY in "
+                        "Streamlit secrets (cloud) or the environment "
+                        "(local).")
+                return
+            st.warning(f"{t}: injury analysis failed ({e})")
+            continue
+        with st.expander(f"🩺 {t} — AI injury analysis"):
+            st.markdown(verdict)
+
+
 @st.cache_data(ttl=3600)
 def load_rapm():
     df = pd.read_parquet(f"{HERE}/app_data/rapm.parquet")
@@ -253,6 +292,10 @@ with tab_price:
         with st.expander("📰 Injury / lineup news scan (beat-writer articles, "
                          "last 7 days)"):
             render_news([away_team, home_team])
+
+        # auto AI injury check for both teams (cached: one API call per
+        # team per hour, refreshed when a new team is selected)
+        render_injury_analysis([away_team, home_team])
 
         absents = load_availability()
         for team in (home_team, away_team):
@@ -606,33 +649,7 @@ with tab_price:
                                    placeholder="Search team…", key="ai_team")
     if ai_cols[1].button("Send injury analysis to API", type="primary",
                          disabled=not ai_team):
-        try:
-            key = None
-            try:
-                key = st.secrets.get("ANTHROPIC_API_KEY")
-            except Exception:
-                pass
-            from vbstats.injury_ai import analyze_team
-            rp_all, _ = load_rapm()
-            tr_ = rp_all[rp_all.team == ai_team].sort_values(
-                "sets_started_cur", ascending=False)
-            core_list = [f"{r.player} ({r.position}, "
-                         f"{r.sets_started_cur} sets)"
-                         for r in tr_.head(12).itertuples()]
-            absent_list = load_availability().get(ai_team, [])
-            arts = cached_news(ai_team)
-            with st.spinner("Analyzing with Claude…"):
-                verdict = analyze_team(ai_team, arts, absent_list,
-                                       core_list, api_key=key)
-            st.markdown(verdict)
-        except Exception as e:
-            if "auth" in str(e).lower() or "api_key" in str(e).lower() \
-                    or "401" in str(e):
-                st.error("No Anthropic API key found — add "
-                         "ANTHROPIC_API_KEY to Streamlit secrets (cloud) "
-                         "or your environment (local).")
-            else:
-                st.error(f"Analysis failed: {e}")
+        render_injury_analysis([ai_team])
 
 # ================================================================== best bets
 with tab_best:
