@@ -76,8 +76,21 @@ def main():
             names[tid] = seo
             if conf:
                 confs[tid] = conf
+    # full school names from the current season's game files (the schedule
+    # feed only has abbreviations), so the app's team search matches
+    # "Georgia Southern", not just "ga-southern"
+    import json as _json
+    full_names = {}
+    games_dir = Path("data/raw") / str(int(out.season.max())) / "games"
+    for pth in games_dir.glob("*.json"):
+        g = _json.loads(pth.read_text()).get("game") or {}
+        for t in g.get("teams", []):
+            if t.get("seoname") and t.get("nameFull"):
+                full_names[t["seoname"]] = t["nameFull"]
+
     current = final[final.team_id.isin(names)].copy()
     current["team"] = current.team_id.map(names)
+    current["name_full"] = current.team.map(full_names).fillna(current.team)
     current["conf"] = current.team_id.map(confs)
     current["conf_elo"] = current.conf.map(ratings.conf).fillna(0.0)
     current = current.sort_values("team")

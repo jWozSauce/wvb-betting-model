@@ -260,7 +260,9 @@ with tab_price:
 
     def team_label(seo):
         r = ratings[ratings.team == seo].iloc[0]
-        return f"{seo}  ({r.conf}, {int(r.games)} gms)"
+        full = getattr(r, "name_full", seo)
+        extra = f" — {full}" if str(full).lower() != seo else ""
+        return f"{seo}{extra}  ({r.conf}, {int(r.games)} gms)"
 
     mc = st.columns([3, 3, 2])
     away_team = mc[0].selectbox("Away team (listed first at the book)",
