@@ -312,11 +312,17 @@ ALIASES = {
     "uncgreensboro": "unc-greensboro",
     "uncg": "unc-greensboro",
     "liu": "long-island",
+    "georgiasouthern": "ga-southern",
 }
 
 
-def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
+def match_team(name: str, seonames: list[str],
+               fullnames: dict | None = None) -> tuple[str | None, float]:
     """Fuzzy-match a book team name (school + mascot) to a seoname.
+
+    fullnames (optional): {seoname: official school name}. Candidates are
+    also scored against their full name, so "Georgia Southern" matches
+    ga-southern via "Georgia Southern University" without needing an alias.
 
     Short names (<=4 letters) are treated as acronyms: they match only via
     the alias table or exact equality — generic fuzzy similarity between
@@ -344,6 +350,16 @@ def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
         r = difflib.SequenceMatcher(None, s, n).ratio()
         if s and n.startswith(s):  # 'nebraska' prefix of 'nebraskacornhuskers'
             r = max(r, 0.5 + 0.5 * len(s) / len(n))
+        # score against the official school name too ("georgiasouthern" is
+        # a prefix of "georgiasouthernuniversity")
+        if fullnames and fullnames.get(seo):
+            f = _norm(str(fullnames[seo]))
+            if f:
+                r = max(r, difflib.SequenceMatcher(None, f, n).ratio())
+                if f.startswith(n) and len(n) >= 6:
+                    r = max(r, 0.6 + 0.4 * len(n) / len(f))
+                if n.startswith(f):
+                    r = max(r, 0.6 + 0.4 * len(f) / len(n))
         # mascot-stripping heuristic: match against the first two words, but
         # penalized so a full-name match always beats a truncated one
         # ("South Dakota State" must not lose to "South Dakota"'s exact
@@ -356,7 +372,11 @@ def match_team(name: str, seonames: list[str]) -> tuple[str | None, float]:
         # words ("Ohio State" must not become ohio)
         parts = name.split()
         if (len(parts) > 1 and parts[-1].lower().strip(".") not in
-                ("state", "st", "tech", "university", "college")
+                ("state", "st", "tech", "university", "college",
+                 # directional/qualifier suffixes are school identity, not
+                 # mascots: "Georgia Southern" must not strip to "Georgia"
+                 "southern", "northern", "eastern", "western", "central",
+                 "international", "am", "a&m")
                 and _norm(" ".join(parts[:-1])) == s):
             r = max(r, 0.88)
         if r > score:

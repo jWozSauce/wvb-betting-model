@@ -710,10 +710,15 @@ with tab_best:
 
     if st.button("Parse & evaluate", type="primary") and paste.strip():
         games, unparsed, n_oddsless = paste_odds.parse_board(paste)
+        seos_all = ratings.team.tolist()
+        team_fullnames = (dict(zip(ratings.team, ratings.name_full))
+                          if "name_full" in ratings.columns else None)
         matched_pairs = []
         for g in games:
-            hm_, _ = paste_odds.match_team(g["home"], ratings.team.tolist())
-            am_, _ = paste_odds.match_team(g["away"], ratings.team.tolist())
+            hm_, _ = paste_odds.match_team(g["home"], seos_all,
+                                           fullnames=team_fullnames)
+            am_, _ = paste_odds.match_team(g["away"], seos_all,
+                                           fullnames=team_fullnames)
             if hm_ and am_:
                 matched_pairs.append((am_, hm_))
         venue_info = cached_venues(tuple(sorted(matched_pairs)))
@@ -726,8 +731,10 @@ with tab_best:
         seos = ratings.team.tolist()
         card_rows, unmatched, low_conf = [], [], []
         for g in games:
-            h_match, hs = paste_odds.match_team(g["home"], seos)
-            a_match, as_ = paste_odds.match_team(g["away"], seos)
+            h_match, hs = paste_odds.match_team(g["home"], seos,
+                                                fullnames=team_fullnames)
+            a_match, as_ = paste_odds.match_team(g["away"], seos,
+                                                fullnames=team_fullnames)
             if not h_match or not a_match:
                 unmatched.append(f"{g['away']} @ {g['home']} "
                                  f"(match scores {as_:.2f}/{hs:.2f})")
