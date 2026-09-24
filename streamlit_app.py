@@ -225,6 +225,17 @@ with st.sidebar:
 VENUE_SHORT = {"Home court": "home",
                "Neutral (host/label matters)": "neutral-host",
                "True toss-up (symmetrized)": "toss-up"}
+MODEL_SHORT = {"Team Elo": "elo", "Hybrid (Elo + lineup adjust)": "hybrid",
+               "Player (RAPM)": "player"}
+
+
+def pricing_context(price_model):
+    """Every setting that shaped this bet's price/gate/stake — logged with
+    the bet so later analysis can condition on strategy, not just outcome."""
+    return dict(w_model=w_model, basis="p20" if conservative else "point",
+                min_edge=value_req, kelly_frac=kfrac, edge_cap=edge_cap,
+                bankroll=bankroll,
+                price_model=MODEL_SHORT.get(price_model, price_model))
 
 
 def away_first(df):
@@ -616,7 +627,8 @@ with tab_price:
                 status="pending", profit="", graded_at="",
                 mkt_prob=round(p_mkt_side, 4) if other_odds else "",
                 blend_prob=round(p_stake, 4) if other_odds else "",
-                venue_mode=VENUE_SHORT.get(venue_mode, venue_mode))
+                venue_mode=VENUE_SHORT.get(venue_mode, venue_mode),
+                **pricing_context(model_mode))
             try:
                 bet_log.log_bets([rec])
                 app_config.update(last_book=book)
@@ -920,7 +932,8 @@ with tab_best:
                         profit="", graded_at="",
                         mkt_prob=getattr(r, "mkt_prob", ""),
                         blend_prob=getattr(r, "blend_prob", ""),
-                        venue_mode=VENUE_SHORT.get(venue_b, venue_b))
+                        venue_mode=VENUE_SHORT.get(venue_b, venue_b),
+                        **pricing_context("Team Elo"))
                         for r in trackable.itertuples()]
                     try:
                         n_ = bet_log.log_bets(
@@ -956,7 +969,8 @@ with tab_best:
                             profit="", graded_at="",
                             mkt_prob=getattr(r, "mkt_prob", ""),
                             blend_prob=getattr(r, "blend_prob", ""),
-                            venue_mode=VENUE_SHORT.get(venue_b, venue_b))
+                            venue_mode=VENUE_SHORT.get(venue_b, venue_b),
+                            **pricing_context("Team Elo"))
                             for r in picks.itertuples()]
                         try:
                             n_ = bet_log.log_bets(recs)
