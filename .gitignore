@@ -12,3 +12,5 @@ streamlit.log
 backfill_*.log
 .streamlit/secrets.toml
 sheet_id.txt
+oddspapi_key.txt
+odds papi API.rtf

@@ -681,29 +681,42 @@ with tab_price:
 
 # ================================================================== best bets
 with tab_best:
-    st.subheader("Best bets from a pasted board")
-    st.caption(
-        "Open the book's NCAA W volleyball page, select all (Cmd+A), copy, "
-        "and paste below. Away team is assumed to be listed first in each "
-        "game. Every parsed market is priced with the model; bets are gated "
-        "and sized exactly like the pricing tab (same staking basis, min "
-        "edge, and edge cap).")
-    with st.expander("How to copy the board (bookmarklet — one-time setup)"):
-        st.markdown(
-            "BetOnline's odds buttons are excluded from normal select-all "
-            "copy, so use this instead:\n\n"
-            "1. Create a bookmark in your browser; name it `Copy board` and "
-            "paste this as the URL:\n"
-            "```\n"
-            "javascript:(async()=>{await navigator.clipboard.writeText("
-            "document.body.innerText);alert('Board copied to clipboard');})()"
-            "\n```\n"
-            "2. Open the book's NCAA W volleyball page, click the `Copy "
-            "board` bookmark, then paste below.\n\n"
-            "Alternative (no bookmark): open DevTools Console on the page "
-            "(Cmd+Opt+J) and run `copy(document.body.innerText)`.")
-    paste = st.text_area("Pasted board", height=200,
-                         placeholder="Paste the sportsbook page text here…")
+    st.subheader("Best bets")
+    source_b = st.radio(
+        "Odds source",
+        ["Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"],
+        horizontal=True, key="best_source",
+        help="Live API pulls the whole NCAA W slate from OddsPapi — one "
+             "request per book (free tier: 250/month). Each market shows "
+             "the BEST price across books; the blend anchor devigs the "
+             "sharpest book quoting both sides (Pinnacle first).")
+    paste = ""
+    if source_b == "Paste a board":
+        st.caption(
+            "Open the book's NCAA W volleyball page, select all (Cmd+A), "
+            "copy, and paste below. Away team is assumed to be listed first "
+            "in each game. Every parsed market is priced with the model; "
+            "bets are gated and sized exactly like the pricing tab (same "
+            "staking basis, min edge, and edge cap).")
+        with st.expander("How to copy the board (bookmarklet — one-time "
+                         "setup)"):
+            st.markdown(
+                "BetOnline's odds buttons are excluded from normal "
+                "select-all copy, so use this instead:\n\n"
+                "1. Create a bookmark in your browser; name it `Copy board` "
+                "and paste this as the URL:\n"
+                "```\n"
+                "javascript:(async()=>{await navigator.clipboard.writeText("
+                "document.body.innerText);alert('Board copied to "
+                "clipboard');})()"
+                "\n```\n"
+                "2. Open the book's NCAA W volleyball page, click the "
+                "`Copy board` bookmark, then paste below.\n\n"
+                "Alternative (no bookmark): open DevTools Console on the "
+                "page (Cmd+Opt+J) and run `copy(document.body.innerText)`.")
+        paste = st.text_area("Pasted board", height=200,
+                             placeholder="Paste the sportsbook page text "
+                                         "here…")
     venue_b = st.selectbox(
         "Venue for ALL games on this slate", ["Home court",
         "Neutral (host/label matters)", "True toss-up (symmetrized)"],
@@ -734,8 +747,37 @@ with tab_best:
         except Exception:
             return {}
 
-    if st.button("Parse & evaluate", type="primary") and paste.strip():
-        games, unparsed, n_oddsless = paste_odds.parse_board(paste)
+    @st.cache_data(ttl=600, show_spinner="Fetching live odds (one request "
+                                         "per book)…")
+    def cached_api_board():
+        import oddspapi
+        games_, nreq_ = oddspapi.fetch_board()
+        try:
+            acct = oddspapi.account()
+            used = acct.get("requests_used", acct.get("request_count", "?"))
+            lim = acct.get("request_limit", "?")
+            quota = f"{used}/{lim} requests used this month"
+        except Exception:
+            quota = ""
+        return games_, nreq_, quota
+
+    run_eval, games, unparsed, n_oddsless = False, [], [], 0
+    if source_b == "Paste a board":
+        if st.button("Parse & evaluate", type="primary") and paste.strip():
+            games, unparsed, n_oddsless = paste_odds.parse_board(paste)
+            run_eval = True
+    else:
+        fc = st.columns([2, 5])
+        if fc[0].button("Fetch odds & evaluate", type="primary"):
+            try:
+                games, nreq, quota = cached_api_board()
+                st.caption(f"OddsPapi: {len(games)} pregame games fetched"
+                           + (f" | {quota}" if quota else "")
+                           + " (cached 10 min — re-clicks are free)")
+                run_eval = True
+            except Exception as e:
+                st.error(f"OddsPapi fetch failed: {e}")
+    if run_eval:
         seos_all = ratings.team.tolist()
         team_fullnames = (dict(zip(ratings.team, ratings.name_full))
                           if "name_full" in ratings.columns else None)
@@ -809,7 +851,9 @@ with tab_best:
                 # market blend: shrink model toward the de-vigged book price
                 # (WPO); unpaired markets shrink toward the vig-included
                 # implied instead (more conservative)
-                p_mkt = mkt_devigs[mkt_i]
+                # API markets carry their own devig anchor (sharpest book
+                # quoting both sides); pasted boards pair complements here
+                p_mkt = mkt.get("mkt_prob") or mkt_devigs[mkt_i]
                 mkt_paired = p_mkt is not None
                 if not mkt_paired:
                     p_mkt = implied
@@ -848,14 +892,18 @@ with tab_best:
                     "match_conf": match_conf,
                     "game_#": g.get("board_pos"),
                     "time": g.get("time", ""),
+                    "game_date": g.get("date", ""),
                     "matchup": f"{a_match} @ {h_match}",
                     "site": vi.get("site", ""),
                     "venue": vi.get("venue", ""),
                     "bet": bet_label_, "odds": mkt["odds"],
+                    "book": mkt.get("book", ""),
                     "model_prob": round(p, 4),
                     "mkt_prob": round(p_mkt, 4),
                     "blend_prob": round(p_blend, 4),
-                    "devig": "wpo" if mkt_paired else "one-sided",
+                    "devig": (f"wpo ({mkt['devig_book']})"
+                              if mkt.get("devig_book")
+                              else "wpo" if mkt_paired else "one-sided"),
                     f"p{CONSERVATIVE_Q}": round(p_lo, 4),
                     "edge": round(edge, 4), "stake": stake_,
                     "fair_odds": kelly.prob_to_american(p_blend),
@@ -872,7 +920,8 @@ with tab_best:
     # a card parsed before an app update may lack newer columns — drop it
     if "best_card" in st.session_state:
         _card = st.session_state.best_card
-        if len(_card) and not {"game_#", "site", "⚠"} <= set(_card.columns):
+        if len(_card) and not {"game_#", "site", "⚠",
+                               "book"} <= set(_card.columns):
             for k in ("best_card", "best_unmatched", "best_low_conf",
                       "best_unparsed", "best_n_games"):
                 st.session_state.pop(k, None)
@@ -902,8 +951,8 @@ with tab_best:
                            f"${bets.stake.sum():,.2f}")
                 show_cols = ["⚠", "⚕opp", "game_#", "time", "matchup",
                              "site", "venue", "⚕ absent", "bet", "odds",
-                             "model_prob", "mkt_prob", "blend_prob", "edge",
-                             "stake", "fair_odds"]
+                             "book", "model_prob", "mkt_prob", "blend_prob",
+                             "edge", "stake", "fair_odds"]
                 show_cols = [c for c in show_cols if c in bets.columns]
                 bets_show = bets[show_cols].reset_index(drop=True)
                 bets_show.insert(0, "log", False)
@@ -936,11 +985,13 @@ with tab_best:
                         n_skipped_short = 0
                     recs = [dict(
                         logged_at=now.strftime("%Y-%m-%d %H:%M"),
-                        game_date=str(paper_date),
+                        game_date=getattr(r, "game_date", "")
+                        or str(paper_date),
                         matchup=r.matchup, home_team=r.home_team,
                         away_team=r.away_team, bet=r.bet,
                         market=r.market, side=r.side, point=r.point,
-                        book=book_b, odds=r.odds, stake=r.stake,
+                        book=getattr(r, "book", "") or book_b,
+                        odds=r.odds, stake=r.stake,
                         edge=r.edge, model_prob=r.model_prob,
                         model_fair=r.fair_odds, status="pending",
                         profit="", graded_at="",
@@ -975,11 +1026,13 @@ with tab_best:
                         now = pd.Timestamp.now(tz="America/New_York")
                         recs = [dict(
                             logged_at=now.strftime("%Y-%m-%d %H:%M"),
-                            game_date=now.strftime("%Y-%m-%d"),
+                            game_date=getattr(r, "game_date", "")
+                            or now.strftime("%Y-%m-%d"),
                             matchup=r.matchup, home_team=r.home_team,
                             away_team=r.away_team, bet=r.bet,
                             market=r.market, side=r.side, point=r.point,
-                            book=book_b, odds=r.odds, stake=r.stake,
+                            book=getattr(r, "book", "") or book_b,
+                            odds=r.odds, stake=r.stake,
                             edge=r.edge, model_prob=r.model_prob,
                             model_fair=r.fair_odds, status="pending",
                             profit="", graded_at="",

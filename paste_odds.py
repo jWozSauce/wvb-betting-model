@@ -276,12 +276,27 @@ def _norm(s: str) -> str:
     return re.sub(r"[^a-z]", "", s.lower())
 
 
+def _school_core(fullname: str) -> str:
+    """Official name minus institutional dressing: 'The Ohio State
+    University' -> 'ohiostate', 'University of Georgia' -> 'georgia'."""
+    c = _norm(fullname)
+    if c.startswith("the"):
+        c = c[3:]
+    if c.startswith("universityof"):
+        c = c[len("universityof"):]
+    for suf in ("university", "college"):
+        if c.endswith(suf):
+            c = c[:-len(suf)]
+    return c
+
+
 # book school names whose NCAA seoname isn't fuzzy-findable
 ALIASES = {
     "omaha": "neb-omaha",
     "uconn": "connecticut",
     "usc": "southern-california",
     "olemiss": "ole-miss",
+    "pennstate": "penn-st",  # official name is "Pennsylvania State Univ."
     "miami": "miami-fl",
     "miamioh": "miami-oh",
     "appstate": "appalachian-st",
@@ -390,18 +405,32 @@ def match_team(name: str, seonames: list[str],
         words = _norm("".join(name.split()[:2]))
         if len(words) > 4:
             r = max(r, 0.85 * difflib.SequenceMatcher(None, s, words).ratio())
-        # exact school match once a trailing mascot word is removed is nearly
-        # certain ("Kansas Jayhawks" -> kansas) — but never strip structural
-        # words ("Ohio State" must not become ohio)
+        # exact school match once trailing mascot words are removed is
+        # nearly certain ("Kansas Jayhawks" -> kansas, "Minnesota Golden
+        # Gophers" -> minnesota) — but never strip structural words ("Ohio
+        # State" must not become ohio, "Texas A&M Aggies" not texas)
         parts = name.split()
-        if (len(parts) > 1 and parts[-1].lower().strip(".") not in
-                ("state", "st", "tech", "university", "college",
-                 # directional/qualifier suffixes are school identity, not
-                 # mascots: "Georgia Southern" must not strip to "Georgia"
-                 "southern", "northern", "eastern", "western", "central",
-                 "international", "am", "a&m")
-                and _norm(" ".join(parts[:-1])) == s):
-            r = max(r, 0.88)
+        protect = ("state", "st", "tech", "university", "college",
+                   # directional/qualifier suffixes are school identity,
+                   # not mascots: "Georgia Southern" must not strip to
+                   # "Georgia"
+                   "southern", "northern", "eastern", "western", "central",
+                   "international", "am", "a&m")
+        for strip_n in (1, 2):  # one- and two-word mascots
+            if (len(parts) > strip_n
+                    and all(w.lower().strip(".") not in protect
+                            for w in parts[-strip_n:])):
+                stripped = _norm(" ".join(parts[:-strip_n]))
+                hit = stripped == s
+                # "Ohio State Buckeyes": stripped "ohiostate" isn't the
+                # seoname "ohiost" but IS the official "The Ohio State
+                # University" minus institutional dressing. Exact equality
+                # with that core only — a prefix test would hand "Georgia
+                # Bulldogs" to Georgia Southern
+                if not hit and fullnames and fullnames.get(seo):
+                    hit = stripped == _school_core(str(fullnames[seo]))
+                if hit:
+                    r = max(r, 0.88)
         if r > score:
             best, score = seo, r
     return (best, score) if score >= 0.62 else (None, score)
