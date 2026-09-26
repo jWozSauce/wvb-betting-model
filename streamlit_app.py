@@ -246,6 +246,17 @@ def away_first(df):
     return df[cols]
 
 
+def with_start_time(df):
+    """Fold game_time into the displayed game_date ('2026-09-26 7:00 PM')
+    for rows where a start time was captured."""
+    if "game_time" not in df.columns:
+        return df
+    df = df.copy()
+    t = df.game_time.fillna("").astype(str).str.strip()
+    df["game_date"] = (df.game_date.astype(str) + " " + t).str.strip()
+    return df.drop(columns=["game_time"])
+
+
 def overall_rating(df):
     """Regression-weighted overall rating on the Elo scale.
 
@@ -599,19 +610,21 @@ with tab_price:
                    f"{row[f'prob_p{CONSERVATIVE_Q}'] - implied:+.1%} — the "
                    f"'{basis}' one is what gates and sizes the bet.")
 
-        lg = st.columns([2, 2, 2, 2])
+        lg = st.columns([2, 1.4, 2, 2, 2])
         game_date = lg[0].date_input("Game date", value=pd.Timestamp.now(
             tz="America/New_York").date(), key="log_date")
-        book = lg[1].text_input("Book", value=cfg.get("last_book", "betonline"),
+        game_time = lg[1].text_input("Start (opt.)", value="",
+                                     key="log_time", placeholder="7:00 PM")
+        book = lg[2].text_input("Book", value=cfg.get("last_book", "betonline"),
                                 key="log_book")
         # context-keyed so the box follows the freshest Kelly recommendation
         # whenever the pick/odds/model change, while a manual edit sticks
         # until the recommendation itself changes
-        stake_actual = lg[2].number_input(
+        stake_actual = lg[3].number_input(
             "Stake placed ($)", value=float(stake), step=1.0,
             key=f"log_stake|{away_team}@{home_team}|{pick}|{book_odds}|"
                 f"{other_odds}|{round(stake, 2)}")
-        if lg[3].button("Log this bet", type="primary",
+        if lg[4].button("Log this bet", type="primary",
                         help="Appends to the Vball_Bet_Log worksheet of the "
                              "Constants Google Sheet."):
             rec = dict(
@@ -628,7 +641,8 @@ with tab_price:
                 mkt_prob=round(p_mkt_side, 4) if other_odds else "",
                 blend_prob=round(p_stake, 4) if other_odds else "",
                 venue_mode=VENUE_SHORT.get(venue_mode, venue_mode),
-                **pricing_context(model_mode))
+                **pricing_context(model_mode),
+                game_time=paste_odds.game_time_et(game_time))
             try:
                 bet_log.log_bets([rec])
                 app_config.update(last_book=book)
@@ -933,7 +947,9 @@ with tab_best:
                         mkt_prob=getattr(r, "mkt_prob", ""),
                         blend_prob=getattr(r, "blend_prob", ""),
                         venue_mode=VENUE_SHORT.get(venue_b, venue_b),
-                        **pricing_context("Team Elo"))
+                        **pricing_context("Team Elo"),
+                        game_time=paste_odds.game_time_et(
+                            getattr(r, "time", ""), now))
                         for r in trackable.itertuples()]
                     try:
                         n_ = bet_log.log_bets(
@@ -970,7 +986,9 @@ with tab_best:
                             mkt_prob=getattr(r, "mkt_prob", ""),
                             blend_prob=getattr(r, "blend_prob", ""),
                             venue_mode=VENUE_SHORT.get(venue_b, venue_b),
-                            **pricing_context("Team Elo"))
+                            **pricing_context("Team Elo"),
+                            game_time=paste_odds.game_time_et(
+                                getattr(r, "time", ""), now))
                             for r in picks.itertuples()]
                         try:
                             n_ = bet_log.log_bets(recs)
@@ -1156,8 +1174,8 @@ with tab_log:
                                   f"{(settled.status == 'push').sum()}")
         mcols[2].metric("Profit", f"${profit:,.2f}")
         mcols[3].metric("ROI", f"{profit / staked:+.1%}" if staked else "—")
-        st.dataframe(away_first(log_df).iloc[::-1], width="stretch",
-                     height=500, hide_index=True)
+        st.dataframe(with_start_time(away_first(log_df)).iloc[::-1],
+                     width="stretch", height=500, hide_index=True)
     else:
         st.info("No bets logged yet — log one from the pricing tab.")
 
@@ -1202,7 +1220,8 @@ with tab_log:
             st.caption("ROI by claimed edge — if the model is honest, bigger "
                        "claimed edges should earn more:")
             st.dataframe(by.round(3), width="stretch")
-        st.dataframe(away_first(paper).iloc[::-1], width="stretch", height=400)
+        st.dataframe(with_start_time(away_first(paper)).iloc[::-1],
+                     width="stretch", height=400)
     else:
         st.info("Nothing tracked yet — use '📋 Track full card (paper)' on "
                 "the Best bets tab after parsing a slate.")

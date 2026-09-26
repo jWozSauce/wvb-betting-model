@@ -17,8 +17,10 @@ Unparsed lines are returned for debugging so format quirks are visible.
 
 from __future__ import annotations
 
+import datetime as _dt
 import difflib
 import re
+from zoneinfo import ZoneInfo
 
 AMERICAN = re.compile(r"^[+-]\d{3,4}$")
 SPREAD = re.compile(r"^[+-]\d(?:\.5)?$")
@@ -53,6 +55,27 @@ TIMEISH = re.compile(
     r"^(starts in\b.*|today\b.*|tomorrow\b.*|"
     r"(mon|tue|wed|thu|fri|sat|sun)[a-z]*[, ].*|"
     r"\d{1,2}:\d{2}(:\d{2})?\s*(am|pm)?)$", re.I)
+
+
+def game_time_et(raw: str, now: _dt.datetime | None = None) -> str:
+    """Normalize a board time string to a clock time like '7:00 PM' for the
+    bet log. Relative times ('Starts in 1h 23m') are resolved against the
+    current Eastern time; returns '' when nothing time-like is present."""
+    raw = (raw or "").strip()
+    if not raw:
+        return ""
+    if now is None:
+        now = _dt.datetime.now(ZoneInfo("America/New_York"))
+    m = re.search(r"starts?\s+in\s+(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?", raw, re.I)
+    if m and (m.group(1) or m.group(2)):
+        t = now + _dt.timedelta(hours=int(m.group(1) or 0),
+                                minutes=int(m.group(2) or 0))
+        return t.strftime("%I:%M %p").lstrip("0")
+    m = re.search(r"(\d{1,2}):(\d{2})(?::\d{2})?\s*(am|pm)?", raw, re.I)
+    if m:
+        ap = f" {m.group(3).upper()}" if m.group(3) else ""
+        return f"{int(m.group(1))}:{m.group(2)}{ap}"
+    return raw
 
 
 def _parse_blocks(lines: list[str]) -> tuple[list[dict], list[str], int]:

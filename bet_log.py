@@ -33,7 +33,10 @@ HEADER = ["logged_at", "game_date", "matchup", "home_team", "away_team",
           "mkt_prob", "blend_prob", "venue_mode",
           # full pricing context per bet (added 2026-09-23)
           "w_model", "basis", "min_edge", "kelly_frac", "edge_cap",
-          "bankroll", "price_model"]
+          "bankroll", "price_model",
+          # scheduled start time when known (added 2026-09-26) — new columns
+          # must always be APPENDED so historical column indices don't shift
+          "game_time"]
 
 
 def _client():
@@ -62,11 +65,18 @@ def _ws(worksheet=WORKSHEET):
     from app_config import _sheet_id
     ss = _client().open_by_key(_sheet_id())
     try:
-        return ss.worksheet(worksheet)
+        ws = ss.worksheet(worksheet)
     except gspread.exceptions.WorksheetNotFound:
         ws = ss.add_worksheet(title=worksheet, rows=2000, cols=len(HEADER))
         ws.update([HEADER], "A1")
         return ws
+    # schema migration: when the code grows new (appended) columns, widen
+    # the grid and rewrite the header so get_all_records keys line up
+    if ws.col_count < len(HEADER):
+        ws.resize(cols=len(HEADER))
+    if len(ws.row_values(1)) < len(HEADER):
+        ws.update([HEADER], "A1")
+    return ws
 
 
 def log_bets(rows, worksheet=WORKSHEET, dedupe=False):
