@@ -122,10 +122,14 @@ def main():
                     box_rows.append(row)
 
     out = Path("data/processed")
-    starters = pd.DataFrame(starter_rows).drop_duplicates()
+    # merge cross-game spelling variants of the same athlete (feeds
+    # flip-flop on "McDermott"/"Mcdermott" etc.) before writing
+    from vbstats.names import canonicalize_players
+    starters = canonicalize_players(
+        pd.DataFrame(starter_rows)).drop_duplicates()
     starters.to_parquet(out / f"set_starters_{args.season}.parquet",
                         index=False)
-    boxes = pd.DataFrame(box_rows)
+    boxes = canonicalize_players(pd.DataFrame(box_rows))
     boxes.to_parquet(out / f"player_box_{args.season}.parquet", index=False)
     print(f"{args.season}: {n_games} regulation games | "
           f"{len(starters)} starter rows | boxscores in {n_with_box} games "

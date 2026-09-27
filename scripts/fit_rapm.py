@@ -106,10 +106,24 @@ def main():
                     help="per-year weight decay for older seasons")
     args = ap.parse_args()
 
+    from vbstats.names import apply_canonical, canonical_map
+
+    # one spelling-merge map pooled over every season's starters plus the
+    # current boxscore table, so all frames joined on (team, player) agree
+    # even when a feed changed its capitalization between seasons
+    seasons_raw = {s: load_season(s) for s in args.train}
+    cur = max(args.train)
+    box_raw = pd.read_parquet(D / f"player_box_{cur}.parquet")
+    cmap = canonical_map([st for _, _, st in seasons_raw.values()]
+                         + [box_raw])
+    n_merged = len(cmap)
+    print(f"name canonicalization: {n_merged} spelling-variant groups "
+          f"merged")
+
     train_parts = []
     for s in args.train:
-        m, p, st = load_season(s)
-        t = phase_table(m, p, st)
+        m, p, st = seasons_raw[s]
+        t = phase_table(m, p, apply_canonical(st, cmap))
         t["season"] = s
         train_parts.append(t)
     tr = pd.concat(train_parts, ignore_index=True)
@@ -118,7 +132,6 @@ def main():
     X, player_ix = build_design(tr)
     y = (tr.w / tr.n).to_numpy()
     wgt = tr.n.to_numpy().astype(float)
-    cur = max(args.train)
     wgt = wgt * (args.recency ** (cur - tr.season.to_numpy()))
     print(f"design: {X.shape[0]} rows x {X.shape[1]} cols "
           f"({len(player_ix)} player-team entities)")
@@ -135,9 +148,10 @@ def main():
                  "serve": coefs[2 * ix], "recv": coefs[2 * ix + 1]}
                 for (t, p), ix in player_ix.items()]
         rapm = pd.DataFrame(rows)
-        # current-season participation for lineup defaults in the app
-        st_cur = pd.read_parquet(D / f"set_starters_{cur}.parquet")
-        box_cur = pd.read_parquet(D / f"player_box_{cur}.parquet")
+        # current-season participation for lineup defaults in the app,
+        # under the same spelling-merge map as the fit
+        st_cur = apply_canonical(seasons_raw[cur][2], cmap)
+        box_cur = apply_canonical(box_raw, cmap)
         sets_cur = (st_cur.groupby(["team", "player"]).size()
                     .rename("sets_started_cur").reset_index())
         last_cid = (st_cur.sort_values("start_epoch")
