@@ -752,6 +752,17 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   audit job finished: original parquets/parameters hash-preserved. No
   worker background job remains from that replay.
 
+### 2026-10-01 11:36 EDT — T1 in progress: stale staking context
+
+- **Bug, high, live staking/logging path:** a Best bets card retains its
+  old stakes when sidebar settings change. AppTest: bankroll $500→$1,000
+  leaves the displayed $31.50 stake unchanged; parsing the same board
+  again produces $63.00. Logging reads current sidebar context alongside
+  the old card. Evidence: `evidence/t1-20261001/stale_slate.json`, repro
+  `scripts/audit/slate_state_audit.py`. No real log writes were made.
+- Q5 requests a separate repair. No application code changed in T1.
+  All audit jobs have finished; report consolidation continues.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -813,3 +824,15 @@ handling of ambiguous school names. Require zero wrong matches on the
 captured corpus plus focused Utah/UTA, USC/USC Upstate, Miami Ohio/Florida,
 and LSU/LSU New Orleans regressions. Audit real log exposure read-only;
 do not rewrite records or production defaults as part of this review.
+
+### Q5 — 2026-10-01 11:36 EDT — Stale stakes and mismatched logged context
+
+Changing bankroll (and other pricing controls) does not invalidate or
+reprice `best_card`; `pricing_context` reads current controls at log time.
+The measured $31.50→$63.00 stake requires pressing Parse again despite the
+sidebar already showing the new bankroll. **Recommendation:** authorize a
+separate repair to capture a complete pricing-input snapshot with each
+card, invalidate/reprice when it changes, and log that exact snapshot.
+Require bankroll, basis, blend, edge, and venue change regressions with
+Sheets mocked. T1's report-only rule prohibits this fix here; no real
+records or production behavior were changed.

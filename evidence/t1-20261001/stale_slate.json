@@ -1,0 +1,18 @@
+{
+  "initial_bankroll": 500,
+  "updated_bankroll": 1000,
+  "initial_stakes": [
+    0.0,
+    31.5
+  ],
+  "stakes_after_sidebar_edit": [
+    0.0,
+    31.5
+  ],
+  "stakes_after_re_evaluate": [
+    0.0,
+    63.0
+  ],
+  "stakes_remain_stale": true,
+  "log_context_risk": "pricing_context reads current sidebar globals when logging previously priced card; no log button was pressed"
+}
