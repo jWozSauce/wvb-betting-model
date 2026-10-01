@@ -25,7 +25,7 @@ import kelly
 import paste_odds
 import repair_flags
 import safe_http
-from vbstats import model
+from vbstats import model, player_metrics
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONSERVATIVE_Q = 20  # percentile of the posterior used for staking
@@ -147,6 +147,11 @@ def load_rapm():
     df = pd.read_parquet(f"{HERE}/app_data/rapm.parquet")
     meta = json.load(open(f"{HERE}/app_data/rapm_meta.json"))
     return df, meta
+
+
+@st.cache_data(ttl=3600)
+def load_player_annotations():
+    return player_metrics.annotation_index(load_rapm()[0])
 
 
 @st.cache_data(ttl=3600)
@@ -302,12 +307,16 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
         render_injury_analysis([away_team, home_team])
 
     absents = load_availability()
+    annotations = (load_player_annotations()
+                   if repair_flags.enabled() else {})
     for team in (home_team, away_team):
         if team in absents:
             st.warning(f"⚕ {team} — core starter(s) absent from their "
-                       f"last match: {', '.join(absents[team])}. The "
-                       f"rating doesn't know; verify status before "
-                       f"betting.")
+                       f"last match: {', '.join(player_metrics.annotate(team, name, annotations) if repair_flags.enabled() else name for name in absents[team])}. "
+                       + ("Team Elo does not auto-adjust for absences; player modes "
+                          "depend on your selected lineup. Verify status before betting."
+                          if repair_flags.enabled() else
+                          "The rating doesn't know; verify status before betting."))
 
     df = pd.DataFrame([{
         "home_serve_elo": h.serve_elo, "home_receive_elo": h.receive_elo,
@@ -378,7 +387,9 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
             sel = col.multiselect(
                 f"{team} lineup (remove injured/absent)",
                 tr.player.tolist(), default=default,
-                key=f"{key_prefix}lineup_{team}")
+                key=f"{key_prefix}lineup_{team}",
+                format_func=(lambda name: player_metrics.annotate(team, name, annotations))
+                if repair_flags.enabled() else str)
             return tr.to_dict("records"), sel
 
         lc = st.columns(2)
@@ -926,8 +937,10 @@ with tab_best:
                                   f"{mkt['side'].title()} {mkt['point']:g} sets")
                     vi = venue_info.get((a_match, h_match), {})
                     absents_map = load_availability()
+                    absence_annotations = (load_player_annotations()
+                                           if repair_flags.enabled() else {})
                     absent_note = "; ".join(
-                        f"{t}: {', '.join(n.split(' (')[0] for n in absents_map[t])}"
+                        f"{t}: {', '.join(player_metrics.annotate(t, n.split(' (')[0], absence_annotations) if repair_flags.enabled() else n.split(' (')[0] for n in absents_map[t])}"
                         for t in (a_match, h_match) if t in absents_map)
                     # betting AGAINST a shorthanded team measured -33% ROI in
                     # the paper log: the book prices the absence before Elo does
@@ -1172,13 +1185,7 @@ with tab_players:
     rp, rp_meta = load_rapm()
     rp = rp.copy()
     rp["conf"] = rp.team.map(ratings.set_index("team").conf)
-    PHASE_RALLIES_PER_SET = 20.4  # empirical: 40.8 rallies/set, half per phase
-    rp["serve_per_set"] = (PHASE_RALLIES_PER_SET * rp.serve).round(2)
-    rp["recv_per_set"] = (PHASE_RALLIES_PER_SET * rp.recv).round(2)
-    rp["impact_per_set"] = (rp.serve_per_set + rp.recv_per_set).round(2)
-    # total contribution this season = rate x sets actually played; the
-    # "biggest absence" view, vs impact_per_set's "best player" view
-    rp["season_impact"] = (rp.impact_per_set * rp.sets_started_cur).round(1)
+    rp = player_metrics.add_metrics(rp)
     rp = rp.sort_values("impact_per_set",
                         ascending=False).reset_index(drop=True)
     rp.insert(0, "rank", rp.index + 1)
