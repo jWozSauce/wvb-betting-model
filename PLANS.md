@@ -248,6 +248,76 @@ no-behavior-change check on the existing tab; (v) drill-in wiring +
 parity evidence. Report after (iv) if the refactor turns out riskier than
 specified — stop and ask rather than forking the pricing code.
 
+**2026-10-01 (later) — Planner's note to the worker:** T2 is authorized to
+START NOW — no further instruction is coming. Monitor check-ins that only
+re-read the plan do not advance it; begin T2 stage (i) on branch
+`t2-schedule-pricing`. Also: commit your worker-log entries rather than
+leaving them as uncommitted edits, so the audit trail survives.
+
+**2026-10-01 (later) — Owner's instruction (verbatim in substance):** review
+whether the market blend must be as strict as it is — at 70% market / 30%
+model, even major model-vs-market disagreements fail the edge requirement.
+Task T3 below. Order of work: T2, then T3, then T1.
+
+### T3 — Is the blend/gate too strict? (analysis + recommendation; no app change)
+
+**Status: open. Run after T2.** Deliverable is a report and a
+recommendation; any change to the deployed default (w_model or min edge)
+is the owner's decision afterward.
+
+**What is already known (planner, measured 2026-10-01 on
+`data/processed/backtest_odds_2026.parquet` — verify, do not trust).**
+At w=0.30 with a 2% gate vs vig-included implied: market 50% requires
+model ≥64.3% to bet (60%→73.7%, 70%→82.9%). On DK closing lines
+(Aug 28–Sep 25): bets passing the gate 18-11, +32.3%; positive
+disagreements of 8+ points that FAIL the gate went 10-26 (−30.6%);
+5–8-point disagreements −12.5%; marginal bets admitted by w=0.40@2% went
+2-10 (−63%), by w=0.50@2% 6-17 (−33%). I.e. current evidence says the
+strictness is load-bearing — but n is small and it is closing lines only.
+
+**Integrity note (planner's ruling).** The existing backtest parquet has
+already been used to sweep w once (2026-09-26), so results on it are
+confirmatory/diagnostic, not fresh out-of-sample. The games swept AFTER
+2026-09-26 are the clean increment; report them separately.
+
+**Specification.**
+1. Extend the historical sweep first: run `scripts/backfill_odds.py`
+   (free endpoint, resumable, one copy only) to cover finished fixtures
+   through yesterday; rebuild the backtest rows with
+   `scripts/backtest_odds.py`. Report how many new boarded fixtures the
+   extension added.
+2. On the full sample and on the post-09-26 increment separately:
+   (a) ROI/record by disagreement bucket (p_model − p_mkt: 2–5, 5–8,
+   8–12, 12+ points), for bets failing and passing the current gate;
+   (b) the (w × gate) grid, w ∈ {0.30, 0.35, 0.40, 0.50}, gate ∈
+   {1%, 2%, 3%, 4%, 6%}: n, record, flat-stake ROI, and a bootstrap 90%
+   interval on ROI (resample bets, ≥10k draws, seed published);
+   (c) for each loosening relative to (0.30, 2%): the MARGINAL bets it
+   admits and their record — the decision-relevant quantity;
+   (d) ML logloss of the blend across w on closing devigs.
+3. Cross-check against the paper log (read-only via `bet_log.read_log`,
+   or export): same bucket analysis at TAKEN prices rather than closing,
+   acknowledging those prices predate close. State where the two datasets
+   agree and disagree.
+4. Pre-registered decision frame (planner): recommend changing the
+   default only if some (w, gate) cell beats (0.30, 2%) on total profit
+   AND its bootstrap interval excludes the kind of loss the marginal-bet
+   analysis shows; otherwise recommend keeping current settings and name
+   the sample size at which the question should be reopened.
+
+**Deliverables.** `BLEND_REVIEW_2026-10.md` at repo root (verdict and
+recommendation up front, owner-readable); analysis code under
+`scripts/audit/`; worker-log entry with the headline numbers.
+
+**Acceptance gate.** All four analyses present with reconciling bet
+counts; bootstrap seed published; increment (post-09-26) reported
+separately; no change to any app default in this task.
+
+**Boundaries.** Google Sheets read-only; no OddsPapi billable calls
+(historical + account endpoints only); only one backfill_odds.py
+instance; nothing merged to `main` except the report, scripts/audit/,
+and PLANS.md entries.
+
 ### T1 — Full audit of the app and its statistical methods (review only)
 
 **Status: open. Report first; change nothing under review** (WORKER.md §3,
@@ -407,6 +477,19 @@ Standing restrictions (planner, 2026-10-01):
 - Next execution task is T2 stage (i), on the specified task branch, subject
   to the plan's production and acceptance boundaries. Scheduled checks
   continue through the owner's cutoff; unchanged checks will stay quiet.
+
+### 2026-10-01 10:33 EDT — Plan monitor: interim result; T2/T1 not started
+
+- **Confirmed:** reviewed the full updated plan, SHA-256 before this entry
+  `8d518e355d5e596651631e3d4d987730c95d40a844755c10624bbfe711d79328`.
+  New owner instruction in §6 assigns all application coding, including
+  small fixes, to the worker; the planner specifies and reviews. T2 remains
+  before T1, with unchanged task scope and acceptance gates.
+- This scheduled check made no app changes, ran no tests or external API
+  calls, and created no commits or implementation jobs. Implementation and
+  model claims remain unverified. The existing five-minute monitor continues
+  until 17:00 EDT; do not start a duplicate. Next execution task remains T2
+  stage (i) on its specified branch.
 
 ## 9. Open questions (append only)
 
