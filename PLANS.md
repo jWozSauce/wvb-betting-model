@@ -1037,6 +1037,18 @@ unchanged) and `evidence/t6-20261001/exposure_summary.json` (43 real +
   redistribution); OddsPapi key rotation; confirm authorship of the
   2026-10-01 PLANNER.md amendments (commit aaba606).
 
+**ANSWER to Q7 — 2026-10-01 (owner's decision, given in chat, recorded by
+planner):** "Yes push that update." The owner explicitly authorizes the
+full chain as recommended: (1) rebase the accepted branch
+(`codex/review-repairs`, backup `codex/accepted-repairs-baseline-20261001`)
+onto the latest ratings-bot `main`; (2) merge to `main`; (3) commit the
+prepared default-on change (repairs + NCAA schedule source enabled);
+(4) **push to origin/main**, which deploys the cloud app. Verify the
+integrated app boots with defaults on before the push; report commit ids
+in the worker log. If the rebase hits conflicts with newer bot commits,
+resolve data-file conflicts by taking the bot's data and reapplying, per
+standing practice; stop and ask only if a code conflict is non-trivial.
+
 ### Q7 — 2026-10-01 16:53 EDT — Explicit approval needed for integration
 
 The planner's acceptance instructs rebase, merge to `main`, and then a
