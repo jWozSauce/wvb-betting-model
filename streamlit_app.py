@@ -23,6 +23,7 @@ import app_config
 import bet_log
 import kelly
 import paste_odds
+import repair_flags
 from vbstats import model
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -784,6 +785,25 @@ with tab_best:
                 quota = ""
             return games_, nreq_, quota
 
+        card_context = dict(pricing_context("Team Elo"),
+                            venue_mode=VENUE_SHORT.get(venue_b, venue_b))
+        if repair_flags.enabled():
+            import hashlib
+            card_inputs = dict(
+                context=card_context, source=source_b, paste=paste,
+                ratings=hashlib.sha256(pd.util.hash_pandas_object(
+                    ratings, index=True).values.tobytes()).hexdigest(),
+                model=hashlib.sha256(params.tobytes() + param_draws.tobytes()).hexdigest(),
+                availability=load_availability())
+            if ("best_card" in st.session_state and
+                    st.session_state.get("best_inputs") != card_inputs):
+                for key in ("best_card", "best_unmatched", "best_low_conf",
+                            "best_unparsed", "best_n_games", "best_inputs",
+                            "best_context", "best_editor"):
+                    st.session_state.pop(key, None)
+                st.info("Pricing inputs changed. Evaluate the board again "
+                        "to refresh prices and stakes.")
+
         run_eval, games, unparsed, n_oddsless = False, [], [], 0
         if source_b == "Paste a board":
             if st.button("Parse & evaluate", type="primary") and paste.strip():
@@ -934,6 +954,11 @@ with tab_best:
                         "point": mkt["point"],
                         "away_team": a_match, "home_team": h_match,
                     })
+            if repair_flags.enabled():
+                import copy
+                st.session_state.best_inputs = copy.deepcopy(card_inputs)
+                st.session_state.best_context = copy.deepcopy(card_context)
+                st.session_state.pop("best_editor", None)
             st.session_state.best_card = pd.DataFrame(card_rows)
             st.session_state.best_unmatched = unmatched
             st.session_state.best_low_conf = low_conf
@@ -953,6 +978,8 @@ with tab_best:
 
         if "best_card" in st.session_state:
             card = st.session_state.best_card
+            logged_context = (st.session_state.best_context if repair_flags.enabled()
+                              else card_context)
             st.caption(f"{st.session_state.best_n_games} games parsed, "
                        f"{len(card)} markets priced.")
             if st.session_state.best_unmatched:
@@ -1020,8 +1047,7 @@ with tab_best:
                             profit="", graded_at="",
                             mkt_prob=getattr(r, "mkt_prob", ""),
                             blend_prob=getattr(r, "blend_prob", ""),
-                            venue_mode=VENUE_SHORT.get(venue_b, venue_b),
-                            **pricing_context("Team Elo"),
+                            **logged_context,
                             game_time=paste_odds.game_time_et(
                                 getattr(r, "time", ""), now))
                             for r in trackable.itertuples()]
@@ -1061,8 +1087,7 @@ with tab_best:
                                 profit="", graded_at="",
                                 mkt_prob=getattr(r, "mkt_prob", ""),
                                 blend_prob=getattr(r, "blend_prob", ""),
-                                venue_mode=VENUE_SHORT.get(venue_b, venue_b),
-                                **pricing_context("Team Elo"),
+                                **logged_context,
                                 game_time=paste_odds.game_time_et(
                                     getattr(r, "time", ""), now))
                                 for r in picks.itertuples()]
