@@ -1,0 +1,120 @@
+{
+  "endpoint": "historical-odds",
+  "params": {
+    "fixtureId": "id2304384773534874",
+    "bookmakers": "draftkings,fanduel,betonline.ag"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-01T16:05:39.335113+00:00",
+  "payload": {
+    "fixtureId": "id2304384773534874",
+    "bookmakers": {
+      "draftkings": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:00.670Z",
+                      "price": 1.123,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T16:02:38.359Z",
+                      "price": 1.161,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:02:15.230Z",
+                      "price": 1.161,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:00.670Z",
+                      "price": 6.0,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T16:02:38.359Z",
+                      "price": 5.0,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:02:15.230Z",
+                      "price": 5.0,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "2319": {
+            "outcomes": {
+              "2319": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:00.670Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:02:15.230Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "2320": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:00.670Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:02:15.230Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

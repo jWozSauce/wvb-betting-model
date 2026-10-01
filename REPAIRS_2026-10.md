@@ -9,7 +9,7 @@ The owner's D1 replacement-player decision remains open; lineup math is unchange
 | Task | Change | Validation | Commit |
 |---|---|---|---|
 | T6 | Search both result orientations together; nearest calendar date wins; tied fixtures are refused | Six tests; 2,287 reversed queries: zero wrong matches, 14 ambiguous refusals. 43 real bet rows + 159 paper rows reviewed read-only: zero lookup or grade changes | `c9c9b71` |
-| T7 | Exact known identities before whole-name aliases; preserve campus and ampersand distinctions; reject unknown/ambiguous names | All 1,596 corpus cases correct, versus 26 wrong and three unmatched before. Five tests cover Utah/UTA, USC/Upstate, Miami, LSU/New Orleans, Missouri S&T/St., ambiguous and unknown names | `4e0c7c0` |
+| T7 | Exact known identities before whole-name aliases; preserve campus and ampersand distinctions; reject unknown/ambiguous names | All 1,596 corpus cases and 64 historical vendor names correct, versus 26 wrong and three unmatched in the original corpus. Six tests cover Utah/UTA, USC/Upstate, Miami, LSU/New Orleans, Missouri S&T/St., ambiguous and unknown names | `4e0c7c0`, `6ebbd95` |
 | T8 | Invalidate cards when inputs change; retain and log the exact pricing snapshot | Seven control edits invalidate the card; $500→$1,000 bankroll changes $31.50→$63 after reevaluation. A nonempty mocked paper record matches the snapshot | `1ce6412` |
 | T9 | Provider errors expose allowlisted endpoint/status only; suppress credential-bearing exception chains and arbitrary UI error details | Five unit checks for status, network, JSON and 404; actual API UI exercised with fake credential exception | `c5fb92c` |
 | Small T4 defects | Explain last-match defaults vs season reference; refuse player pricing when either roster is unavailable | Spring Hill–Kansas in Player and Hybrid modes shows an actionable message without crashing | `3922cef` |
@@ -39,8 +39,12 @@ Unrecognized names no longer receive fuzzy guesses. The known corpus loses no
 coverage, but a new vendor spelling may now require an explicit reviewed alias.
 No arbitrary prefix can turn a new campus into a different school's priced bet.
 The finite corpus cannot certify every future book spelling. Whole normalized
-names define the alias boundary; mascot suffixes outside the known identity
-are refused rather than silently stripped.
+names define the alias boundary. A follow-up check on real vendor names found
+that the original strict version refused mascot names. `6ebbd95` adds explicit
+known mascot suffixes at word boundaries, then re-runs exact school matching.
+All 64 vendor names pass, including Utah Utes → Utah (formerly UT Arlington).
+Unknown suffixes/campuses still fail closed. Corrected Utah joins also change
+T3 sample membership; see its final report.
 
 ## T8 snapshot behavior
 

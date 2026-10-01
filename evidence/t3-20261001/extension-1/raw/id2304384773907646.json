@@ -1,0 +1,106 @@
+{
+  "endpoint": "historical-odds",
+  "params": {
+    "fixtureId": "id2304384773907646",
+    "bookmakers": "draftkings,fanduel,betonline.ag"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-01T16:04:07.627139+00:00",
+  "payload": {
+    "fixtureId": "id2304384773907646",
+    "bookmakers": {
+      "draftkings": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:32:10.175Z",
+                      "price": 4.9,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:31.810Z",
+                      "price": 4.9,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:32:10.175Z",
+                      "price": 1.167,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:31.810Z",
+                      "price": 1.167,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "2335": {
+            "outcomes": {
+              "2335": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:32:10.175Z",
+                      "price": 2.6,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:31.810Z",
+                      "price": 2.6,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "2336": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:32:10.175Z",
+                      "price": 1.476,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:31.810Z",
+                      "price": 1.476,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

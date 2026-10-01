@@ -1,0 +1,53 @@
+{
+  "seed": 20261001,
+  "bootstrap_draws": 10000,
+  "source_hashes": {
+    "data/processed/odds_hist_2026.parquet": "484249df9753caf00edafe8333355e0904ea5eb77c993272ca5f356e893dbf0a",
+    "data/processed/backtest_odds_2026.parquet": "32be6f0c0a8da9d0d382e57b71004f7e72228e2a82fdc9d8d19e1469ea768f83",
+    "app_data/model_params.json": "d315dfd101b6efe9cfcedb5de0b4e409ae1569ea405bde70aa9fdbb8b3a1454a"
+  },
+  "priced_rows": 350,
+  "best_rows": 350,
+  "dedup_removed": 0,
+  "new_boarded_fixtures": 12,
+  "extension_status": "Completed authorized fixture enumeration and free history sweep; see extension ledger.",
+  "history_path": "evidence/t3-20261001/extension-1/odds_hist_2026.parquet",
+  "history_sha256": "ed168168441ee9918e846a9db0c44e777659ab5f7b8447a102747f46e20a48a0",
+  "full": {
+    "rows": 350,
+    "fixtures": 89,
+    "baseline": {
+      "n": 34,
+      "wins": 17,
+      "losses": 17,
+      "pushes": 0,
+      "profit": 2.2650000000000006,
+      "roi": 0.06661764705882355,
+      "ci90_low": -0.2493132352941176,
+      "ci90_high": 0.3875691176470587
+    }
+  },
+  "post_0926": {
+    "rows": 32,
+    "fixtures": 8,
+    "baseline": {
+      "n": 2,
+      "wins": 0,
+      "losses": 2,
+      "pushes": 0,
+      "profit": -2.0,
+      "roi": -1.0,
+      "ci90_low": -1.0,
+      "ci90_high": -1.0
+    }
+  },
+  "paper": {
+    "total": 159,
+    "settled": 156,
+    "excluded_unsettled": 3,
+    "excluded_invalid_or_missing_probabilities": 125,
+    "analyzed": 31,
+    "disagreement_buckets_total": 31,
+    "outside_buckets": 0
+  }
+}

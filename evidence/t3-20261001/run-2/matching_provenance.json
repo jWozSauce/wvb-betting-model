@@ -1,0 +1,5 @@
+{
+  "mode": "legacy",
+  "matching_repair_commit": "6ebbd95",
+  "note": "Same original backtest code and protected inputs; only history input and review matcher differ."
+}

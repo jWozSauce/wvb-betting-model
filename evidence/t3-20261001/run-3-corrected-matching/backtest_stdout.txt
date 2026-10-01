@@ -1,0 +1,27 @@
+
+=== JOIN: 350 priced closing lines | 89 fixtures | unmapped names 0 | no-result 0
+market       ml  spread
+book
+draftkings  168     182
+
+ML model          logloss 0.5360  acc 72.6%  (n=84)
+
+ML market(devig)  logloss 0.4852  acc 76.2%  (n=84)
+
+ML blend w=0.30   logloss 0.4925  acc 73.8%  (n=84)
+
+=== flat-stake ROI by edge gate (blend basis, dedup best line per bet across books)
+
+  basis: edge_blend
+   >= 2%: n=  34  W-L 17-17  ROI +6.7%
+   >= 4%: n=  18  W-L 8-10  ROI -7.6%
+   >= 6%: n=   7  W-L 3-4  ROI -4.5%
+
+  basis: edge_model
+   >= 2%: n= 108  W-L 45-63  ROI -13.8%
+   >= 4%: n=  86  W-L 34-52  ROI -12.5%
+   >= 6%: n=  75  W-L 28-47  ROI -14.8%
+  blend>=2% favs: n=14  ROI -31.1%
+  blend>=2% dogs: n=20  ROI +33.1%
+
+row-level results -> data/processed/backtest_odds_2026.parquet

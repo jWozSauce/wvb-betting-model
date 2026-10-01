@@ -1,0 +1,9 @@
+{
+  "budget_tests": 2,
+  "reserved_fixture_retry_prevented": true,
+  "cached_fixture_resume_only_free_account": true,
+  "protected_hashes_unchanged": 29,
+  "stored_closing_timestamps_checked": 350,
+  "post_scheduled_start_rows": 0,
+  "running": false
+}

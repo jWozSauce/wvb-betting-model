@@ -1,0 +1,134 @@
+{
+  "endpoint": "historical-odds",
+  "params": {
+    "fixtureId": "id2304384773534844",
+    "bookmakers": "draftkings,fanduel,betonline.ag"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-01T16:03:48.448381+00:00",
+  "payload": {
+    "fixtureId": "id2304384773534844",
+    "bookmakers": {
+      "draftkings": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:46:36.619Z",
+                      "price": 1.267,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T13:36:24.843Z",
+                      "price": 1.317,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T13:37:44.880Z",
+                      "price": 1.336,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:30.900Z",
+                      "price": 1.336,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:46:36.619Z",
+                      "price": 3.7,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T13:36:24.843Z",
+                      "price": 3.3,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T13:37:44.880Z",
+                      "price": 3.2,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:30.900Z",
+                      "price": 3.2,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "2323": {
+            "outcomes": {
+              "2323": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:46:36.619Z",
+                      "price": 1.714,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:30.900Z",
+                      "price": 1.714,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "2324": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-26T00:46:36.619Z",
+                      "price": 2.1,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-26T23:02:30.900Z",
+                      "price": 2.1,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

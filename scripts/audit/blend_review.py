@@ -14,6 +14,7 @@ import pandas as pd
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 import kelly
+import repair_flags
 
 SEED=20261001
 DRAWS=10000
@@ -82,7 +83,7 @@ def analyze(df,label,out):
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--paper')
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--paper');parser.add_argument('--history')
     args=parser.parse_args();out=Path(args.output);out.mkdir(parents=True,exist_ok=False)
     paths=['data/processed/odds_hist_2026.parquet','data/processed/backtest_odds_2026.parquet','app_data/model_params.json']
     hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths}
@@ -92,15 +93,27 @@ def main():
     def evidence_write(frame,path,*a,**kw):
         assert str(path)=='data/processed/backtest_odds_2026.parquet'
         return write(frame,out/'rebuilt_backtest.parquet',*a,**kw)
-    with (out/'backtest_stdout.txt').open('x') as log,redirect_stdout(log),patch.object(pd.DataFrame,'to_parquet',evidence_write):
+    read = pd.read_parquet
+    def evidence_read(path,*a,**kw):
+        if args.history and str(path) == 'data/processed/odds_hist_2026.parquet':
+            return read(args.history,*a,**kw)
+        return read(path,*a,**kw)
+    with (out/'backtest_stdout.txt').open('x') as log,redirect_stdout(log),patch.object(pd.DataFrame,'to_parquet',evidence_write),patch.object(pd,'read_parquet',evidence_read):
         module.main()
     bt=pd.read_parquet(out/'rebuilt_backtest.parquet')
     bt['date']=pd.to_datetime(bt.date)
     keys=['fixture','market','side','point']
     best=bt.sort_values('close_dec',ascending=False).drop_duplicates(keys)
-    report={'seed':SEED,'bootstrap_draws':DRAWS,'source_hashes':hashes,'priced_rows':len(bt),
+    report={'matching_mode':'review repair' if repair_flags.enabled() else 'legacy','seed':SEED,'bootstrap_draws':DRAWS,'source_hashes':hashes,'priced_rows':len(bt),
             'best_rows':len(best),'dedup_removed':len(bt)-len(best),'new_boarded_fixtures':None,
             'extension_status':'Blocked: fixture enumeration is billable; T3 permits zero billable requests.'}
+    if args.history:
+        old = read(ROOT/'data/processed/odds_hist_2026.parquet')
+        extended = read(args.history)
+        report['new_boarded_fixtures'] = len(set(extended[extended.book!=''].fixture_id)-set(old[old.book!=''].fixture_id))
+        report['extension_status'] = 'Completed authorized fixture enumeration and free history sweep; see extension ledger.'
+        report['history_path'] = str(args.history)
+        report['history_sha256'] = hashlib.sha256(Path(args.history).read_bytes()).hexdigest()
     report['full']=analyze(best,'full',out)
     increment=best[best.date>pd.Timestamp('2026-09-26')]
     report['post_0926']=analyze(increment,'post_0926',out)

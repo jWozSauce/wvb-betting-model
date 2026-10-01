@@ -1,0 +1,26 @@
+{
+  "task": "T3",
+  "cap": 1,
+  "reserved": 1,
+  "state": "completed",
+  "history_calls": 70,
+  "source_sha256": "484249df9753caf00edafe8333355e0904ea5eb77c993272ca5f356e893dbf0a",
+  "quota_before": {
+    "used": 5,
+    "limit": 250
+  },
+  "updated_at": "2026-10-01T16:08:43.908450+00:00",
+  "quota_after_enumeration": {
+    "used": 6,
+    "limit": 250
+  },
+  "measured_delta": 1,
+  "enumerated": 1001,
+  "initial_todo": 70,
+  "completed_new_fixtures": 70,
+  "new_boarded_fixtures": 12,
+  "quota_final": {
+    "used": 6,
+    "limit": 250
+  }
+}
