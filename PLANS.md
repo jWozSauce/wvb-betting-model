@@ -318,6 +318,93 @@ separately; no change to any app default in this task.
 instance; nothing merged to `main` except the report, scripts/audit/,
 and PLANS.md entries.
 
+**2026-10-01 (later) — Owner's instruction (verbatim in substance):** have
+the worker audit the player-based model procedure and the hybrid (team Elo
++ player lineup adjust). To the owner they do not seem to work correctly
+or sensibly: prices "barely move", and in the hybrid view players who are
+not playing are ALREADY de-selected — their absences appear to be priced
+in already, so there is nothing left to unselect and the lever seems
+pointless. Additionally (feature): wherever an injured/absent player is
+shown in that section, append in parentheses their player-model impact
+and their rank within their position on their team. Tasks T4 (audit) and
+T5 (feature). **Order ruling (planner): T2 first (in progress), then T4,
+then T3, then T5, then T1.** T5 waits for T4 because T4 may change how
+absences are displayed.
+
+### T4 — Audit of player (RAPM) and hybrid pricing behavior in the app (review + design proposal)
+
+**Status: open. Report and propose; change no pricing behavior.**
+
+**Purpose.** Decide whether the player/hybrid modes are (a) buggy,
+(b) working as designed but with a design that defeats the owner's use
+case, or (c) both — and produce concrete repair/redesign proposals for
+the owner to choose from.
+
+**Planner's context — verify, do not trust. Much of the owner's
+observation may be DESIGN, not bug:** by a 2026-09 decision, the hybrid
+reference lineup is the season-typical rotation (full roster,
+playtime-weighted), while the default SELECTED lineup is the last match's
+set-1 starters. Consequence: a player who already missed the last match
+is absent from the default selection, and her absence is already priced
+(selection vs season reference) — so unselecting her again does nothing;
+RE-selecting her prices her return. That matches the owner's report
+exactly. The audit must still check for real defects on top of this.
+
+**Specification.**
+1. **Reproduce magnitudes.** Benchmarks recorded 2026-09-06: removing
+   Harper Murray moved Nebraska ML 90.9%→83.6% (pure RAPM, vs Kansas) and
+   96.6%→92.7% (hybrid). Reproduce equivalent single-star removals today
+   (Murray, Babcock, plus 2 mid-tier starters). If today's moves are
+   materially smaller, bisect: prime suspect is the 2026-09-26 name
+   canonicalization (did `sets_started_cur`, `in_last_lineup`, or the
+   availability↔rapm name join change the default lineups or weights?).
+2. **Trace the lineup math** end to end in `streamlit_app.py` +
+   `vbstats/rapm_price.py`: default-selection construction, season
+   reference construction, playtime weights (6·(sets+1)/Σ), the hybrid
+   delta (Elo logit + RAPM DP delta), and whether UI selections actually
+   reach the pricing call (widget keys/state). Verify the no-edit
+   identity: untouched hybrid == pure Elo price, exactly.
+3. **Expected-size analysis.** From the fitted coefficients, what SHOULD
+   removing a top-5 player move a set probability / match ML, given alpha
+   =1000 shrinkage and playtime weighting? State whether "barely moves"
+   is a bug or the honest size of the estimate — with numbers.
+4. **Design proposals** (numbered, for the owner to pick): at minimum one
+   proposal that makes the lever legible — e.g. default selection =
+   season rotation with currently-absent players shown pre-removed but
+   RE-ADDABLE, each labeled "already priced out", so the user sees what
+   the model has done and can override in both directions; and a
+   what-if display showing the price with and without each absent player.
+5. Verdicts per PLANS rules on: lineup defaults, reference lineup, delta
+   computation, UI→pricing wiring, magnitude sanity.
+
+**Deliverables.** `PLAYER_MODEL_AUDIT_2026-10.md` (verdicts + proposals up
+front), repro script under `scripts/audit/`, worker-log entry.
+
+**Acceptance gate.** Item-1 reproductions with numbers; the no-edit
+identity tested; magnitude analysis with explicit expected-vs-observed
+table; ≥2 design proposals with their pricing implications stated.
+
+**Boundaries.** No changes to pricing code or app behavior in this task;
+Sheets read-only; no billable API calls; S1 applies (no local 2026 table
+rebuilds).
+
+### T5 — Feature: absent-player annotations (impact + position rank)
+
+**Status: queued — starts after T4 is reviewed (its proposals may change
+where/how absences are displayed).**
+
+Wherever the player/hybrid pricing section (and its availability/absence
+display) names an injured or absent player, append in parentheses that
+player's impact as measured by the player model and their rank within
+their position ON THEIR TEAM, e.g. "H. Murray (−1.8%/set, #1 of 3 OH)".
+Requirements: (a) the impact number must be computed by the SAME code the
+Player ranks tab uses (import/shared function, not a reimplementation),
+so the two never disagree; (b) rank counts only teammates with the same
+position label and ≥1 set started, and states the denominator; (c)
+unrated/unknown players degrade to "(unrated)" without error; (d) spot
+check in the log: 5 players' annotations vs the Player ranks tab, exact
+match. Branch + planner acceptance before merge (production rule).
+
 ### T1 — Full audit of the app and its statistical methods (review only)
 
 **Status: open. Report first; change nothing under review** (WORKER.md §3,
