@@ -1,0 +1,65 @@
+{
+  "defaults_boot": true,
+  "rollback_boot": true,
+  "schedule_games": 126,
+  "unpriced_games": 203,
+  "drill_in_parity": [
+    {
+      "home": "nc-central",
+      "away": "morgan-st",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "home": "nc-central",
+      "away": "morgan-st",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    },
+    {
+      "home": "nc-central",
+      "away": "morgan-st",
+      "venue": "True toss-up (symmetrized)",
+      "markets": 16
+    },
+    {
+      "home": "seton-hall",
+      "away": "butler",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "home": "seton-hall",
+      "away": "butler",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    },
+    {
+      "home": "seton-hall",
+      "away": "butler",
+      "venue": "True toss-up (symmetrized)",
+      "markets": 16
+    },
+    {
+      "home": "fordham",
+      "away": "dayton",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "home": "fordham",
+      "away": "dayton",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    },
+    {
+      "home": "fordham",
+      "away": "dayton",
+      "venue": "True toss-up (symmetrized)",
+      "markets": 16
+    }
+  ],
+  "venue_change_model_calls": 1,
+  "slate_fetches": 1,
+  "external_io": "mocked"
+}

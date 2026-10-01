@@ -1,5 +1,18 @@
 # Authorized repair handoff — October 1, 2026
 
+**Update — 2026-10-01 18:13 EDT:** planner accepted T2/T5/T6–T9 and the
+owner authorized integration and deployment in Q7. The accepted branch was
+rebased onto ratings-bot `1bbda3e` without conflicts and fast-forwarded into
+`main` at `5100cd8`. Separate commit `8058920` enables both features by
+default. Set `WVB_ENABLE_REPAIRS=0` and/or `WVB_ENABLE_NCAA_SCHEDULE=0` for
+explicit rollback. All ten integration validation scripts passed, including
+actual AppTest startup with unset switches, rollback startup, a cached
+126-priced/203-unpriced schedule, and nine exact 16-market drill-in
+comparisons. External services and Sheets were mocked; cloud runtime health
+is not established by these local checks. Evidence is under
+`evidence/integration-20261001/`. Historical handoff below is preserved.
+
+
 **Implementation complete, awaiting planner acceptance.** Branch:
 `codex/review-repairs`. No push, merge, deployment or real Sheets write.
 Review with `WVB_ENABLE_REPAIRS=1`; the repair behavior and annotations default

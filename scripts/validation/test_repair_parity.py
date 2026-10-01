@@ -7,7 +7,7 @@ import json,os,sys,subprocess
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT));sys.path.insert(0,str(Path(__file__).parent))
 from validate_t2_ui import guards,new_app,element,check,select_match,board,MODES
-old=subprocess.check_output(['git','show','c7fd873:streamlit_app.py'],text=True,cwd=ROOT);new=(ROOT/'streamlit_app.py').read_text()
+old=subprocess.check_output(['git','show','490ccea:streamlit_app.py'],text=True,cwd=ROOT);new=(ROOT/'streamlit_app.py').read_text()
 rows=[]
 with ExitStack() as stack:
  guards(stack);stack.enter_context(patch('vbstats.venues.slate_venues',return_value={}))

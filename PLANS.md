@@ -965,6 +965,34 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 - No validation process remains running. Only the owner-authorized monitor
   continues through 19:00 EDT. Four owner reference files remain untouched.
 
+### 2026-10-01 18:13 EDT — Q7 authorized; accepted changes integrated and verified
+
+- **Accepted; local integration complete.** Owner authorization recorded by
+  planner in `fbf991f` resolved the earlier automatic approval block. The
+  rebase was approved and completed without conflicts. Backup branch
+  `codex/approved-integration-baseline-20261001` preserves that pre-rebase
+  history; the earlier accepted baseline backup also remains local.
+- Rebased onto ratings-bot `1bbda3e`; fast-forward merged into `main` at
+  `5100cd8`. Separate commit `8058920` enables accepted repairs and NCAA
+  schedule by default. Explicit environment value `0` still disables each.
+  Tracked app data, processed data and raw data match origin's bot version;
+  nothing was rebuilt. Historical report commit IDs refer to backup history.
+- Confirmed: all ten integration validation scripts pass. Actual integrated
+  source boots in AppTest with both switches unset and with both disabled.
+  Cached slate: 126 priced/203 unpriced; three games × three venue modes ×
+  16 markets match the original manual panel exactly with current ratings.
+  A venue change reprices only its game and does not refetch the slate.
+  Evidence: `evidence/integration-20261001/validation-summary.json` and its
+  timestamped `defaults.json`; new individual reruns retain prior evidence.
+- Updated the parity script's baseline to equivalent rebased `490ccea` so
+  a fresh clone can resolve it. External services/Sheets were mocked;
+  no paid calls or real log writes. These checks do not establish cloud
+  deployment health. The next step is the owner-authorized push to
+  `origin/main`, then confirmation of the remote commit.
+- No background job remains. Monitor continues through 19:00 EDT. Existing
+  four owner reference files remain untouched; D1 and key rotation remain
+  owner decisions.
+
 ## 9. Open questions (append only)
 
 (none open)

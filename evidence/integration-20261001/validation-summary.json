@@ -1,0 +1,42 @@
+[
+  {
+    "script": "test_result_matching.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_team_matching.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_safe_http.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_schedule_pricing.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_extension_budget.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_card_state.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_player_guards.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_player_annotations.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_repair_parity.py",
+    "exit_code": 0
+  },
+  {
+    "script": "test_integrated_defaults.py",
+    "exit_code": 0
+  }
+]
