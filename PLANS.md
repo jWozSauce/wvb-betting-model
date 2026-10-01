@@ -123,6 +123,122 @@ app does and how it is set up, then have the worker do a full audit of the
 app and its statistical methods. Planner's review is §2–§4 of this file;
 the audit is T1 below.
 
+**2026-10-01 (later) — Owner's instruction (verbatim in substance):** one app
+upgrade, moved to the front of the line (T2 before T1). Best bets gets a
+third way to pull games to auto-price: the NCAA schedule (all divisions),
+pricing every game, with home / neutral / true-neutral determined per game
+from the schedule. Each game gets a dropdown to change that venue input on
+the fly, repricing that game only (not the whole slate as today). Selecting
+a game shows all generated odds — essentially a prepopulated individual
+pricing screen like Price a match. **Order of work: T2 first, then T1.**
+
+### T2 — Best bets: NCAA-schedule slate source with per-game venue control and drill-in pricing
+
+**Status: open. Do this before T1.**
+
+**Purpose.** Today the Best bets tab only prices games a sportsbook boards
+(paste or OddsPapi) and applies ONE venue mode to the whole slate. The owner
+wants model prices for the FULL NCAA slate — including unboarded games —
+with per-game venue classification and per-game override, and a one-click
+jump from any game to a full pricing panel.
+
+**What is already known (planner; verify, do not trust).**
+- `NCAAClient.contests(date, season, division)` (vbstats/ncaa.py) returns
+  the day's schedule per division (1/2/3). Planner probe 2026-10-01: 121 D1
+  contests on 2026-10-02; each contest has `contestId`, `startTimeEpoch`,
+  `teams[].seoname` + `teams[].isHome` + full names — but **no venue**.
+  Venue requires the existing per-game call (`client.game(cid)` →
+  `location`), as `vbstats/venues.py:slate_venues` already does.
+- `app_data/home_venues.parquet` maps teams → modal home venue (with `n`
+  counts for owner-of-venue resolution). `app_data/elo_current.parquet`
+  holds ratings for ~392 active teams (D1-centric; many D2/D3 teams have
+  ratings from cross-division games, many do not).
+- The Price a match tab's board (market table incl. ML/spreads/totals,
+  p20 basis, Kelly box, bet logging) lives inline in `streamlit_app.py`
+  (~lines 380–660); the Best bets evaluation path is separate.
+- Venue modes and their pricing semantics are in §3. The home intercept
+  follows the home-labeled team; "True toss-up" averages both label
+  orientations.
+
+**Specification.**
+1. Add a third option to the Best bets source selector: **"NCAA schedule
+   (price everything)"**, alongside Live API and Paste. Date picker
+   (default today, allow +/- a few days). On fetch: pull contests for
+   divisions 1–3 for that date, keep games where BOTH teams have ratings
+   in `elo_current.parquet`; list the rest separately as "not priced
+   (unrated team)" with counts — never silently dropped.
+2. **Per-game venue auto-classification** from the schedule + venue data,
+   with these defaults (planner's ruling; surface the label so the owner
+   can see why):
+   - game venue == NCAA home team's modal venue → **Home court**;
+   - game venue == the AWAY-labeled team's modal venue → **Home court
+     with the host as home** (price the de-facto host as home; flag it);
+   - venue known but neither team's gym → **True toss-up (symmetrized)**,
+     label "neutral (3rd site)" or "neutral (X's gym)";
+   - venue unknown/missing → **Home court** per NCAA's isHome, flagged
+     "venue ?" (most such games are ordinary home games; the dropdown
+     allows correction).
+   Venue lookups: only for games that will be priced; cache per contestId
+   (long TTL — venues do not change) so a slate's first load does the
+   lookups once (~0.25s throttle each; show progress) and later loads are
+   instant.
+3. **Per-game venue dropdown** on each row (options: Home court /
+   Neutral host-matters / True toss-up), defaulted to the
+   auto-classification. Changing one game's dropdown reprices THAT game's
+   rows only — no full-slate re-fetch or re-parse. (Streamlit reruns are
+   fine; the requirement is that the user doesn't have to re-run the
+   slate action or lose other games' state. Keep slate data in
+   session_state keyed by date; price from cached ratings.)
+4. **Slate table**: one row per game — time, away @ home, site label,
+   venue dropdown, model ML both sides (fair odds), spread fair odds,
+   total fair odds — enough to scan for interesting games. (No stake/edge
+   columns here: there are no book odds in this source.)
+5. **Drill-in**: a per-game "Price this game" control. Selecting it
+   renders, inline below the table, the FULL pricing panel prepopulated
+   with that game's teams and its current venue-dropdown value — the same
+   board as Price a match (all markets incl. p20 conservative basis,
+   set-score distribution, odds-entry + blend + Kelly + "Log this bet").
+   **Implement by refactoring the Price a match board into a reusable
+   function** (parameterized by home, away, venue_mode, key-prefix for
+   widget keys) called from both tabs — a pure refactor of the existing
+   tab, no behavior change there. Do NOT copy-paste a second divergent
+   pricing path (see T1 item 6: parity between paths is a named risk).
+6. The existing Paste and Live API sources, and the Price a match tab,
+   must behave exactly as before.
+
+**Deliverables.** Branch `t2-schedule-pricing` with small single-purpose
+commits; a worker-log entry with: a parity check (drill-in panel vs Price
+a match tab produce IDENTICAL probabilities for 3 named games × 3 venue
+modes — table of numbers in the log), a timing measurement for a full
+slate first load and for a single-game venue change, and screenshots or a
+text dump of the slate table for one real date.
+
+**Acceptance gate.**
+(a) Parity: drill-in == Price a match to 4 decimal places on the 3×3
+check; (b) a Friday-sized slate (≥80 rated games) first-loads in under
+~3 minutes with progress shown, and a single-game venue change does not
+re-fetch the schedule or venues; (c) unrated-team games are listed with a
+count that reconciles (priced + unpriced == fetched); (d) auto-venue
+labels match `slate_venues` semantics on a 10-game spot check; (e) paste
+and Live API sources verified unchanged (run each once).
+
+**Boundaries.**
+- Production: implement on the branch; the planner reviews the log
+  evidence and accepts BEFORE merge to `main` (which auto-deploys).
+- No OddsPapi billable calls needed for this task (0 expected); NCAA API
+  is free but throttled — keep the existing client delay.
+- No writes to the Google Sheets logs except via the existing untouched
+  log-bet code path, and none during testing (do not press-test "Log this
+  bet" against the real sheet; verify by code path identity instead).
+- No changes to model/Elo/RAPM code, `bet_log.py`, or the workflow.
+
+**Staging.** (i) Schedule fetch + rated-game filter + counts; (ii) venue
+auto-classification + caching; (iii) slate table + per-game dropdown
+repricing; (iv) the Price-a-match refactor to a reusable function with a
+no-behavior-change check on the existing tab; (v) drill-in wiring +
+parity evidence. Report after (iv) if the refactor turns out riskier than
+specified — stop and ask rather than forking the pricing code.
+
 ### T1 — Full audit of the app and its statistical methods (review only)
 
 **Status: open. Report first; change nothing under review** (WORKER.md §3,
