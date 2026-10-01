@@ -690,6 +690,36 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   left running. Next is T3. T5 remains queued awaiting T4 review, and Q1
   below requests a unit clarification for its annotations.
 
+### 2026-10-01 11:22 EDT — T3 interim result; extension blocked on Q2
+
+- **Diagnostic report:** `BLEND_REVIEW_2026-10.md`, commit `7db4fc4`, code
+  `scripts/audit/blend_review.py`; evidence `evidence/t3-20261001/run-1/`.
+  All 20 grid cells, marginal additions/removals, disagreement buckets,
+  logloss, and the available paper-log comparison are present. Fresh-data
+  extension and final recommendation remain unfinished.
+- **Confirmed:** cached headline reproduces 29 bets, 18–11, +32.2931% ROI.
+  Rebuilding with the unchanged script gives 28, 17–11, +29.5179%. Four
+  fixtures / 14 cached probabilities match the opposite venue flag from
+  current inputs; Florida −2.5 moves below the 2% gate. Cause of cached
+  artifact provenance remains unverified; original files were hash-preserved.
+- Seed 20261001; 10,000 bet-bootstrap draws per cell. Baseline rebuilt
+  ROI 90% interval −4.85%..+63.63%. At a 2% gate, w=.40 adds 13 bets,
+  3–10, −49.75% marginal ROI. The favorable .40/.03 cell adds only two
+  winners; report discusses its nominally positive interval and selection
+  limits explicitly. No defaults changed or parameters fit.
+- Paper read performed with a read-only OAuth scope, bypassing `_ws`
+  because that helper can migrate headers even from `read_log`. 159 rows
+  = 156 settled + 3 unsettled; 125 settled rows lack required usable
+  probability/price fields, leaving 31. Private raw cache at
+  `/tmp/volleyball-t3-paper-20261001.json` is excluded from Git. Only
+  aggregate paper statistics were committed. Zero sheet writes.
+- **Cannot verify fresh increment:** available post-09-26 sample n=0.
+  No sweep started: its fixture enumeration is billable, contradicting T3's
+  zero-billable boundary. No running `backfill_odds.py` process found. Spend
+  and quota use in this task: zero. Resume extension after Q2, then rerun
+  analysis into a new evidence directory. T5 remains queued; independent
+  review-only T1 can proceed while Q1/Q2 await rulings.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -707,3 +737,19 @@ what-if display. Alternative: change the requested metric to a removal
 effect, which would change scope and could not equal the current ranks tab.
 Please rule on units when reviewing T4/T5. Only T5 depends on this answer;
 T3 and the review-only T1 can proceed.
+
+### Q2 — 2026-10-01 11:22 EDT — T3 fixture enumeration requires one billable request
+
+The requested sweep starts with `/v4/fixtures` (`scripts/backfill_odds.py`,
+line 102), which costs one quota request per the provider's current
+documentation: https://oddspapi.io/en/docs/requests-and-quota . T3 explicitly
+allows **no OddsPapi billable calls**. Historical-odds calls are free, but
+the project has no cached enumeration covering the required new fixtures.
+**Recommendation:** owner authorizes a hard cap of **one** fixture-list
+request covering finished fixtures through 2026-09-30; cache it, verify
+the account quota before/after, then use only free history calls. A safe
+wrapper should add a single-job lock, raw-response cache, atomic new outputs,
+and stop on authorization/rate-limit errors; the existing sweep lacks those
+protections. Alternatively provide a suitable cached fixture response for
+zero-quota continuation. No request has been made; the existing diagnostic
+report is ready to review. This blocks only T3's extension/final conclusion.
