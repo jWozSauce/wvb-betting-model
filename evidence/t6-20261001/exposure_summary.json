@@ -1,0 +1,18 @@
+{
+  "worksheets": {
+    "Vball_Bet_Log": {
+      "rows": 43,
+      "lookup_changes": 0,
+      "grade_changes": 0,
+      "unusable": 0
+    },
+    "Vball_Paper_Log": {
+      "rows": 159,
+      "lookup_changes": 0,
+      "grade_changes": 0,
+      "unusable": 0
+    }
+  },
+  "private_row_report": "/tmp/volleyball-t6-grading-exposure-20261001.json",
+  "writes": 0
+}

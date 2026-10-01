@@ -18,6 +18,7 @@ Market encoding (columns market / side / point):
 import os
 
 import pandas as pd
+import repair_flags
 
 WORKSHEET = "Vball_Bet_Log"
 PAPER_WORKSHEET = "Vball_Paper_Log"  # model-tracking: every qualifying bet
@@ -101,7 +102,7 @@ def read_log(worksheet=WORKSHEET):
     return pd.DataFrame(_ws(worksheet).get_all_records())
 
 
-def _find_result(results, home, away, date):
+def _find_result_legacy(results, home, away, date):
     """Result row for this matchup within one day of game_date. Matches the
     fixture in either orientation (bets sometimes get logged with home/away
     swapped); returns (row, flipped) — flipped=True means the bet's
@@ -116,6 +117,34 @@ def _find_result(results, home, away, date):
         if len(hit):
             return hit.iloc[0], flipped
     return None, False
+
+
+def _find_result_safe(results, home, away, date):
+    """Rank both orientations by calendar date; refuse equally close fixtures."""
+    direct = (results.home_seo == home) & (results.away_seo == away)
+    reverse = (results.home_seo == away) & (results.away_seo == home)
+    hit = results[direct | reverse].copy()
+    if hit.empty:
+        return None, False
+    try:
+        day = pd.Timestamp(date).normalize()
+        distance = (pd.to_datetime(hit.date).dt.normalize() - day).abs().dt.days
+    except (ValueError, TypeError):
+        return None, False
+    hit = hit.assign(_distance=distance)
+    hit = hit[hit._distance <= 1]
+    if hit.empty:
+        return None, False
+    nearest = hit[hit._distance == hit._distance.min()]
+    if len(nearest) != 1:
+        return None, False
+    row = nearest.iloc[0].drop(labels=['_distance'])
+    return row, bool(row.home_seo == away and row.away_seo == home)
+
+
+def _find_result(results, home, away, date):
+    finder = _find_result_safe if repair_flags.enabled() else _find_result_legacy
+    return finder(results, home, away, date)
 
 
 def _settle(market, side, point, home_sets, away_sets):
