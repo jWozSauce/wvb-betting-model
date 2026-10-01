@@ -736,6 +736,22 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   start another copy. It reads historical tables and writes only new audit
   evidence; no 2026 player tables are rebuilt.
 
+### 2026-10-01 11:33 EDT — T1 in progress: high-severity team matcher bug
+
+- **Bug, high, live pricing path:** the alias-prefix matcher resolves
+  `Utah` to `texas-arlington` (alias `uta`) at confidence 1.0, and
+  `USC Upstate` to `southern-california` at confidence 1.0. Such inputs
+  can silently price the wrong team; no low-confidence warning is triggered.
+- Defined exhaustive corpus: 392 rated teams, 364 represented in local
+  schedule names, 1,596 slug/full/short/alias cases = 1,567 correct + 26
+  wrong + 3 unmatched. Evidence and all wrong cases:
+  `evidence/t1-20261001/matching-1/team_names.csv`; reproduction
+  `scripts/audit/matching_audit.py`. This is a finite corpus, not every
+  possible book spelling. Q4 below requests a separate repair.
+- Read-only checks continue; no matching or pricing code changed. Core
+  audit job finished: original parquets/parameters hash-preserved. No
+  worker background job remains from that replay.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -784,3 +800,16 @@ exposure read-only before proposing any correction to real records. T1's
 review-only rule prohibits fixing this in-place; no real rows have been
 changed. This question flags the high-severity issue immediately as required
 by T1 staging; independent review continues.
+
+### Q4 — 2026-10-01 11:33 EDT — High-severity confident wrong-team matching
+
+`paste_odds.match_team` allows alias prefixes before exact school identity;
+`uta` captures Utah/Utah State and `usc` captures USC Upstate at confidence
+1.0. These feed both live API and pasted-board pricing. The 1,596-case
+corpus contains 26 wrong mappings, all listed in the evidence CSV.
+**Recommendation:** authorize a separate repair using exact known team
+identity first, token-bounded aliases/campus exceptions, and fail-closed
+handling of ambiguous school names. Require zero wrong matches on the
+captured corpus plus focused Utah/UTA, USC/USC Upstate, Miami Ohio/Florida,
+and LSU/LSU New Orleans regressions. Audit real log exposure read-only;
+do not rewrite records or production defaults as part of this review.

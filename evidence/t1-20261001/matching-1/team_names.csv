@@ -1,0 +1,1597 @@
+expected,kind,input,actual,score,verdict
+abilene-christian,slug,abilene-christian,abilene-christian,1.0,correct
+abilene-christian,full,Abilene Christian University,abilene-christian,1.0,correct
+abilene-christian,slug_spaces,abilene christian,abilene-christian,1.0,correct
+abilene-christian,schedule_short_0,Abilene Christian,abilene-christian,1.0,correct
+air-force,slug,air-force,air-force,1.0,correct
+air-force,full,U.S. Air Force Academy,air-force,1.0,correct
+air-force,slug_spaces,air force,air-force,1.0,correct
+air-force,schedule_short_0,Air Force,air-force,1.0,correct
+akron,slug,akron,akron,1.0,correct
+akron,full,University of Akron,akron,1.0,correct
+akron,slug_spaces,akron,akron,1.0,correct
+akron,schedule_short_0,Akron,akron,1.0,correct
+ala-huntsville,slug,ala-huntsville,ala-huntsville,1.0,correct
+ala-huntsville,full,ala-huntsville,ala-huntsville,1.0,correct
+ala-huntsville,slug_spaces,ala huntsville,ala-huntsville,1.0,correct
+alabama,slug,alabama,alabama,1.0,correct
+alabama,full,University of Alabama,alabama,1.0,correct
+alabama,slug_spaces,alabama,alabama,1.0,correct
+alabama,schedule_short_0,Alabama,alabama,1.0,correct
+alabama-am,slug,alabama-am,alabama-am,1.0,correct
+alabama-am,full,Alabama A&M University,alabama-am,1.0,correct
+alabama-am,slug_spaces,alabama am,alabama-am,1.0,correct
+alabama-am,schedule_short_0,Alabama A&M,alabama-am,1.0,correct
+alabama-st,slug,alabama-st,alabama-st,1.0,correct
+alabama-st,full,Alabama State University,alabama-st,1.0,correct
+alabama-st,slug_spaces,alabama st,alabama-st,1.0,correct
+alabama-st,schedule_short_0,Alabama St.,alabama-st,1.0,correct
+albany-ny,slug,albany-ny,albany-ny,1.0,correct
+albany-ny,full,University at Albany,albany-ny,1.0,correct
+albany-ny,slug_spaces,albany ny,albany-ny,1.0,correct
+albany-ny,schedule_short_0,UAlbany,albany-ny,0.8,correct
+alcorn,slug,alcorn,alcorn,1.0,correct
+alcorn,full,Alcorn State University,alcorn,1.0,correct
+alcorn,slug_spaces,alcorn,alcorn,1.0,correct
+alcorn,schedule_short_0,Alcorn,alcorn,1.0,correct
+allen,slug,allen,allen,1.0,correct
+allen,full,allen,allen,1.0,correct
+allen,slug_spaces,allen,allen,1.0,correct
+am-corpus-chris,slug,am-corpus-chris,am-corpus-chris,1.0,correct
+am-corpus-chris,full,Texas A&M University-Corpus Christi,am-corpus-chris,1.0,correct
+am-corpus-chris,slug_spaces,am corpus chris,am-corpus-chris,1.0,correct
+am-corpus-chris,schedule_short_0,A&M-Corpus Christi,am-corpus-chris,0.9333333333333333,correct
+american,slug,american,american,1.0,correct
+american,full,American University,american,1.0,correct
+american,slug_spaces,american,american,1.0,correct
+american,schedule_short_0,American,american,1.0,correct
+appalachian-st,slug,appalachian-st,appalachian-st,1.0,correct
+appalachian-st,full,Appalachian State University,appalachian-st,1.0,correct
+appalachian-st,slug_spaces,appalachian st,appalachian-st,1.0,correct
+appalachian-st,schedule_short_0,App State,appalachian-st,1.0,correct
+appalachian-st,alias_appstate,appstate,appalachian-st,1.0,correct
+arizona,slug,arizona,arizona,1.0,correct
+arizona,full,University of Arizona,arizona,1.0,correct
+arizona,slug_spaces,arizona,arizona,1.0,correct
+arizona,schedule_short_0,Arizona,arizona,1.0,correct
+arizona-st,slug,arizona-st,arizona-st,1.0,correct
+arizona-st,full,Arizona State University,arizona-st,1.0,correct
+arizona-st,slug_spaces,arizona st,arizona-st,1.0,correct
+arizona-st,schedule_short_0,Arizona St.,arizona-st,1.0,correct
+ark-monticello,slug,ark-monticello,ark-monticello,1.0,correct
+ark-monticello,full,ark-monticello,ark-monticello,1.0,correct
+ark-monticello,slug_spaces,ark monticello,ark-monticello,1.0,correct
+ark-pine-bluff,slug,ark-pine-bluff,ark-pine-bluff,1.0,correct
+ark-pine-bluff,full,"University of Arkansas, Pine Bluff",ark-pine-bluff,1.0,correct
+ark-pine-bluff,slug_spaces,ark pine bluff,ark-pine-bluff,1.0,correct
+ark-pine-bluff,schedule_short_0,Ark.-Pine Bluff,ark-pine-bluff,1.0,correct
+arkansas,slug,arkansas,arkansas,1.0,correct
+arkansas,full,"University of Arkansas, Fayetteville",arkansas,1.0,correct
+arkansas,slug_spaces,arkansas,arkansas,1.0,correct
+arkansas,schedule_short_0,Arkansas,arkansas,1.0,correct
+arkansas-st,slug,arkansas-st,arkansas-st,1.0,correct
+arkansas-st,full,Arkansas State University,arkansas-st,1.0,correct
+arkansas-st,slug_spaces,arkansas st,arkansas-st,1.0,correct
+arkansas-st,schedule_short_0,Arkansas St.,arkansas-st,1.0,correct
+army,slug,army,army,1.0,correct
+army,full,U.S. Military Academy,army,1.0,correct
+army,slug_spaces,army,army,1.0,correct
+army,schedule_short_0,Army West Point,army,0.88,correct
+aub-montgomery,slug,aub-montgomery,aub-montgomery,1.0,correct
+aub-montgomery,full,aub-montgomery,aub-montgomery,1.0,correct
+aub-montgomery,slug_spaces,aub montgomery,aub-montgomery,1.0,correct
+auburn,slug,auburn,auburn,1.0,correct
+auburn,full,Auburn University,auburn,1.0,correct
+auburn,slug_spaces,auburn,auburn,1.0,correct
+auburn,schedule_short_0,Auburn,auburn,1.0,correct
+austin-peay,slug,austin-peay,austin-peay,1.0,correct
+austin-peay,full,Austin Peay State University,austin-peay,1.0,correct
+austin-peay,slug_spaces,austin peay,austin-peay,1.0,correct
+austin-peay,schedule_short_0,Austin Peay,austin-peay,1.0,correct
+bakersfield,slug,bakersfield,bakersfield,1.0,correct
+bakersfield,full,"California State University, Bakersfield",bakersfield,1.0,correct
+bakersfield,slug_spaces,bakersfield,bakersfield,1.0,correct
+bakersfield,schedule_short_0,CSU Bakersfield,bakersfield,0.88,correct
+ball-st,slug,ball-st,ball-st,1.0,correct
+ball-st,full,Ball State University,ball-st,1.0,correct
+ball-st,slug_spaces,ball st,ball-st,1.0,correct
+ball-st,schedule_short_0,Ball St.,ball-st,1.0,correct
+baylor,slug,baylor,baylor,1.0,correct
+baylor,full,Baylor University,baylor,1.0,correct
+baylor,slug_spaces,baylor,baylor,1.0,correct
+baylor,schedule_short_0,Baylor,baylor,1.0,correct
+bellarmine,slug,bellarmine,bellarmine,1.0,correct
+bellarmine,full,Bellarmine University,bellarmine,1.0,correct
+bellarmine,slug_spaces,bellarmine,bellarmine,1.0,correct
+bellarmine,schedule_short_0,Bellarmine,bellarmine,1.0,correct
+belmont,slug,belmont,belmont,1.0,correct
+belmont,full,Belmont University,belmont,1.0,correct
+belmont,slug_spaces,belmont,belmont,1.0,correct
+belmont,schedule_short_0,Belmont,belmont,1.0,correct
+bethune-cookman,slug,bethune-cookman,bethune-cookman,1.0,correct
+bethune-cookman,full,Bethune-Cookman University,bethune-cookman,1.0,correct
+bethune-cookman,slug_spaces,bethune cookman,bethune-cookman,1.0,correct
+bethune-cookman,schedule_short_0,Bethune-Cookman,bethune-cookman,1.0,correct
+binghamton,slug,binghamton,binghamton,1.0,correct
+binghamton,full,Binghamton University,binghamton,1.0,correct
+binghamton,slug_spaces,binghamton,binghamton,1.0,correct
+binghamton,schedule_short_0,Binghamton,binghamton,1.0,correct
+boise-st,slug,boise-st,boise-st,1.0,correct
+boise-st,full,Boise State University,boise-st,1.0,correct
+boise-st,slug_spaces,boise st,boise-st,1.0,correct
+boise-st,schedule_short_0,Boise St.,boise-st,1.0,correct
+boston-college,slug,boston-college,boston-college,1.0,correct
+boston-college,full,Boston College,boston-college,1.0,correct
+boston-college,slug_spaces,boston college,boston-college,1.0,correct
+boston-college,schedule_short_0,Boston College,boston-college,1.0,correct
+bowie-st,slug,bowie-st,bowie-st,1.0,correct
+bowie-st,full,Bowie State University,bowie-st,1.0,correct
+bowie-st,slug_spaces,bowie st,bowie-st,1.0,correct
+bowie-st,schedule_short_0,Bowie St.,bowie-st,1.0,correct
+bowling-green,slug,bowling-green,bowling-green,1.0,correct
+bowling-green,full,Bowling Green State University,bowling-green,1.0,correct
+bowling-green,slug_spaces,bowling green,bowling-green,1.0,correct
+bowling-green,schedule_short_0,Bowling Green,bowling-green,1.0,correct
+bradley,slug,bradley,bradley,1.0,correct
+bradley,full,Bradley University,bradley,1.0,correct
+bradley,slug_spaces,bradley,bradley,1.0,correct
+bradley,schedule_short_0,Bradley,bradley,1.0,correct
+brown,slug,brown,brown,1.0,correct
+brown,full,Brown University,brown,1.0,correct
+brown,slug_spaces,brown,brown,1.0,correct
+brown,schedule_short_0,Brown,brown,1.0,correct
+bryant,slug,bryant,bryant,1.0,correct
+bryant,full,Bryant University,bryant,1.0,correct
+bryant,slug_spaces,bryant,bryant,1.0,correct
+bryant,schedule_short_0,Bryant,bryant,1.0,correct
+bucknell,slug,bucknell,bucknell,1.0,correct
+bucknell,full,Bucknell University,bucknell,1.0,correct
+bucknell,slug_spaces,bucknell,bucknell,1.0,correct
+bucknell,schedule_short_0,Bucknell,bucknell,1.0,correct
+buffalo,slug,buffalo,buffalo,1.0,correct
+buffalo,full,"University at Buffalo, the State University of New York",buffalo,1.0,correct
+buffalo,slug_spaces,buffalo,buffalo,1.0,correct
+buffalo,schedule_short_0,Buffalo,buffalo,1.0,correct
+butler,slug,butler,butler,1.0,correct
+butler,full,Butler University,butler,1.0,correct
+butler,slug_spaces,butler,butler,1.0,correct
+butler,schedule_short_0,Butler,butler,1.0,correct
+byu,slug,byu,byu,1.0,correct
+byu,full,Brigham Young University,byu,1.0,correct
+byu,slug_spaces,byu,byu,1.0,correct
+byu,schedule_short_0,BYU,byu,1.0,correct
+byu,alias_byu,byu,byu,1.0,correct
+cal-poly,slug,cal-poly,cal-poly,1.0,correct
+cal-poly,full,California Polytechnic State University,cal-poly,1.0,correct
+cal-poly,slug_spaces,cal poly,cal-poly,1.0,correct
+cal-poly,schedule_short_0,Cal Poly,cal-poly,1.0,correct
+cal-st-fullerton,slug,cal-st-fullerton,cal-st-fullerton,1.0,correct
+cal-st-fullerton,full,"California State University, Fullerton",cal-st-fullerton,1.0,correct
+cal-st-fullerton,slug_spaces,cal st fullerton,cal-st-fullerton,1.0,correct
+cal-st-fullerton,schedule_short_0,Cal St. Fullerton,cal-st-fullerton,1.0,correct
+cal-st-northridge,slug,cal-st-northridge,cal-st-northridge,1.0,correct
+cal-st-northridge,full,"California State University, Northridge",cal-st-northridge,1.0,correct
+cal-st-northridge,slug_spaces,cal st northridge,cal-st-northridge,1.0,correct
+cal-st-northridge,schedule_short_0,CSUN,cal-st-northridge,1.0,correct
+cal-st-northridge,alias_csun,csun,cal-st-northridge,1.0,correct
+california,slug,california,california,1.0,correct
+california,full,"University of California, Berkeley",california,1.0,correct
+california,slug_spaces,california,california,1.0,correct
+california,schedule_short_0,California,california,1.0,correct
+california-baptist,slug,california-baptist,california-baptist,1.0,correct
+california-baptist,full,California Baptist University,california-baptist,1.0,correct
+california-baptist,slug_spaces,california baptist,california-baptist,1.0,correct
+california-baptist,schedule_short_0,California Baptist,california-baptist,1.0,correct
+campbell,slug,campbell,campbell,1.0,correct
+campbell,full,Campbell University,campbell,1.0,correct
+campbell,slug_spaces,campbell,campbell,1.0,correct
+campbell,schedule_short_0,Campbell,campbell,1.0,correct
+canisius,slug,canisius,canisius,1.0,correct
+canisius,full,Canisius University,canisius,1.0,correct
+canisius,slug_spaces,canisius,canisius,1.0,correct
+canisius,schedule_short_0,Canisius,canisius,1.0,correct
+central-ark,slug,central-ark,central-ark,1.0,correct
+central-ark,full,University of Central Arkansas,central-ark,1.0,correct
+central-ark,slug_spaces,central ark,central-ark,1.0,correct
+central-ark,schedule_short_0,Central Ark.,central-ark,1.0,correct
+central-conn-st,slug,central-conn-st,central-conn-st,1.0,correct
+central-conn-st,full,Central Connecticut State University,central-conn-st,1.0,correct
+central-conn-st,slug_spaces,central conn st,central-conn-st,1.0,correct
+central-conn-st,schedule_short_0,Central Conn. St.,central-conn-st,1.0,correct
+central-mich,slug,central-mich,central-mich,1.0,correct
+central-mich,full,Central Michigan University,central-mich,1.0,correct
+central-mich,slug_spaces,central mich,central-mich,1.0,correct
+central-mich,schedule_short_0,Central Mich.,central-mich,1.0,correct
+charleston-so,slug,charleston-so,charleston-so,1.0,correct
+charleston-so,full,Charleston Southern University,charleston-so,1.0,correct
+charleston-so,slug_spaces,charleston so,charleston-so,1.0,correct
+charleston-so,schedule_short_0,Charleston So.,charleston-so,1.0,correct
+charlotte,slug,charlotte,charlotte,1.0,correct
+charlotte,full,The University of North Carolina at Charlotte,charlotte,1.0,correct
+charlotte,slug_spaces,charlotte,charlotte,1.0,correct
+charlotte,schedule_short_0,Charlotte,charlotte,1.0,correct
+chattanooga,slug,chattanooga,chattanooga,1.0,correct
+chattanooga,full,University of Tennessee at Chattanooga,chattanooga,1.0,correct
+chattanooga,slug_spaces,chattanooga,chattanooga,1.0,correct
+chattanooga,schedule_short_0,Chattanooga,chattanooga,1.0,correct
+chicago-st,slug,chicago-st,chicago-st,1.0,correct
+chicago-st,full,Chicago State University,chicago-st,1.0,correct
+chicago-st,slug_spaces,chicago st,chicago-st,1.0,correct
+chicago-st,schedule_short_0,Chicago St.,chicago-st,1.0,correct
+christian-bros,slug,christian-bros,christian-bros,1.0,correct
+christian-bros,full,christian-bros,christian-bros,1.0,correct
+christian-bros,slug_spaces,christian bros,christian-bros,1.0,correct
+cincinnati,slug,cincinnati,cincinnati,1.0,correct
+cincinnati,full,University of Cincinnati,cincinnati,1.0,correct
+cincinnati,slug_spaces,cincinnati,cincinnati,1.0,correct
+cincinnati,schedule_short_0,Cincinnati,cincinnati,1.0,correct
+citadel,slug,citadel,citadel,1.0,correct
+citadel,full,The Citadel,citadel,1.0,correct
+citadel,slug_spaces,citadel,citadel,1.0,correct
+citadel,schedule_short_0,The Citadel,citadel,1.0,correct
+claflin,slug,claflin,claflin,1.0,correct
+claflin,full,Claflin University,claflin,1.0,correct
+claflin,slug_spaces,claflin,claflin,1.0,correct
+claflin,schedule_short_0,Claflin,claflin,1.0,correct
+clemson,slug,clemson,clemson,1.0,correct
+clemson,full,Clemson University,clemson,1.0,correct
+clemson,slug_spaces,clemson,clemson,1.0,correct
+clemson,schedule_short_0,Clemson,clemson,1.0,correct
+cleveland-st,slug,cleveland-st,cleveland-st,1.0,correct
+cleveland-st,full,Cleveland State University,cleveland-st,1.0,correct
+cleveland-st,slug_spaces,cleveland st,cleveland-st,1.0,correct
+cleveland-st,schedule_short_0,Cleveland St.,cleveland-st,1.0,correct
+coastal-caro,slug,coastal-caro,coastal-caro,1.0,correct
+coastal-caro,full,Coastal Carolina University,coastal-caro,1.0,correct
+coastal-caro,slug_spaces,coastal caro,coastal-caro,1.0,correct
+coastal-caro,schedule_short_0,Coastal Carolina,coastal-caro,0.8666666666666667,correct
+col-of-charleston,slug,col-of-charleston,col-of-charleston,1.0,correct
+col-of-charleston,full,College of Charleston (South Carolina),col-of-charleston,1.0,correct
+col-of-charleston,slug_spaces,col of charleston,col-of-charleston,1.0,correct
+col-of-charleston,schedule_short_0,Col. of Charleston,col-of-charleston,1.0,correct
+colgate,slug,colgate,colgate,1.0,correct
+colgate,full,Colgate University,colgate,1.0,correct
+colgate,slug_spaces,colgate,colgate,1.0,correct
+colgate,schedule_short_0,Colgate,colgate,1.0,correct
+colorado,slug,colorado,colorado,1.0,correct
+colorado,full,University of Colorado Boulder,colorado,1.0,correct
+colorado,slug_spaces,colorado,colorado,1.0,correct
+colorado,schedule_short_0,Colorado,colorado,1.0,correct
+colorado-st,slug,colorado-st,colorado-st,1.0,correct
+colorado-st,full,Colorado State University,colorado-st,1.0,correct
+colorado-st,slug_spaces,colorado st,colorado-st,1.0,correct
+colorado-st,schedule_short_0,Colorado St.,colorado-st,1.0,correct
+columbia,slug,columbia,columbia,1.0,correct
+columbia,full,Columbia University-Barnard College,columbia,1.0,correct
+columbia,slug_spaces,columbia,columbia,1.0,correct
+columbia,schedule_short_0,Columbia,columbia,1.0,correct
+coppin-st,slug,coppin-st,coppin-st,1.0,correct
+coppin-st,full,Coppin State University,coppin-st,1.0,correct
+coppin-st,slug_spaces,coppin st,coppin-st,1.0,correct
+coppin-st,schedule_short_0,Coppin St.,coppin-st,1.0,correct
+cornell,slug,cornell,cornell,1.0,correct
+cornell,full,Cornell University,cornell,1.0,correct
+cornell,slug_spaces,cornell,cornell,1.0,correct
+cornell,schedule_short_0,Cornell,cornell,1.0,correct
+creighton,slug,creighton,creighton,1.0,correct
+creighton,full,Creighton University,creighton,1.0,correct
+creighton,slug_spaces,creighton,creighton,1.0,correct
+creighton,schedule_short_0,Creighton,creighton,1.0,correct
+dartmouth,slug,dartmouth,dartmouth,1.0,correct
+dartmouth,full,Dartmouth College,dartmouth,1.0,correct
+dartmouth,slug_spaces,dartmouth,dartmouth,1.0,correct
+dartmouth,schedule_short_0,Dartmouth,dartmouth,1.0,correct
+davidson,slug,davidson,davidson,1.0,correct
+davidson,full,Davidson College,davidson,1.0,correct
+davidson,slug_spaces,davidson,davidson,1.0,correct
+davidson,schedule_short_0,Davidson,davidson,1.0,correct
+dayton,slug,dayton,dayton,1.0,correct
+dayton,full,University of Dayton,dayton,1.0,correct
+dayton,slug_spaces,dayton,dayton,1.0,correct
+dayton,schedule_short_0,Dayton,dayton,1.0,correct
+delaware,slug,delaware,delaware,1.0,correct
+delaware,full,University of Delaware,delaware,1.0,correct
+delaware,slug_spaces,delaware,delaware,1.0,correct
+delaware,schedule_short_0,Delaware,delaware,1.0,correct
+delaware-st,slug,delaware-st,delaware-st,1.0,correct
+delaware-st,full,Delaware State University,delaware-st,1.0,correct
+delaware-st,slug_spaces,delaware st,delaware-st,1.0,correct
+delaware-st,schedule_short_0,Delaware St.,delaware-st,1.0,correct
+denver,slug,denver,denver,1.0,correct
+denver,full,University of Denver,denver,1.0,correct
+denver,slug_spaces,denver,denver,1.0,correct
+denver,schedule_short_0,Denver,denver,1.0,correct
+depaul,slug,depaul,depaul,1.0,correct
+depaul,full,DePaul University,depaul,1.0,correct
+depaul,slug_spaces,depaul,depaul,1.0,correct
+depaul,schedule_short_0,DePaul,depaul,1.0,correct
+dillard,slug,dillard,dillard,1.0,correct
+dillard,full,Dillard,dillard,1.0,correct
+dillard,slug_spaces,dillard,dillard,1.0,correct
+dillard,schedule_short_0,Dillard,dillard,1.0,correct
+drake,slug,drake,drake,1.0,correct
+drake,full,Drake University,drake,1.0,correct
+drake,slug_spaces,drake,drake,1.0,correct
+drake,schedule_short_0,Drake,drake,1.0,correct
+duke,slug,duke,duke,1.0,correct
+duke,full,Duke University,duke,1.0,correct
+duke,slug_spaces,duke,duke,1.0,correct
+duke,schedule_short_0,Duke,duke,1.0,correct
+duquesne,slug,duquesne,duquesne,1.0,correct
+duquesne,full,Duquesne University,duquesne,1.0,correct
+duquesne,slug_spaces,duquesne,duquesne,1.0,correct
+duquesne,schedule_short_0,Duquesne,duquesne,1.0,correct
+east-carolina,slug,east-carolina,east-carolina,1.0,correct
+east-carolina,full,East Carolina University,east-carolina,1.0,correct
+east-carolina,slug_spaces,east carolina,east-carolina,1.0,correct
+east-carolina,schedule_short_0,East Carolina,east-carolina,1.0,correct
+east-tenn-st,slug,east-tenn-st,east-tenn-st,1.0,correct
+east-tenn-st,full,East Tennessee State University,east-tenn-st,1.0,correct
+east-tenn-st,slug_spaces,east tenn st,east-tenn-st,1.0,correct
+east-tenn-st,schedule_short_0,ETSU,east-tenn-st,1.0,correct
+east-tenn-st,alias_etsu,etsu,east-tenn-st,1.0,correct
+eastern-ill,slug,eastern-ill,eastern-ill,1.0,correct
+eastern-ill,full,Eastern Illinois University,eastern-ill,1.0,correct
+eastern-ill,slug_spaces,eastern ill,eastern-ill,1.0,correct
+eastern-ill,schedule_short_0,Eastern Ill.,eastern-ill,1.0,correct
+eastern-ky,slug,eastern-ky,eastern-ky,1.0,correct
+eastern-ky,full,Eastern Kentucky University,eastern-ky,1.0,correct
+eastern-ky,slug_spaces,eastern ky,eastern-ky,1.0,correct
+eastern-ky,schedule_short_0,Eastern Ky.,eastern-ky,1.0,correct
+eastern-mich,slug,eastern-mich,eastern-mich,1.0,correct
+eastern-mich,full,Eastern Michigan University,eastern-mich,1.0,correct
+eastern-mich,slug_spaces,eastern mich,eastern-mich,1.0,correct
+eastern-mich,schedule_short_0,Eastern Mich.,eastern-mich,1.0,correct
+eastern-wash,slug,eastern-wash,eastern-wash,1.0,correct
+eastern-wash,full,Eastern Washington University,eastern-wash,1.0,correct
+eastern-wash,slug_spaces,eastern wash,eastern-wash,1.0,correct
+eastern-wash,schedule_short_0,Eastern Wash.,eastern-wash,1.0,correct
+elon,slug,elon,elon,1.0,correct
+elon,full,Elon University,elon,1.0,correct
+elon,slug_spaces,elon,elon,1.0,correct
+elon,schedule_short_0,Elon,elon,1.0,correct
+erskine,slug,erskine,erskine,1.0,correct
+erskine,full,Erskine College,erskine,1.0,correct
+erskine,slug_spaces,erskine,erskine,1.0,correct
+erskine,schedule_short_0,Erskine,erskine,1.0,correct
+evansville,slug,evansville,evansville,1.0,correct
+evansville,full,University of Evansville,evansville,1.0,correct
+evansville,slug_spaces,evansville,evansville,1.0,correct
+evansville,schedule_short_0,Evansville,evansville,1.0,correct
+fairfield,slug,fairfield,fairfield,1.0,correct
+fairfield,full,Fairfield University,fairfield,1.0,correct
+fairfield,slug_spaces,fairfield,fairfield,1.0,correct
+fairfield,schedule_short_0,Fairfield,fairfield,1.0,correct
+fdu,slug,fdu,fdu,1.0,correct
+fdu,full,"Fairleigh Dickinson University, Metropolitan Campus",fdu,1.0,correct
+fdu,slug_spaces,fdu,fdu,1.0,correct
+fdu,schedule_short_0,FDU,fdu,1.0,correct
+ferris-st,slug,ferris-st,ferris-st,1.0,correct
+ferris-st,full,ferris-st,ferris-st,1.0,correct
+ferris-st,slug_spaces,ferris st,ferris-st,1.0,correct
+fgcu,slug,fgcu,fgcu,1.0,correct
+fgcu,full,Florida Gulf Coast University,fgcu,1.0,correct
+fgcu,slug_spaces,fgcu,fgcu,1.0,correct
+fgcu,schedule_short_0,FGCU,fgcu,1.0,correct
+fgcu,alias_fgcu,fgcu,fgcu,1.0,correct
+fiu,slug,fiu,fiu,1.0,correct
+fiu,full,Florida International University,fiu,1.0,correct
+fiu,slug_spaces,fiu,fiu,1.0,correct
+fiu,schedule_short_0,FIU,fiu,1.0,correct
+fiu,alias_fiu,fiu,fiu,1.0,correct
+fla-atlantic,slug,fla-atlantic,fla-atlantic,1.0,correct
+fla-atlantic,full,Florida Atlantic University,fla-atlantic,1.0,correct
+fla-atlantic,slug_spaces,fla atlantic,fla-atlantic,1.0,correct
+fla-atlantic,schedule_short_0,Fla. Atlantic,fla-atlantic,1.0,correct
+fla-atlantic,alias_fau,fau,fla-atlantic,1.0,correct
+fla-southern,slug,fla-southern,fla-southern,1.0,correct
+fla-southern,full,Florida Southern College,fla-southern,1.0,correct
+fla-southern,slug_spaces,fla southern,fla-southern,1.0,correct
+fla-southern,schedule_short_0,Fla. Southern,fla-southern,1.0,correct
+florida,slug,florida,florida,1.0,correct
+florida,full,University of Florida,florida,1.0,correct
+florida,slug_spaces,florida,florida,1.0,correct
+florida,schedule_short_0,Florida,florida,1.0,correct
+florida-am,slug,florida-am,florida-am,1.0,correct
+florida-am,full,Florida A&M University,florida-am,1.0,correct
+florida-am,slug_spaces,florida am,florida-am,1.0,correct
+florida-am,schedule_short_0,Florida A&M,florida-am,1.0,correct
+florida-st,slug,florida-st,florida-st,1.0,correct
+florida-st,full,Florida State University,florida-st,1.0,correct
+florida-st,slug_spaces,florida st,florida-st,1.0,correct
+florida-st,schedule_short_0,Florida St.,florida-st,1.0,correct
+fordham,slug,fordham,fordham,1.0,correct
+fordham,full,Fordham University,fordham,1.0,correct
+fordham,slug_spaces,fordham,fordham,1.0,correct
+fordham,schedule_short_0,Fordham,fordham,1.0,correct
+fort-valley-st,slug,fort-valley-st,fort-valley-st,1.0,correct
+fort-valley-st,full,Fort Valley State University,fort-valley-st,1.0,correct
+fort-valley-st,slug_spaces,fort valley st,fort-valley-st,1.0,correct
+fresno-st,slug,fresno-st,fresno-st,1.0,correct
+fresno-st,full,"California State University, Fresno",fresno-st,1.0,correct
+fresno-st,slug_spaces,fresno st,fresno-st,1.0,correct
+fresno-st,schedule_short_0,Fresno St.,fresno-st,1.0,correct
+furman,slug,furman,furman,1.0,correct
+furman,full,Furman University,furman,1.0,correct
+furman,slug_spaces,furman,furman,1.0,correct
+furman,schedule_short_0,Furman,furman,1.0,correct
+ga-southern,slug,ga-southern,ga-southern,1.0,correct
+ga-southern,full,Georgia Southern University,ga-southern,1.0,correct
+ga-southern,slug_spaces,ga southern,ga-southern,1.0,correct
+ga-southern,schedule_short_0,Ga. Southern,ga-southern,1.0,correct
+ga-southern,alias_georgiasouthern,georgiasouthern,ga-southern,1.0,correct
+gardner-webb,slug,gardner-webb,gardner-webb,1.0,correct
+gardner-webb,full,Gardner-Webb University,gardner-webb,1.0,correct
+gardner-webb,slug_spaces,gardner webb,gardner-webb,1.0,correct
+gardner-webb,schedule_short_0,Gardner-Webb,gardner-webb,1.0,correct
+george-mason,slug,george-mason,george-mason,1.0,correct
+george-mason,full,George Mason University,george-mason,1.0,correct
+george-mason,slug_spaces,george mason,george-mason,1.0,correct
+george-mason,schedule_short_0,George Mason,george-mason,1.0,correct
+george-washington,slug,george-washington,george-washington,1.0,correct
+george-washington,full,George Washington University,george-washington,1.0,correct
+george-washington,slug_spaces,george washington,george-washington,1.0,correct
+george-washington,schedule_short_0,George Washington,george-washington,1.0,correct
+georgetown,slug,georgetown,georgetown,1.0,correct
+georgetown,full,Georgetown University,georgetown,1.0,correct
+georgetown,slug_spaces,georgetown,georgetown,1.0,correct
+georgetown,schedule_short_0,Georgetown,georgetown,1.0,correct
+georgia,slug,georgia,georgia,1.0,correct
+georgia,full,University of Georgia,georgia,1.0,correct
+georgia,slug_spaces,georgia,georgia,1.0,correct
+georgia,schedule_short_0,Georgia,georgia,1.0,correct
+georgia-st,slug,georgia-st,georgia-st,1.0,correct
+georgia-st,full,Georgia State University,georgia-st,1.0,correct
+georgia-st,slug_spaces,georgia st,georgia-st,1.0,correct
+georgia-st,schedule_short_0,Georgia St.,georgia-st,1.0,correct
+georgia-tech,slug,georgia-tech,georgia-tech,1.0,correct
+georgia-tech,full,Georgia Institute of Technology,georgia-tech,1.0,correct
+georgia-tech,slug_spaces,georgia tech,georgia-tech,1.0,correct
+georgia-tech,schedule_short_0,Georgia Tech,georgia-tech,1.0,correct
+gonzaga,slug,gonzaga,gonzaga,1.0,correct
+gonzaga,full,Gonzaga University,gonzaga,1.0,correct
+gonzaga,slug_spaces,gonzaga,gonzaga,1.0,correct
+gonzaga,schedule_short_0,Gonzaga,gonzaga,1.0,correct
+grambling,slug,grambling,grambling,1.0,correct
+grambling,full,Grambling State University,grambling,1.0,correct
+grambling,slug_spaces,grambling,grambling,1.0,correct
+grambling,schedule_short_0,Grambling,grambling,1.0,correct
+grand-canyon,slug,grand-canyon,grand-canyon,1.0,correct
+grand-canyon,full,Grand Canyon University,grand-canyon,1.0,correct
+grand-canyon,slug_spaces,grand canyon,grand-canyon,1.0,correct
+grand-canyon,schedule_short_0,Grand Canyon,grand-canyon,1.0,correct
+green-bay,slug,green-bay,green-bay,1.0,correct
+green-bay,full,University of Wisconsin-Green Bay,green-bay,1.0,correct
+green-bay,slug_spaces,green bay,green-bay,1.0,correct
+green-bay,schedule_short_0,Green Bay,green-bay,1.0,correct
+hampton,slug,hampton,hampton,1.0,correct
+hampton,full,Hampton University,hampton,1.0,correct
+hampton,slug_spaces,hampton,hampton,1.0,correct
+hampton,schedule_short_0,Hampton,hampton,1.0,correct
+harvard,slug,harvard,harvard,1.0,correct
+harvard,full,Harvard University,harvard,1.0,correct
+harvard,slug_spaces,harvard,harvard,1.0,correct
+harvard,schedule_short_0,Harvard,harvard,1.0,correct
+hawaii,slug,hawaii,hawaii,1.0,correct
+hawaii,full,"University of Hawaii, Manoa",hawaii,1.0,correct
+hawaii,slug_spaces,hawaii,hawaii,1.0,correct
+hawaii,schedule_short_0,Hawaii,hawaii,1.0,correct
+hawaii,alias_hawaii,hawaii,hawaii,1.0,correct
+henderson-st,slug,henderson-st,henderson-st,1.0,correct
+henderson-st,full,Henderson State University,henderson-st,1.0,correct
+henderson-st,slug_spaces,henderson st,henderson-st,1.0,correct
+henderson-st,schedule_short_0,Henderson St.,henderson-st,1.0,correct
+high-point,slug,high-point,high-point,1.0,correct
+high-point,full,High Point University,high-point,1.0,correct
+high-point,slug_spaces,high point,high-point,1.0,correct
+high-point,schedule_short_0,High Point,high-point,1.0,correct
+hofstra,slug,hofstra,hofstra,1.0,correct
+hofstra,full,Hofstra University,hofstra,1.0,correct
+hofstra,slug_spaces,hofstra,hofstra,1.0,correct
+hofstra,schedule_short_0,Hofstra,hofstra,1.0,correct
+holy-cross,slug,holy-cross,holy-cross,1.0,correct
+holy-cross,full,College of the Holy Cross,holy-cross,1.0,correct
+holy-cross,slug_spaces,holy cross,holy-cross,1.0,correct
+holy-cross,schedule_short_0,Holy Cross,holy-cross,1.0,correct
+houston,slug,houston,houston,1.0,correct
+houston,full,University of Houston,houston,1.0,correct
+houston,slug_spaces,houston,houston,1.0,correct
+houston,schedule_short_0,Houston,houston,1.0,correct
+houston-christian,slug,houston-christian,houston-christian,1.0,correct
+houston-christian,full,Houston Christian University,houston-christian,1.0,correct
+houston-christian,slug_spaces,houston christian,houston-christian,1.0,correct
+houston-christian,schedule_short_0,Houston Christian,houston-christian,1.0,correct
+howard,slug,howard,howard,1.0,correct
+howard,full,Howard University,howard,1.0,correct
+howard,slug_spaces,howard,howard,1.0,correct
+howard,schedule_short_0,Howard,howard,1.0,correct
+idaho,slug,idaho,idaho,1.0,correct
+idaho,full,University of Idaho,idaho,1.0,correct
+idaho,slug_spaces,idaho,idaho,1.0,correct
+idaho,schedule_short_0,Idaho,idaho,1.0,correct
+idaho-st,slug,idaho-st,idaho-st,1.0,correct
+idaho-st,full,Idaho State University,idaho-st,1.0,correct
+idaho-st,slug_spaces,idaho st,idaho-st,1.0,correct
+idaho-st,schedule_short_0,Idaho St.,idaho-st,1.0,correct
+ill-chicago,slug,ill-chicago,ill-chicago,1.0,correct
+ill-chicago,full,University of Illinois Chicago,ill-chicago,1.0,correct
+ill-chicago,slug_spaces,ill chicago,ill-chicago,1.0,correct
+ill-chicago,schedule_short_0,UIC,ill-chicago,1.0,correct
+ill-chicago,alias_uic,uic,ill-chicago,1.0,correct
+illinois,slug,illinois,illinois,1.0,correct
+illinois,full,University of Illinois Urbana-Champaign,illinois,1.0,correct
+illinois,slug_spaces,illinois,illinois,1.0,correct
+illinois,schedule_short_0,Illinois,illinois,1.0,correct
+illinois-st,slug,illinois-st,illinois-st,1.0,correct
+illinois-st,full,Illinois State University,illinois-st,1.0,correct
+illinois-st,slug_spaces,illinois st,illinois-st,1.0,correct
+illinois-st,schedule_short_0,Illinois St.,illinois-st,1.0,correct
+indiana,slug,indiana,indiana,1.0,correct
+indiana,full,"Indiana University, Bloomington",indiana,1.0,correct
+indiana,slug_spaces,indiana,indiana,1.0,correct
+indiana,schedule_short_0,Indiana,indiana,1.0,correct
+indiana-st,slug,indiana-st,indiana-st,1.0,correct
+indiana-st,full,Indiana State University,indiana-st,1.0,correct
+indiana-st,slug_spaces,indiana st,indiana-st,1.0,correct
+indiana-st,schedule_short_0,Indiana St.,indiana-st,1.0,correct
+iona,slug,iona,iona,1.0,correct
+iona,full,Iona University,iona,1.0,correct
+iona,slug_spaces,iona,iona,1.0,correct
+iona,schedule_short_0,Iona,iona,1.0,correct
+iowa,slug,iowa,iowa,1.0,correct
+iowa,full,University of Iowa,iowa,1.0,correct
+iowa,slug_spaces,iowa,iowa,1.0,correct
+iowa,schedule_short_0,Iowa,iowa,1.0,correct
+iowa-st,slug,iowa-st,iowa-st,1.0,correct
+iowa-st,full,Iowa State University,iowa-st,1.0,correct
+iowa-st,slug_spaces,iowa st,iowa-st,1.0,correct
+iowa-st,schedule_short_0,Iowa St.,iowa-st,1.0,correct
+ipfw,slug,ipfw,ipfw,1.0,correct
+ipfw,full,Purdue University Fort Wayne,ipfw,1.0,correct
+ipfw,slug_spaces,ipfw,ipfw,1.0,correct
+ipfw,schedule_short_0,Purdue Fort Wayne,purdue,0.88,wrong
+iu-indy,slug,iu-indy,iu-indy,1.0,correct
+iu-indy,full,Indiana University Indianapolis,iu-indy,1.0,correct
+iu-indy,slug_spaces,iu indy,iu-indy,1.0,correct
+iu-indy,schedule_short_0,IU Indy,iu-indy,1.0,correct
+iu-indy,alias_iupui,iupui,iu-indy,1.0,correct
+jackson-st,slug,jackson-st,jackson-st,1.0,correct
+jackson-st,full,Jackson State University,jackson-st,1.0,correct
+jackson-st,slug_spaces,jackson st,jackson-st,1.0,correct
+jackson-st,schedule_short_0,Jackson St.,jackson-st,1.0,correct
+jacksonville,slug,jacksonville,jacksonville,1.0,correct
+jacksonville,full,Jacksonville University,jacksonville,1.0,correct
+jacksonville,slug_spaces,jacksonville,jacksonville,1.0,correct
+jacksonville,schedule_short_0,Jacksonville,jacksonville,1.0,correct
+jacksonville-st,slug,jacksonville-st,jacksonville-st,1.0,correct
+jacksonville-st,full,Jacksonville State University,jacksonville-st,1.0,correct
+jacksonville-st,slug_spaces,jacksonville st,jacksonville-st,1.0,correct
+jacksonville-st,schedule_short_0,Jacksonville St.,jacksonville-st,1.0,correct
+james-madison,slug,james-madison,james-madison,1.0,correct
+james-madison,full,James Madison University,james-madison,1.0,correct
+james-madison,slug_spaces,james madison,james-madison,1.0,correct
+james-madison,schedule_short_0,James Madison,james-madison,1.0,correct
+kansas,slug,kansas,kansas,1.0,correct
+kansas,full,University of Kansas,kansas,1.0,correct
+kansas,slug_spaces,kansas,kansas,1.0,correct
+kansas,schedule_short_0,Kansas,kansas,1.0,correct
+kansas-st,slug,kansas-st,kansas-st,1.0,correct
+kansas-st,full,Kansas State University,kansas-st,1.0,correct
+kansas-st,slug_spaces,kansas st,kansas-st,1.0,correct
+kansas-st,schedule_short_0,Kansas St.,kansas-st,1.0,correct
+kennesaw-st,slug,kennesaw-st,kennesaw-st,1.0,correct
+kennesaw-st,full,Kennesaw State University,kennesaw-st,1.0,correct
+kennesaw-st,slug_spaces,kennesaw st,kennesaw-st,1.0,correct
+kennesaw-st,schedule_short_0,Kennesaw St.,kennesaw-st,1.0,correct
+kent-st,slug,kent-st,kent-st,1.0,correct
+kent-st,full,Kent State University,kent-st,1.0,correct
+kent-st,slug_spaces,kent st,kent-st,1.0,correct
+kent-st,schedule_short_0,Kent St.,kent-st,1.0,correct
+kentucky,slug,kentucky,kentucky,1.0,correct
+kentucky,full,University of Kentucky,kentucky,1.0,correct
+kentucky,slug_spaces,kentucky,kentucky,1.0,correct
+kentucky,schedule_short_0,Kentucky,kentucky,1.0,correct
+la-lafayette,slug,la-lafayette,la-lafayette,1.0,correct
+la-lafayette,full,University of Louisiana at Lafayette,la-lafayette,1.0,correct
+la-lafayette,slug_spaces,la lafayette,la-lafayette,1.0,correct
+la-lafayette,schedule_short_0,Louisiana,louisiana-tech,0.8181818181818182,wrong
+la-lafayette,alias_ull,ull,la-lafayette,1.0,correct
+la-monroe,slug,la-monroe,la-monroe,1.0,correct
+la-monroe,full,University of Louisiana Monroe,la-monroe,1.0,correct
+la-monroe,slug_spaces,la monroe,la-monroe,1.0,correct
+la-monroe,schedule_short_0,ULM,la-monroe,1.0,correct
+la-monroe,alias_ulm,ulm,la-monroe,1.0,correct
+lafayette,slug,lafayette,lafayette,1.0,correct
+lafayette,full,Lafayette College,lafayette,1.0,correct
+lafayette,slug_spaces,lafayette,lafayette,1.0,correct
+lafayette,schedule_short_0,Lafayette,lafayette,1.0,correct
+lamar,slug,lamar,lamar,1.0,correct
+lamar,full,Lamar University,lamar,1.0,correct
+lamar,slug_spaces,lamar,lamar,1.0,correct
+lamar,schedule_short_0,Lamar University,lamar,1.0,correct
+le-moyne,slug,le-moyne,le-moyne,1.0,correct
+le-moyne,full,Le Moyne College,le-moyne,1.0,correct
+le-moyne,slug_spaces,le moyne,le-moyne,1.0,correct
+le-moyne,schedule_short_0,Le Moyne,le-moyne,1.0,correct
+lee,slug,lee,lee,1.0,correct
+lee,full,lee,lee,1.0,correct
+lee,slug_spaces,lee,lee,1.0,correct
+lees-mcrae,slug,lees-mcrae,lees-mcrae,1.0,correct
+lees-mcrae,full,lees-mcrae,lees-mcrae,1.0,correct
+lees-mcrae,slug_spaces,lees mcrae,lees-mcrae,1.0,correct
+lehigh,slug,lehigh,lehigh,1.0,correct
+lehigh,full,Lehigh University,lehigh,1.0,correct
+lehigh,slug_spaces,lehigh,lehigh,1.0,correct
+lehigh,schedule_short_0,Lehigh,lehigh,1.0,correct
+lemoyne-owen,slug,lemoyne-owen,lemoyne-owen,1.0,correct
+lemoyne-owen,full,lemoyne-owen,lemoyne-owen,1.0,correct
+lemoyne-owen,slug_spaces,lemoyne owen,lemoyne-owen,1.0,correct
+liberty,slug,liberty,liberty,1.0,correct
+liberty,full,Liberty University,liberty,1.0,correct
+liberty,slug_spaces,liberty,liberty,1.0,correct
+liberty,schedule_short_0,Liberty,liberty,1.0,correct
+lindenwood-mo,slug,lindenwood-mo,lindenwood-mo,1.0,correct
+lindenwood-mo,full,Lindenwood University,lindenwood-mo,1.0,correct
+lindenwood-mo,slug_spaces,lindenwood mo,lindenwood-mo,1.0,correct
+lindenwood-mo,schedule_short_0,Lindenwood,lindenwood-mo,0.9090909090909091,correct
+lipscomb,slug,lipscomb,lipscomb,1.0,correct
+lipscomb,full,Lipscomb University,lipscomb,1.0,correct
+lipscomb,slug_spaces,lipscomb,lipscomb,1.0,correct
+lipscomb,schedule_short_0,Lipscomb,lipscomb,1.0,correct
+long-beach-st,slug,long-beach-st,long-beach-st,1.0,correct
+long-beach-st,full,Long Beach State University,long-beach-st,1.0,correct
+long-beach-st,slug_spaces,long beach st,long-beach-st,1.0,correct
+long-beach-st,schedule_short_0,Long Beach St.,long-beach-st,1.0,correct
+long-island,slug,long-island,long-island,1.0,correct
+long-island,full,Long Island University,long-island,1.0,correct
+long-island,slug_spaces,long island,long-island,1.0,correct
+long-island,schedule_short_0,LIU,long-island,1.0,correct
+long-island,alias_liu,liu,long-island,1.0,correct
+louisiana-tech,slug,louisiana-tech,louisiana-tech,1.0,correct
+louisiana-tech,full,Louisiana Tech University,louisiana-tech,1.0,correct
+louisiana-tech,slug_spaces,louisiana tech,louisiana-tech,1.0,correct
+louisiana-tech,schedule_short_0,Louisiana Tech,louisiana-tech,1.0,correct
+louisville,slug,louisville,louisville,1.0,correct
+louisville,full,University of Louisville,louisville,1.0,correct
+louisville,slug_spaces,louisville,louisville,1.0,correct
+louisville,schedule_short_0,Louisville,louisville,1.0,correct
+loyola-chicago,slug,loyola-chicago,loyola-chicago,1.0,correct
+loyola-chicago,full,Loyola University Chicago,loyola-chicago,1.0,correct
+loyola-chicago,slug_spaces,loyola chicago,loyola-chicago,1.0,correct
+loyola-chicago,schedule_short_0,Loyola Chicago,loyola-chicago,1.0,correct
+loyola-maryland,slug,loyola-maryland,loyola-maryland,1.0,correct
+loyola-maryland,full,Loyola University Maryland,loyola-maryland,1.0,correct
+loyola-maryland,slug_spaces,loyola maryland,loyola-maryland,1.0,correct
+loyola-maryland,schedule_short_0,Loyola Maryland,loyola-maryland,1.0,correct
+loyola-marymount,slug,loyola-marymount,loyola-marymount,1.0,correct
+loyola-marymount,full,Loyola Marymount University,loyola-marymount,1.0,correct
+loyola-marymount,slug_spaces,loyola marymount,loyola-marymount,1.0,correct
+loyola-marymount,schedule_short_0,LMU (CA),loyola-marymount,1.0,correct
+loyola-marymount,alias_lmu,lmu,loyola-marymount,1.0,correct
+lsu,slug,lsu,lsu,1.0,correct
+lsu,full,Louisiana State University,lsu,1.0,correct
+lsu,slug_spaces,lsu,lsu,1.0,correct
+lsu,schedule_short_0,LSU,lsu,1.0,correct
+lsu,alias_lsu,lsu,lsu,1.0,correct
+manhattan,slug,manhattan,manhattan,1.0,correct
+manhattan,full,Manhattan University,manhattan,1.0,correct
+manhattan,slug_spaces,manhattan,manhattan,1.0,correct
+manhattan,schedule_short_0,Manhattan,manhattan,1.0,correct
+marist,slug,marist,marist,1.0,correct
+marist,full,Marist University,marist,1.0,correct
+marist,slug_spaces,marist,marist,1.0,correct
+marist,schedule_short_0,Marist,marist,1.0,correct
+marquette,slug,marquette,marquette,1.0,correct
+marquette,full,Marquette University,marquette,1.0,correct
+marquette,slug_spaces,marquette,marquette,1.0,correct
+marquette,schedule_short_0,Marquette,marquette,1.0,correct
+marshall,slug,marshall,marshall,1.0,correct
+marshall,full,Marshall University,marshall,1.0,correct
+marshall,slug_spaces,marshall,marshall,1.0,correct
+marshall,schedule_short_0,Marshall,marshall,1.0,correct
+maryland,slug,maryland,maryland,1.0,correct
+maryland,full,"University of Maryland, College Park",maryland,1.0,correct
+maryland,slug_spaces,maryland,maryland,1.0,correct
+maryland,schedule_short_0,Maryland,maryland,1.0,correct
+mcneese,slug,mcneese,mcneese,1.0,correct
+mcneese,full,McNeese State University,mcneese,1.0,correct
+mcneese,slug_spaces,mcneese,mcneese,1.0,correct
+mcneese,schedule_short_0,McNeese,mcneese,1.0,correct
+memphis,slug,memphis,memphis,1.0,correct
+memphis,full,University of Memphis,memphis,1.0,correct
+memphis,slug_spaces,memphis,memphis,1.0,correct
+memphis,schedule_short_0,Memphis,memphis,1.0,correct
+mercer,slug,mercer,mercer,1.0,correct
+mercer,full,Mercer University,mercer,1.0,correct
+mercer,slug_spaces,mercer,mercer,1.0,correct
+mercer,schedule_short_0,Mercer,mercer,1.0,correct
+mercyhurst,slug,mercyhurst,mercyhurst,1.0,correct
+mercyhurst,full,Mercyhurst University,mercyhurst,1.0,correct
+mercyhurst,slug_spaces,mercyhurst,mercyhurst,1.0,correct
+mercyhurst,schedule_short_0,Mercyhurst,mercyhurst,1.0,correct
+merrimack,slug,merrimack,merrimack,1.0,correct
+merrimack,full,Merrimack College,merrimack,1.0,correct
+merrimack,slug_spaces,merrimack,merrimack,1.0,correct
+merrimack,schedule_short_0,Merrimack,merrimack,1.0,correct
+miami-fl,slug,miami-fl,miami-fl,1.0,correct
+miami-fl,full,University of Miami (Florida),miami-fl,1.0,correct
+miami-fl,slug_spaces,miami fl,miami-fl,1.0,correct
+miami-fl,schedule_short_0,Miami (FL),miami-fl,1.0,correct
+miami-fl,alias_miami,miami,miami-fl,1.0,correct
+miami-oh,slug,miami-oh,miami-oh,1.0,correct
+miami-oh,full,Miami University (Ohio),miami-fl,1.0,wrong
+miami-oh,slug_spaces,miami oh,miami-oh,1.0,correct
+miami-oh,schedule_short_0,Miami (OH),miami-oh,1.0,correct
+miami-oh,alias_miamioh,miamioh,miami-oh,1.0,correct
+michigan,slug,michigan,michigan,1.0,correct
+michigan,full,University of Michigan,michigan,1.0,correct
+michigan,slug_spaces,michigan,michigan,1.0,correct
+michigan,schedule_short_0,Michigan,michigan,1.0,correct
+michigan-st,slug,michigan-st,michigan-st,1.0,correct
+michigan-st,full,Michigan State University,michigan-st,1.0,correct
+michigan-st,slug_spaces,michigan st,michigan-st,1.0,correct
+michigan-st,schedule_short_0,Michigan St.,michigan-st,1.0,correct
+middle-tenn,slug,middle-tenn,middle-tenn,1.0,correct
+middle-tenn,full,Middle Tennessee State University,middle-tenn,1.0,correct
+middle-tenn,slug_spaces,middle tenn,middle-tenn,1.0,correct
+middle-tenn,schedule_short_0,Middle Tenn.,middle-tenn,1.0,correct
+miles,slug,miles,miles,1.0,correct
+miles,full,miles,miles,1.0,correct
+miles,slug_spaces,miles,miles,1.0,correct
+milwaukee,slug,milwaukee,milwaukee,1.0,correct
+milwaukee,full,University of Wisconsin-Milwaukee,milwaukee,1.0,correct
+milwaukee,slug_spaces,milwaukee,milwaukee,1.0,correct
+milwaukee,schedule_short_0,Milwaukee,milwaukee,1.0,correct
+minnesota,slug,minnesota,minnesota,1.0,correct
+minnesota,full,"University of Minnesota, Twin Cities",minnesota,1.0,correct
+minnesota,slug_spaces,minnesota,minnesota,1.0,correct
+minnesota,schedule_short_0,Minnesota,minnesota,1.0,correct
+mississippi-christ,slug,mississippi-christ,mississippi-christ,1.0,correct
+mississippi-christ,full,mississippi-christ,mississippi-christ,1.0,correct
+mississippi-christ,slug_spaces,mississippi christ,mississippi-christ,1.0,correct
+mississippi-st,slug,mississippi-st,mississippi-st,1.0,correct
+mississippi-st,full,Mississippi State University,mississippi-st,1.0,correct
+mississippi-st,slug_spaces,mississippi st,mississippi-st,1.0,correct
+mississippi-st,schedule_short_0,Mississippi St.,mississippi-st,1.0,correct
+mississippi-val,slug,mississippi-val,mississippi-val,1.0,correct
+mississippi-val,full,Mississippi Valley State University,mississippi-val,1.0,correct
+mississippi-val,slug_spaces,mississippi val,mississippi-val,1.0,correct
+mississippi-val,schedule_short_0,Mississippi Val.,mississippi-val,1.0,correct
+missouri,slug,missouri,missouri,1.0,correct
+missouri,full,"University of Missouri, Columbia",missouri,1.0,correct
+missouri,slug_spaces,missouri,missouri,1.0,correct
+missouri,schedule_short_0,Missouri,missouri,1.0,correct
+missouri-snt,slug,missouri-snt,missouri-snt,1.0,correct
+missouri-snt,full,Missouri University of Science and Technology,missouri-snt,1.0,correct
+missouri-snt,slug_spaces,missouri snt,missouri-snt,1.0,correct
+missouri-snt,schedule_short_0,Missouri S&T,missouri-st,1.0,wrong
+missouri-st,slug,missouri-st,missouri-st,1.0,correct
+missouri-st,full,Missouri State University,missouri-st,1.0,correct
+missouri-st,slug_spaces,missouri st,missouri-st,1.0,correct
+missouri-st,schedule_short_0,Missouri St.,missouri-st,1.0,correct
+mo-western-st,slug,mo-western-st,mo-western-st,1.0,correct
+mo-western-st,full,mo-western-st,mo-western-st,1.0,correct
+mo-western-st,slug_spaces,mo western st,mo-western-st,1.0,correct
+montana,slug,montana,montana,1.0,correct
+montana,full,University of Montana,montana,1.0,correct
+montana,slug_spaces,montana,montana,1.0,correct
+montana,schedule_short_0,Montana,montana,1.0,correct
+montana-st,slug,montana-st,montana-st,1.0,correct
+montana-st,full,Montana State University-Bozeman,montana-st,1.0,correct
+montana-st,slug_spaces,montana st,montana-st,1.0,correct
+montana-st,schedule_short_0,Montana St.,montana-st,1.0,correct
+montevallo,slug,montevallo,montevallo,1.0,correct
+montevallo,full,montevallo,montevallo,1.0,correct
+montevallo,slug_spaces,montevallo,montevallo,1.0,correct
+montreat,slug,montreat,montreat,1.0,correct
+montreat,full,Montreat,montreat,1.0,correct
+montreat,slug_spaces,montreat,montreat,1.0,correct
+montreat,schedule_short_0,Montreat,montreat,1.0,correct
+morehead-st,slug,morehead-st,morehead-st,1.0,correct
+morehead-st,full,Morehead State University,morehead-st,1.0,correct
+morehead-st,slug_spaces,morehead st,morehead-st,1.0,correct
+morehead-st,schedule_short_0,Morehead St.,morehead-st,1.0,correct
+morgan-st,slug,morgan-st,morgan-st,1.0,correct
+morgan-st,full,Morgan State University,morgan-st,1.0,correct
+morgan-st,slug_spaces,morgan st,morgan-st,1.0,correct
+morgan-st,schedule_short_0,Morgan St.,morgan-st,1.0,correct
+murray-st,slug,murray-st,murray-st,1.0,correct
+murray-st,full,Murray State University,murray-st,1.0,correct
+murray-st,slug_spaces,murray st,murray-st,1.0,correct
+murray-st,schedule_short_0,Murray St.,murray-st,1.0,correct
+navy,slug,navy,navy,1.0,correct
+navy,full,U.S. Naval Academy,navy,1.0,correct
+navy,slug_spaces,navy,navy,1.0,correct
+navy,schedule_short_0,Navy,navy,1.0,correct
+nc-at,slug,nc-at,nc-at,1.0,correct
+nc-at,full,North Carolina A&T State University,nc-at,1.0,correct
+nc-at,slug_spaces,nc at,nc-at,1.0,correct
+nc-at,schedule_short_0,N.C. A&T,nc-at,1.0,correct
+nc-at,alias_northcarolinaat,northcarolinaat,nc-at,1.0,correct
+nc-at,alias_ncat,ncat,nc-at,1.0,correct
+nc-central,slug,nc-central,nc-central,1.0,correct
+nc-central,full,North Carolina Central University,nc-central,1.0,correct
+nc-central,slug_spaces,nc central,nc-central,1.0,correct
+nc-central,schedule_short_0,N.C. Central,nc-central,1.0,correct
+neb-omaha,slug,neb-omaha,neb-omaha,1.0,correct
+neb-omaha,full,University of Nebraska at Omaha,neb-omaha,1.0,correct
+neb-omaha,slug_spaces,neb omaha,neb-omaha,1.0,correct
+neb-omaha,schedule_short_0,Omaha,neb-omaha,1.0,correct
+neb-omaha,alias_omaha,omaha,neb-omaha,1.0,correct
+nebraska,slug,nebraska,nebraska,1.0,correct
+nebraska,full,University of Nebraska-Lincoln,nebraska,1.0,correct
+nebraska,slug_spaces,nebraska,nebraska,1.0,correct
+nebraska,schedule_short_0,Nebraska,nebraska,1.0,correct
+nevada,slug,nevada,nevada,1.0,correct
+nevada,full,"University of Nevada, Reno",nevada,1.0,correct
+nevada,slug_spaces,nevada,nevada,1.0,correct
+nevada,schedule_short_0,Nevada,nevada,1.0,correct
+new-hampshire,slug,new-hampshire,new-hampshire,1.0,correct
+new-hampshire,full,University of New Hampshire,new-hampshire,1.0,correct
+new-hampshire,slug_spaces,new hampshire,new-hampshire,1.0,correct
+new-hampshire,schedule_short_0,New Hampshire,new-hampshire,1.0,correct
+new-haven,slug,new-haven,new-haven,1.0,correct
+new-haven,full,University of New Haven,new-haven,1.0,correct
+new-haven,slug_spaces,new haven,new-haven,1.0,correct
+new-haven,schedule_short_0,New Haven,new-haven,1.0,correct
+new-mexico,slug,new-mexico,new-mexico,1.0,correct
+new-mexico,full,University of New Mexico,new-mexico,1.0,correct
+new-mexico,slug_spaces,new mexico,new-mexico,1.0,correct
+new-mexico,schedule_short_0,New Mexico,new-mexico,1.0,correct
+new-mexico-st,slug,new-mexico-st,new-mexico-st,1.0,correct
+new-mexico-st,full,New Mexico State University,new-mexico-st,1.0,correct
+new-mexico-st,slug_spaces,new mexico st,new-mexico-st,1.0,correct
+new-mexico-st,schedule_short_0,New Mexico St.,new-mexico-st,1.0,correct
+new-orleans,slug,new-orleans,new-orleans,1.0,correct
+new-orleans,full,LSU New Orleans,lsu,1.0,wrong
+new-orleans,slug_spaces,new orleans,new-orleans,1.0,correct
+new-orleans,schedule_short_0,LSU New Orleans ,lsu,1.0,wrong
+new-orleans,alias_uno,uno,new-orleans,1.0,correct
+niagara,slug,niagara,niagara,1.0,correct
+niagara,full,Niagara University,niagara,1.0,correct
+niagara,slug_spaces,niagara,niagara,1.0,correct
+niagara,schedule_short_0,Niagara,niagara,1.0,correct
+nicholls-st,slug,nicholls-st,nicholls-st,1.0,correct
+nicholls-st,full,Nicholls State University,nicholls-st,1.0,correct
+nicholls-st,slug_spaces,nicholls st,nicholls-st,1.0,correct
+nicholls-st,schedule_short_0,Nicholls,nicholls-st,0.8888888888888888,correct
+njit,slug,njit,njit,1.0,correct
+njit,full,New Jersey Institute of Technology,njit,1.0,correct
+njit,slug_spaces,njit,njit,1.0,correct
+njit,schedule_short_0,NJIT,njit,1.0,correct
+norfolk-st,slug,norfolk-st,norfolk-st,1.0,correct
+norfolk-st,full,Norfolk State University,norfolk-st,1.0,correct
+norfolk-st,slug_spaces,norfolk st,norfolk-st,1.0,correct
+norfolk-st,schedule_short_0,Norfolk St.,norfolk-st,1.0,correct
+north-ala,slug,north-ala,north-ala,1.0,correct
+north-ala,full,University of North Alabama,north-ala,1.0,correct
+north-ala,slug_spaces,north ala,north-ala,1.0,correct
+north-ala,schedule_short_0,North Ala.,north-ala,1.0,correct
+north-carolina,slug,north-carolina,north-carolina,1.0,correct
+north-carolina,full,"University of North Carolina, Chapel Hill",north-carolina,1.0,correct
+north-carolina,slug_spaces,north carolina,north-carolina,1.0,correct
+north-carolina,schedule_short_0,North Carolina,north-carolina,1.0,correct
+north-carolina,alias_unc,unc,north-carolina,1.0,correct
+north-carolina-st,slug,north-carolina-st,north-carolina-st,1.0,correct
+north-carolina-st,full,North Carolina State University,north-carolina-st,1.0,correct
+north-carolina-st,slug_spaces,north carolina st,north-carolina-st,1.0,correct
+north-carolina-st,schedule_short_0,NC State,north-carolina-st,1.0,correct
+north-carolina-st,alias_ncstate,ncstate,north-carolina-st,1.0,correct
+north-carolina-st,alias_ncst,ncst,north-carolina-st,1.0,correct
+north-carolina-st,alias_northcarolinastate,northcarolinastate,north-carolina-st,1.0,correct
+north-dakota,slug,north-dakota,north-dakota,1.0,correct
+north-dakota,full,University of North Dakota,north-dakota,1.0,correct
+north-dakota,slug_spaces,north dakota,north-dakota,1.0,correct
+north-dakota,schedule_short_0,North Dakota,north-dakota,1.0,correct
+north-dakota-st,slug,north-dakota-st,north-dakota-st,1.0,correct
+north-dakota-st,full,North Dakota State University,north-dakota-st,1.0,correct
+north-dakota-st,slug_spaces,north dakota st,north-dakota-st,1.0,correct
+north-dakota-st,schedule_short_0,North Dakota St.,north-dakota-st,1.0,correct
+north-florida,slug,north-florida,north-florida,1.0,correct
+north-florida,full,University of North Florida,north-florida,1.0,correct
+north-florida,slug_spaces,north florida,north-florida,1.0,correct
+north-florida,schedule_short_0,North Florida,north-florida,1.0,correct
+north-florida,alias_unf,unf,north-florida,1.0,correct
+north-texas,slug,north-texas,north-texas,1.0,correct
+north-texas,full,University of North Texas,north-texas,1.0,correct
+north-texas,slug_spaces,north texas,north-texas,1.0,correct
+north-texas,schedule_short_0,North Texas,north-texas,1.0,correct
+northeastern,slug,northeastern,northeastern,1.0,correct
+northeastern,full,Northeastern University,northeastern,1.0,correct
+northeastern,slug_spaces,northeastern,northeastern,1.0,correct
+northeastern,schedule_short_0,Northeastern,northeastern,1.0,correct
+northern-ariz,slug,northern-ariz,northern-ariz,1.0,correct
+northern-ariz,full,Northern Arizona University,northern-ariz,1.0,correct
+northern-ariz,slug_spaces,northern ariz,northern-ariz,1.0,correct
+northern-ariz,schedule_short_0,Northern Ariz.,northern-ariz,1.0,correct
+northern-colo,slug,northern-colo,northern-colo,1.0,correct
+northern-colo,full,University of Northern Colorado,northern-colo,1.0,correct
+northern-colo,slug_spaces,northern colo,northern-colo,1.0,correct
+northern-colo,schedule_short_0,Northern Colo.,northern-colo,1.0,correct
+northern-ill,slug,northern-ill,northern-ill,1.0,correct
+northern-ill,full,Northern Illinois University,northern-ill,1.0,correct
+northern-ill,slug_spaces,northern ill,northern-ill,1.0,correct
+northern-ill,schedule_short_0,NIU,,0.0,unmatched
+northern-ky,slug,northern-ky,northern-ky,1.0,correct
+northern-ky,full,Northern Kentucky University,northern-ky,1.0,correct
+northern-ky,slug_spaces,northern ky,northern-ky,1.0,correct
+northern-ky,schedule_short_0,Northern Ky.,northern-ky,1.0,correct
+northern-mich,slug,northern-mich,northern-mich,1.0,correct
+northern-mich,full,northern-mich,northern-mich,1.0,correct
+northern-mich,slug_spaces,northern mich,northern-mich,1.0,correct
+northwestern,slug,northwestern,northwestern,1.0,correct
+northwestern,full,Northwestern University,northwestern,1.0,correct
+northwestern,slug_spaces,northwestern,northwestern,1.0,correct
+northwestern,schedule_short_0,Northwestern,northwestern,1.0,correct
+northwestern-st,slug,northwestern-st,northwestern-st,1.0,correct
+northwestern-st,full,Northwestern State University,northwestern-st,1.0,correct
+northwestern-st,slug_spaces,northwestern st,northwestern-st,1.0,correct
+northwestern-st,schedule_short_0,Northwestern St.,northwestern-st,1.0,correct
+notre-dame,slug,notre-dame,notre-dame,1.0,correct
+notre-dame,full,University of Notre Dame,notre-dame,1.0,correct
+notre-dame,slug_spaces,notre dame,notre-dame,1.0,correct
+notre-dame,schedule_short_0,Notre Dame,notre-dame,1.0,correct
+oakland,slug,oakland,oakland,1.0,correct
+oakland,full,Oakland University,oakland,1.0,correct
+oakland,slug_spaces,oakland,oakland,1.0,correct
+oakland,schedule_short_0,Oakland,oakland,1.0,correct
+ohio,slug,ohio,ohio,1.0,correct
+ohio,full,Ohio University,ohio,1.0,correct
+ohio,slug_spaces,ohio,ohio,1.0,correct
+ohio,schedule_short_0,Ohio,ohio,1.0,correct
+ohio-st,slug,ohio-st,ohio-st,1.0,correct
+ohio-st,full,The Ohio State University,ohio-st,1.0,correct
+ohio-st,slug_spaces,ohio st,ohio-st,1.0,correct
+ohio-st,schedule_short_0,Ohio St.,ohio-st,1.0,correct
+oklahoma,slug,oklahoma,oklahoma,1.0,correct
+oklahoma,full,University of Oklahoma,oklahoma,1.0,correct
+oklahoma,slug_spaces,oklahoma,oklahoma,1.0,correct
+oklahoma,schedule_short_0,Oklahoma,oklahoma,1.0,correct
+old-dominion,slug,old-dominion,old-dominion,1.0,correct
+old-dominion,full,Old Dominion University,old-dominion,1.0,correct
+old-dominion,slug_spaces,old dominion,old-dominion,1.0,correct
+old-dominion,schedule_short_0,Old Dominion,old-dominion,1.0,correct
+ole-miss,slug,ole-miss,ole-miss,1.0,correct
+ole-miss,full,University of Mississippi,ole-miss,1.0,correct
+ole-miss,slug_spaces,ole miss,ole-miss,1.0,correct
+ole-miss,schedule_short_0,Ole Miss,ole-miss,1.0,correct
+ole-miss,alias_olemiss,olemiss,ole-miss,1.0,correct
+oral-roberts,slug,oral-roberts,oral-roberts,1.0,correct
+oral-roberts,full,Oral Roberts University,oral-roberts,1.0,correct
+oral-roberts,slug_spaces,oral roberts,oral-roberts,1.0,correct
+oral-roberts,schedule_short_0,Oral Roberts,oral-roberts,1.0,correct
+oregon,slug,oregon,oregon,1.0,correct
+oregon,full,University of Oregon,oregon,1.0,correct
+oregon,slug_spaces,oregon,oregon,1.0,correct
+oregon,schedule_short_0,Oregon,oregon,1.0,correct
+oregon-st,slug,oregon-st,oregon-st,1.0,correct
+oregon-st,full,Oregon State University,oregon-st,1.0,correct
+oregon-st,slug_spaces,oregon st,oregon-st,1.0,correct
+oregon-st,schedule_short_0,Oregon St.,oregon-st,1.0,correct
+pacific,slug,pacific,pacific,1.0,correct
+pacific,full,University of the Pacific,pacific,1.0,correct
+pacific,slug_spaces,pacific,pacific,1.0,correct
+pacific,schedule_short_0,Pacific,pacific,1.0,correct
+palm-beach-atl,slug,palm-beach-atl,palm-beach-atl,1.0,correct
+palm-beach-atl,full,palm-beach-atl,palm-beach-atl,1.0,correct
+palm-beach-atl,slug_spaces,palm beach atl,palm-beach-atl,1.0,correct
+paul-quinn,slug,paul-quinn,paul-quinn,1.0,correct
+paul-quinn,full,paul-quinn,paul-quinn,1.0,correct
+paul-quinn,slug_spaces,paul quinn,paul-quinn,1.0,correct
+penn,slug,penn,penn,1.0,correct
+penn,full,University of Pennsylvania,penn,1.0,correct
+penn,slug_spaces,penn,penn,1.0,correct
+penn,schedule_short_0,Penn,penn,1.0,correct
+penn-st,slug,penn-st,penn-st,1.0,correct
+penn-st,full,Pennsylvania State University,penn-st,1.0,correct
+penn-st,slug_spaces,penn st,penn-st,1.0,correct
+penn-st,schedule_short_0,Penn St.,penn-st,1.0,correct
+penn-st,alias_pennstate,pennstate,penn-st,1.0,correct
+pepperdine,slug,pepperdine,pepperdine,1.0,correct
+pepperdine,full,Pepperdine University,pepperdine,1.0,correct
+pepperdine,slug_spaces,pepperdine,pepperdine,1.0,correct
+pepperdine,schedule_short_0,Pepperdine,pepperdine,1.0,correct
+pittsburgh,slug,pittsburgh,pittsburgh,1.0,correct
+pittsburgh,full,University of Pittsburgh,pittsburgh,1.0,correct
+pittsburgh,slug_spaces,pittsburgh,pittsburgh,1.0,correct
+pittsburgh,schedule_short_0,Pittsburgh,pittsburgh,1.0,correct
+pittsburgh,alias_pitt,pitt,pittsburgh,1.0,correct
+point-loma,slug,point-loma,point-loma,1.0,correct
+point-loma,full,point-loma,point-loma,1.0,correct
+point-loma,slug_spaces,point loma,point-loma,1.0,correct
+portland,slug,portland,portland,1.0,correct
+portland,full,University of Portland,portland,1.0,correct
+portland,slug_spaces,portland,portland,1.0,correct
+portland,schedule_short_0,Portland,portland,1.0,correct
+portland-st,slug,portland-st,portland-st,1.0,correct
+portland-st,full,Portland State University,portland-st,1.0,correct
+portland-st,slug_spaces,portland st,portland-st,1.0,correct
+portland-st,schedule_short_0,Portland St.,portland-st,1.0,correct
+prairie-view,slug,prairie-view,prairie-view,1.0,correct
+prairie-view,full,Prairie View A&M University,prairie-view,1.0,correct
+prairie-view,slug_spaces,prairie view,prairie-view,1.0,correct
+prairie-view,schedule_short_0,Prairie View,prairie-view,1.0,correct
+presbyterian,slug,presbyterian,presbyterian,1.0,correct
+presbyterian,full,Presbyterian College,presbyterian,1.0,correct
+presbyterian,slug_spaces,presbyterian,presbyterian,1.0,correct
+presbyterian,schedule_short_0,Presbyterian,presbyterian,1.0,correct
+princeton,slug,princeton,princeton,1.0,correct
+princeton,full,Princeton University,princeton,1.0,correct
+princeton,slug_spaces,princeton,princeton,1.0,correct
+princeton,schedule_short_0,Princeton,princeton,1.0,correct
+providence,slug,providence,providence,1.0,correct
+providence,full,Providence College,providence,1.0,correct
+providence,slug_spaces,providence,providence,1.0,correct
+providence,schedule_short_0,Providence,providence,1.0,correct
+purdue,slug,purdue,purdue,1.0,correct
+purdue,full,Purdue University,purdue,1.0,correct
+purdue,slug_spaces,purdue,purdue,1.0,correct
+purdue,schedule_short_0,Purdue,purdue,1.0,correct
+queens-nc,slug,queens-nc,queens-nc,1.0,correct
+queens-nc,full,Queens University of Charlotte,queens-nc,1.0,correct
+queens-nc,slug_spaces,queens nc,queens-nc,1.0,correct
+queens-nc,schedule_short_0,Queens (NC),queens-nc,1.0,correct
+quinnipiac,slug,quinnipiac,quinnipiac,1.0,correct
+quinnipiac,full,Quinnipiac University,quinnipiac,1.0,correct
+quinnipiac,slug_spaces,quinnipiac,quinnipiac,1.0,correct
+quinnipiac,schedule_short_0,Quinnipiac,quinnipiac,1.0,correct
+radford,slug,radford,radford,1.0,correct
+radford,full,Radford University,radford,1.0,correct
+radford,slug_spaces,radford,radford,1.0,correct
+radford,schedule_short_0,Radford,radford,1.0,correct
+regis-co,slug,regis-co,regis-co,1.0,correct
+regis-co,full,regis-co,regis-co,1.0,correct
+regis-co,slug_spaces,regis co,regis-co,1.0,correct
+rhode-island,slug,rhode-island,rhode-island,1.0,correct
+rhode-island,full,University of Rhode Island,rhode-island,1.0,correct
+rhode-island,slug_spaces,rhode island,rhode-island,1.0,correct
+rhode-island,schedule_short_0,Rhode Island,rhode-island,1.0,correct
+rice,slug,rice,rice,1.0,correct
+rice,full,Rice University,rice,1.0,correct
+rice,slug_spaces,rice,rice,1.0,correct
+rice,schedule_short_0,Rice,rice,1.0,correct
+rider,slug,rider,rider,1.0,correct
+rider,full,Rider University,rider,1.0,correct
+rider,slug_spaces,rider,rider,1.0,correct
+rider,schedule_short_0,Rider,rider,1.0,correct
+robert-morris,slug,robert-morris,robert-morris,1.0,correct
+robert-morris,full,Robert Morris University,robert-morris,1.0,correct
+robert-morris,slug_spaces,robert morris,robert-morris,1.0,correct
+robert-morris,schedule_short_0,Robert Morris,robert-morris,1.0,correct
+rust,slug,rust,rust,1.0,correct
+rust,full,rust,rust,1.0,correct
+rust,slug_spaces,rust,rust,1.0,correct
+rutgers,slug,rutgers,rutgers,1.0,correct
+rutgers,full,"Rutgers, The State University of New Jersey, New Brunswick",rutgers,1.0,correct
+rutgers,slug_spaces,rutgers,rutgers,1.0,correct
+rutgers,schedule_short_0,Rutgers,rutgers,1.0,correct
+rutgers-camden,slug,rutgers-camden,rutgers-camden,1.0,correct
+rutgers-camden,full,"Rutgers, The State Univ. of New Jersey, Camden",rutgers-camden,1.0,correct
+rutgers-camden,slug_spaces,rutgers camden,rutgers-camden,1.0,correct
+rutgers-camden,schedule_short_0,Rutgers-Camden,rutgers-camden,1.0,correct
+sacramento-st,slug,sacramento-st,sacramento-st,1.0,correct
+sacramento-st,full,"California State University, Sacramento",sacramento-st,1.0,correct
+sacramento-st,slug_spaces,sacramento st,sacramento-st,1.0,correct
+sacramento-st,schedule_short_0,Sacramento St.,sacramento-st,1.0,correct
+sacred-heart,slug,sacred-heart,sacred-heart,1.0,correct
+sacred-heart,full,Sacred Heart University,sacred-heart,1.0,correct
+sacred-heart,slug_spaces,sacred heart,sacred-heart,1.0,correct
+sacred-heart,schedule_short_0,Sacred Heart,sacred-heart,1.0,correct
+saint-louis,slug,saint-louis,saint-louis,1.0,correct
+saint-louis,full,Saint Louis University,saint-louis,1.0,correct
+saint-louis,slug_spaces,saint louis,saint-louis,1.0,correct
+saint-louis,schedule_short_0,Saint Louis,saint-louis,1.0,correct
+saint-louis,alias_slu,slu,saint-louis,1.0,correct
+sam-houston-st,slug,sam-houston-st,sam-houston-st,1.0,correct
+sam-houston-st,full,Sam Houston State University,sam-houston-st,1.0,correct
+sam-houston-st,slug_spaces,sam houston st,sam-houston-st,1.0,correct
+sam-houston-st,schedule_short_0,Sam Houston,sam-houston-st,0.9090909090909091,correct
+samford,slug,samford,samford,1.0,correct
+samford,full,Samford University,samford,1.0,correct
+samford,slug_spaces,samford,samford,1.0,correct
+samford,schedule_short_0,Samford,samford,1.0,correct
+san-diego,slug,san-diego,san-diego,1.0,correct
+san-diego,full,University of San Diego,san-diego,1.0,correct
+san-diego,slug_spaces,san diego,san-diego,1.0,correct
+san-diego,schedule_short_0,San Diego,san-diego,1.0,correct
+san-diego,alias_usd,usd,san-diego,1.0,correct
+san-diego-st,slug,san-diego-st,san-diego-st,1.0,correct
+san-diego-st,full,San Diego State University,san-diego-st,1.0,correct
+san-diego-st,slug_spaces,san diego st,san-diego-st,1.0,correct
+san-diego-st,schedule_short_0,San Diego St.,san-diego-st,1.0,correct
+san-francisco,slug,san-francisco,san-francisco,1.0,correct
+san-francisco,full,University of San Francisco,san-francisco,1.0,correct
+san-francisco,slug_spaces,san francisco,san-francisco,1.0,correct
+san-francisco,schedule_short_0,San Francisco,san-francisco,1.0,correct
+san-jose-st,slug,san-jose-st,san-jose-st,1.0,correct
+san-jose-st,full,San Jose State University,san-jose-st,1.0,correct
+san-jose-st,slug_spaces,san jose st,san-jose-st,1.0,correct
+san-jose-st,schedule_short_0,San Jose St.,san-jose-st,1.0,correct
+santa-clara,slug,santa-clara,santa-clara,1.0,correct
+santa-clara,full,Santa Clara University,santa-clara,1.0,correct
+santa-clara,slug_spaces,santa clara,santa-clara,1.0,correct
+santa-clara,schedule_short_0,Santa Clara,santa-clara,1.0,correct
+seattle,slug,seattle,seattle,1.0,correct
+seattle,full,Seattle University,seattle,1.0,correct
+seattle,slug_spaces,seattle,seattle,1.0,correct
+seattle,schedule_short_0,Seattle U,seattle,0.9375,correct
+seattle-pacific,slug,seattle-pacific,seattle-pacific,1.0,correct
+seattle-pacific,full,seattle-pacific,seattle-pacific,1.0,correct
+seattle-pacific,slug_spaces,seattle pacific,seattle-pacific,1.0,correct
+seton-hall,slug,seton-hall,seton-hall,1.0,correct
+seton-hall,full,Seton Hall University,seton-hall,1.0,correct
+seton-hall,slug_spaces,seton hall,seton-hall,1.0,correct
+seton-hall,schedule_short_0,Seton Hall,seton-hall,1.0,correct
+siena,slug,siena,siena,1.0,correct
+siena,full,Siena University,siena,1.0,correct
+siena,slug_spaces,siena,siena,1.0,correct
+siena,schedule_short_0,Siena,siena,1.0,correct
+siu-edwardsville,slug,siu-edwardsville,siu-edwardsville,1.0,correct
+siu-edwardsville,full,Southern Illinois University Edwardsville,siu-edwardsville,1.0,correct
+siu-edwardsville,slug_spaces,siu edwardsville,siu-edwardsville,1.0,correct
+siu-edwardsville,schedule_short_0,SIUE,,0.0,unmatched
+smu,slug,smu,smu,1.0,correct
+smu,full,Southern Methodist University,smu,1.0,correct
+smu,slug_spaces,smu,smu,1.0,correct
+smu,schedule_short_0,SMU,smu,1.0,correct
+smu,alias_smu,smu,smu,1.0,correct
+south-ala,slug,south-ala,south-ala,1.0,correct
+south-ala,full,University of South Alabama,south-ala,1.0,correct
+south-ala,slug_spaces,south ala,south-ala,1.0,correct
+south-ala,schedule_short_0,South Alabama,south-ala,0.8333333333333333,correct
+south-carolina,slug,south-carolina,south-carolina,1.0,correct
+south-carolina,full,"University of South Carolina, Columbia",south-carolina,1.0,correct
+south-carolina,slug_spaces,south carolina,south-carolina,1.0,correct
+south-carolina,schedule_short_0,South Carolina,south-carolina,1.0,correct
+south-carolina-st,slug,south-carolina-st,south-carolina-st,1.0,correct
+south-carolina-st,full,South Carolina State University,south-carolina-st,1.0,correct
+south-carolina-st,slug_spaces,south carolina st,south-carolina-st,1.0,correct
+south-carolina-st,schedule_short_0,South Carolina St.,south-carolina-st,1.0,correct
+south-dakota,slug,south-dakota,south-dakota,1.0,correct
+south-dakota,full,University of South Dakota,south-dakota,1.0,correct
+south-dakota,slug_spaces,south dakota,south-dakota,1.0,correct
+south-dakota,schedule_short_0,South Dakota,south-dakota,1.0,correct
+south-dakota-st,slug,south-dakota-st,south-dakota-st,1.0,correct
+south-dakota-st,full,South Dakota State University,south-dakota-st,1.0,correct
+south-dakota-st,slug_spaces,south dakota st,south-dakota-st,1.0,correct
+south-dakota-st,schedule_short_0,South Dakota St.,south-dakota-st,1.0,correct
+south-fla,slug,south-fla,south-fla,1.0,correct
+south-fla,full,University of South Florida,south-fla,1.0,correct
+south-fla,slug_spaces,south fla,south-fla,1.0,correct
+south-fla,schedule_short_0,South Fla.,south-fla,1.0,correct
+south-fla,alias_usf,usf,south-fla,1.0,correct
+southeast-mo-st,slug,southeast-mo-st,southeast-mo-st,1.0,correct
+southeast-mo-st,full,Southeast Missouri State University,southeast-mo-st,1.0,correct
+southeast-mo-st,slug_spaces,southeast mo st,southeast-mo-st,1.0,correct
+southeast-mo-st,schedule_short_0,Southeast Mo. St.,southeast-mo-st,1.0,correct
+southeastern-la,slug,southeastern-la,southeastern-la,1.0,correct
+southeastern-la,full,Southeastern Louisiana University,southeastern-la,1.0,correct
+southeastern-la,slug_spaces,southeastern la,southeastern-la,1.0,correct
+southeastern-la,schedule_short_0,Southeastern La.,southeastern-la,1.0,correct
+southern-california,slug,southern-california,southern-california,1.0,correct
+southern-california,full,University of Southern California,southern-california,1.0,correct
+southern-california,slug_spaces,southern california,southern-california,1.0,correct
+southern-california,schedule_short_0,Southern California,southern-california,1.0,correct
+southern-california,alias_usc,usc,southern-california,1.0,correct
+southern-ill,slug,southern-ill,southern-ill,1.0,correct
+southern-ill,full,Southern Illinois University at Carbondale,southern-ill,1.0,correct
+southern-ill,slug_spaces,southern ill,southern-ill,1.0,correct
+southern-ill,schedule_short_0,Southern Ill.,southern-ill,1.0,correct
+southern-ind,slug,southern-ind,southern-ind,1.0,correct
+southern-ind,full,University of Southern Indiana,southern-ind,1.0,correct
+southern-ind,slug_spaces,southern ind,southern-ind,1.0,correct
+southern-ind,schedule_short_0,Southern Ind.,southern-ind,1.0,correct
+southern-miss,slug,southern-miss,southern-miss,1.0,correct
+southern-miss,full,The University of Southern Mississippi,southern-miss,1.0,correct
+southern-miss,slug_spaces,southern miss,southern-miss,1.0,correct
+southern-miss,schedule_short_0,Southern Miss.,southern-miss,1.0,correct
+southern-no,slug,southern-no,southern-no,1.0,correct
+southern-no,full,Southern-N.O.,southern-no,1.0,correct
+southern-no,slug_spaces,southern no,southern-no,1.0,correct
+southern-no,schedule_short_0,Southern-N.O.,southern-no,1.0,correct
+southern-u,slug,southern-u,southern-u,1.0,correct
+southern-u,full,"Southern University, Baton Rouge",southern-u,1.0,correct
+southern-u,slug_spaces,southern u,southern-u,1.0,correct
+southern-u,schedule_short_0,Southern U.,southern-u,1.0,correct
+southern-utah,slug,southern-utah,southern-utah,1.0,correct
+southern-utah,full,Southern Utah University,southern-utah,1.0,correct
+southern-utah,slug_spaces,southern utah,southern-utah,1.0,correct
+southern-utah,schedule_short_0,Southern Utah,southern-utah,1.0,correct
+southwest-minn-st,slug,southwest-minn-st,southwest-minn-st,1.0,correct
+southwest-minn-st,full,Southwest Minnesota State University,southwest-minn-st,1.0,correct
+southwest-minn-st,slug_spaces,southwest minn st,southwest-minn-st,1.0,correct
+southwest-minn-st,schedule_short_0,Southwest Minn. St.,southwest-minn-st,1.0,correct
+spring-hill,slug,spring-hill,spring-hill,1.0,correct
+spring-hill,full,spring-hill,spring-hill,1.0,correct
+spring-hill,slug_spaces,spring hill,spring-hill,1.0,correct
+st-francis-pa,slug,st-francis-pa,st-francis-pa,1.0,correct
+st-francis-pa,full,st-francis-pa,st-francis-pa,1.0,correct
+st-francis-pa,slug_spaces,st francis pa,st-francis-pa,1.0,correct
+st-johns-ny,slug,st-johns-ny,st-johns-ny,1.0,correct
+st-johns-ny,full,St. John's University (New York),st-johns-ny,1.0,correct
+st-johns-ny,slug_spaces,st johns ny,st-johns-ny,1.0,correct
+st-johns-ny,schedule_short_0,St. John's (NY),st-johns-ny,1.0,correct
+st-johns-ny,alias_stjohns,stjohns,st-johns-ny,1.0,correct
+st-marys-ca,slug,st-marys-ca,st-marys-ca,1.0,correct
+st-marys-ca,full,Saint Mary's College of California,st-marys-ca,1.0,correct
+st-marys-ca,slug_spaces,st marys ca,st-marys-ca,1.0,correct
+st-marys-ca,schedule_short_0,Saint Mary's (CA),st-marys-ca,0.8571428571428571,correct
+st-peters,slug,st-peters,st-peters,1.0,correct
+st-peters,full,Saint Peter's University,st-peters,1.0,correct
+st-peters,slug_spaces,st peters,st-peters,1.0,correct
+st-peters,schedule_short_0,Saint Peter's,st-peters,0.8421052631578947,correct
+st-thomas-mn,slug,st-thomas-mn,st-thomas-mn,1.0,correct
+st-thomas-mn,full,University of St. Thomas (Minnesota),st-thomas-mn,1.0,correct
+st-thomas-mn,slug_spaces,st thomas mn,st-thomas-mn,1.0,correct
+st-thomas-mn,schedule_short_0,St. Thomas (MN),st-thomas-mn,1.0,correct
+stanford,slug,stanford,stanford,1.0,correct
+stanford,full,Stanford University,stanford,1.0,correct
+stanford,slug_spaces,stanford,stanford,1.0,correct
+stanford,schedule_short_0,Stanford,stanford,1.0,correct
+stephen-f-austin,slug,stephen-f-austin,stephen-f-austin,1.0,correct
+stephen-f-austin,full,Stephen F. Austin State University,stephen-f-austin,1.0,correct
+stephen-f-austin,slug_spaces,stephen f austin,stephen-f-austin,1.0,correct
+stephen-f-austin,schedule_short_0,SFA,stephen-f-austin,1.0,correct
+stephen-f-austin,alias_sfa,sfa,stephen-f-austin,1.0,correct
+stetson,slug,stetson,stetson,1.0,correct
+stetson,full,Stetson University,stetson,1.0,correct
+stetson,slug_spaces,stetson,stetson,1.0,correct
+stetson,schedule_short_0,Stetson,stetson,1.0,correct
+stonehill,slug,stonehill,stonehill,1.0,correct
+stonehill,full,Stonehill College,stonehill,1.0,correct
+stonehill,slug_spaces,stonehill,stonehill,1.0,correct
+stonehill,schedule_short_0,Stonehill,stonehill,1.0,correct
+stony-brook,slug,stony-brook,stony-brook,1.0,correct
+stony-brook,full,Stony Brook University,stony-brook,1.0,correct
+stony-brook,slug_spaces,stony brook,stony-brook,1.0,correct
+stony-brook,schedule_short_0,Stony Brook,stony-brook,1.0,correct
+syracuse,slug,syracuse,syracuse,1.0,correct
+syracuse,full,Syracuse University,syracuse,1.0,correct
+syracuse,slug_spaces,syracuse,syracuse,1.0,correct
+syracuse,schedule_short_0,Syracuse,syracuse,1.0,correct
+tampa,slug,tampa,tampa,1.0,correct
+tampa,full,University of Tampa,tampa,1.0,correct
+tampa,slug_spaces,tampa,tampa,1.0,correct
+tampa,schedule_short_0,Tampa,tampa,1.0,correct
+tarleton-st,slug,tarleton-st,tarleton-st,1.0,correct
+tarleton-st,full,Tarleton State University,tarleton-st,1.0,correct
+tarleton-st,slug_spaces,tarleton st,tarleton-st,1.0,correct
+tarleton-st,schedule_short_0,Tarleton St.,tarleton-st,1.0,correct
+tcu,slug,tcu,tcu,1.0,correct
+tcu,full,Texas Christian University,tcu,1.0,correct
+tcu,slug_spaces,tcu,tcu,1.0,correct
+tcu,schedule_short_0,TCU,tcu,1.0,correct
+tcu,alias_tcu,tcu,tcu,1.0,correct
+temple,slug,temple,temple,1.0,correct
+temple,full,Temple University,temple,1.0,correct
+temple,slug_spaces,temple,temple,1.0,correct
+temple,schedule_short_0,Temple,temple,1.0,correct
+tennessee,slug,tennessee,tennessee,1.0,correct
+tennessee,full,"University of Tennessee, Knoxville",tennessee,1.0,correct
+tennessee,slug_spaces,tennessee,tennessee,1.0,correct
+tennessee,schedule_short_0,Tennessee,tennessee,1.0,correct
+tennessee-st,slug,tennessee-st,tennessee-st,1.0,correct
+tennessee-st,full,Tennessee State University,tennessee-st,1.0,correct
+tennessee-st,slug_spaces,tennessee st,tennessee-st,1.0,correct
+tennessee-st,schedule_short_0,Tennessee St.,tennessee-st,1.0,correct
+tennessee-tech,slug,tennessee-tech,tennessee-tech,1.0,correct
+tennessee-tech,full,Tennessee Technological University,tennessee-tech,1.0,correct
+tennessee-tech,slug_spaces,tennessee tech,tennessee-tech,1.0,correct
+tennessee-tech,schedule_short_0,Tennessee Tech,tennessee-tech,1.0,correct
+tex-am-commerce,slug,tex-am-commerce,tex-am-commerce,1.0,correct
+tex-am-commerce,full,East Texas A&M University,tex-am-commerce,1.0,correct
+tex-am-commerce,slug_spaces,tex am commerce,tex-am-commerce,1.0,correct
+tex-am-commerce,schedule_short_0,East Texas A&M,tex-am-commerce,0.8095238095238095,correct
+texas,slug,texas,texas,1.0,correct
+texas,full,University of Texas at Austin,texas,1.0,correct
+texas,slug_spaces,texas,texas,1.0,correct
+texas,schedule_short_0,Texas,texas,1.0,correct
+texas-am,slug,texas-am,texas-am,1.0,correct
+texas-am,full,"Texas A&M University, College Station",texas-am,1.0,correct
+texas-am,slug_spaces,texas am,texas-am,1.0,correct
+texas-am,schedule_short_0,Texas A&M,texas-am,1.0,correct
+texas-arlington,slug,texas-arlington,texas-arlington,1.0,correct
+texas-arlington,full,University of Texas at Arlington,texas-arlington,1.0,correct
+texas-arlington,slug_spaces,texas arlington,texas-arlington,1.0,correct
+texas-arlington,schedule_short_0,UT Arlington,texas-arlington,1.0,correct
+texas-arlington,alias_uta,uta,texas-arlington,1.0,correct
+texas-southern,slug,texas-southern,texas-southern,1.0,correct
+texas-southern,full,Texas Southern University,texas-southern,1.0,correct
+texas-southern,slug_spaces,texas southern,texas-southern,1.0,correct
+texas-southern,schedule_short_0,Texas Southern,texas-southern,1.0,correct
+texas-st,slug,texas-st,texas-st,1.0,correct
+texas-st,full,Texas State University,texas-st,1.0,correct
+texas-st,slug_spaces,texas st,texas-st,1.0,correct
+texas-st,schedule_short_0,Texas St.,texas-st,1.0,correct
+texas-tech,slug,texas-tech,texas-tech,1.0,correct
+texas-tech,full,Texas Tech University,texas-tech,1.0,correct
+texas-tech,slug_spaces,texas tech,texas-tech,1.0,correct
+texas-tech,schedule_short_0,Texas Tech,texas-tech,1.0,correct
+texas-tyler,slug,texas-tyler,texas-tyler,1.0,correct
+texas-tyler,full,The University of Texas at Tyler,texas-tyler,1.0,correct
+texas-tyler,slug_spaces,texas tyler,texas-tyler,1.0,correct
+texas-tyler,schedule_short_0,UT Tyler,butler,0.7692307692307693,wrong
+toledo,slug,toledo,toledo,1.0,correct
+toledo,full,University of Toledo,toledo,1.0,correct
+toledo,slug_spaces,toledo,toledo,1.0,correct
+toledo,schedule_short_0,Toledo,toledo,1.0,correct
+tougaloo,slug,tougaloo,tougaloo,1.0,correct
+tougaloo,full,tougaloo,tougaloo,1.0,correct
+tougaloo,slug_spaces,tougaloo,tougaloo,1.0,correct
+towson,slug,towson,towson,1.0,correct
+towson,full,Towson University,towson,1.0,correct
+towson,slug_spaces,towson,towson,1.0,correct
+towson,schedule_short_0,Towson,towson,1.0,correct
+trevecca-nazarene,slug,trevecca-nazarene,trevecca-nazarene,1.0,correct
+trevecca-nazarene,full,trevecca-nazarene,trevecca-nazarene,1.0,correct
+trevecca-nazarene,slug_spaces,trevecca nazarene,trevecca-nazarene,1.0,correct
+troy,slug,troy,troy,1.0,correct
+troy,full,Troy University,troy,1.0,correct
+troy,slug_spaces,troy,troy,1.0,correct
+troy,schedule_short_0,Troy,troy,1.0,correct
+tulane,slug,tulane,tulane,1.0,correct
+tulane,full,Tulane University,tulane,1.0,correct
+tulane,slug_spaces,tulane,tulane,1.0,correct
+tulane,schedule_short_0,Tulane,tulane,1.0,correct
+tulsa,slug,tulsa,tulsa,1.0,correct
+tulsa,full,The University of Tulsa,tulsa,1.0,correct
+tulsa,slug_spaces,tulsa,tulsa,1.0,correct
+tulsa,schedule_short_0,Tulsa,tulsa,1.0,correct
+tuskegee,slug,tuskegee,tuskegee,1.0,correct
+tuskegee,full,Tuskegee University,tuskegee,1.0,correct
+tuskegee,slug_spaces,tuskegee,tuskegee,1.0,correct
+tuskegee,schedule_short_0,Tuskegee,tuskegee,1.0,correct
+uab,slug,uab,uab,1.0,correct
+uab,full,University of Alabama at Birmingham,uab,1.0,correct
+uab,slug_spaces,uab,uab,1.0,correct
+uab,schedule_short_0,UAB,uab,1.0,correct
+uab,alias_uab,uab,uab,1.0,correct
+ualr,slug,ualr,ualr,1.0,correct
+ualr,full,University of Arkansas at Little Rock,ualr,1.0,correct
+ualr,slug_spaces,ualr,ualr,1.0,correct
+ualr,schedule_short_0,Little Rock,,0.5,unmatched
+uc-davis,slug,uc-davis,uc-davis,1.0,correct
+uc-davis,full,"University of California, Davis",uc-davis,1.0,correct
+uc-davis,slug_spaces,uc davis,uc-davis,1.0,correct
+uc-davis,schedule_short_0,UC Davis,uc-davis,1.0,correct
+uc-davis,alias_ucd,ucd,uc-davis,1.0,correct
+uc-irvine,slug,uc-irvine,uc-irvine,1.0,correct
+uc-irvine,full,"University of California, Irvine",uc-irvine,1.0,correct
+uc-irvine,slug_spaces,uc irvine,uc-irvine,1.0,correct
+uc-irvine,schedule_short_0,UC Irvine,uc-irvine,1.0,correct
+uc-irvine,alias_uci,uci,uc-irvine,1.0,correct
+uc-riverside,slug,uc-riverside,uc-riverside,1.0,correct
+uc-riverside,full,"University of California, Riverside",uc-riverside,1.0,correct
+uc-riverside,slug_spaces,uc riverside,uc-riverside,1.0,correct
+uc-riverside,schedule_short_0,UC Riverside,uc-riverside,1.0,correct
+uc-san-diego,slug,uc-san-diego,uc-san-diego,1.0,correct
+uc-san-diego,full,"University of California, San Diego",uc-san-diego,1.0,correct
+uc-san-diego,slug_spaces,uc san diego,uc-san-diego,1.0,correct
+uc-san-diego,schedule_short_0,UC San Diego,uc-san-diego,1.0,correct
+uc-san-diego,alias_ucsd,ucsd,uc-san-diego,1.0,correct
+uc-santa-barbara,slug,uc-santa-barbara,uc-santa-barbara,1.0,correct
+uc-santa-barbara,full,"University of California, Santa Barbara",uc-santa-barbara,1.0,correct
+uc-santa-barbara,slug_spaces,uc santa barbara,uc-santa-barbara,1.0,correct
+uc-santa-barbara,schedule_short_0,UC Santa Barbara,uc-santa-barbara,1.0,correct
+uc-santa-barbara,alias_ucsb,ucsb,uc-santa-barbara,1.0,correct
+ucf,slug,ucf,ucf,1.0,correct
+ucf,full,University of Central Florida,ucf,1.0,correct
+ucf,slug_spaces,ucf,ucf,1.0,correct
+ucf,schedule_short_0,UCF,ucf,1.0,correct
+ucf,alias_ucf,ucf,ucf,1.0,correct
+ucla,slug,ucla,ucla,1.0,correct
+ucla,full,"University of California, Los Angeles",ucla,1.0,correct
+ucla,slug_spaces,ucla,ucla,1.0,correct
+ucla,schedule_short_0,UCLA,ucla,1.0,correct
+uconn,slug,uconn,uconn,1.0,correct
+uconn,full,University of Connecticut,uconn,1.0,correct
+uconn,slug_spaces,uconn,uconn,1.0,correct
+uconn,schedule_short_0,UConn,uconn,1.0,correct
+uiw,slug,uiw,uiw,1.0,correct
+uiw,full,University of the Incarnate Word,uiw,1.0,correct
+uiw,slug_spaces,uiw,uiw,1.0,correct
+uiw,schedule_short_0,UIW,uiw,1.0,correct
+umbc,slug,umbc,umbc,1.0,correct
+umbc,full,"University of Maryland, Baltimore County",umbc,1.0,correct
+umbc,slug_spaces,umbc,umbc,1.0,correct
+umbc,schedule_short_0,UMBC,umbc,1.0,correct
+umbc,alias_umbc,umbc,umbc,1.0,correct
+umes,slug,umes,umes,1.0,correct
+umes,full,University of Maryland Eastern Shore,umes,1.0,correct
+umes,slug_spaces,umes,umes,1.0,correct
+umes,schedule_short_0,UMES,umes,1.0,correct
+umkc,slug,umkc,umkc,1.0,correct
+umkc,full,University of Missouri-Kansas City,umkc,1.0,correct
+umkc,slug_spaces,umkc,umkc,1.0,correct
+umkc,schedule_short_0,Kansas City,kansas,0.88,wrong
+umkc,alias_umkc,umkc,umkc,1.0,correct
+unc-asheville,slug,unc-asheville,unc-asheville,1.0,correct
+unc-asheville,full,University of North Carolina Asheville,unc-asheville,1.0,correct
+unc-asheville,slug_spaces,unc asheville,unc-asheville,1.0,correct
+unc-asheville,schedule_short_0,UNC Asheville,unc-asheville,1.0,correct
+unc-asheville,alias_uncasheville,uncasheville,unc-asheville,1.0,correct
+unc-asheville,alias_unca,unca,unc-asheville,1.0,correct
+unc-greensboro,slug,unc-greensboro,unc-greensboro,1.0,correct
+unc-greensboro,full,The University of North Carolina at Greensboro,unc-greensboro,1.0,correct
+unc-greensboro,slug_spaces,unc greensboro,unc-greensboro,1.0,correct
+unc-greensboro,schedule_short_0,UNC Greensboro,unc-greensboro,1.0,correct
+unc-greensboro,alias_uncgreensboro,uncgreensboro,unc-greensboro,1.0,correct
+unc-greensboro,alias_uncg,uncg,unc-greensboro,1.0,correct
+unc-wilmington,slug,unc-wilmington,unc-wilmington,1.0,correct
+unc-wilmington,full,University of North Carolina Wilmington,unc-wilmington,1.0,correct
+unc-wilmington,slug_spaces,unc wilmington,unc-wilmington,1.0,correct
+unc-wilmington,schedule_short_0,UNCW,unc-wilmington,1.0,correct
+unc-wilmington,alias_uncw,uncw,unc-wilmington,1.0,correct
+unc-wilmington,alias_uncwilmington,uncwilmington,unc-wilmington,1.0,correct
+uni,slug,uni,uni,1.0,correct
+uni,full,University of Northern Iowa,uni,1.0,correct
+uni,slug_spaces,uni,uni,1.0,correct
+uni,schedule_short_0,UNI,uni,1.0,correct
+union-tn,slug,union-tn,union-tn,1.0,correct
+union-tn,full,union-tn,union-tn,1.0,correct
+union-tn,slug_spaces,union tn,union-tn,1.0,correct
+unlv,slug,unlv,unlv,1.0,correct
+unlv,full,"University of Nevada, Las Vegas",unlv,1.0,correct
+unlv,slug_spaces,unlv,unlv,1.0,correct
+unlv,schedule_short_0,UNLV,unlv,1.0,correct
+usc-upstate,slug,usc-upstate,southern-california,1.0,wrong
+usc-upstate,full,University of South Carolina Upstate,usc-upstate,1.0,correct
+usc-upstate,slug_spaces,usc upstate,southern-california,1.0,wrong
+usc-upstate,schedule_short_0,USC Upstate,southern-california,1.0,wrong
+ut-martin,slug,ut-martin,ut-martin,1.0,correct
+ut-martin,full,University of Tennessee at Martin,ut-martin,1.0,correct
+ut-martin,slug_spaces,ut martin,ut-martin,1.0,correct
+ut-martin,schedule_short_0,UT Martin,ut-martin,1.0,correct
+utah,slug,utah,texas-arlington,1.0,wrong
+utah,full,University of Utah,utah,1.0,correct
+utah,slug_spaces,utah,texas-arlington,1.0,wrong
+utah,schedule_short_0,Utah,texas-arlington,1.0,wrong
+utah-st,slug,utah-st,texas-arlington,1.0,wrong
+utah-st,full,Utah State University,texas-arlington,1.0,wrong
+utah-st,slug_spaces,utah st,texas-arlington,1.0,wrong
+utah-st,schedule_short_0,Utah St.,texas-arlington,1.0,wrong
+utah-tech,slug,utah-tech,texas-arlington,1.0,wrong
+utah-tech,full,Utah Tech University,texas-arlington,1.0,wrong
+utah-tech,slug_spaces,utah tech,texas-arlington,1.0,wrong
+utah-tech,schedule_short_0,Utah Tech,texas-arlington,1.0,wrong
+utah-valley,slug,utah-valley,texas-arlington,1.0,wrong
+utah-valley,full,Utah Valley University,texas-arlington,1.0,wrong
+utah-valley,slug_spaces,utah valley,texas-arlington,1.0,wrong
+utah-valley,schedule_short_0,Utah Valley,texas-arlington,1.0,wrong
+utep,slug,utep,utep,1.0,correct
+utep,full,University of Texas at El Paso,utep,1.0,correct
+utep,slug_spaces,utep,utep,1.0,correct
+utep,schedule_short_0,UTEP,utep,1.0,correct
+utep,alias_utep,utep,utep,1.0,correct
+utrgv,slug,utrgv,utrgv,1.0,correct
+utrgv,full,The University of Texas Rio Grande Valley,utrgv,1.0,correct
+utrgv,slug_spaces,utrgv,utrgv,1.0,correct
+utrgv,schedule_short_0,UTRGV,utrgv,1.0,correct
+utrgv,alias_utrgv,utrgv,utrgv,1.0,correct
+utsa,slug,utsa,utsa,1.0,correct
+utsa,full,University of Texas at San Antonio,utsa,1.0,correct
+utsa,slug_spaces,utsa,utsa,1.0,correct
+utsa,schedule_short_0,UTSA,utsa,1.0,correct
+valdosta-st,slug,valdosta-st,valdosta-st,1.0,correct
+valdosta-st,full,valdosta-st,valdosta-st,1.0,correct
+valdosta-st,slug_spaces,valdosta st,valdosta-st,1.0,correct
+valparaiso,slug,valparaiso,valparaiso,1.0,correct
+valparaiso,full,Valparaiso University,valparaiso,1.0,correct
+valparaiso,slug_spaces,valparaiso,valparaiso,1.0,correct
+valparaiso,schedule_short_0,Valparaiso,valparaiso,1.0,correct
+vanderbilt,slug,vanderbilt,vanderbilt,1.0,correct
+vanderbilt,full,Vanderbilt University,vanderbilt,1.0,correct
+vanderbilt,slug_spaces,vanderbilt,vanderbilt,1.0,correct
+vanderbilt,schedule_short_0,Vanderbilt,vanderbilt,1.0,correct
+vcu,slug,vcu,vcu,1.0,correct
+vcu,full,Virginia Commonwealth University,vcu,1.0,correct
+vcu,slug_spaces,vcu,vcu,1.0,correct
+vcu,schedule_short_0,VCU,vcu,1.0,correct
+vcu,alias_vcu,vcu,vcu,1.0,correct
+villanova,slug,villanova,villanova,1.0,correct
+villanova,full,Villanova University,villanova,1.0,correct
+villanova,slug_spaces,villanova,villanova,1.0,correct
+villanova,schedule_short_0,Villanova,villanova,1.0,correct
+virginia,slug,virginia,virginia,1.0,correct
+virginia,full,University of Virginia,virginia,1.0,correct
+virginia,slug_spaces,virginia,virginia,1.0,correct
+virginia,schedule_short_0,Virginia,virginia,1.0,correct
+virginia-tech,slug,virginia-tech,virginia-tech,1.0,correct
+virginia-tech,full,Virginia Polytechnic Institute and State University,virginia-tech,1.0,correct
+virginia-tech,slug_spaces,virginia tech,virginia-tech,1.0,correct
+virginia-tech,schedule_short_0,Virginia Tech,virginia-tech,1.0,correct
+wake-forest,slug,wake-forest,wake-forest,1.0,correct
+wake-forest,full,Wake Forest University,wake-forest,1.0,correct
+wake-forest,slug_spaces,wake forest,wake-forest,1.0,correct
+wake-forest,schedule_short_0,Wake Forest,wake-forest,1.0,correct
+washington,slug,washington,washington,1.0,correct
+washington,full,University of Washington,washington,1.0,correct
+washington,slug_spaces,washington,washington,1.0,correct
+washington,schedule_short_0,Washington,washington,1.0,correct
+washington-st,slug,washington-st,washington-st,1.0,correct
+washington-st,full,Washington State University,washington-st,1.0,correct
+washington-st,slug_spaces,washington st,washington-st,1.0,correct
+washington-st,schedule_short_0,Washington St.,washington-st,1.0,correct
+weber-st,slug,weber-st,weber-st,1.0,correct
+weber-st,full,Weber State University,weber-st,1.0,correct
+weber-st,slug_spaces,weber st,weber-st,1.0,correct
+weber-st,schedule_short_0,Weber St.,weber-st,1.0,correct
+west-ala,slug,west-ala,west-ala,1.0,correct
+west-ala,full,west-ala,west-ala,1.0,correct
+west-ala,slug_spaces,west ala,west-ala,1.0,correct
+west-florida,slug,west-florida,west-florida,1.0,correct
+west-florida,full,University of West Florida,west-florida,1.0,correct
+west-florida,slug_spaces,west florida,west-florida,1.0,correct
+west-florida,schedule_short_0,West Florida,west-florida,1.0,correct
+west-ga,slug,west-ga,west-ga,1.0,correct
+west-ga,full,University of West Georgia,west-ga,1.0,correct
+west-ga,slug_spaces,west ga,west-ga,1.0,correct
+west-ga,schedule_short_0,West Ga.,west-ga,1.0,correct
+west-virginia,slug,west-virginia,west-virginia,1.0,correct
+west-virginia,full,West Virginia University,west-virginia,1.0,correct
+west-virginia,slug_spaces,west virginia,west-virginia,1.0,correct
+west-virginia,schedule_short_0,West Virginia,west-virginia,1.0,correct
+western-caro,slug,western-caro,western-caro,1.0,correct
+western-caro,full,Western Carolina University,western-caro,1.0,correct
+western-caro,slug_spaces,western caro,western-caro,1.0,correct
+western-caro,schedule_short_0,Western Caro.,western-caro,1.0,correct
+western-ill,slug,western-ill,western-ill,1.0,correct
+western-ill,full,Western Illinois University,western-ill,1.0,correct
+western-ill,slug_spaces,western ill,western-ill,1.0,correct
+western-ill,schedule_short_0,Western Ill.,western-ill,1.0,correct
+western-ky,slug,western-ky,western-ky,1.0,correct
+western-ky,full,Western Kentucky University,western-ky,1.0,correct
+western-ky,slug_spaces,western ky,western-ky,1.0,correct
+western-ky,schedule_short_0,Western Ky.,western-ky,1.0,correct
+western-mich,slug,western-mich,western-mich,1.0,correct
+western-mich,full,Western Michigan University,western-mich,1.0,correct
+western-mich,slug_spaces,western mich,western-mich,1.0,correct
+western-mich,schedule_short_0,Western Mich.,western-mich,1.0,correct
+wheeling-jesuit,slug,wheeling-jesuit,wheeling-jesuit,1.0,correct
+wheeling-jesuit,full,Wheeling University,wheeling-jesuit,1.0,correct
+wheeling-jesuit,slug_spaces,wheeling jesuit,wheeling-jesuit,1.0,correct
+wheeling-jesuit,schedule_short_0,Wheeling,wheeling-jesuit,0.7777777777777778,correct
+wichita-st,slug,wichita-st,wichita-st,1.0,correct
+wichita-st,full,Wichita State University,wichita-st,1.0,correct
+wichita-st,slug_spaces,wichita st,wichita-st,1.0,correct
+wichita-st,schedule_short_0,Wichita St.,wichita-st,1.0,correct
+wiley,slug,wiley,wiley,1.0,correct
+wiley,full,Wiley,wiley,1.0,correct
+wiley,slug_spaces,wiley,wiley,1.0,correct
+wiley,schedule_short_0,Wiley,wiley,1.0,correct
+william-mary,slug,william-mary,william-mary,1.0,correct
+william-mary,full,William & Mary,william-mary,1.0,correct
+william-mary,slug_spaces,william mary,william-mary,1.0,correct
+william-mary,schedule_short_0,William & Mary,william-mary,1.0,correct
+winthrop,slug,winthrop,winthrop,1.0,correct
+winthrop,full,Winthrop University,winthrop,1.0,correct
+winthrop,slug_spaces,winthrop,winthrop,1.0,correct
+winthrop,schedule_short_0,Winthrop,winthrop,1.0,correct
+wisconsin,slug,wisconsin,wisconsin,1.0,correct
+wisconsin,full,University of Wisconsin-Madison,wisconsin,1.0,correct
+wisconsin,slug_spaces,wisconsin,wisconsin,1.0,correct
+wisconsin,schedule_short_0,Wisconsin,wisconsin,1.0,correct
+wofford,slug,wofford,wofford,1.0,correct
+wofford,full,Wofford College,wofford,1.0,correct
+wofford,slug_spaces,wofford,wofford,1.0,correct
+wofford,schedule_short_0,Wofford,wofford,1.0,correct
+wright-st,slug,wright-st,wright-st,1.0,correct
+wright-st,full,Wright State University,wright-st,1.0,correct
+wright-st,slug_spaces,wright st,wright-st,1.0,correct
+wright-st,schedule_short_0,Wright St.,wright-st,1.0,correct
+wyoming,slug,wyoming,wyoming,1.0,correct
+wyoming,full,University of Wyoming,wyoming,1.0,correct
+wyoming,slug_spaces,wyoming,wyoming,1.0,correct
+wyoming,schedule_short_0,Wyoming,wyoming,1.0,correct
+xavier,slug,xavier,xavier,1.0,correct
+xavier,full,Xavier University,xavier,1.0,correct
+xavier,slug_spaces,xavier,xavier,1.0,correct
+xavier,schedule_short_0,Xavier,xavier,1.0,correct
+yale,slug,yale,yale,1.0,correct
+yale,full,Yale University,yale,1.0,correct
+yale,slug_spaces,yale,yale,1.0,correct
+yale,schedule_short_0,Yale,yale,1.0,correct
+youngstown-st,slug,youngstown-st,youngstown-st,1.0,correct
+youngstown-st,full,Youngstown State University,youngstown-st,1.0,correct
+youngstown-st,slug_spaces,youngstown st,youngstown-st,1.0,correct
+youngstown-st,schedule_short_0,Youngstown St.,youngstown-st,1.0,correct

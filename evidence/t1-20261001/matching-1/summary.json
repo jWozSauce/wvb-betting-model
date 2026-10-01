@@ -1,0 +1,13 @@
+{
+  "rated_teams": 392,
+  "teams_in_local_schedule": 364,
+  "name_cases": 1596,
+  "verdict_counts": {
+    "correct": 1567,
+    "wrong": 26,
+    "unmatched": 3
+  },
+  "player_variant_groups": 372,
+  "groups_with_shared_jersey": 372,
+  "groups_with_same_contest_variants": 0
+}
