@@ -118,7 +118,115 @@ re-verification; sample sizes stated.
 
 ## 6. Task queue
 
-(No open tasks. Owner is about to state new work — 2026-10-01.)
+**2026-10-01 — Owner's instruction (verbatim in substance):** review what the
+app does and how it is set up, then have the worker do a full audit of the
+app and its statistical methods. Planner's review is §2–§4 of this file;
+the audit is T1 below.
+
+### T1 — Full audit of the app and its statistical methods (review only)
+
+**Status: open. Report first; change nothing under review** (WORKER.md §3,
+"In a review task, report first"). This is the independent review that
+PLANNER.md §3 calls for: the planner wrote most of this system's
+specifications, so treat §2–§5 of this file as *claims to verify, not
+facts* — refuting an entry there is a successful outcome.
+
+**Purpose.** The owner is staking real money on this system. This audit
+decides (a) whether any live pricing, staking, logging or grading path has
+a correctness bug, and (b) whether the statistical claims in §4 survive
+independent scrutiny. Findings feed a follow-up repair queue.
+
+**Scope — audit each area, with a verdict (confirmed / bug / risk /
+cannot verify + severity + size) per numbered item:**
+
+1. **Data pipeline integrity.** `scripts/backfill.py`, `build_points.py`,
+   `vbstats/parse.py`. Reconstruction of scoreless feeds (dedup rule),
+   exhibition/non-regulation exclusion, daily-file staleness handling.
+   Reconcile counts: matches per season vs points rows vs
+   `results_current.parquet` (2,287 rows at 2026-10-01).
+2. **Elo correctness, especially leakage.** `vbstats/elo.py`,
+   `build_elo.py`. Verify pre-game snapshots truly precede the game
+   (chronological ordering incl. same-day ties), conference-anchor updates
+   only on cross-conference points, carryover application, and the
+   rated-games identity (total team-games = 2 × matches).
+3. **Bayesian set model.** `vbstats/model.py`, `scripts/fit_model.py`.
+   GH-quadrature integration correctness, 6-outcome distribution sums to 1
+   over a parameter grid, fifth-set shrink, home/venue term, best-of-5
+   combinatorics vs a brute-force enumeration, Laplace draws usage for the
+   p20 basis. Confirm params were fit on 2021–2025 only (planner probe
+   2026-10-01: `model_params.json` unchanged since commit da67757 and the
+   workflow never runs `fit_model.py` — verify independently).
+4. **RAPM.** `scripts/fit_rapm.py`, `vbstats/rapm_price.py`,
+   `vbstats/names.py`. Design-matrix sign conventions (receive coefs
+   positive-good), phase table vs raw points spot-check, recency weights,
+   set-win DP vs Monte Carlo simulation (incl. deuce fixed point, race to
+   15 in the fifth), playtime-weighted lineup normalization, and that the
+   2026-09-26 name canonicalization did not merge distinct athletes
+   (sample near-certain merges against boxscore jersey numbers).
+5. **Pricing, staking, blending.** `kelly.py`, pricing paths in
+   `streamlit_app.py`, `paste_odds.py` (`market_devig`, `price_market`),
+   `oddspapi.py` (decoding: sides, points, best-line, anchor devig).
+   Verify: edge gate uses vig-included implied; WPO devig matches the
+   NCAAF reference implementation; logit blend; Kelly with edge cap;
+   p20-vs-point basis used consistently between display, gate and stake.
+6. **Live-vs-tested parity (highest-value item).** Compare the pricing
+   path `scripts/backtest_odds.py` exercised against the path the Best
+   bets tab executes live, feature by feature (venue/neutral handling,
+   basis, anchor book, dedup of best line). Name every difference and
+   quantify any that could change which bets clear the gate.
+7. **Bet logging and grading.** `bet_log.py`. `_settle` per market incl.
+   pushes and the five-sets market; orientation-tolerant `_find_result`
+   (could the ±1-day window or flipped matching ever grade against the
+   wrong fixture — e.g. rematches?); dedupe keys; half-written-row repair;
+   header migration. Read-only on the real sheets: verify logic against
+   `results_current.parquet` and synthetic rows, not by writing.
+8. **Team/player matching.** `paste_odds.match_team` (aliases, acronym
+   rules, mascot stripping, `_school_core`): adversarial cases, and an
+   exhaustive pass — every 2026 D1 team's plausible book spellings resolve
+   to the right seoname or to None (never silently to a wrong team).
+9. **Statistical claims in §4.** Reproduce independently: warm accuracy
+   77–78%; backtest headline (29 bets, 18-11, +32.3%, and the w-sweep);
+   ML logloss triple (0.542 / 0.519 / 0.519). Scrutinize the backtest
+   itself for selection effects (join losses, fixture matching, the
+   dedup-best-line step, post-start "closing" prices leaking in-play
+   odds). State what the evidence can and cannot support at n=29.
+10. **App/runtime risks.** Cache staleness patterns, session-state guards,
+    secrets handling (nothing secret reachable from the public repo),
+    Sheets quota discipline, OddsPapi quota math.
+
+**Deliverables.**
+- `AUDIT_2026-10.md` at repo root: verdict table up front (one row per
+  numbered item above), then per-area findings, each claim with file:line
+  or a command + output. Written for the owner.
+- Any reproduction scripts under `scripts/audit/` (new directory; nothing
+  existing modified).
+- A dated worker-log entry in §8 summarising state and pointing at the
+  report.
+
+**Acceptance gate.** (a) Every item 1–10 has a verdict with evidence;
+(b) the four §4 reproductions in item 9 are attempted and each either
+matches within stated tolerance or the discrepancy is explained with
+evidence; (c) at least the probability-distribution and DP checks (items
+3, 4) are validated against brute force, not against the code under test;
+(d) zero modifications to existing files other than PLANS.md §8/§9.
+
+**Boundaries.**
+- Report only — no fixes, no behavior changes, even obvious ones; propose
+  them as numbered follow-ups in the report.
+- Google Sheets: read-only. No writes of any kind to the bet/paper logs.
+- OddsPapi: free endpoints (historical, account) freely; at most 4
+  billable requests total if live-board verification needs them.
+- No Anthropic API calls.
+- Do not rebuild 2026 player tables locally (S1) and do not start a second
+  `backfill_odds.py` sweep.
+- Committing the audit report + PLANS.md entries to `main` is authorized;
+  nothing else.
+
+**Staging.** Items 1–5 and 7–8 are independent — any order. Do item 6
+after 5. Do item 9 last (it depends on understanding from 3/5/6). If a
+**bug verdict with severity high** appears in any live money path
+(pricing, staking, grading), write an open question flagging it
+immediately rather than waiting for the full report.
 
 ## 7. How to run things / standing restrictions
 
