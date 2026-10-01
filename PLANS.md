@@ -720,6 +720,22 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   analysis into a new evidence directory. T5 remains queued; independent
   review-only T1 can proceed while Q1/Q2 await rulings.
 
+### 2026-10-01 11:28 EDT — T1 in progress: high-severity grading bug
+
+- **Bug, high, live grading path:** `_find_result` checks orientations
+  before ranking by date. A neighboring-day same-orientation fixture wins
+  over an exact-date reversed fixture. Synthetic reproduction selects
+  contest 1 on Sep 30 instead of contest 2 on Oct 1. Exhaustive reversed
+  lookups across 2,287 current results return another contest for 26 rows.
+  Evidence: `evidence/t1-20261001/grading_match_risk.json` (IDs listed).
+  These are affected lookup scenarios, not 26 proven misgraded owner bets.
+- No grader or sheets changed. Q3 below requests a repair task and controlled
+  exposure review. Independent T1 checks continue. Mathematical/data/Elo
+  replay is running locally under `scripts/audit/core_audit.py`; progress
+  log `/tmp/t1-core.log`, output `evidence/t1-20261001/core-1/`. Do not
+  start another copy. It reads historical tables and writes only new audit
+  evidence; no 2026 player tables are rebuilt.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -753,3 +769,18 @@ and stop on authorization/rate-limit errors; the existing sweep lacks those
 protections. Alternatively provide a suitable cached fixture response for
 zero-quota continuation. No request has been made; the existing diagnostic
 report is ready to review. This blocks only T3's extension/final conclusion.
+
+### Q3 — 2026-10-01 11:28 EDT — High-severity result matching bug
+
+`bet_log._find_result` can grade against the wrong rematch when the book's
+labels are reversed. It returns the closest same-orientation fixture within
+one day before considering any reversed fixture, even an exact-date match.
+26 of 2,287 actual-result reversed lookups return a different contest;
+e.g. UCLA/Long Beach State on Aug 28 returns the Aug 29 rematch.
+**Recommendation:** authorize a separate repair to rank both orientations
+together, prefer exact date, and refuse ambiguous ties (or use an explicit
+contest ID/time). Add the two-date/reversed regression and audit stored log
+exposure read-only before proposing any correction to real records. T1's
+review-only rule prohibits fixing this in-place; no real rows have been
+changed. This question flags the high-severity issue immediately as required
+by T1 staging; independent review continues.

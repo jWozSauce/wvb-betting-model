@@ -1,0 +1,189 @@
+{
+  "synthetic_expected": 2,
+  "synthetic_returned": 1,
+  "actual_flipped_lookups_checked": 2287,
+  "actual_mismatches": [
+    {
+      "expected": 6625951,
+      "returned": 6625952,
+      "date": "2026-08-28",
+      "bet_home": "ucla",
+      "bet_away": "long-beach-st"
+    },
+    {
+      "expected": 6625557,
+      "returned": 6640466,
+      "date": "2026-08-29",
+      "bet_home": "southern-miss",
+      "bet_away": "jacksonville-st"
+    },
+    {
+      "expected": 6625952,
+      "returned": 6625951,
+      "date": "2026-08-29",
+      "bet_home": "long-beach-st",
+      "bet_away": "ucla"
+    },
+    {
+      "expected": 6640627,
+      "returned": 6627646,
+      "date": "2026-09-04",
+      "bet_home": "northwestern-st",
+      "bet_away": "indiana-st"
+    },
+    {
+      "expected": 6640635,
+      "returned": 6627647,
+      "date": "2026-09-04",
+      "bet_home": "ualr",
+      "bet_away": "indiana-st"
+    },
+    {
+      "expected": 6627646,
+      "returned": 6640627,
+      "date": "2026-09-04",
+      "bet_home": "indiana-st",
+      "bet_away": "northwestern-st"
+    },
+    {
+      "expected": 6626436,
+      "returned": 6640631,
+      "date": "2026-09-04",
+      "bet_home": "western-ill",
+      "bet_away": "south-dakota-st"
+    },
+    {
+      "expected": 6627647,
+      "returned": 6640635,
+      "date": "2026-09-04",
+      "bet_home": "indiana-st",
+      "bet_away": "ualr"
+    },
+    {
+      "expected": 6626442,
+      "returned": 6640649,
+      "date": "2026-09-04",
+      "bet_home": "western-ill",
+      "bet_away": "bradley"
+    },
+    {
+      "expected": 6628625,
+      "returned": 6628626,
+      "date": "2026-09-04",
+      "bet_home": "stetson",
+      "bet_away": "bethune-cookman"
+    },
+    {
+      "expected": 6628626,
+      "returned": 6628625,
+      "date": "2026-09-05",
+      "bet_home": "bethune-cookman",
+      "bet_away": "stetson"
+    },
+    {
+      "expected": 6639581,
+      "returned": 6639582,
+      "date": "2026-09-15",
+      "bet_home": "claflin",
+      "bet_away": "south-carolina-st"
+    },
+    {
+      "expected": 6639582,
+      "returned": 6639581,
+      "date": "2026-09-16",
+      "bet_home": "south-carolina-st",
+      "bet_away": "claflin"
+    },
+    {
+      "expected": 6624323,
+      "returned": 6624325,
+      "date": "2026-09-17",
+      "bet_home": "usc-upstate",
+      "bet_away": "western-caro"
+    },
+    {
+      "expected": 6627621,
+      "returned": 6627622,
+      "date": "2026-09-17",
+      "bet_home": "colorado-st",
+      "bet_away": "colorado"
+    },
+    {
+      "expected": 6642171,
+      "returned": 6626095,
+      "date": "2026-09-18",
+      "bet_home": "nicholls-st",
+      "bet_away": "jacksonville-st"
+    },
+    {
+      "expected": 6626105,
+      "returned": 6626106,
+      "date": "2026-09-18",
+      "bet_home": "morehead-st",
+      "bet_away": "marshall"
+    },
+    {
+      "expected": 6624325,
+      "returned": 6624323,
+      "date": "2026-09-18",
+      "bet_home": "western-caro",
+      "bet_away": "usc-upstate"
+    },
+    {
+      "expected": 6626543,
+      "returned": 6626544,
+      "date": "2026-09-18",
+      "bet_home": "northern-ky",
+      "bet_away": "miami-oh"
+    },
+    {
+      "expected": 6628546,
+      "returned": 6642170,
+      "date": "2026-09-18",
+      "bet_home": "unc-asheville",
+      "bet_away": "ohio"
+    },
+    {
+      "expected": 6625973,
+      "returned": 6625974,
+      "date": "2026-09-18",
+      "bet_home": "evansville",
+      "bet_away": "southern-ind"
+    },
+    {
+      "expected": 6626095,
+      "returned": 6642171,
+      "date": "2026-09-18",
+      "bet_home": "jacksonville-st",
+      "bet_away": "nicholls-st"
+    },
+    {
+      "expected": 6627622,
+      "returned": 6627621,
+      "date": "2026-09-18",
+      "bet_home": "colorado",
+      "bet_away": "colorado-st"
+    },
+    {
+      "expected": 6626106,
+      "returned": 6626105,
+      "date": "2026-09-19",
+      "bet_home": "marshall",
+      "bet_away": "morehead-st"
+    },
+    {
+      "expected": 6625974,
+      "returned": 6625973,
+      "date": "2026-09-19",
+      "bet_home": "southern-ind",
+      "bet_away": "evansville"
+    },
+    {
+      "expected": 6626544,
+      "returned": 6626543,
+      "date": "2026-09-19",
+      "bet_home": "miami-oh",
+      "bet_away": "northern-ky"
+    }
+  ]
+}
