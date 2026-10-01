@@ -662,6 +662,48 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 - Reviewed planner commit `183fa96`: next is T4, then T3; T5 is explicitly
   queued until T4 review, then T1. T2 acceptance is reserved to the planner.
 
+### 2026-10-01 11:14 EDT — T4 implementation complete, awaiting acceptance
+
+- **Report complete:** `PLAYER_MODEL_AUDIT_2026-10.md`, commit `13886ee`,
+  reproduction `scripts/audit/player_model_audit.py`; detailed CSV/JSON
+  evidence in `evidence/t4-20261001/`. No application/pricing changes by T4.
+- **Confirmed:** four removals × player/hybrid modes reach the actual UI
+  and agree with expected prices to four decimals. Murray vs Kansas:
+  player 90.1057%→83.5976%, hybrid 95.9723%→92.5890%. Babcock vs Kansas:
+  player 73.2133%→49.6167%, hybrid 79.6445%→57.5465%. Top-five analysis
+  and pre/post `6f92059` snapshots do not support broadly diminished star
+  effects from canonicalization.
+- **Bug, medium:** no-edit UI promise is false for last-match defaults:
+  Nebraska–Kansas Elo .9337 vs default hybrid .9597. Full season-reference
+  selection restores exact equality for all 16 board rows, including p20.
+- **Risk, high design impact:** removals redistribute weight; deleting
+  lower-relative-impact starters can improve the forecast. Sigler raises
+  hybrid ML 1.0239pp; Watson raises it 4.5875pp. Do not interpret the
+  control as a causal injury estimate or enlarge effects without validation.
+- **Bug, medium:** 27 rated teams lack rosters; Spring Hill–Kansas in Player
+  mode raises TypeError rather than gracefully refusing to price. This
+  pre-existing path remains unchanged, per T4's review-only boundary.
+- Absence reconciliation: 331 flagged core absences = 327 already deselected
+  + 2 matched but selected + 2 unmatched encoding variants. Proposals in
+  the report distinguish clear UI wording from replacement-model changes.
+- No paid calls, Sheets writes, or player-table rebuilds. No worker jobs
+  left running. Next is T3. T5 remains queued awaiting T4 review, and Q1
+  below requests a unit clarification for its annotations.
+
 ## 9. Open questions (append only)
 
 (none open)
+
+### Q1 — 2026-10-01 11:14 EDT — T5 annotation units
+
+T5 requires identity with Player ranks but gives an example in percent/set.
+Player ranks actually reports rally points/set (rounded serve contribution
+plus rounded receive contribution), not percentage points of set-win
+probability or the price effect of removing a player. Murray's ranking
+metric and her −3.38pp hybrid ML removal effect are different quantities.
+**Recommendation:** label T5's shared metric “points/set” with position rank;
+reserve matchup-dependent “ML percentage points” for a separately approved
+what-if display. Alternative: change the requested metric to a removal
+effect, which would change scope and could not equal the current ranks tab.
+Please rule on units when reviewing T4/T5. Only T5 depends on this answer;
+T3 and the review-only T1 can proceed.
