@@ -1,0 +1,114 @@
+{
+  "manual": [
+    {
+      "enabled": "0",
+      "venue": "Home court",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "Home court",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "Home court",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "Neutral (host/label matters)",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "Neutral (host/label matters)",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "Neutral (host/label matters)",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "0",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Home court",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Home court",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Home court",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Neutral (host/label matters)",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Neutral (host/label matters)",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "Neutral (host/label matters)",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Team Elo",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Hybrid (Elo + lineup adjust)",
+      "market_rows": 16
+    },
+    {
+      "enabled": "1",
+      "venue": "True toss-up (symmetrized)",
+      "model": "Player (RAPM)",
+      "market_rows": 16
+    }
+  ],
+  "card_comparisons": 2,
+  "fake_error_ui_safe": true
+}
