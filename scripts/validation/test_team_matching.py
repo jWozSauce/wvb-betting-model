@@ -1,5 +1,6 @@
 import os,sys,unittest,json
 from pathlib import Path
+from evidence_runs import new_run
 from unittest.mock import patch
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT));import paste_odds
@@ -32,6 +33,6 @@ class Matching(unittest.TestCase):
   df=pd.read_csv(ROOT/'evidence/t1-20261001/matching-1/team_names.csv',keep_default_na=False)
   df['repaired']=df.input.map(self.match);df['repaired_verdict']=['unmatched' if pd.isna(x) else 'correct' if x==y else 'wrong' for x,y in zip(df.repaired,df.expected)]
   self.assertEqual((df.repaired_verdict=='wrong').sum(),0,df[df.repaired_verdict=='wrong'].to_string())
-  out=ROOT/'evidence/t7-20261001';out.mkdir(exist_ok=True);df.to_csv(out/'corpus.csv',index=False)
+  out=new_run(ROOT/'evidence/t7-20261001');df.to_csv(out/'corpus.csv',index=False)
   summary=df.repaired_verdict.value_counts().to_dict();(out/'summary.json').write_text(json.dumps(summary,indent=2));print(summary)
 if __name__=='__main__':unittest.main()

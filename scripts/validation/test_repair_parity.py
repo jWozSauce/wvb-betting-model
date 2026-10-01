@@ -1,6 +1,7 @@
 """Ensure review-disabled behavior is preserved and annotations do not reprice."""
 from contextlib import ExitStack
 from pathlib import Path
+from evidence_runs import new_run
 from unittest.mock import patch
 import json,os,sys,subprocess
 import pandas as pd
@@ -28,4 +29,4 @@ with ExitStack() as stack:
  with patch.dict(os.environ,{'WVB_ENABLE_REPAIRS':'1'}),patch('oddspapi.fetch_board',side_effect=RuntimeError('URL apiKey=FAKE_UI_SECRET')):
   app=new_app(new);element(app.button,'Fetch odds & evaluate').click();check(app.run());messages=' '.join(x.value for x in app.error)
   assert 'FAKE_UI_SECRET' not in messages and 'details withheld' in messages
-out=ROOT/'evidence/repairs-20261001';out.mkdir(exist_ok=False);(out/'parity.json').write_text(json.dumps({'manual':rows,'card_comparisons':2,'fake_error_ui_safe':True},indent=2));print('PASS: 18 manual comparisons, 2 slate cards, fake credential UI')
+out=new_run(ROOT/'evidence/repairs-20261001');(out/'parity.json').write_text(json.dumps({'manual':rows,'card_comparisons':2,'fake_error_ui_safe':True},indent=2));print('PASS: 18 manual comparisons, 2 slate cards, fake credential UI')

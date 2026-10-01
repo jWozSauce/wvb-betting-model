@@ -1,0 +1,32 @@
+[
+  {
+    "team": "nebraska",
+    "player": "Harper Murray",
+    "rank_tab_impact": 1.43,
+    "annotation": "Harper Murray (+1.43 pts/set, #1 of 5 OH)"
+  },
+  {
+    "team": "pittsburgh",
+    "player": "Olivia Babcock",
+    "rank_tab_impact": 1.78,
+    "annotation": "Olivia Babcock (+1.78 pts/set, #1 of 6 OH)"
+  },
+  {
+    "team": "nebraska",
+    "player": "Bergen Reilly",
+    "rank_tab_impact": 1.36,
+    "annotation": "Bergen Reilly (+1.36 pts/set, #1 of 2 S)"
+  },
+  {
+    "team": "nebraska",
+    "player": "Teraya Sigler",
+    "rank_tab_impact": 0.78,
+    "annotation": "Teraya Sigler (+0.78 pts/set, #2 of 5 OH)"
+  },
+  {
+    "team": "pittsburgh",
+    "player": "Ayanna Watson",
+    "rank_tab_impact": 0.44,
+    "annotation": "Ayanna Watson (+0.44 pts/set, #4 of 6 OH)"
+  }
+]

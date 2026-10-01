@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "iteration": 1,
+      "script": "test_team_matching.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 1,
+      "script": "test_card_state.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 1,
+      "script": "test_player_guards.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 1,
+      "script": "test_player_annotations.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 1,
+      "script": "test_repair_parity.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "script": "test_team_matching.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "script": "test_card_state.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "script": "test_player_guards.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "script": "test_player_annotations.py",
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "script": "test_repair_parity.py",
+      "exit_code": 0
+    }
+  ],
+  "prior_files_unchanged": 296
+}

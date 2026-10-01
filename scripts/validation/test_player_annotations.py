@@ -1,6 +1,7 @@
 """T5 metric parity, position denominators, unknowns and actual UI labels."""
 import os,sys,json
 from pathlib import Path
+from evidence_runs import new_run
 from contextlib import ExitStack
 from unittest.mock import patch
 import pandas as pd
@@ -28,4 +29,4 @@ with ExitStack() as stack:
  # Controlled ties and a zero-start teammate: tied rank 1 of 2, not 3.
  tiny=pd.DataFrame([dict(team='a',player=n,position='OH',serve=.1,recv=.1,sets_started_cur=starts) for n,starts in [('One',1),('Two',2),('Zero',0)]])
  tie=player_metrics.annotation_index(tiny);assert '#1 of 2 OH' in player_metrics.annotate('a','One',tie);assert '(unrated)' in player_metrics.annotate('a','Zero',tie)
- out=ROOT/'evidence/t5-20261001';out.mkdir(exist_ok=False);(out/'annotations.json').write_text(json.dumps(evidence,indent=2));print(json.dumps(evidence))
+ out=new_run(ROOT/'evidence/t5-20261001');(out/'annotations.json').write_text(json.dumps(evidence,indent=2));print(json.dumps(evidence))

@@ -1,0 +1,11 @@
+{
+  "prepared_source_only": true,
+  "defaults_boot": true,
+  "default_sources": [
+    "Live API (Pinnacle/DK/FD/BetOnline)",
+    "Paste a board",
+    "NCAA schedule (price everything)"
+  ],
+  "rollback_boot": true,
+  "network_and_sheets_mocked": true
+}

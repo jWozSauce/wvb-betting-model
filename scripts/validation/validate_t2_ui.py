@@ -1,7 +1,7 @@
 """AppTest parity against the pre-refactor app, with all external IO blocked.
 
 Run from repository root: .venv/bin/python scripts/validation/validate_t2_ui.py
-Results are JSON/CSV in a new directory passed with --output.
+Results are JSON/CSV in a timestamped run directory under --output.
 """
 import argparse
 import ast
@@ -11,6 +11,7 @@ import os
 from contextlib import ExitStack
 import json
 from pathlib import Path
+from evidence_runs import new_run
 import subprocess
 import sys
 import time
@@ -77,8 +78,7 @@ def main():
     parser.add_argument('--output', required=True)
     parser.add_argument('--slate')
     args = parser.parse_args()
-    out = Path(args.output)
-    out.mkdir(parents=True, exist_ok=False)
+    out = new_run(args.output)
     original = subprocess.check_output(['git','show',f'{BASE}:streamlit_app.py'], cwd=ROOT, text=True)
     updated = (ROOT/'streamlit_app.py').read_text()
     rows = []

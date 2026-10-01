@@ -2,6 +2,7 @@
 import datetime as dt
 import json
 from pathlib import Path
+from evidence_runs import new_run
 import sys
 from unittest.mock import patch
 
@@ -48,7 +49,8 @@ for row in selected:
     assert row['venue']==actual['venue']
     checks.append(dict(contest_id=row['contest_id'],away=row['ncaa_away'],home=row['ncaa_home'],
                        legacy=actual['site'],new=row['site'],venue=row['venue'],verdict='confirmed'))
-pd.DataFrame(checks).to_csv(source/'venue_spot_check.csv',index=False)
+out=new_run(ROOT/'evidence/t2-20261001/venue-checks')
+pd.DataFrame(checks).to_csv(out/'venue_spot_check.csv',index=False)
 ratings=pd.read_parquet(ROOT/'app_data/elo_current.parquet').set_index('team')
 params=tuple(json.loads((ROOT/'app_data/model_params.json').read_text())['params'])
 rows=[]
@@ -63,5 +65,5 @@ for row in slate['priced']:
         shown[k+'_prob']=v
         shown[k+'_fair']=kelly.prob_to_american(v)
     rows.append(shown)
-pd.DataFrame(rows).to_csv(source/'slate_table.csv',index=False)
+pd.DataFrame(rows).to_csv(out/'slate_table.csv',index=False)
 print('10/10 legacy venue labels match; 126-game slate CSV saved')

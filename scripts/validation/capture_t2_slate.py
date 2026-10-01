@@ -3,6 +3,7 @@ import argparse
 import datetime as dt
 import json
 from pathlib import Path
+from evidence_runs import new_run
 import sys
 import time
 from unittest.mock import patch
@@ -18,8 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--date', default='2026-10-02')
 parser.add_argument('--output', required=True)
 args = parser.parse_args()
-out = Path(args.output)
-out.mkdir(parents=True, exist_ok=False)
+out = new_run(args.output)
 # Exclusive lock prevents duplicate network validation jobs.
 lock = ROOT/'evidence/t2-20261001/capture.lock'
 with lock.open('x') as f:
