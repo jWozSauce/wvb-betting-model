@@ -1,4 +1,5 @@
 """Shared Player ranks metrics and display-only absence annotations."""
+import math
 import pandas as pd
 from vbstats.names import fold_key
 
@@ -24,6 +25,9 @@ def annotation_index(roster):
     index = {}
     for row in eligible.itertuples():
         key = (row.team, fold_key(row.player))
+        if not math.isfinite(row.impact_per_set) or pd.isna(row.position_rank):
+            index[key] = None
+            continue
         value = (f'{row.impact_per_set:+.2f} pts/set, '
                  f'#{int(row.position_rank)} of {int(row.position_count)} {row.position}')
         # Refuse collisions rather than assigning another athlete's metric.

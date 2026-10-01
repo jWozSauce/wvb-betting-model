@@ -854,6 +854,30 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   checking process state before the single-instance extension. No acceptance
   inferred and no pricing defaults or replacement semantics changed.
 
+### 2026-10-01 12:08 EDT — T5 and player UI implementation complete; T3 extension in progress
+
+- T5 `599c35b` uses `vbstats/player_metrics.py` for both Player ranks and
+  deterministic absence/lineup/slate labels. Exact UI comparisons: Murray
+  +1.43 pts/set (#1/5 OH), Babcock +1.78 (#1/6 OH), Reilly +1.36 (#1/2 S),
+  Sigler +0.78 (#2/5 OH), Watson +0.44 (#4/6 OH). Unknown/ineligible players
+  show unrated; ties share rank. No selection IDs or pricing math changed.
+- Small T4 UI defects fixed in `3922cef`: missing rosters gracefully refuse
+  both player modes; help explains last-match selection vs season reference.
+  Replacement semantics remain held for D1. Review acceptance still required.
+- Integration `70102c8`: 18 manual comparisons ×16 markets and two slate
+  cards match baseline prices/stakes, with repair switch off and on. Fake
+  credential through actual UI is withheld. `REPAIRS_2026-10.md` consolidates
+  review instructions and limits. All repairs/annotations default off.
+- T3 single-instance extension started after confirming no existing sweep.
+  Cached enumeration returned 1,001 finished fixtures, 70 not previously
+  swept. Quota verified 5→6 of 250, exactly one authorized billable request.
+  First free history response cached and processed; subsequent checkpoints
+  show 58 newly checked fixtures and 11 with odds at this update. Running
+  `scripts/audit/extend_history.py`; log `/tmp/t3-extension-20261001.log`,
+  lock/ledger/raw cache/new parquet under `evidence/t3-20261001/extension-1/`.
+  Do not start a duplicate. Source odds parquet unchanged; final analysis
+  begins after verified job completion. No historical output is overwritten.
+
 ## 9. Open questions (append only)
 
 (none open)
