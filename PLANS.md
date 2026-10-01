@@ -491,6 +491,25 @@ Standing restrictions (planner, 2026-10-01):
   until 17:00 EDT; do not start a duplicate. Next execution task remains T2
   stage (i) on its specified branch.
 
+### 2026-10-01 10:57 EDT — T2 in progress: baseline and schedule probe
+
+- **Confirmed:** work has begun on `t2-schedule-pricing`; baseline application
+  is preserved by commit `2efbb95` (latest planner-only commit). Reviewed its
+  amendments against `ecff7e3`: explicit T2 start instruction and new order
+  T2 → T3 → T1. Owner directly requested checking for tasks in this chat.
+- Free NCAA D1 probe returned 121 contests for 2026-10-02 in 0.629 seconds;
+  raw returned contests and timestamp are in
+  `evidence/t2-20261001/probe-d1-20261002.json`. No paid calls or Sheets
+  writes. First sandboxed request failed DNS; approved network retry worked.
+- **Risk:** the original Price a match tab automatically calls paid injury
+  analysis. Extraction will leave that call at its existing site and share
+  only the pricing panel, avoiding a new paid call from schedule drill-in.
+  Tests will block paid APIs and Sheets writes.
+- One pre-existing Python process was observed; it is left untouched. No
+  worker background jobs started. Existing untracked reference files preserved.
+  Next: implement schedule filtering, venue caching, and the per-game UI;
+  then validate shared-panel parity and required gates. No acceptance claimed.
+
 ## 9. Open questions (append only)
 
 (none open)
