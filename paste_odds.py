@@ -483,6 +483,26 @@ def _match_team_safe(name, seonames, fullnames=None):
     hits = identities.get(key, set())
     if len(hits) == 1:
         return next(iter(hits)), .95
+    # Strip only an explicitly recognized mascot suffix at a word boundary.
+    # Campus words such as State/Upstate/New Orleans are never suffixes here.
+    mascots = (
+        'golden gophers', 'lady volunteers', 'nittany lions', 'yellow jackets',
+        'sun devils', 'horned frogs', 'fighting illini', 'red storm',
+        'golden eagles', 'tar heels', 'mean green',
+        'panthers', 'boilermakers', 'cardinals', 'cardinal', 'hoosiers',
+        'badgers', 'longhorns', 'hurricanes', 'bluejays', 'cougars', 'toreros',
+        'bears', 'ducks', 'buffaloes', 'utes', 'seminoles', 'jayhawks',
+        'cyclones', 'broncos', 'wildcats', 'gators', 'mustangs', 'bulls',
+        'aggies', 'trojans', 'huskers', 'bearcats', 'wolfpack', 'wolverines',
+        'mountaineers', 'spartans', 'sooners', 'tigers', 'bruins', 'shockers',
+        'hawkeyes', 'jackrabbits', 'beavers', 'flyers', 'miners', 'rams',
+        'rebels', 'terrapins', 'commodores',
+    )
+    text = str(name).strip()
+    for suffix in mascots:
+        ending = ' ' + suffix
+        if text.lower().endswith(ending):
+            return _match_team_safe(text[:-len(ending)], seonames, fullnames)
     return None, 0.0
 
 

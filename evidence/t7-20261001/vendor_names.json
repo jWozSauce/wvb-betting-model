@@ -1,0 +1,386 @@
+[
+  {
+    "name": "Arizona State Sun Devils",
+    "expected": "arizona-st",
+    "actual": "arizona-st",
+    "legacy": "arizona-st"
+  },
+  {
+    "name": "Arizona Wildcats",
+    "expected": "arizona",
+    "actual": "arizona",
+    "legacy": "arizona"
+  },
+  {
+    "name": "Auburn Tigers",
+    "expected": "auburn",
+    "actual": "auburn",
+    "legacy": "auburn"
+  },
+  {
+    "name": "BYU Cougars",
+    "expected": "byu",
+    "actual": "byu",
+    "legacy": "byu"
+  },
+  {
+    "name": "Baylor Bears",
+    "expected": "baylor",
+    "actual": "baylor",
+    "legacy": "baylor"
+  },
+  {
+    "name": "Boise State Broncos",
+    "expected": "boise-st",
+    "actual": "boise-st",
+    "legacy": "boise-st"
+  },
+  {
+    "name": "Cal Poly Mustangs",
+    "expected": "cal-poly",
+    "actual": "cal-poly",
+    "legacy": "cal-poly"
+  },
+  {
+    "name": "Cincinnati Bearcats",
+    "expected": "cincinnati",
+    "actual": "cincinnati",
+    "legacy": "cincinnati"
+  },
+  {
+    "name": "Colorado Buffaloes",
+    "expected": "colorado",
+    "actual": "colorado",
+    "legacy": "colorado"
+  },
+  {
+    "name": "Colorado State Rams",
+    "expected": "colorado-st",
+    "actual": "colorado-st",
+    "legacy": "colorado-st"
+  },
+  {
+    "name": "Creighton Bluejays",
+    "expected": "creighton",
+    "actual": "creighton",
+    "legacy": "creighton"
+  },
+  {
+    "name": "Dayton Flyers",
+    "expected": "dayton",
+    "actual": "dayton",
+    "legacy": "dayton"
+  },
+  {
+    "name": "Florida Gators",
+    "expected": "florida",
+    "actual": "florida",
+    "legacy": "florida"
+  },
+  {
+    "name": "Florida State Seminoles",
+    "expected": "florida-st",
+    "actual": "florida-st",
+    "legacy": "florida-st"
+  },
+  {
+    "name": "Georgia Tech Yellow Jackets",
+    "expected": "georgia-tech",
+    "actual": "georgia-tech",
+    "legacy": "georgia-tech"
+  },
+  {
+    "name": "Illinois Fighting Illini",
+    "expected": "illinois",
+    "actual": "illinois",
+    "legacy": "illinois"
+  },
+  {
+    "name": "Indiana Hoosiers",
+    "expected": "indiana",
+    "actual": "indiana",
+    "legacy": "indiana"
+  },
+  {
+    "name": "Iowa Hawkeyes",
+    "expected": "iowa",
+    "actual": "iowa",
+    "legacy": "iowa"
+  },
+  {
+    "name": "Iowa State Cyclones",
+    "expected": "iowa-st",
+    "actual": "iowa-st",
+    "legacy": "iowa-st"
+  },
+  {
+    "name": "Kansas Jayhawks",
+    "expected": "kansas",
+    "actual": "kansas",
+    "legacy": "kansas"
+  },
+  {
+    "name": "Kansas State Wildcats",
+    "expected": "kansas-st",
+    "actual": "kansas-st",
+    "legacy": "kansas-st"
+  },
+  {
+    "name": "Kentucky Wildcats",
+    "expected": "kentucky",
+    "actual": "kentucky",
+    "legacy": "kentucky"
+  },
+  {
+    "name": "Louisville Cardinals",
+    "expected": "louisville",
+    "actual": "louisville",
+    "legacy": "louisville"
+  },
+  {
+    "name": "Lsu Tigers",
+    "expected": "lsu",
+    "actual": "lsu",
+    "legacy": "lsu"
+  },
+  {
+    "name": "Marquette Golden Eagles",
+    "expected": "marquette",
+    "actual": "marquette",
+    "legacy": "marquette"
+  },
+  {
+    "name": "Maryland Terrapins",
+    "expected": "maryland",
+    "actual": "maryland",
+    "legacy": "maryland"
+  },
+  {
+    "name": "Miami Hurricanes",
+    "expected": "miami-fl",
+    "actual": "miami-fl",
+    "legacy": "miami-fl"
+  },
+  {
+    "name": "Michigan State Spartans",
+    "expected": "michigan-st",
+    "actual": "michigan-st",
+    "legacy": "michigan-st"
+  },
+  {
+    "name": "Michigan Wolverines",
+    "expected": "michigan",
+    "actual": "michigan",
+    "legacy": "michigan"
+  },
+  {
+    "name": "Minnesota Golden Gophers",
+    "expected": "minnesota",
+    "actual": "minnesota",
+    "legacy": "minnesota"
+  },
+  {
+    "name": "Missouri Tigers",
+    "expected": "missouri",
+    "actual": "missouri",
+    "legacy": "missouri"
+  },
+  {
+    "name": "NC State Wolfpack",
+    "expected": "north-carolina-st",
+    "actual": "north-carolina-st",
+    "legacy": "north-carolina-st"
+  },
+  {
+    "name": "Nebraska Huskers",
+    "expected": "nebraska",
+    "actual": "nebraska",
+    "legacy": "nebraska"
+  },
+  {
+    "name": "North Carolina Tar Heels",
+    "expected": "north-carolina",
+    "actual": "north-carolina",
+    "legacy": "north-carolina"
+  },
+  {
+    "name": "North Texas Mean Green",
+    "expected": "north-texas",
+    "actual": "north-texas",
+    "legacy": "north-texas"
+  },
+  {
+    "name": "Northern Colorado Bears",
+    "expected": "northern-colo",
+    "actual": "northern-colo",
+    "legacy": "northern-colo"
+  },
+  {
+    "name": "Northwestern Wildcats",
+    "expected": "northwestern",
+    "actual": "northwestern",
+    "legacy": "northwestern"
+  },
+  {
+    "name": "Oklahoma Sooners",
+    "expected": "oklahoma",
+    "actual": "oklahoma",
+    "legacy": "oklahoma"
+  },
+  {
+    "name": "Ole Miss Rebels",
+    "expected": "ole-miss",
+    "actual": "ole-miss",
+    "legacy": "ole-miss"
+  },
+  {
+    "name": "Oregon Ducks",
+    "expected": "oregon",
+    "actual": "oregon",
+    "legacy": "oregon"
+  },
+  {
+    "name": "Oregon State Beavers",
+    "expected": "oregon-st",
+    "actual": "oregon-st",
+    "legacy": "oregon-st"
+  },
+  {
+    "name": "Penn State Nittany Lions",
+    "expected": "penn-st",
+    "actual": "penn-st",
+    "legacy": "penn-st"
+  },
+  {
+    "name": "Pittsburgh Panthers",
+    "expected": "pittsburgh",
+    "actual": "pittsburgh",
+    "legacy": "pittsburgh"
+  },
+  {
+    "name": "Purdue Boilermakers",
+    "expected": "purdue",
+    "actual": "purdue",
+    "legacy": "purdue"
+  },
+  {
+    "name": "San Diego Toreros",
+    "expected": "san-diego",
+    "actual": "san-diego",
+    "legacy": "san-diego"
+  },
+  {
+    "name": "Smu Mustangs",
+    "expected": "smu",
+    "actual": "smu",
+    "legacy": "smu"
+  },
+  {
+    "name": "South Dakota State Jackrabbits",
+    "expected": "south-dakota-st",
+    "actual": "south-dakota-st",
+    "legacy": "south-dakota-st"
+  },
+  {
+    "name": "South Florida Bulls",
+    "expected": "south-fla",
+    "actual": "south-fla",
+    "legacy": "south-fla"
+  },
+  {
+    "name": "St. John's Red Storm",
+    "expected": "st-johns-ny",
+    "actual": "st-johns-ny",
+    "legacy": "st-johns-ny"
+  },
+  {
+    "name": "Stanford Cardinal",
+    "expected": "stanford",
+    "actual": "stanford",
+    "legacy": "stanford"
+  },
+  {
+    "name": "Tcu Horned Frogs",
+    "expected": "tcu",
+    "actual": "tcu",
+    "legacy": "tcu"
+  },
+  {
+    "name": "Tennessee Lady Volunteers",
+    "expected": "tennessee",
+    "actual": "tennessee",
+    "legacy": "tennessee"
+  },
+  {
+    "name": "Texas A&M Aggies",
+    "expected": "texas-am",
+    "actual": "texas-am",
+    "legacy": "texas-am"
+  },
+  {
+    "name": "Texas Longhorns",
+    "expected": "texas",
+    "actual": "texas",
+    "legacy": "texas"
+  },
+  {
+    "name": "UC Davis Aggies",
+    "expected": "uc-davis",
+    "actual": "uc-davis",
+    "legacy": "uc-davis"
+  },
+  {
+    "name": "UCLA Bruins",
+    "expected": "ucla",
+    "actual": "ucla",
+    "legacy": "ucla"
+  },
+  {
+    "name": "USC Trojans",
+    "expected": "southern-california",
+    "actual": "southern-california",
+    "legacy": "southern-california"
+  },
+  {
+    "name": "UTEP Miners",
+    "expected": "utep",
+    "actual": "utep",
+    "legacy": "utep"
+  },
+  {
+    "name": "Utah Utes",
+    "expected": "utah",
+    "actual": "utah",
+    "legacy": "texas-arlington"
+  },
+  {
+    "name": "Vanderbilt Commodores",
+    "expected": "vanderbilt",
+    "actual": "vanderbilt",
+    "legacy": "vanderbilt"
+  },
+  {
+    "name": "Washington State Cougars",
+    "expected": "washington-st",
+    "actual": "washington-st",
+    "legacy": "washington-st"
+  },
+  {
+    "name": "West Virginia Mountaineers",
+    "expected": "west-virginia",
+    "actual": "west-virginia",
+    "legacy": "west-virginia"
+  },
+  {
+    "name": "Wichita State Shockers",
+    "expected": "wichita-st",
+    "actual": "wichita-st",
+    "legacy": "wichita-st"
+  },
+  {
+    "name": "Wisconsin Badgers",
+    "expected": "wisconsin",
+    "actual": "wisconsin",
+    "legacy": "wisconsin"
+  }
+]
