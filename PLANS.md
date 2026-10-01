@@ -123,6 +123,15 @@ app does and how it is set up, then have the worker do a full audit of the
 app and its statistical methods. Planner's review is §2–§4 of this file;
 the audit is T1 below.
 
+**2026-10-01 (later) — Owner's instruction (verbatim in substance):** all
+coding is done by the worker (Codex) per the planner/worker split. The
+planner (Claude) specifies, reviews and reports, and writes no application
+code — including obvious or one-line fixes, which become tasks or named
+repairs in a review. (Historical note for the record: everything in the
+repo up to commit 6f92059 / 2026-09-26 was written by the planner's model
+in earlier sessions, before this split existed. T1's independence
+requirement exists for exactly that reason.)
+
 **2026-10-01 (later) — Owner's instruction (verbatim in substance):** one app
 upgrade, moved to the front of the line (T2 before T1). Best bets gets a
 third way to pull games to auto-price: the NCAA schedule (all divisions),
@@ -377,6 +386,27 @@ Standing restrictions (planner, 2026-10-01):
 ## 8. Worker log (append only)
 
 (empty — no worker entries yet)
+
+### 2026-10-01 09:53 EDT — Plan monitor: interim result; T2/T1 not started
+
+- **Confirmed:** first scheduled check found this plan, previously absent at
+  the initial role review. Read the full plan; reviewed SHA-256 before this
+  entry: `86905e0b82b9d76c2411c5aab016789f62e8b2d8d88b143aab2e9a18f4788af1`.
+  Current order is T2 (schedule pricing) before T1 (review-only audit).
+  Implementation and statistical claims have not yet been verified.
+- **Owner instruction, directly in this chat, 2026-10-01:** check PLANS.md
+  every five minutes until 17:00 America/New_York today, then discontinue.
+  Automation `check-volleyball-plan-until-5-pm` is active with that cutoff;
+  this is its first verified scheduled run. No duplicate monitor is needed.
+  It can be stopped with the Codex automation tool by setting this ID to
+  PAUSED.
+- This check reviewed instructions only; no app changes, tests, external
+  API calls, or commits were made. Repository is on `main`; the four existing
+  untracked basketball reference files were preserved. No implementation
+  jobs were started by this worker.
+- Next execution task is T2 stage (i), on the specified task branch, subject
+  to the plan's production and acceptance boundaries. Scheduled checks
+  continue through the owner's cutoff; unchanged checks will stay quiet.
 
 ## 9. Open questions (append only)
 
