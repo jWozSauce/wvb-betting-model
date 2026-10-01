@@ -1,0 +1,43 @@
+{
+  "no_edit_identity": {
+    "elo": 0.9337,
+    "hybrid_default": 0.9597,
+    "hybrid_season_reference": 0.9337,
+    "default_exact": false,
+    "season_reference_exact": true
+  },
+  "rated_teams_without_rosters": [
+    "ala-huntsville",
+    "allen",
+    "ark-monticello",
+    "aub-montgomery",
+    "christian-bros",
+    "ferris-st",
+    "lee",
+    "lees-mcrae",
+    "lemoyne-owen",
+    "miles",
+    "mississippi-christ",
+    "mo-western-st",
+    "montevallo",
+    "northern-mich",
+    "palm-beach-atl",
+    "paul-quinn",
+    "point-loma",
+    "regis-co",
+    "rust",
+    "seattle-pacific",
+    "spring-hill",
+    "st-francis-pa",
+    "tougaloo",
+    "trevecca-nazarene",
+    "union-tn",
+    "valdosta-st",
+    "west-ala"
+  ],
+  "absent_core_count": 331,
+  "unmatched_absent_count": 2,
+  "absent_already_deselected": 327,
+  "alpha": 1000.0,
+  "recency": 0.75
+}

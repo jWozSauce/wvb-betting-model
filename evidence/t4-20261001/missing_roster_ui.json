@@ -1,0 +1,7 @@
+{
+  "home": "spring-hill",
+  "away": "kansas",
+  "exceptions": [
+    "'NoneType' object is not iterable"
+  ]
+}

@@ -1,0 +1,9 @@
+player,mode,expected_before,ui_before,expected_after,ui_after
+Harper Murray,player,0.9011,0.9011,0.836,0.836
+Harper Murray,hybrid,0.9597,0.9597,0.9259,0.9259
+Olivia Babcock,player,0.7321,0.7321,0.4962,0.4962
+Olivia Babcock,hybrid,0.7964,0.7964,0.5755,0.5755
+Teraya Sigler,player,0.9011,0.9011,0.923,0.923
+Teraya Sigler,hybrid,0.9597,0.9597,0.97,0.97
+Ayanna Watson,player,0.7321,0.7321,0.7867,0.7867
+Ayanna Watson,hybrid,0.7964,0.7964,0.8423,0.8423
