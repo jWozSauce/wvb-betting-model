@@ -24,6 +24,7 @@ import bet_log
 import kelly
 import paste_odds
 import repair_flags
+import safe_http
 from vbstats import model
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -819,7 +820,7 @@ with tab_best:
                                + " (cached 10 min — re-clicks are free)")
                     run_eval = True
                 except Exception as e:
-                    st.error(f"OddsPapi fetch failed: {e}")
+                    st.error(f"OddsPapi fetch failed: {safe_http.public_error(e)}")
         if run_eval:
             seos_all = ratings.team.tolist()
             team_fullnames = (dict(zip(ratings.team, ratings.name_full))

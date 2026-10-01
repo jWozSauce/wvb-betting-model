@@ -29,6 +29,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 import kelly
+import safe_http
 
 API = "https://api.oddspapi.io/v4"
 TOURNAMENT_NCAAW = "43847"
@@ -125,7 +126,7 @@ def fetch_board(books=BOOKS, key: str | None = None, timeout: int = 60):
     for i, bk in enumerate(books):
         if i:
             time.sleep(1.1)  # endpoint has a ~1s per-call cooldown
-        r = requests.get(f"{API}/odds-by-tournaments",
+        r = safe_http.get(f"{API}/odds-by-tournaments",
                          params={"apiKey": key,
                                  "tournamentIds": TOURNAMENT_NCAAW,
                                  "bookmaker": bk, "oddsFormat": "american"},
@@ -190,7 +191,7 @@ def fetch_board(books=BOOKS, key: str | None = None, timeout: int = 60):
 
 def account(key: str | None = None) -> dict:
     """Quota usage — free endpoint, never counts against the limit."""
-    r = requests.get(f"{API}/account", params={"apiKey": key or api_key()},
+    r = safe_http.get(f"{API}/account", params={"apiKey": key or api_key()},
                      timeout=30)
     r.raise_for_status()
     return r.json()

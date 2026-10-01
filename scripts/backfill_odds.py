@@ -31,6 +31,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import oddspapi  # noqa: E402
+import safe_http
 
 BOOKS = "draftkings,fanduel,betonline.ag"  # max 3 per call; pinnacle has
                                            # no NCAA W board
@@ -98,7 +99,7 @@ def main():
     mktmap = oddspapi._markets_map()
     names = oddspapi._participants()
 
-    r = requests.get(f"{oddspapi.API}/fixtures",
+    r = safe_http.get(f"{oddspapi.API}/fixtures",
                      params={"apiKey": key,
                              "tournamentId": oddspapi.TOURNAMENT_NCAAW,
                              "from": args.date_from, "to": args.date_to},
@@ -123,7 +124,7 @@ def main():
     for i, f in enumerate(todo):
         time.sleep(COOLDOWN)
         try:
-            h = requests.get(f"{oddspapi.API}/historical-odds",
+            h = safe_http.get(f"{oddspapi.API}/historical-odds",
                              params={"apiKey": key,
                                      "fixtureId": f["fixtureId"],
                                      "bookmakers": BOOKS}, timeout=60)
