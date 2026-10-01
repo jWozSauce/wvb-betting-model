@@ -763,6 +763,51 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 - Q5 requests a separate repair. No application code changed in T1.
   All audit jobs have finished; report consolidation continues.
 
+### 2026-10-01 11:41 EDT — T1 implementation complete, awaiting acceptance
+
+- **Report:** `AUDIT_2026-10.md`, commit `6435b08`, covers all ten areas
+  with verdicts and reproducible evidence. Earlier immediate flags:
+  `6adb0c4` (grading), `b689a91` (matcher), `c6b6766` (stale stakes).
+  All T1 changes are new reports/scripts/evidence plus worker sections here;
+  no existing application code was modified by T1.
+- **Confirmed:** 75 distribution cases agree with independent set-sequence
+  enumeration to 1.11e-16; normal integration to 1.77e-9. Eighteen DP cases
+  agree with independent rally enumeration to 1.05e-13 and 50,000-set
+  simulations (seed 20261001; max |z| 1.78). A new extreme-input check
+  finds a low-severity deuce convergence error of 0.0625 percentage points.
+  144 settlement cases, 20 Kelly cases, and mock decoder/grade-batch checks
+  pass. The stale-stake reproduction confirms a bug, not a passing gate.
+- **Risk, high:** only 497/729 sampled raw set scores agree with official
+  totals, including 70/204 reconstructed sets. Upstream incompleteness vs
+  parser causes needs diagnosis; this is not a population error estimate.
+  Eleven invalid 2024 finals remain in protected historical inputs.
+- **Claims:** warm Elo accuracy 77.233%, fixed set model 77.940% (n=16,133);
+  cached 29-bet +32.293% headline and weight sweep reproduce. Current rebuild
+  gives 28 bets +29.518%; report documents unresolved venue provenance.
+  Rebuilt ML logloss .541522 / .519108 / .519125 matches the rounded triple.
+  Live/backtest venue and p20 each change one qualifying bet in the isolated
+  replay. Statistical limitations and exclusions are explicit.
+- **Risk, high:** a fake-key HTTP error demonstrates the credential-query
+  exposure path to UI error text. No actual secret was exposed. Q6 proposes
+  a separate repair; local tracked-file checks do not certify public history.
+- **Metered result:** one T1 DraftKings request returned 404 (no fixtures),
+  cached raw and decoded empty board. The follow-up ledger sequence failed
+  with RuntimeError; a subsequent free account check confirmed quota 4→5
+  of 250. `evidence/t1-20261001/live-probe-1/` retains the failure and its
+  reconciliation. One billable request used of the authorized maximum four;
+  no retry. Nonempty current API compatibility remains unverified.
+- All 29 recorded protected source hashes match after completion; no Sheets
+  writes, model fits, player-table rebuilds, push or deployment. No audit
+  processes remain running. Four pre-existing owner reference files remain
+  untracked and untouched. Only the authorized plan monitor continues until
+  17:00 EDT; do not start a duplicate.
+- **Handoff:** T2, T4 and T1 execution complete awaiting planner acceptance;
+  T3 remains an interim report with extension blocked on Q2. T5 remains
+  queued until T4 review and Q1 ruling. Proposed repairs Q3–Q6 require
+  separate authorization under T1's report-only boundary. No acceptance
+  inferred from silence. Some earlier log timestamps were approximate;
+  use Git/evidence timestamps for exact chronology.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -836,3 +881,16 @@ card, invalidate/reprice when it changes, and log that exact snapshot.
 Require bankroll, basis, blend, edge, and venue change regressions with
 Sheets mocked. T1's report-only rule prohibits this fix here; no real
 records or production behavior were changed.
+
+### Q6 — 2026-10-01 11:41 EDT — Credential-bearing HTTP exceptions reach UI
+
+`oddspapi.fetch_board` calls `raise_for_status` on a request with apiKey in
+the URL; the app displays the exception at `streamlit_app.py:802`.
+An offline fake-key response confirms the error contains the key value.
+No real credential was exposed during this audit. **Recommendation:**
+authorize a separate boundary-hardening repair to replace credential-bearing
+exceptions with status/endpoint-only messages in app and collector paths;
+regression-test with fake credentials that neither UI text nor logs includes
+them. Review historical exposure privately before deciding whether rotation
+is needed. Do not print real keys or assume exposure occurred. T1 is
+report-only, so this audit does not change the exception path.
