@@ -1,0 +1,96 @@
+{
+  "baseline": "2efbb954e4810bc41015c61168e012f24c04b993",
+  "manual_parity": "PASS",
+  "rows": [
+    {
+      "home": "nebraska",
+      "away": "wisconsin",
+      "venue": "Home court",
+      "original_ml": 0.8403,
+      "refactor_ml": 0.8403,
+      "original_p20": 0.8347,
+      "refactor_p20": 0.8347,
+      "markets_equal": 16
+    },
+    {
+      "home": "nebraska",
+      "away": "wisconsin",
+      "venue": "Neutral (host/label matters)",
+      "original_ml": 0.8455,
+      "refactor_ml": 0.8455,
+      "original_p20": 0.8298,
+      "refactor_p20": 0.8298,
+      "markets_equal": 16
+    },
+    {
+      "home": "nebraska",
+      "away": "wisconsin",
+      "venue": "True toss-up (symmetrized)",
+      "original_ml": 0.7752,
+      "refactor_ml": 0.7752,
+      "original_p20": 0.7704,
+      "refactor_p20": 0.7704,
+      "markets_equal": 16
+    },
+    {
+      "home": "texas",
+      "away": "stanford",
+      "venue": "Home court",
+      "original_ml": 0.8277,
+      "refactor_ml": 0.8277,
+      "original_p20": 0.8216,
+      "refactor_p20": 0.8216,
+      "markets_equal": 16
+    },
+    {
+      "home": "texas",
+      "away": "stanford",
+      "venue": "Neutral (host/label matters)",
+      "original_ml": 0.8331,
+      "refactor_ml": 0.8331,
+      "original_p20": 0.8165,
+      "refactor_p20": 0.8165,
+      "markets_equal": 16
+    },
+    {
+      "home": "texas",
+      "away": "stanford",
+      "venue": "True toss-up (symmetrized)",
+      "original_ml": 0.7599,
+      "refactor_ml": 0.7599,
+      "original_p20": 0.7552,
+      "refactor_p20": 0.7552,
+      "markets_equal": 16
+    },
+    {
+      "home": "pittsburgh",
+      "away": "louisville",
+      "venue": "Home court",
+      "original_ml": 0.6532,
+      "refactor_ml": 0.6532,
+      "original_p20": 0.647,
+      "refactor_p20": 0.647,
+      "markets_equal": 16
+    },
+    {
+      "home": "pittsburgh",
+      "away": "louisville",
+      "venue": "Neutral (host/label matters)",
+      "original_ml": 0.6612,
+      "refactor_ml": 0.6612,
+      "original_p20": 0.638,
+      "refactor_p20": 0.638,
+      "markets_equal": 16
+    },
+    {
+      "home": "pittsburgh",
+      "away": "louisville",
+      "venue": "True toss-up (symmetrized)",
+      "original_ml": 0.5679,
+      "refactor_ml": 0.5679,
+      "original_p20": 0.5664,
+      "refactor_p20": 0.5664,
+      "markets_equal": 16
+    }
+  ]
+}

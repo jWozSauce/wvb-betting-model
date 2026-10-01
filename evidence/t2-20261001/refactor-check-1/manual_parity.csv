@@ -1,0 +1,10 @@
+home,away,venue,original_ml,refactor_ml,original_p20,refactor_p20,markets_equal
+nebraska,wisconsin,Home court,0.8403,0.8403,0.8347,0.8347,16
+nebraska,wisconsin,Neutral (host/label matters),0.8455,0.8455,0.8298,0.8298,16
+nebraska,wisconsin,True toss-up (symmetrized),0.7752,0.7752,0.7704,0.7704,16
+texas,stanford,Home court,0.8277,0.8277,0.8216,0.8216,16
+texas,stanford,Neutral (host/label matters),0.8331,0.8331,0.8165,0.8165,16
+texas,stanford,True toss-up (symmetrized),0.7599,0.7599,0.7552,0.7552,16
+pittsburgh,louisville,Home court,0.6532,0.6532,0.647,0.647,16
+pittsburgh,louisville,Neutral (host/label matters),0.6612,0.6612,0.638,0.638,16
+pittsburgh,louisville,True toss-up (symmetrized),0.5679,0.5679,0.5664,0.5664,16
