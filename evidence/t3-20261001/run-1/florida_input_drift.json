@@ -1,0 +1,31 @@
+{
+  "cached_backtest_commit": "f54f6fb441cf049d3d56d21528d4a6838be80146",
+  "old_inputs": [
+    {
+      "contest_id": 6638582,
+      "home_seo": "north-texas",
+      "away_seo": "florida",
+      "home_serve_elo": 1492.9663809047897,
+      "home_receive_elo": 1517.697156399685,
+      "home_conf_elo": 12.6876149682485,
+      "away_serve_elo": 1499.2278639579574,
+      "away_receive_elo": 1551.278929403008,
+      "away_conf_elo": 45.09125308727347,
+      "is_neutral": true
+    }
+  ],
+  "current_inputs": [
+    {
+      "contest_id": 6638582,
+      "home_seo": "north-texas",
+      "away_seo": "florida",
+      "home_serve_elo": 1492.9663809047897,
+      "home_receive_elo": 1517.697156399685,
+      "home_conf_elo": 12.6876149682485,
+      "away_serve_elo": 1499.2278639579574,
+      "away_receive_elo": 1551.278929403008,
+      "away_conf_elo": 45.09125308727347,
+      "is_neutral": true
+    }
+  ]
+}

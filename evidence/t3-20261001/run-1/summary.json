@@ -1,0 +1,51 @@
+{
+  "seed": 20261001,
+  "bootstrap_draws": 10000,
+  "source_hashes": {
+    "data/processed/odds_hist_2026.parquet": "484249df9753caf00edafe8333355e0904ea5eb77c993272ca5f356e893dbf0a",
+    "data/processed/backtest_odds_2026.parquet": "32be6f0c0a8da9d0d382e57b71004f7e72228e2a82fdc9d8d19e1469ea768f83",
+    "app_data/model_params.json": "d315dfd101b6efe9cfcedb5de0b4e409ae1569ea405bde70aa9fdbb8b3a1454a"
+  },
+  "priced_rows": 294,
+  "best_rows": 294,
+  "dedup_removed": 0,
+  "new_boarded_fixtures": null,
+  "extension_status": "Blocked: fixture enumeration is billable; T3 permits zero billable requests.",
+  "full": {
+    "rows": 294,
+    "fixtures": 75,
+    "baseline": {
+      "n": 28,
+      "wins": 17,
+      "losses": 11,
+      "pushes": 0,
+      "profit": 8.265,
+      "roi": 0.29517857142857146,
+      "ci90_low": -0.048510714285714275,
+      "ci90_high": 0.6362589285714281
+    }
+  },
+  "post_0926": {
+    "rows": 0,
+    "fixtures": 0,
+    "baseline": {
+      "n": 0,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "profit": 0.0,
+      "roi": null,
+      "ci90_low": null,
+      "ci90_high": null
+    }
+  },
+  "paper": {
+    "total": 159,
+    "settled": 156,
+    "excluded_unsettled": 3,
+    "excluded_invalid_or_missing_probabilities": 125,
+    "analyzed": 31,
+    "disagreement_buckets_total": 31,
+    "outside_buckets": 0
+  }
+}

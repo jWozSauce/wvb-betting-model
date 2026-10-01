@@ -1,0 +1,9 @@
+bucket,passed,n,wins,losses,pushes,profit,roi
+2–5pp,False,0,0,0,0,0.0,
+2–5pp,True,0,0,0,0,0.0,
+5–8pp,False,0,0,0,0,0.0,
+5–8pp,True,0,0,0,0,0.0,
+8–12pp,False,0,0,0,0,0.0,
+8–12pp,True,0,0,0,0,0.0,
+12+pp,False,0,0,0,0,0.0,
+12+pp,True,0,0,0,0,0.0,

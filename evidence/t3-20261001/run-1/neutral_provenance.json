@@ -1,0 +1,156 @@
+[
+  {
+    "matchup": "florida @ north-texas",
+    "market": "ml",
+    "side": "home",
+    "point": "",
+    "old": 0.07262697013210734,
+    "rebuilt": 0.07556388840066816,
+    "current_neutral": true,
+    "False": 0.07262697013210734,
+    "True": 0.07556388840066816
+  },
+  {
+    "matchup": "florida @ north-texas",
+    "market": "ml",
+    "side": "away",
+    "point": "",
+    "old": 0.9273730298678926,
+    "rebuilt": 0.9244361115993318,
+    "current_neutral": true,
+    "False": 0.9273730298678926,
+    "True": 0.9244361115993318
+  },
+  {
+    "matchup": "florida @ north-texas",
+    "market": "spread",
+    "side": "home",
+    "point": "2.5",
+    "old": 0.3844213048971663,
+    "rebuilt": 0.3907852783476342,
+    "current_neutral": true,
+    "False": 0.3844213048971663,
+    "True": 0.3907852783476342
+  },
+  {
+    "matchup": "florida @ north-texas",
+    "market": "spread",
+    "side": "away",
+    "point": "-2.5",
+    "old": 0.6155786951028339,
+    "rebuilt": 0.609214721652366,
+    "current_neutral": true,
+    "False": 0.6155786951028339,
+    "True": 0.609214721652366
+  },
+  {
+    "matchup": "pittsburgh @ tennessee",
+    "market": "ml",
+    "side": "away",
+    "point": "",
+    "old": 0.21287977924996226,
+    "rebuilt": 0.2067131349750898,
+    "current_neutral": true,
+    "False": 0.21287977924996226,
+    "True": 0.2067131349750898
+  },
+  {
+    "matchup": "pittsburgh @ tennessee",
+    "market": "ml",
+    "side": "home",
+    "point": "",
+    "old": 0.7871202207500377,
+    "rebuilt": 0.7932868650249102,
+    "current_neutral": true,
+    "False": 0.7871202207500377,
+    "True": 0.7932868650249102
+  },
+  {
+    "matchup": "pittsburgh @ tennessee",
+    "market": "spread",
+    "side": "away",
+    "point": "-1.5",
+    "old": 0.12882710611918027,
+    "rebuilt": 0.1244993414163516,
+    "current_neutral": true,
+    "False": 0.12882710611918027,
+    "True": 0.1244993414163516
+  },
+  {
+    "matchup": "pittsburgh @ tennessee",
+    "market": "spread",
+    "side": "home",
+    "point": "1.5",
+    "old": 0.8711728938808201,
+    "rebuilt": 0.8755006585836487,
+    "current_neutral": true,
+    "False": 0.8711728938808201,
+    "True": 0.8755006585836487
+  },
+  {
+    "matchup": "creighton @ nebraska",
+    "market": "spread",
+    "side": "home",
+    "point": "-2.5",
+    "old": 0.782779934076185,
+    "rebuilt": 0.7782568849399213,
+    "current_neutral": false,
+    "False": 0.7782568849399213,
+    "True": 0.782779934076185
+  },
+  {
+    "matchup": "creighton @ nebraska",
+    "market": "spread",
+    "side": "away",
+    "point": "2.5",
+    "old": 0.2172200659238152,
+    "rebuilt": 0.2217431150600789,
+    "current_neutral": false,
+    "False": 0.2217431150600789,
+    "True": 0.2172200659238152
+  },
+  {
+    "matchup": "penn-st @ michigan",
+    "market": "ml",
+    "side": "home",
+    "point": "",
+    "old": 0.6478555916528632,
+    "rebuilt": 0.6398171605601635,
+    "current_neutral": false,
+    "False": 0.6398171605601635,
+    "True": 0.6478555916528632
+  },
+  {
+    "matchup": "penn-st @ michigan",
+    "market": "ml",
+    "side": "away",
+    "point": "",
+    "old": 0.3521444083471368,
+    "rebuilt": 0.36018283943983653,
+    "current_neutral": false,
+    "False": 0.36018283943983653,
+    "True": 0.3521444083471368
+  },
+  {
+    "matchup": "penn-st @ michigan",
+    "market": "spread",
+    "side": "home",
+    "point": "-1.5",
+    "old": 0.5006497753677313,
+    "rebuilt": 0.492429263248763,
+    "current_neutral": false,
+    "False": 0.492429263248763,
+    "True": 0.5006497753677313
+  },
+  {
+    "matchup": "penn-st @ michigan",
+    "market": "spread",
+    "side": "away",
+    "point": "1.5",
+    "old": 0.4993502246322691,
+    "rebuilt": 0.5075707367512372,
+    "current_neutral": false,
+    "False": 0.5075707367512372,
+    "True": 0.4993502246322691
+  }
+]
