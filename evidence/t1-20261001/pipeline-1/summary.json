@@ -1,0 +1,192 @@
+{
+  "raw_sample_sets": 729,
+  "raw_sets_match": 497,
+  "raw_reconstructed_sets": 204,
+  "raw_reconstructed_match": 70,
+  "phase_rows": 14571,
+  "phase_spotchecks": [
+    {
+      "contest_id": 6624236,
+      "set": 1,
+      "server_id": 46061,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 11,
+      "raw_wins": 11
+    },
+    {
+      "contest_id": 6624236,
+      "set": 1,
+      "server_id": 46314,
+      "phase_rallies": 21,
+      "raw_rallies": 21,
+      "phase_wins": 7,
+      "raw_wins": 7
+    },
+    {
+      "contest_id": 6624236,
+      "set": 2,
+      "server_id": 46061,
+      "phase_rallies": 25,
+      "raw_rallies": 25,
+      "phase_wins": 16,
+      "raw_wins": 16
+    },
+    {
+      "contest_id": 6624236,
+      "set": 2,
+      "server_id": 46314,
+      "phase_rallies": 12,
+      "raw_rallies": 12,
+      "phase_wins": 3,
+      "raw_wins": 3
+    },
+    {
+      "contest_id": 6624236,
+      "set": 3,
+      "server_id": 46061,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 15,
+      "raw_wins": 15
+    },
+    {
+      "contest_id": 6624236,
+      "set": 3,
+      "server_id": 46314,
+      "phase_rallies": 12,
+      "raw_rallies": 12,
+      "phase_wins": 2,
+      "raw_wins": 2
+    },
+    {
+      "contest_id": 6624237,
+      "set": 1,
+      "server_id": 45911,
+      "phase_rallies": 2,
+      "raw_rallies": 2,
+      "phase_wins": 1,
+      "raw_wins": 1
+    },
+    {
+      "contest_id": 6624237,
+      "set": 1,
+      "server_id": 46314,
+      "phase_rallies": 2,
+      "raw_rallies": 2,
+      "phase_wins": 0,
+      "raw_wins": 0
+    },
+    {
+      "contest_id": 6624237,
+      "set": 2,
+      "server_id": 45911,
+      "phase_rallies": 22,
+      "raw_rallies": 22,
+      "phase_wins": 6,
+      "raw_wins": 6
+    },
+    {
+      "contest_id": 6624237,
+      "set": 2,
+      "server_id": 46314,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 8,
+      "raw_wins": 8
+    },
+    {
+      "contest_id": 6624237,
+      "set": 3,
+      "server_id": 45911,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 9,
+      "raw_wins": 9
+    },
+    {
+      "contest_id": 6624237,
+      "set": 3,
+      "server_id": 46314,
+      "phase_rallies": 22,
+      "raw_rallies": 22,
+      "phase_wins": 7,
+      "raw_wins": 7
+    },
+    {
+      "contest_id": 6624237,
+      "set": 4,
+      "server_id": 45911,
+      "phase_rallies": 17,
+      "raw_rallies": 17,
+      "phase_wins": 4,
+      "raw_wins": 4
+    },
+    {
+      "contest_id": 6624237,
+      "set": 4,
+      "server_id": 46314,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 11,
+      "raw_wins": 11
+    },
+    {
+      "contest_id": 6624239,
+      "set": 1,
+      "server_id": 46005,
+      "phase_rallies": 14,
+      "raw_rallies": 14,
+      "phase_wins": 4,
+      "raw_wins": 4
+    },
+    {
+      "contest_id": 6624239,
+      "set": 1,
+      "server_id": 46314,
+      "phase_rallies": 17,
+      "raw_rallies": 17,
+      "phase_wins": 6,
+      "raw_wins": 6
+    },
+    {
+      "contest_id": 6624239,
+      "set": 2,
+      "server_id": 46005,
+      "phase_rallies": 25,
+      "raw_rallies": 25,
+      "phase_wins": 8,
+      "raw_wins": 8
+    },
+    {
+      "contest_id": 6624239,
+      "set": 2,
+      "server_id": 46314,
+      "phase_rallies": 22,
+      "raw_rallies": 22,
+      "phase_wins": 5,
+      "raw_wins": 5
+    },
+    {
+      "contest_id": 6624239,
+      "set": 3,
+      "server_id": 46005,
+      "phase_rallies": 24,
+      "raw_rallies": 24,
+      "phase_wins": 16,
+      "raw_wins": 16
+    },
+    {
+      "contest_id": 6624239,
+      "set": 3,
+      "server_id": 46314,
+      "phase_rallies": 16,
+      "raw_rallies": 16,
+      "phase_wins": 7,
+      "raw_wins": 7
+    }
+  ],
+  "design_signs": "serve +6, receive -6 on all 20 rows",
+  "local_2026_game_files": 1915,
+  "local_2026_boxscore_files": 913
+}

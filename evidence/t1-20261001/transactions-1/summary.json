@@ -1,0 +1,16 @@
+{
+  "decoder": "PASS: best price independent from first complete anchor; live status excluded",
+  "grade_rows": 3,
+  "grade_batches": 1,
+  "half_written_profit_repaired": true,
+  "within_batch_duplicates_appended": 2,
+  "fake_key_in_http_error": true,
+  "historical_rows": 1156,
+  "boarded_rows": 302,
+  "swept_fixtures": 931,
+  "boarded_fixtures": 77,
+  "post_scheduled_start_prices": 0,
+  "books": {
+    "draftkings": 302
+  }
+}

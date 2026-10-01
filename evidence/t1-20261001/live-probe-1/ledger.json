@@ -1,0 +1,21 @@
+{
+  "task": "T1",
+  "authorized_cap": 4,
+  "probe_cap": 1,
+  "reserved_billable_requests": 1,
+  "state": "failed",
+  "created_at": "2026-10-01T15:28:53.437134+00:00",
+  "quota_before": [
+    {
+      "request_limit": 250,
+      "request_count": 4
+    }
+  ],
+  "error_type": "RuntimeError",
+  "quota_after": [
+    {
+      "request_limit": 250,
+      "request_count": 5
+    }
+  ]
+}

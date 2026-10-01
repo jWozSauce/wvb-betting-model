@@ -1,0 +1,11 @@
+{
+  "reviewed_at": "2026-10-01T15:40:07Z",
+  "raw_http_status": 404,
+  "decoded_games": 0,
+  "quota_before": 4,
+  "quota_after": 5,
+  "billable_used": 1,
+  "retries": 0,
+  "original_ledger_state": "failed",
+  "conclusion": "Empty-board response path verified; subsequent ledger sequence failed with RuntimeError, exact cause unrecorded. Nonempty live compatibility not verified."
+}

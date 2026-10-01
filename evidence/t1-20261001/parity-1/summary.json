@@ -1,0 +1,11 @@
+{
+  "markets": 294,
+  "fixtures": 75,
+  "backtest_bets": 28,
+  "app_home_point_bets": 29,
+  "app_default_p20_bets": 28,
+  "venue_gate_changes": 1,
+  "p20_gate_changes": 1,
+  "rounding_gate_changes": 0,
+  "limitation": "Same historical pregame ratings for all scenarios; live app actually uses current ratings, and API anchors may differ from DK. Orientation follows results, not original API labels; no claim of replaying unrecorded live state."
+}
