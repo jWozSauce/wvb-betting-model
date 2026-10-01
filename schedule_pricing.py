@@ -217,7 +217,8 @@ def render_schedule(ratings, params, home_venues, render_panel):
         probs = point_price(values(h), values(a), mode, tuple(params))
         markets = {k: v[0] for k, v in model.markets(probs[None, :]).items()}
         def odds(p):
-            return f"{kelly.prob_to_american(float(p)):+.0f}"
+            value = kelly.prob_to_american(float(p))
+            return "—" if value is None else f"{value:+.0f}"
         cols[4].write(f"{odds(1-markets['home_ml'])} / {odds(markets['home_ml'])}")
         for line in (1, 2):
             p = markets[f"home_minus_{line}_5"]

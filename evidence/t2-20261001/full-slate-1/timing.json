@@ -1,0 +1,533 @@
+{
+  "date": "2026-10-02",
+  "first_load_seconds": 41.96971204200236,
+  "warm_load_seconds": 0.015581417013891041,
+  "requests": 129,
+  "rated": 126,
+  "unpriced": 203,
+  "fetched": 329,
+  "raw_count": 330,
+  "duplicates": 1,
+  "progress": [
+    {
+      "fraction": 0.0,
+      "message": "Fetching NCAA Division 1 schedule\u2026"
+    },
+    {
+      "fraction": 0.1,
+      "message": "Fetching NCAA Division 2 schedule\u2026"
+    },
+    {
+      "fraction": 0.2,
+      "message": "Fetching NCAA Division 3 schedule\u2026"
+    },
+    {
+      "fraction": 0.3,
+      "message": "Venue 1/126: morgan-st @ nc-central"
+    },
+    {
+      "fraction": 0.3055555555555555,
+      "message": "Venue 2/126: butler @ seton-hall"
+    },
+    {
+      "fraction": 0.3111111111111111,
+      "message": "Venue 3/126: dayton @ fordham"
+    },
+    {
+      "fraction": 0.31666666666666665,
+      "message": "Venue 4/126: albany-ny @ njit"
+    },
+    {
+      "fraction": 0.3222222222222222,
+      "message": "Venue 5/126: spring-hill @ fort-valley-st"
+    },
+    {
+      "fraction": 0.3277777777777778,
+      "message": "Venue 6/126: samford @ western-caro"
+    },
+    {
+      "fraction": 0.3333333333333333,
+      "message": "Venue 7/126: iu-indy @ youngstown-st"
+    },
+    {
+      "fraction": 0.33888888888888885,
+      "message": "Venue 8/126: coppin-st @ south-carolina-st"
+    },
+    {
+      "fraction": 0.34444444444444444,
+      "message": "Venue 9/126: kennesaw-st @ fiu"
+    },
+    {
+      "fraction": 0.35,
+      "message": "Venue 10/126: wright-st @ oakland"
+    },
+    {
+      "fraction": 0.3555555555555555,
+      "message": "Venue 11/126: col-of-charleston @ nc-at"
+    },
+    {
+      "fraction": 0.3611111111111111,
+      "message": "Venue 12/126: umes @ norfolk-st"
+    },
+    {
+      "fraction": 0.36666666666666664,
+      "message": "Venue 13/126: cornell @ penn"
+    },
+    {
+      "fraction": 0.37222222222222223,
+      "message": "Venue 14/126: central-conn-st @ new-haven"
+    },
+    {
+      "fraction": 0.37777777777777777,
+      "message": "Venue 15/126: old-dominion @ ga-southern"
+    },
+    {
+      "fraction": 0.3833333333333333,
+      "message": "Venue 16/126: chattanooga @ furman"
+    },
+    {
+      "fraction": 0.38888888888888884,
+      "message": "Venue 17/126: james-madison @ georgia-st"
+    },
+    {
+      "fraction": 0.39444444444444443,
+      "message": "Venue 18/126: army @ bucknell"
+    },
+    {
+      "fraction": 0.39999999999999997,
+      "message": "Venue 19/126: columbia @ princeton"
+    },
+    {
+      "fraction": 0.40555555555555556,
+      "message": "Venue 20/126: high-point @ usc-upstate"
+    },
+    {
+      "fraction": 0.4111111111111111,
+      "message": "Venue 21/126: stonehill @ chicago-st"
+    },
+    {
+      "fraction": 0.41666666666666663,
+      "message": "Venue 22/126: tennessee-tech @ citadel"
+    },
+    {
+      "fraction": 0.42222222222222217,
+      "message": "Venue 23/126: niagara @ st-peters"
+    },
+    {
+      "fraction": 0.42777777777777776,
+      "message": "Venue 24/126: north-texas @ east-carolina"
+    },
+    {
+      "fraction": 0.4333333333333333,
+      "message": "Venue 25/126: providence @ villanova"
+    },
+    {
+      "fraction": 0.4388888888888889,
+      "message": "Venue 26/126: smu @ syracuse"
+    },
+    {
+      "fraction": 0.4444444444444444,
+      "message": "Venue 27/126: unc-greensboro @ wofford"
+    },
+    {
+      "fraction": 0.44999999999999996,
+      "message": "Venue 28/126: northern-ky @ cleveland-st"
+    },
+    {
+      "fraction": 0.4555555555555555,
+      "message": "Venue 29/126: northeastern @ unc-wilmington"
+    },
+    {
+      "fraction": 0.4611111111111111,
+      "message": "Venue 30/126: eastern-mich @ western-mich"
+    },
+    {
+      "fraction": 0.4666666666666667,
+      "message": "Venue 31/126: campbell @ hofstra"
+    },
+    {
+      "fraction": 0.4722222222222222,
+      "message": "Venue 32/126: dartmouth @ brown"
+    },
+    {
+      "fraction": 0.47777777777777775,
+      "message": "Venue 33/126: radford @ unc-asheville"
+    },
+    {
+      "fraction": 0.4833333333333333,
+      "message": "Venue 34/126: stony-brook @ elon"
+    },
+    {
+      "fraction": 0.4888888888888888,
+      "message": "Venue 35/126: presbyterian @ gardner-webb"
+    },
+    {
+      "fraction": 0.49444444444444446,
+      "message": "Venue 36/126: ipfw @ robert-morris"
+    },
+    {
+      "fraction": 0.5,
+      "message": "Venue 37/126: rice @ south-fla"
+    },
+    {
+      "fraction": 0.5055555555555555,
+      "message": "Venue 38/126: harvard @ yale"
+    },
+    {
+      "fraction": 0.5111111111111111,
+      "message": "Venue 39/126: george-washington @ vcu"
+    },
+    {
+      "fraction": 0.5166666666666666,
+      "message": "Venue 40/126: north-carolina-st @ florida-st"
+    },
+    {
+      "fraction": 0.5222222222222221,
+      "message": "Venue 41/126: west-florida @ stetson"
+    },
+    {
+      "fraction": 0.5277777777777778,
+      "message": "Venue 42/126: mercer @ east-tenn-st"
+    },
+    {
+      "fraction": 0.5333333333333333,
+      "message": "Venue 43/126: charleston-so @ winthrop"
+    },
+    {
+      "fraction": 0.5388888888888889,
+      "message": "Venue 44/126: canisius @ rider"
+    },
+    {
+      "fraction": 0.5444444444444444,
+      "message": "Venue 45/126: le-moyne @ long-island"
+    },
+    {
+      "fraction": 0.5499999999999999,
+      "message": "Venue 46/126: coastal-caro @ appalachian-st"
+    },
+    {
+      "fraction": 0.5555555555555556,
+      "message": "Venue 47/126: loyola-maryland @ navy"
+    },
+    {
+      "fraction": 0.5611111111111111,
+      "message": "Venue 48/126: temple @ fla-atlantic"
+    },
+    {
+      "fraction": 0.5666666666666667,
+      "message": "Venue 49/126: ball-st @ toledo"
+    },
+    {
+      "fraction": 0.5722222222222222,
+      "message": "Venue 50/126: quinnipiac @ fairfield"
+    },
+    {
+      "fraction": 0.5777777777777777,
+      "message": "Venue 51/126: jacksonville @ bellarmine"
+    },
+    {
+      "fraction": 0.5833333333333333,
+      "message": "Venue 52/126: william-mary @ towson"
+    },
+    {
+      "fraction": 0.5888888888888888,
+      "message": "Venue 53/126: queens-nc @ fgcu"
+    },
+    {
+      "fraction": 0.5944444444444443,
+      "message": "Venue 54/126: akron @ ohio"
+    },
+    {
+      "fraction": 0.6,
+      "message": "Venue 55/126: erskine @ lees-mcrae"
+    },
+    {
+      "fraction": 0.6055555555555556,
+      "message": "Venue 56/126: mercyhurst @ fdu"
+    },
+    {
+      "fraction": 0.611111111111111,
+      "message": "Venue 57/126: bowling-green @ kent-st"
+    },
+    {
+      "fraction": 0.6166666666666667,
+      "message": "Venue 58/126: manhattan @ siena"
+    },
+    {
+      "fraction": 0.6222222222222222,
+      "message": "Venue 59/126: buffalo @ miami-oh"
+    },
+    {
+      "fraction": 0.6277777777777778,
+      "message": "Venue 60/126: georgia-tech @ duke"
+    },
+    {
+      "fraction": 0.6333333333333333,
+      "message": "Venue 61/126: eastern-ill @ lindenwood-mo"
+    },
+    {
+      "fraction": 0.6388888888888888,
+      "message": "Venue 62/126: george-mason @ davidson"
+    },
+    {
+      "fraction": 0.6444444444444444,
+      "message": "Venue 63/126: xavier @ st-johns-ny"
+    },
+    {
+      "fraction": 0.6499999999999999,
+      "message": "Venue 64/126: arkansas-st @ la-lafayette"
+    },
+    {
+      "fraction": 0.6555555555555554,
+      "message": "Venue 65/126: troy @ southern-miss"
+    },
+    {
+      "fraction": 0.6611111111111111,
+      "message": "Venue 66/126: uni @ bradley"
+    },
+    {
+      "fraction": 0.6666666666666666,
+      "message": "Venue 67/126: florida-am @ mississippi-val"
+    },
+    {
+      "fraction": 0.6722222222222223,
+      "message": "Venue 68/126: alabama-st @ alabama-am"
+    },
+    {
+      "fraction": 0.6777777777777777,
+      "message": "Venue 69/126: indiana-st @ belmont"
+    },
+    {
+      "fraction": 0.6833333333333333,
+      "message": "Venue 70/126: tennessee @ florida"
+    },
+    {
+      "fraction": 0.6888888888888889,
+      "message": "Venue 71/126: colgate @ lehigh"
+    },
+    {
+      "fraction": 0.6944444444444444,
+      "message": "Venue 72/126: drake @ illinois-st"
+    },
+    {
+      "fraction": 0.7,
+      "message": "Venue 73/126: delaware @ middle-tenn"
+    },
+    {
+      "fraction": 0.7055555555555555,
+      "message": "Venue 74/126: oklahoma @ south-carolina"
+    },
+    {
+      "fraction": 0.711111111111111,
+      "message": "Venue 75/126: southern-u @ prairie-view"
+    },
+    {
+      "fraction": 0.7166666666666667,
+      "message": "Venue 76/126: byu @ kansas"
+    },
+    {
+      "fraction": 0.7222222222222221,
+      "message": "Venue 77/126: iona @ marist"
+    },
+    {
+      "fraction": 0.7277777777777777,
+      "message": "Venue 78/126: wake-forest @ miami-fl"
+    },
+    {
+      "fraction": 0.7333333333333333,
+      "message": "Venue 79/126: siu-edwardsville @ southeast-mo-st"
+    },
+    {
+      "fraction": 0.7388888888888889,
+      "message": "Venue 80/126: new-mexico-st @ sam-houston-st"
+    },
+    {
+      "fraction": 0.7444444444444445,
+      "message": "Venue 81/126: tulsa @ wichita-st"
+    },
+    {
+      "fraction": 0.75,
+      "message": "Venue 82/126: liberty @ jacksonville-st"
+    },
+    {
+      "fraction": 0.7555555555555555,
+      "message": "Venue 83/126: marshall @ la-monroe"
+    },
+    {
+      "fraction": 0.7611111111111111,
+      "message": "Venue 84/126: holy-cross @ lafayette"
+    },
+    {
+      "fraction": 0.7666666666666666,
+      "message": "Venue 85/126: valparaiso @ southern-ill"
+    },
+    {
+      "fraction": 0.7722222222222221,
+      "message": "Venue 86/126: western-ill @ tennessee-st"
+    },
+    {
+      "fraction": 0.7777777777777777,
+      "message": "Venue 87/126: duquesne @ saint-louis"
+    },
+    {
+      "fraction": 0.7833333333333333,
+      "message": "Venue 88/126: west-virginia @ texas-tech"
+    },
+    {
+      "fraction": 0.7888888888888888,
+      "message": "Venue 89/126: uconn @ georgetown"
+    },
+    {
+      "fraction": 0.7944444444444444,
+      "message": "Venue 90/126: kentucky @ auburn"
+    },
+    {
+      "fraction": 0.7999999999999999,
+      "message": "Venue 91/126: bethune-cookman @ jackson-st"
+    },
+    {
+      "fraction": 0.8055555555555556,
+      "message": "Venue 92/126: morehead-st @ ut-martin"
+    },
+    {
+      "fraction": 0.8111111111111111,
+      "message": "Venue 93/126: depaul @ creighton"
+    },
+    {
+      "fraction": 0.8166666666666667,
+      "message": "Venue 94/126: arkansas @ georgia"
+    },
+    {
+      "fraction": 0.8222222222222222,
+      "message": "Venue 95/126: green-bay @ northern-ill"
+    },
+    {
+      "fraction": 0.8277777777777777,
+      "message": "Venue 96/126: alcorn @ texas-southern"
+    },
+    {
+      "fraction": 0.8333333333333333,
+      "message": "Venue 97/126: missouri-st @ western-ky"
+    },
+    {
+      "fraction": 0.8388888888888888,
+      "message": "Venue 98/126: pittsburgh @ boston-college"
+    },
+    {
+      "fraction": 0.8444444444444443,
+      "message": "Venue 99/126: clemson @ north-carolina"
+    },
+    {
+      "fraction": 0.8499999999999999,
+      "message": "Venue 100/126: merrimack @ sacred-heart"
+    },
+    {
+      "fraction": 0.8555555555555556,
+      "message": "Venue 101/126: valdosta-st @ christian-bros"
+    },
+    {
+      "fraction": 0.8611111111111109,
+      "message": "Venue 102/126: west-ala @ montevallo"
+    },
+    {
+      "fraction": 0.8666666666666667,
+      "message": "Venue 103/126: aub-montgomery @ union-tn"
+    },
+    {
+      "fraction": 0.8722222222222222,
+      "message": "Venue 104/126: north-florida @ lipscomb"
+    },
+    {
+      "fraction": 0.8777777777777778,
+      "message": "Venue 105/126: missouri @ ole-miss"
+    },
+    {
+      "fraction": 0.8833333333333333,
+      "message": "Venue 106/126: mississippi-christ @ ala-huntsville"
+    },
+    {
+      "fraction": 0.8888888888888888,
+      "message": "Venue 107/126: utsa @ charlotte"
+    },
+    {
+      "fraction": 0.8944444444444444,
+      "message": "Venue 108/126: evansville @ murray-st"
+    },
+    {
+      "fraction": 0.8999999999999999,
+      "message": "Venue 109/126: tulane @ memphis"
+    },
+    {
+      "fraction": 0.9055555555555554,
+      "message": "Venue 110/126: colorado @ tcu"
+    },
+    {
+      "fraction": 0.9111111111111112,
+      "message": "Venue 111/126: cincinnati @ houston"
+    },
+    {
+      "fraction": 0.9166666666666665,
+      "message": "Venue 112/126: alabama @ texas-am"
+    },
+    {
+      "fraction": 0.922222222222222,
+      "message": "Venue 113/126: ucf @ baylor"
+    },
+    {
+      "fraction": 0.9277777777777778,
+      "message": "Venue 114/126: purdue @ oregon"
+    },
+    {
+      "fraction": 0.9333333333333333,
+      "message": "Venue 115/126: long-beach-st @ cal-st-northridge"
+    },
+    {
+      "fraction": 0.9388888888888889,
+      "message": "Venue 116/126: hawaii @ grand-canyon"
+    },
+    {
+      "fraction": 0.9444444444444444,
+      "message": "Venue 117/126: nevada @ new-mexico"
+    },
+    {
+      "fraction": 0.95,
+      "message": "Venue 118/126: iowa-st @ arizona"
+    },
+    {
+      "fraction": 0.9555555555555555,
+      "message": "Venue 119/126: cal-st-fullerton @ bakersfield"
+    },
+    {
+      "fraction": 0.961111111111111,
+      "message": "Venue 120/126: mississippi-st @ texas"
+    },
+    {
+      "fraction": 0.9666666666666666,
+      "message": "Venue 121/126: michigan-st @ ucla"
+    },
+    {
+      "fraction": 0.9722222222222221,
+      "message": "Venue 122/126: illinois @ washington"
+    },
+    {
+      "fraction": 0.9777777777777776,
+      "message": "Venue 123/126: uc-irvine @ uc-riverside"
+    },
+    {
+      "fraction": 0.9833333333333332,
+      "message": "Venue 124/126: virginia-tech @ stanford"
+    },
+    {
+      "fraction": 0.9888888888888889,
+      "message": "Venue 125/126: virginia @ california"
+    },
+    {
+      "fraction": 0.9944444444444445,
+      "message": "Venue 126/126: michigan @ southern-california"
+    },
+    {
+      "fraction": 1.0,
+      "message": "Loaded 126 rated games; 203 not priced"
+    }
+  ]
+}

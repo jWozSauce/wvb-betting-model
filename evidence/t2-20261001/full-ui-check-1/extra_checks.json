@@ -1,0 +1,11 @@
+{
+  "lineup_modes": "identical",
+  "sportsbook_AST": "identical",
+  "paste_UI": "PASS",
+  "live_API_UI_fixture": "PASS; no billable calls",
+  "slate_render_seconds": 0.41980654100188985,
+  "single_venue_change_seconds": 0.3732054579886608,
+  "single_venue_model_calls": 1,
+  "venue_change_refetches": 0,
+  "source_date_switch_state": "PASS"
+}

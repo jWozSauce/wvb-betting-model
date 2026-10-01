@@ -1,0 +1,10 @@
+home,away,venue,original_ml,drill_in_ml,original_p20,drill_in_p20,markets_equal
+nc-central,morgan-st,Home court,0.6529,0.6529,0.6493,0.6493,16
+nc-central,morgan-st,Neutral (host/label matters),0.6608,0.6608,0.6381,0.6381,16
+nc-central,morgan-st,True toss-up (symmetrized),0.5705,0.5705,0.5691,0.5691,16
+seton-hall,butler,Home court,0.1669,0.1669,0.1628,0.1628,16
+seton-hall,butler,Neutral (host/label matters),0.1723,0.1723,0.1578,0.1578,16
+seton-hall,butler,True toss-up (symmetrized),0.1256,0.1256,0.122,0.122,16
+fordham,dayton,Home court,0.0678,0.0678,0.0656,0.0656,16
+fordham,dayton,Neutral (host/label matters),0.0706,0.0706,0.0628,0.0628,16
+fordham,dayton,True toss-up (symmetrized),0.049,0.049,0.0465,0.0465,16
