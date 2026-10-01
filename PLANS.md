@@ -597,6 +597,71 @@ Standing restrictions (planner, 2026-10-01):
   Next: implement schedule filtering, venue caching, and the per-game UI;
   then validate shared-panel parity and required gates. No acceptance claimed.
 
+### 2026-10-01 11:08 EDT — T2 implementation complete, awaiting acceptance
+
+**Result:** requested implementation and local validation complete on
+`t2-schedule-pricing`. Commits: `28505ca` (schedule source), `acd46d6`
+(shared panel + integration), `4c1ea87` (validation and evidence). Baseline
+and initial report: `6549efc`. No merge, push, or deployment performed.
+
+- **Confirmed, gate (a):** all 16 market rows (point probability, p20,
+  fair odds, min-edge odds) exactly equal between the original manual app
+  at `2efbb95` and the new manual panel for 3 games × 3 venues. A separate
+  3×3 comparison of real schedule drill-ins to that original manual app
+  also passes exactly, exceeding the four-decimal requirement:
+
+  | Away @ Home | Venue | Manual home ML | Drill-in home ML | Manual p20 | Drill-in p20 |
+  |---|---|---:|---:|---:|---:|
+  | Morgan St @ NC Central | Home | .6529 | .6529 | .6493 | .6493 |
+  | Morgan St @ NC Central | Neutral host | .6608 | .6608 | .6381 | .6381 |
+  | Morgan St @ NC Central | Toss-up | .5705 | .5705 | .5691 | .5691 |
+  | Butler @ Seton Hall | Home | .1669 | .1669 | .1628 | .1628 |
+  | Butler @ Seton Hall | Neutral host | .1723 | .1723 | .1578 | .1578 |
+  | Butler @ Seton Hall | Toss-up | .1256 | .1256 | .1220 | .1220 |
+  | Dayton @ Fordham | Home | .0678 | .0678 | .0656 | .0656 |
+  | Dayton @ Fordham | Neutral host | .0706 | .0706 | .0628 | .0628 |
+  | Dayton @ Fordham | Toss-up | .0490 | .0490 | .0465 | .0465 |
+
+- **Confirmed, gates (b)/(c):** real 2026-10-02 schedule: 330 division
+  listings minus 1 duplicate = 329 unique games = 126 priced + 203
+  explicitly unpriced. All three divisions fetched; venue calls only for
+  rated games. 129 free requests, 41.970s cold acquisition; warm acquisition
+  0.016s with network calls prohibited. AppTest slate rendering 0.420s;
+  single-game venue change 0.373s, exactly 1 model evaluation and **0**
+  schedule/venue re-fetches. Acquisition and UI timings measured separately,
+  not a browser wall-clock measurement. Progress is emitted throughout and
+  wired to Streamlit's progress bar. Source/date switches preserve overrides.
+- **Confirmed, gate (d):** 10/10 legacy `slate_venues` labels and venues
+  match on replay of captured real responses (including neutral and missing
+  venues). Synthetic checks cover the away-host swap; no such case occurred
+  in this slate. Known venue with missing home-map entry uses the explicit
+  T2 neutral fallback; legacy `slate_venues` would say unknown in that case.
+- **Confirmed with limits, gate (e):** existing Paste/Live API execution
+  block is AST-identical after indentation under the new source branch.
+  Both UI paths were executed once and yielded identical two-market cards.
+  Live API response was an injected fixture: **cannot verify current external
+  OddsPapi compatibility** from this check; zero billable calls made. No
+  parser, decoder, model, RAPM, bet-log, or workflow files changed.
+- Additional checks: 5/5 boundary tests pass; original vs refactored hybrid
+  and player panels exactly equal for one matchup; both panels can coexist
+  without widget collisions. Logging record and write path are shared
+  unchanged; no Log button pressed. Tests block external network, real
+  Sheets writes, and paid injury calls. Original manual tab retains its
+  automatic news behavior; schedule panel does not trigger it.
+- Evidence: `evidence/t2-20261001/full-slate-1/` contains timestamped raw
+  responses, `timing.json`, `slate_table.csv` (126 rows), and
+  `venue_spot_check.csv`. `full-ui-check-1/` contains both parity CSVs and
+  `extra_checks.json`. Repro scripts are under `scripts/validation/`.
+- **Risk, existing venue data:** matching legacy labels does not establish
+  real-world accuracy; e.g. SECU Arena is attributed to Hofstra by the modal
+  map in this sample. Overrides and visible site labels remain necessary.
+- Review locally with `WVB_ENABLE_NCAA_SCHEDULE=1 ./.venv/bin/streamlit run
+  streamlit_app.py --server.port 8654`. The feature switch defaults off
+  until accepted. No server or worker job is left running; only the authorized
+  five-minute plan monitor remains. Prior reference files are untouched.
+- Reviewed planner commit `183fa96`: next is T4, then T3; T5 is explicitly
+  queued until T4 review, then T1. T2 acceptance is reserved to the planner.
+
 ## 9. Open questions (append only)
 
 (none open)
