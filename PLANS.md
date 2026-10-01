@@ -937,6 +937,34 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   owner action. The extension itself grants no additional implementation
   authority. Historical implementation and acceptance entries are preserved.
 
+### 2026-10-01 16:53 EDT — Acceptance reviewed; integration blocked on Q7
+
+- **Accepted:** recorded planner acceptance of T1/T2/T3/T5/T6–T9 in
+  `255be62`. **Implementation complete, awaiting acceptance:** the named
+  validation rerun repair is `bff4f08`; scripts allocate timestamped unique
+  run directories and print the destination. Explicit `--output` now names
+  the parent directory; use the printed child directory for later inputs.
+- Confirmed: five evidence-producing checks ran twice successfully
+  (team matching, card state, missing-roster guards, player annotations,
+  repair parity). All 296 preexisting evidence files retained their hashes.
+  New runs are beneath their original evidence parents; aggregate results
+  are in `evidence/integration-preparation-20261001/validation-reruns.json`.
+  The free NCAA network capture was not rerun; no external calls or real
+  Sheets writes were made by these mocked checks.
+- Prepared the two-switch default-on patch in
+  `evidence/integration-preparation-20261001/enable-defaults.patch`.
+  Its exact source was previewed in an isolated Python process: AppTest
+  boots with both switches unset and with both explicitly disabled.
+  `boot-preview.json` records this mocked preview; it does not establish
+  startup after the pending rebase. App files and defaults remain unchanged.
+- Fetched origin: latest ratings-bot update is `1bbda3e`. Preserved the
+  accepted branch at `codex/accepted-repairs-baseline-20261001` (`0dd7278`).
+  Automatic approval review rejected `git rebase origin/main`, judging
+  the monitoring request insufficient authority to rewrite branch history.
+  No rebase, merge, push, or deployment occurred. See Q7 for owner approval.
+- No validation process remains running. Only the owner-authorized monitor
+  continues through 19:00 EDT. Four owner reference files remain untouched.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1008,6 +1036,22 @@ unchanged) and `evidence/t6-20261001/exposure_summary.json` (43 real +
 - **Still the owner's decisions:** D1 (removal = replacement vs
   redistribution); OddsPapi key rotation; confirm authorship of the
   2026-10-01 PLANNER.md amendments (commit aaba606).
+
+### Q7 — 2026-10-01 16:53 EDT — Explicit approval needed for integration
+
+The planner's acceptance instructs rebase, merge to `main`, and then a
+separate commit enabling the repairs and NCAA schedule by default. Automatic
+approval review rejected the rebase because it can rewrite branch history
+or conflict with unpushed work and judged the owner's monitoring request
+insufficient authorization. This is an automatic approval block, not a new
+WORKER.md requirement. The accepted history is backed up, and the default-on
+patch plus mocked startup/rollback evidence are prepared above.
+
+**Recommendation:** owner explicitly authorizes rebasing the accepted branch
+onto the ratings-bot update, merging it into local `main`, and committing the
+prepared default-on change separately. Then verify the integrated app and
+report commit IDs. No push/deployment is included in this requested approval.
+Integration stays blocked until that authorization; monitoring continues.
 
 ### Q1 — 2026-10-01 11:14 EDT — T5 annotation units
 
