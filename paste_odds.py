@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import datetime as _dt
 import difflib
+import repair_flags
 import re
 from zoneinfo import ZoneInfo
 
@@ -354,7 +355,7 @@ ALIASES = {
 }
 
 
-def match_team(name: str, seonames: list[str],
+def _match_team_legacy(name: str, seonames: list[str],
                fullnames: dict | None = None) -> tuple[str | None, float]:
     """Fuzzy-match a book team name (school + mascot) to a seoname.
 
@@ -434,6 +435,61 @@ def match_team(name: str, seonames: list[str],
         if r > score:
             best, score = seo, r
     return (best, score) if score >= 0.62 else (None, score)
+
+
+def _match_team_safe(name, seonames, fullnames=None):
+    """Known identities first; ambiguous or unrecognized names fail closed.
+
+    Only whole normalized names match aliases. Unbounded prefixes and fuzzy
+    guesses cannot distinguish campuses reliably in a money path.
+    """
+    def identity(label):
+        return _norm(str(label).replace('&', 'and'))
+    n = identity(name)
+    if not n:
+        return None, 0.0
+    identities = {}
+    def add(label, seo):
+        key = identity(label)
+        if key:
+            identities.setdefault(key, set()).add(seo)
+    for seo in seonames:
+        add(seo, seo)
+        if fullnames and fullnames.get(seo):
+            full = str(fullnames[seo])
+            add(full, seo)
+            add(_school_core(full.replace('&', 'and')), seo)
+    if n in identities:
+        hits = identities[n]
+        return (next(iter(hits)), 1.0) if len(hits) == 1 else (None, 0.0)
+    known = {
+        'ualbany': 'albany-ny', 'aandmcorpuschristi': 'am-corpus-chris',
+        'armywestpoint': 'army', 'csubakersfield': 'bakersfield',
+        'purduefortwayne': 'ipfw', 'louisiana': 'la-lafayette',
+        'lmuca': 'loyola-marymount', 'missourisandt': 'missouri-snt',
+        'nicholls': 'nicholls-st', 'niu': 'northern-ill',
+        'samhouston': 'sam-houston-st', 'seattleu': 'seattle',
+        'siue': 'siu-edwardsville', 'saintmarysca': 'st-marys-ca',
+        'utarlington': 'texas-arlington', 'uttyler': 'texas-tyler',
+        'littlerock': 'ualr', 'kansascity': 'umkc',
+    }
+    aliases = {**ALIASES, **known}
+    if n in aliases and aliases[n] in seonames:
+        return aliases[n], 1.0
+    # Expand common spelling variants as whole tokens, retaining campus words.
+    tokens = re.findall(r"[a-z0-9]+", str(name).lower())
+    expanded = ['state' if x == 'st' else x for x in tokens]
+    key = _norm(' '.join(expanded))
+    hits = identities.get(key, set())
+    if len(hits) == 1:
+        return next(iter(hits)), .95
+    return None, 0.0
+
+
+def match_team(name: str, seonames: list[str],
+               fullnames: dict | None = None) -> tuple[str | None, float]:
+    matcher = _match_team_safe if repair_flags.enabled() else _match_team_legacy
+    return matcher(name, seonames, fullnames)
 
 
 def market_devig(markets: list[dict]) -> list:
