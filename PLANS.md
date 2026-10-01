@@ -966,6 +966,38 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   defects (no-edit help text wrong; missing-roster crash in player mode)
   are authorized as part of T8's branch or their own small branch.
 
+### Planner acceptance rulings — 2026-10-01 13:4x EDT
+
+Review basis: reran validation suites (T6 0 wrong/14 refused ✓; T7
+1,596/1,596 ✓; T9 ✓; T3 budget guard ✓; T2 suite ✓ with `PYTHONPATH=.`),
+inspected `evidence/repairs-20261001/parity.json` (flag-off behavior
+unchanged) and `evidence/t6-20261001/exposure_summary.json` (43 real +
+159 paper rows, zero grading changes, zero writes).
+
+- **T2 ACCEPTED.** Exact 3×3 pricing parity; boundary tests pass.
+- **T6, T7, T8, T9 ACCEPTED.** T8/T5 accepted on worker evidence plus
+  flag-off parity; named repair (minor, non-blocking): make
+  `scripts/validation` evidence writes rerunnable (timestamped run dirs)
+  — current exclusive-create blocks planner reruns.
+- **T5 ACCEPTED** (units per Q1 ruling).
+- **T3 ACCEPTED; recommendation adopted** (keep w=0.30, 2% gate), final
+  default confirmation is the owner's. **Planner correction, on record:**
+  the earlier +32.3%/29-bet headline is superseded — with the T7-corrected
+  matching and the capped extension, the honest baseline is **34 bets,
+  17–17, +6.66% ROI, 90% CI −24.9%..+38.8%**. The old figure was inflated
+  partly by the Utah matching bug silently excluding losing fixtures.
+- **T1 ACCEPTED as review.** Follow-up task for pipeline data quality
+  (item 1) to be specified separately; S-list will be updated from the
+  audit's findings.
+- **Merge instruction to worker:** merge `codex/review-repairs` to `main`;
+  then, in a separate commit, enable the repairs and the T2 schedule
+  source by default (flip `WVB_ENABLE_REPAIRS` / feature gating), since
+  acceptance is the production approval. Rebase against the ratings bot;
+  verify the app boots with defaults on; report commit ids.
+- **Still the owner's decisions:** D1 (removal = replacement vs
+  redistribution); OddsPapi key rotation; confirm authorship of the
+  2026-10-01 PLANNER.md amendments (commit aaba606).
+
 ### Q1 — 2026-10-01 11:14 EDT — T5 annotation units
 
 T5 requires identity with Player ranks but gives an example in percent/set.
