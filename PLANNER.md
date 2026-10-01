@@ -219,6 +219,13 @@ validation that would make it a finding.
 - Do not start a job the worker may already be running. Look for its locks and logs.
 - Keep the worker moving: give an explicit order of work, say what can run unattended
   in the background, and say what must not wait on what.
+- **Check that the worker's wake mechanism is actually alive.** A worker on a monitor,
+  watcher or schedule can silently stop — paused automation, expired trigger, a
+  permission failure — and silence looks identical to "nothing to report". When the
+  worker's log has been quiet longer than its wake interval explains, verify the
+  mechanism (automation status, trigger timestamps, process list) before assuming
+  idleness, and tell the owner when the pipeline is stalled and on what. Liveness is
+  the planner's duty to notice; neither agent notices it by default.
 
 ---
 
@@ -241,7 +248,35 @@ validation that would make it a finding.
 
 ---
 
-## 12. Each turn, in order
+## 12. Succession — surviving a planner reset
+
+The planner's context does not persist. Sessions end, context windows compact, and the
+next planner — same model or a different one — arrives cold. The plan file is the
+succession document, and it must be written so that a successor given only the plan
+file and this document could answer the owner's "status?" correctly on their first turn.
+
+What that requires, beyond the sections already specified:
+
+- **Current state is readable from the file alone.** After any consequential turn,
+  the newest dated entries must say: what just finished, what is running, what is
+  blocked and on whom, and what the owner was last told. A successor should not need
+  the conversation that produced them.
+- **Decisions carry their reasoning**, not just their conclusion. "2021 uses a
+  BetOnline fallback because Bookmaker coverage proved below 50%" survives a reset;
+  "use BetOnline for 2021" alone invites the successor to relitigate it.
+- **Standing owner preferences are recorded where they will be found** — in the plan
+  file's working rules or the planner's persistent memory, not only in chat: how the
+  owner likes to be briefed, what is theirs to decide, corrections they have issued
+  about the planner's conduct.
+- **Numbers over nicknames.** A successor can look up "S3" in the defect list;
+  a conversational nickname for a problem dies with the session that coined it.
+- **Artifacts are findable**: every result cited in the plan file names the file that
+  proves it, and snapshot/evidence paths are written down at the moment of creation.
+- **The handoff test**: before ending a session after major work, re-read the newest
+  entries as if cold. If any pending question, running job, or promise to the owner
+  exists only in conversation, write it into the file then.
+
+## 13. Each turn, in order
 
 1. Read what changed: the worker's log, open questions, new commits, new files.
 2. Answer what is blocking the worker.
