@@ -350,11 +350,17 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
         "Pricing model",
         ["Team Elo", "Hybrid (Elo + lineup adjust)", "Player (RAPM)"],
         horizontal=True, key=panel_key("model"),
-        help="Team Elo: season-long team ratings. Hybrid: Elo baseline, "
+        help=("Team Elo does not automatically adjust for absences. Hybrid compares "
+              "the selected lineup (initially last-match starters) with the season "
+              "rotation; unchanged selections can already differ from Team Elo. "
+              "Removing a player redistributes her weight to the remaining lineup. "
+              "Player RAPM prices the selected lineup directly."
+              if repair_flags.enabled() else
+              "Team Elo: season-long team ratings. Hybrid: Elo baseline, "
              "shifted by the RAPM-measured impact of your lineup edits "
              "vs the usual lineup — untouched lineups price exactly like "
              "Team Elo. Player (RAPM): priced purely from the selected "
-             "lineups' player impacts.")
+             "lineups' player impacts."))
 
     if model_mode != "Team Elo":
         rapm_df, rapm_meta = load_rapm()
@@ -378,6 +384,10 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
         lc = st.columns(2)
         a_rows, a_sel = lineup_ui(away_team, lc[0])
         h_rows, h_sel = lineup_ui(home_team, lc[1])
+        if repair_flags.enabled() and (a_rows is None or h_rows is None):
+            st.warning("Player pricing is unavailable without both rosters. "
+                       "Choose Team Elo to price this match.")
+            return
         if not (a_sel and h_sel):
             st.warning("Empty lineup — that side is priced as an exactly "
                        "average team.")
