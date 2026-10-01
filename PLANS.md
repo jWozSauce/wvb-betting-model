@@ -331,6 +331,21 @@ T5 (feature). **Order ruling (planner): T2 first (in progress), then T4,
 then T3, then T5, then T1.** T5 waits for T4 because T4 may change how
 absences are displayed.
 
+**2026-10-01 12:05 EDT — Owner's clarifications (verbatim in substance) +
+planner amendment to T4/T5:** (1) Confirmed understanding: Team Elo mode
+never auto-prices absences — only Hybrid and Player RAPM do. (2) The
+owner's "barely move" observations involved less-impactful players than
+Murray (who is ~2nd most impactful in the league); audit should calibrate
+expectations for mid-tier players — T4's finding answers this: removal
+REDISTRIBUTES the player's playtime weight to remaining selected players,
+so removing a below-lineup-average starter can move the price little or
+even UP (measured: +2.2pp, +5.5pp). **Open owner decision D1:** should
+"remove player" instead model a replacement-level substitute (bench
+semantics) rather than redistribution? Planner recommendation: yes —
+redistribution answers "what if her minutes go to the others", not "what
+if she's injured"; an injury should pull in a replacement. Worker holds
+on this until the owner decides. (3) T5 approved; units per Q1 ruling.
+
 ### T4 — Audit of player (RAPM) and hybrid pricing behavior in the app (review + design proposal)
 
 **Status: open. Report and propose; change no pricing behavior.**
@@ -811,6 +826,42 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 ## 9. Open questions (append only)
 
 (none open)
+
+### Planner rulings — 2026-10-01 12:05 EDT (answers to Q1–Q6; owner present in chat)
+
+- **Q1 — approved as recommended.** T5 uses the Player ranks metric
+  ("X.X pts/set") plus position rank; a matchup-dependent ML what-if
+  display is deferred to the T4 design decision. (Planner's spec example
+  used wrong units — worker was right to flag; spec corrected by this
+  ruling.)
+- **Q2 — approved as recommended.** One billable `/v4/fixtures` request,
+  hard cap 1, enforced in code, quota checked before/after via the free
+  account endpoint, raw response cached, single-job lock, atomic outputs,
+  stop on auth/rate-limit errors. (Quota ruling within free tier; owner
+  informed in chat this turn.)
+- **Q3 — repair authorized as T6** (as proposed: rank both orientations
+  together, prefer exact date, refuse ambiguous ties; two-date/reversed
+  regressions). Also deliver the read-only list of real logged rows whose
+  grading would change; corrections to the owner's real records are the
+  OWNER's decision after seeing that list — do not modify sheet rows.
+- **Q4 — repair authorized as T7** (as proposed: exact identity first,
+  token-bounded aliases, fail-closed ambiguity). Gate: zero wrong matches
+  on the 1,596-case corpus + the named Utah/USC/Miami/LSU regressions.
+- **Q5 — repair authorized as T8** (as proposed: pricing-input snapshot
+  per card, invalidate/reprice on change, log the snapshot; regressions
+  with Sheets mocked).
+- **Q6 — repair authorized as T9** (as proposed: status/endpoint-only
+  error surfaces; fake-credential regressions). Planner disclosure for the
+  exposure review: the real key appeared in a 404 error URL in planner
+  session output on 2026-09-26 (chat transcript only — not committed, not
+  published). Recommendation to owner: rotate the OddsPapi key as cheap
+  insurance; owner's action.
+- **Repair order: T6, T7 (money paths first), then T8, T9** — on one or
+  more repair branches, planner acceptance before merge. T5 may follow.
+  T3 unblocked by Q2. The T4 "remove = redistribute exposure" semantics
+  question goes to the owner (see §6 amendment below); the two small T4
+  defects (no-edit help text wrong; missing-roster crash in player mode)
+  are authorized as part of T8's branch or their own small branch.
 
 ### Q1 — 2026-10-01 11:14 EDT — T5 annotation units
 
