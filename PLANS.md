@@ -878,6 +878,54 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Do not start a duplicate. Source odds parquet unchanged; final analysis
   begins after verified job completion. No historical output is overwritten.
 
+### 2026-10-01 12:16 EDT — T3 implementation complete, awaiting acceptance; repair handoff complete
+
+- Final extension/report commit `7124303`: `BLEND_REVIEW_2026-10.md` now
+  leads with completed analyses and preserves the interim findings below.
+  One billable enumeration + 70 free history requests completed, no retries,
+  quota 5→6→6. 70 new fixtures yielded 12 new boards. Original 29 protected
+  source hashes still match; outputs/cache/ledger are beside originals.
+- **Correction to T7 coverage statement:** the 1,596-case school-name corpus
+  omitted mascot-bearing vendor names. Initial strict matching refused them.
+  `6ebbd95` adds explicit mascot suffixes at token boundaries and then exact
+  school matching; all 64 observed vendor names and the 1,596 corpus cases
+  now pass. Unknown campuses remain refused. Utah Utes now correctly maps
+  to Utah, restoring three historical fixtures lost by the legacy matcher.
+- Both analysis variants are retained. Legacy matcher: 338 rows / 86
+  fixtures; 32 baseline bets, 17–15, +13.33%. Corrected matcher: all 350
+  rows / 89 fixtures (168 ML + 182 spreads), zero unmatched-result rows;
+  34 bets, 17–17, +2.265u, **+6.66% ROI**, 90% interval −24.93%..+38.76%.
+  Post-09-26: 32 rows / eight fixtures; two baseline bets, both losses.
+  Full ML logloss market .485248, blend .492464, model .535985 (n=84).
+- Full/fresh 20-cell grids, buckets, additions/removals, logloss and paper
+  comparison are present; seed 20261001, 10,000 bet-bootstrap draws per
+  cell. Full buckets reconcile 137 within +2pp buckets +213 outside=350;
+  fresh 13+19=32. Paper sample remains 31 usable settled rows of 159.
+- **Recommendation: keep .30/2%.** .40/3% does beat baseline profit and its
+  interval excludes the roughly −50% marginal-loss severity, so it passes
+  that interpretation of the planner's numerical screen. Its entire gain
+  is still the same two older wins, with no fresh incremental benefit;
+  this does not justify a default change. Review again after ~100 additional
+  usable opportunities / ~250 total boarded fixtures, with prospective
+  decisions frozen. This is a review threshold, not a power guarantee.
+- Read-only T7 exposure review: eight real-bet and 13 paper rows use teams
+  that are also erroneous-match destinations. **Not proven wrong bets:**
+  original vendor labels were not stored. Private review list at
+  `/tmp/volleyball-t7-team-exposure-20261001.json`, aggregate in
+  `evidence/t7-20261001/log_exposure.json`. No logs changed; the T6 grade
+  comparison still found zero changed grades on the available records.
+- T5/T6/T7/T8/T9 and the two small T4 UI defects are implemented and tested
+  on `codex/review-repairs`; `REPAIRS_2026-10.md` is the handoff. Repairs and
+  annotations default off via `WVB_ENABLE_REPAIRS`; T2 has its separate
+  default-off switch. No push/merge/deployment. Acceptance and D1 replacement
+  semantics remain with planner/owner; key rotation is the owner's action
+  after the planner's prior-exposure disclosure.
+- No worker process or historical sweep is running. The completed job's
+  empty lock was removed after verifying exit; reruns acquire a new lock,
+  reuse caches and cannot reissue the reserved fixture request. Two offline
+  budget/resume tests pass. Only the five-minute plan monitor continues
+  through 17:00 EDT. Existing four owner reference files remain untouched.
+
 ## 9. Open questions (append only)
 
 (none open)

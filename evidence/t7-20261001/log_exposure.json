@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "Vball_Bet_Log": {
+      "rows": 43,
+      "potential_review_rows": 8
+    },
+    "Vball_Paper_Log": {
+      "rows": 159,
+      "potential_review_rows": 13
+    }
+  },
+  "private_review_list": "/tmp/volleyball-t7-team-exposure-20261001.json",
+  "confirmed_wrong_logged_rows": null,
+  "limitation": "Original provider/paste team text is not stored, so canonical destination flags cannot establish misidentification. Owner review only; no changes.",
+  "writes": 0
+}

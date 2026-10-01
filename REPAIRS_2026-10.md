@@ -46,6 +46,13 @@ All 64 vendor names pass, including Utah Utes → Utah (formerly UT Arlington).
 Unknown suffixes/campuses still fail closed. Corrected Utah joins also change
 T3 sample membership; see its final report.
 
+A separate read-only review flags eight of 43 real bet rows and 13 of 159
+paper rows whose canonical team names are also known erroneous matcher
+destinations. These can be entirely legitimate bets; the original vendor
+labels are not stored, so **none is established as wrong**. The private list
+is `/tmp/volleyball-t7-team-exposure-20261001.json`; aggregate counts and the
+limitation are in `evidence/t7-20261001/log_exposure.json`. No sheet changes.
+
 ## T8 snapshot behavior
 
 Changing bankroll, conservative basis, blend, minimum edge, venue, Kelly fraction
