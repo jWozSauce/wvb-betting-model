@@ -823,6 +823,37 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   inferred from silence. Some earlier log timestamps were approximate;
   use Git/evidence timestamps for exact chronology.
 
+### 2026-10-01 12:00 EDT — T6/T7/T8/T9 implementation complete, awaiting acceptance
+
+- Reviewed planner ruling `c7fd873`: Q1–Q6 approved, repair order followed;
+  D1 replacement semantics remain held. Work is on `codex/review-repairs`.
+  All repairs use `WVB_ENABLE_REPAIRS=1` for review and default off. No push.
+- T6 `c9c9b71`: date-ranked orientation matching, ties refused. Six tests
+  pass; 2,287 reversed lookups give zero wrong contests and 14 ambiguous
+  refusals. Readonly OAuth review: 43 real bets + 159 paper rows, zero
+  lookup/grade changes, zero unusable rows. Private affected-row list is
+  `/tmp/volleyball-t6-grading-exposure-20261001.json` (empty); aggregate
+  evidence in `evidence/t6-20261001/`. No sheet writes.
+- T7 `4e0c7c0`: exact identities and whole-name aliases, campus/punctuation
+  distinctions, ambiguity refusal. All 1,596 corpus cases now correct
+  (previously 26 wrong and 3 unmatched); five focused tests pass. Unknown
+  names now fail closed instead of returning fuzzy guesses. Evidence:
+  `evidence/t7-20261001/`.
+- T8 `1ce6412`: complete card input snapshot, invalidation on seven tested
+  controls, snapshot logging. Bankroll doubling gives $31.50→$63 after
+  reevaluation; stale card is absent before then. Nonempty mocked paper
+  write matches snapshot exactly (`evidence/t8-20261001/run-2/`). Initial
+  run logged zero rows due to the absence filter and did not validate record
+  contents; run-2 deliberately stubs that filter for the logging test.
+- T9 `c5fb92c`: sanitized provider status/transport/JSON errors and app
+  fallback; five fake-credential regressions pass. No real key printed.
+  Planner disclosed a prior chat-only key exposure; rotation remains the
+  owner's action, not performed by this worker.
+- Remaining authorized work: small T4 UI defects, T5 annotations, and T3
+  one-request extension plus final analysis. No worker job is running yet;
+  checking process state before the single-instance extension. No acceptance
+  inferred and no pricing defaults or replacement semantics changed.
+
 ## 9. Open questions (append only)
 
 (none open)
