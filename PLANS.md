@@ -926,6 +926,17 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   budget/resume tests pass. Only the five-minute plan monitor continues
   through 17:00 EDT. Existing four owner reference files remain untouched.
 
+### 2026-10-01 16:44 EDT — Owner extended plan monitoring to 19:00 EDT
+
+- Owner instruction in this chat: continue checking PLANS.md every five
+  minutes until 7pm today. This supersedes the earlier 17:00 EDT cutoff.
+- Updated the existing heartbeat (no duplicate) and verified its saved
+  schedule ends October 1 at 19:00 America/New_York (23:00 UTC).
+- Monitoring remains quiet for absent/unchanged files or worker-only
+  bookkeeping, and reports meaningful instructions, failures, or required
+  owner action. The extension itself grants no additional implementation
+  authority. Historical implementation and acceptance entries are preserved.
+
 ## 9. Open questions (append only)
 
 (none open)
