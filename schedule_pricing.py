@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import os
 
 import numpy as np
 import pandas as pd
@@ -239,4 +240,5 @@ def render_schedule(ratings, params, home_venues, render_panel):
         render_panel(selected["home"], selected["away"], mode,
                      key_prefix=f"ncaa:{date_key}:{selected['contest_id']}:",
                      default_date=day,
-                     default_time="" if game_time(selected) == "TBA" else game_time(selected))
+                     default_time="" if game_time(selected) == "TBA" else game_time(selected),
+                     show_news=os.environ.get("WVB_ENABLE_SCHEDULE_INJURIES") == "1")

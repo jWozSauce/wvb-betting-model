@@ -282,7 +282,7 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                          default_date=None, default_time="", show_news=False):
     """One pricing/staking/logging path for manual and schedule matchups.
 
-    The original tab alone opts into its existing automatic news/AI scan.
+    Callers opt into the shared cached news/AI scan with show_news.
     Empty prefix retains the original tab's widget keys and defaults.
     """
     def panel_key(name):
