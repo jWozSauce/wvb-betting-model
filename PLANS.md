@@ -1125,6 +1125,19 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Next: planner review of T10/T11; 15-minute monitoring continues to 17:00
   EDT. Four owner reference files remain untouched.
 
+### 2026-10-02 19:53 EDT — Owner extended monitoring until 21:00 EDT
+
+- **Implementation complete:** owner directly requested continued checks
+  every 15 minutes until 9pm today. Updated the existing heartbeat and
+  verified its saved expiration: October 2 at 21:00 America/New_York
+  (October 3 at 01:00 UTC), superseding today's former 17:00 cutoff.
+- Current plan matches reviewed `f4f7d84`; T10/T11 still await planner
+  acceptance. Monitoring remains quiet for unchanged plans or worker-only
+  bookkeeping and reports meaningful instructions, failures or required
+  owner action. This extension grants no new implementation authority.
+- No duplicate automation, app changes, push or deployment. At/after the
+  new deadline, discontinue monitoring without checking the plan.
+
 ## 9. Open questions (append only)
 
 (none open)
