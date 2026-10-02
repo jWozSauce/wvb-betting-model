@@ -420,6 +420,30 @@ unrated/unknown players degrade to "(unrated)" without error; (d) spot
 check in the log: 5 players' annotations vs the Player ranks tab, exact
 match. Branch + planner acceptance before merge (production rule).
 
+**2026-10-02 — Owner's intent for the schedule drill-in (verbatim in
+substance):** the "Price this game" button should bring up the Price a
+match experience with teams pre-populated, to dig deeper into the match
+(injuries etc.). Planner finding: the shipped drill-in already renders the
+shared pricing panel prepopulated (teams, venue, date, time) but passes
+`show_news=False`, so the automatic AI injury analysis that Price a match
+runs is omitted (`schedule_pricing.py:239` call site vs
+`streamlit_app.py:701`).
+
+### T10 — Schedule drill-in: run the injury analysis like Price a match
+
+**Status: open. Small change; same acceptance discipline.**
+Pass `show_news=True` (or equivalent) from the schedule drill-in's
+`render_panel` call so a drilled-in game auto-runs
+`render_injury_analysis([away, home])` exactly as the Price a match tab
+does, including the existing per-team-per-hour cache. Gate: (a) drill-in
+and Price a match render the same injury section for the same matchup;
+(b) no AI call fires from merely loading/pricing the slate — only from an
+explicit drill-in selection; (c) cache behavior verified (second drill-in
+of the same team within the hour = no new API call; evidence via a
+mocked/counted client, not real spend). Anthropic spend: bounded by the
+existing cache; no new call sites beyond the shared panel's. Branch +
+planner acceptance before push, per standing rules.
+
 ### T1 — Full audit of the app and its statistical methods (review only)
 
 **Status: open. Report first; change nothing under review** (WORKER.md §3,
