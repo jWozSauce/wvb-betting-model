@@ -1093,6 +1093,38 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Test passed; no job remains running. The 15-minute monitor continues
   until 17:00 EDT. Four preexisting owner reference files remain untouched.
 
+### 2026-10-02 13:26 EDT — T11 implementation complete, awaiting acceptance with T10
+
+- **Confirmed:** `09e5e72` on `codex/schedule-injury-analysis` places the
+  single shared pricing panel in a bordered container immediately after
+  the selected row. Selection callbacks run before rendering, preventing
+  duplicate old/new panels when moving between earlier and later rows.
+  The explicit `✕` close button clears selection and restores plain rows.
+- Review with `WVB_ENABLE_INLINE_DRILL_IN=1` and
+  `WVB_ENABLE_SCHEDULE_INJURIES=1`. Both new features remain default-off
+  pending planner acceptance; no merge, push or deployment performed.
+- Gates passed: AppTest checks adjacency at row indices 63, 2 and 124 of
+  126 priced games, exactly one open panel, three games × two venues ×
+  16 markets exactly equal to Price a match, selected-row venue repricing,
+  close behavior, and selection/override durability across source/date
+  switches. Only one mocked slate fetch across those checks.
+- Browser validation on a temporary, mocked localhost preview at 1280×720
+  confirmed clicking middle-row Arkansas State / Louisiana-Lafayette
+  reveals the panel beginning in the viewport without another scroll.
+  Closing restores the plain slate. Screenshot and machine-readable checks:
+  `evidence/t11-20261002/run-20261002T172220.080406Z-pih9nc8_/`.
+- T10's counted-client test also passes with inline placement enabled:
+  zero AI calls on load/reprice, two on initial drill-in, no extra call on
+  repeat or same-match manual pricing. Evidence:
+  `evidence/t10-20261002/run-20261002T172448.838768Z-fv6gl81u/injury-cache.json`.
+  Real API calls/spend and real Sheets writes: zero. The preview server
+  was stopped and its browser tab closed; no test job remains running.
+- Non-blocking plan observation: the T11 insertion removed the T1 heading
+  before its existing audit status/specification. Planner-owned text is
+  preserved; planner can restore that heading during plan maintenance.
+  Next: planner review of T10/T11; 15-minute monitoring continues to 17:00
+  EDT. Four owner reference files remain untouched.
+
 ## 9. Open questions (append only)
 
 (none open)
