@@ -1046,6 +1046,32 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   implementation. No app code or real records changed. The monitor is
   the only unattended work started by this request.
 
+### 2026-10-02 12:08 EDT — T10 implementation complete, awaiting acceptance
+
+- **Confirmed:** `4e3c958` on `codex/schedule-injury-analysis` passes the
+  shared panel's `show_news` option for an explicitly selected schedule
+  game. Uses the existing news renderer, injury renderer, analyzer and
+  cache; no new AI client call site or pricing-math change.
+- Review with `WVB_ENABLE_SCHEDULE_INJURIES=1`. The switch defaults off
+  under WORKER.md's pre-acceptance behavior rule. Planner acceptance and
+  an enablement/integration instruction are the next steps; no merge,
+  push, production default change, or deployment performed.
+- Acceptance evidence: `scripts/validation/test_schedule_injuries.py`
+  runs the actual Streamlit panel, cache and analyzer with a counted fake
+  Anthropic client. Zero calls on slate load and venue repricing; two on
+  first explicit drill-in (Morgan State / NC Central); still two after
+  repeating the drill-in and selecting that matchup in Price a match.
+  Both views render exactly equal injury sections. Omitted review switch
+  produces no schedule injury section or additional client call.
+- The existing 3,600-second TTL is verified; cache keys remain team plus
+  absent-player tuple, so changed availability can cause an earlier
+  refresh. Repeat checks exercised immediate reuse within that hour,
+  not a real one-hour wait or external model availability. Real AI calls,
+  paid spend and real Sheets writes: zero.
+- Evidence: `evidence/t10-20261002/run-20261002T160724.006124Z-8lmiy50d/injury-cache.json`.
+  Test passed; no job remains running. The 15-minute monitor continues
+  until 17:00 EDT. Four preexisting owner reference files remain untouched.
+
 ## 9. Open questions (append only)
 
 (none open)
