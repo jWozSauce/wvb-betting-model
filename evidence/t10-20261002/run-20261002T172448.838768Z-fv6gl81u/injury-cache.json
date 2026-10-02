@@ -1,0 +1,26 @@
+{
+  "cumulative_client_calls": {
+    "loaded_slate": 0,
+    "repriced_slate": 0,
+    "first_drill_in": 2,
+    "repeat_drill_in": 2,
+    "same_manual_match": 2,
+    "disabled_drill_in": 2
+  },
+  "called_teams": [
+    "morgan-st",
+    "nc-central"
+  ],
+  "injury_sections": {
+    "\ud83e\ude7a morgan-st \u2014 AI injury analysis": [
+      "Mocked injury verdict for morgan-st\n\n---\n*10 in / 5 out tokens (claude-sonnet-5)*"
+    ],
+    "\ud83e\ude7a nc-central \u2014 AI injury analysis": [
+      "Mocked injury verdict for nc-central\n\n---\n*10 in / 5 out tokens (claude-sonnet-5)*"
+    ]
+  },
+  "shared_section_equal": true,
+  "cache_ttl_seconds": 3600,
+  "real_api_calls": 0,
+  "review_default_off": true
+}

@@ -198,6 +198,12 @@ def render_schedule(ratings, params, home_venues, render_panel):
                "Spreads (home / away)", "Totals (under / over)", "Full prices"]
     for col, label in zip(st.columns(widths), headers):
         col.markdown(f"**{label}**")
+    inline_panel = os.environ.get("WVB_ENABLE_INLINE_DRILL_IN") == "1"
+    panel_container = None
+    def select_game(cid):
+        # Callbacks run before rendering any row, so moving the selection
+        # cannot briefly render the old panel or call its injury analysis.
+        slate["selected"] = cid
     for row in slate["priced"]:
         cid = row["contest_id"]
         cols = st.columns(widths)
@@ -229,11 +235,21 @@ def render_schedule(ratings, params, home_venues, render_panel):
         for line in (3, 4):
             p = markets[f"under_{line}_5_sets"]
             cols[6].caption(f"{line}.5: {odds(p)} / {odds(1-p)}")
-        if cols[7].button("Price this game", key=f"ncaa_pick:{date_key}:{cid}"):
-            slate["selected"] = cid
+        cols[7].button("Price this game", key=f"ncaa_pick:{date_key}:{cid}",
+                       on_click=select_game, args=(cid,))
+        if inline_panel and slate["selected"] == cid:
+            panel_container = st.container(border=True)
     selected = next((r for r in slate["priced"] if r["contest_id"] == slate["selected"]), None)
-    if selected:
-        st.divider()
+    if selected is None:
+        return
+    if panel_container is None:
+        panel_container = st.container()
+    with panel_container:
+        if inline_panel:
+            st.button("✕", key=f"ncaa_close:{date_key}:{selected['contest_id']}",
+                      help="Close game details", on_click=select_game, args=(None,))
+        else:
+            st.divider()
         mode = slate["overrides"].get(selected["contest_id"], selected["venue_mode"])
         st.subheader(f"{selected['away']} @ {selected['home']} — {game_time(selected)} ET")
         st.caption(f"{mode} · {selected['site']} · {selected['venue'] or 'venue ?'}")
