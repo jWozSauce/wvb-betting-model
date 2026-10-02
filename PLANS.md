@@ -444,7 +444,28 @@ mocked/counted client, not real spend). Anthropic spend: bounded by the
 existing cache; no new call sites beyond the shared panel's. Branch +
 planner acceptance before push, per standing rules.
 
-### T1 — Full audit of the app and its statistical methods (review only)
+**2026-10-02 (later) — Owner report + planner finding:** "Price this game"
+appears dead — expected to be moved to the Price a match tab. Planner
+verdict from code (`schedule_pricing.py:231-240`): the button works, but
+the panel renders BELOW the full slate table (after `st.divider()`), so on
+a long slate it opens off-screen with no viewport change — a planner spec
+defect in T2 (inline-below-table placement), not an implementation error.
+Programmatic tab switching is not possible with st.tabs; the panel-in-tab
+approach stands.
+
+### T11 — Drill-in placement: open the pricing panel at the clicked row
+
+**Status: open. Do together with T10 (same code area).**
+Render the drill-in pricing panel IMMEDIATELY BELOW the selected game's
+row (inline expansion inside the row loop), not after the table. Clicking
+another game moves the panel there; add an explicit close control ("✕");
+selection/overrides keep their current session-state durability. Keep the
+single shared `render_panel` call (no second pricing path). Gate: (a)
+after clicking a mid-table game, the panel is adjacent to that row (no
+scrolling needed to see it begin); (b) 3-game × 2-venue parity vs Price a
+match still exact; (c) venue dropdown changes on the selected row reprice
+the open panel consistently; (d) close control returns the plain row.
+Branch + planner acceptance before push.
 
 **Status: open. Report first; change nothing under review** (WORKER.md §3,
 "In a review task, report first"). This is the independent review that
