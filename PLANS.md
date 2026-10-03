@@ -1163,6 +1163,35 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   changes, push or deployment. At/after the deadline, discontinue without
   checking the plan.
 
+### 2026-10-03 08:10 EDT — Event-driven handoff verified; recurring polling retired
+
+- **Implementation complete; confirmed:** applied the owner's replacement
+  coordination instruction in §7 and this chat. Automation
+  `check-volleyball-plan-until-5-pm` is PAUSED, verified in its saved
+  configuration. No further recurring plan monitors will be created or
+  reactivated; future wakes come from the standing local watcher.
+- First delivered watcher event verified:
+  `63b1459b-0b27-480c-8290-7b12e3d1f179`, normalized hash
+  `9d9ef1a2a102180c526a84ee9f4518063efd562bd4151cba04095bdbdb7dda82`.
+  `state.json` records that accepted hash, no inflight delivery, and queued
+  receipt `01a101a9-435e-7f52-9e06-9069364c260c` at 08:07:12 EDT.
+  `launchctl print` confirms watcher PID 68550 running, one launch, no
+  prior exit; `watcher.log` records the matching trigger and queue receipt.
+- **Documentation discrepancy, low severity:** the cited `health.json`
+  does not exist and the installed source does not generate it. Actual
+  diagnostics are `~/.codex/plans-watchers/wvb-plans/state.json`,
+  `watcher.log`, and launchd status. Delivery and liveness are verified
+  through those sources; no watcher reinstall/restart is needed.
+- Read the full plan and compared against `34c5650`: only the coordination
+  change is new. T10/T11 remain implementation complete, awaiting planner
+  acceptance; prior accepted work is already integrated. D1 remains held.
+  No unapproved implementation, paid calls, Sheets writes or push.
+- Preserved the planner's uncommitted §7 edit and untracked `scripts/ops/`
+  files separately from this worker report, along with all four existing
+  owner reference files. The local watcher is the only coordination job;
+  no duplicate service was started. Worker questions will use Q headings;
+  planner rulings must use separate non-Q headings to trigger delivery.
+
 ## 9. Open questions (append only)
 
 (none open)
