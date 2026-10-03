@@ -1150,6 +1150,19 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 - No duplicate automation, app changes, push or deployment. At/after
   midnight, discontinue monitoring without checking the plan.
 
+### 2026-10-03 07:59 EDT — Owner authorized 15-minute monitoring until 17:00
+
+- **Implementation complete:** owner directly requested checks every 15
+  minutes until 5pm today. Updated the existing heartbeat and verified its
+  saved expiration: October 3 at 17:00 America/New_York (21:00 UTC).
+  This replaces the expired October 2 schedule; no duplicate was created.
+- Initial check matches reviewed `c4622e0`; T10/T11 remain awaiting planner
+  acceptance. Keep quiet for unchanged plans or worker-only bookkeeping;
+  report meaningful instructions, failures or required owner action.
+- Monitoring authorization grants no new implementation authority. No app
+  changes, push or deployment. At/after the deadline, discontinue without
+  checking the plan.
+
 ## 9. Open questions (append only)
 
 (none open)
