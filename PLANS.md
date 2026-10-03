@@ -1138,6 +1138,18 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
 - No duplicate automation, app changes, push or deployment. At/after the
   new deadline, discontinue monitoring without checking the plan.
 
+### 2026-10-02 22:19 EDT — Owner extended monitoring until midnight
+
+- **Implementation complete:** owner directly requested continued checks
+  every 15 minutes until midnight tonight. Updated the existing heartbeat
+  and verified the saved expiration: October 3 at 00:00 America/New_York
+  (04:00 UTC), superseding the former October 2 21:00 cutoff.
+- Current plan matches reviewed `ed87d27`; T10/T11 still await planner
+  acceptance. Preserve quiet monitoring for unchanged plans or worker-only
+  bookkeeping. This extension grants no new implementation authority.
+- No duplicate automation, app changes, push or deployment. At/after
+  midnight, discontinue monitoring without checking the plan.
+
 ## 9. Open questions (append only)
 
 (none open)
