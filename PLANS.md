@@ -1375,6 +1375,113 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   preserved. No new unattended jobs; existing watcher remains the sole
   wake mechanism. Next: resolve Q9, amend T13 if needed, then planner review.
 
+### 2026-10-04 16:15 EDT — T13 implementation complete, awaiting acceptance; Q9 applied
+
+- **Q9 resolved / T13 implementation complete, awaiting acceptance.**
+  Applied the planner's approved strict low-start rule in `736f3f7`, on
+  `codex/replacement-lineups` after rebasing the isolated implementation
+  onto deployed main (`aafab84`; initial implementation now `df13c5f`).
+  `WVB_ENABLE_REPLACEMENT_LINEUPS` remains default-off; no T13 push/merge.
+- Bench eligibility now requires fitted coefficients, exclusion from both
+  initial/current selection (and of removed players), and starts strictly
+  below half the team maximum. Position → overall bench → zero tier order
+  is unchanged. Exactly-half boundary regression passes. Reilly (40) and
+  Adriano (29) are excluded; their removal from the pool is reflected in
+  the UI. Explicit actual additions override synthetic replacements.
+- **Gate (a), pass:** four vs-Kansas, home-court, playtime-weighted cases
+  republished with identical current data for both semantics. Values below
+  are before removal / redistribution / replacement:
+
+  | Removed | Player ML | Hybrid ML |
+  |---|---|---|
+  | Murray | .881897 / .771336 / .622239 | .951979 / .891003 / .788312 |
+  | Babcock | .765506 / .518869 / .481156 | .822149 / .594147 / .556218 |
+  | Sigler | .881897 / .898772 / .779731 | .951979 / .960097 / .896190 |
+  | Watson | .765506 / .814679 / .743631 | .822149 / .862909 / .803412 |
+
+  Sigler/Watson replacement removals lower both prices. Q9 did not change
+  these four position pools; it changes broader fallback pools.
+- **Gates (b–e), pass:** no-rated-bench fallback (including a zero-coefficient
+  bench row), exact no-edit strengths for 365 teams × 2 weighting modes ×
+  initial/full-roster selections, exact untouched/full-roster UI boards in
+  Player and Hybrid, exact redistribution toggle, explicit actual substitute
+  override without double weighting, five displayed labels matching computed
+  values. Ryan Hunter's fallback pool now gives +.148172 points/set and
+  excludes the two absent regulars; displayed +0.15. Independent slot-weight
+  arithmetic checked; reference construction and fitted files unchanged.
+- Evidence: `evidence/t13-20261004/run-20261004T201407.708539Z-eg98tbg0/`
+  (`removals.csv`, `labels.json`, `checks.json`, including protected SHA256s).
+  Handoff: `REPLACEMENT_LINEUPS_2026-10.md`; rerun
+  `PYTHONPATH=. .venv/bin/python scripts/validation/test_replacement_lineups.py`.
+- Limits: benchmarks use October 4 coefficients/ratings, so old/new are
+  directly comparable but differ from the older T4 snapshot. No guarantee
+  that every weak player's removal decreases price; the specified two-case
+  direction is verified, with no artificial clamp. Zero real paid requests
+  or Sheets writes. Preserved planner edits and other participants' artifacts.
+  Existing watcher only; next action is planner acceptance of T13, then the
+  already-authorized integration/default enablement/boot/push sequence.
+
+### 2026-10-04 16:50 EDT — T14 implementation complete, awaiting acceptance; T15 stopped at a gate
+
+- **T14 implementation complete, awaiting acceptance:** `3831714` on
+  `codex/live-team-mapping`, based on deployed main `aafab84`, independent
+  of the still-unaccepted T13 branch. `WVB_ENABLE_LIVE_TEAM_MAP` defaults
+  off. Stable participant/fixture IDs survive decoding; confirmed ID
+  mappings precede names; unresolved/low-confidence/same-team fixtures
+  remain visible for explicit two-side confirmation. Confirmation prices
+  the saved board without another odds request. No matcher heuristic edits.
+- Actual UI gate **confirmed/pass**: Purdue–Washington prices after one
+  confirmation, then a fresh app session/disk reload prices the identical
+  two-market card without a prompt; changed vendor spelling still resolves
+  by ID. Duplicate schools refused, concurrent same-ID change preserved.
+  Mock GitHub adapter verifies fixed mapping path, unrelated-change merge,
+  blob-SHA compare-and-swap and 409/no retry. Real cloud storage is **cannot
+  verify**, pending owner credential setup and acceptance; no real GitHub
+  mapping write occurred. `LIVE_TEAM_MATCHING_2026-10.md` explains the
+  repository-backed persistence, authentication requirement and deployment
+  prerequisite `TEAM_MAP_GITHUB_TOKEN` (repository Contents read/write,
+  configured privately in Streamlit secrets with APP_PASSWORD enabled).
+  Each future confirmed mapping creates a mapping-only main commit; local
+  atomic-file mode is explicitly opt-in and is not durable cloud storage.
+- T7 corpus **pass:** 1,596 correct, zero wrong; 228 refused NCAA participant
+  names plus Purdue added as static regression cases. The participant file
+  contains 2,573 sport-wide entries, not a NCAA-only map; cached tournament
+  fixtures identify the 338 NCAA subset used here. Refusal cases are not
+  fabricated owner-confirmed mappings. Ratings build scripts do not write
+  the new JSON; the bot's rebase preserves upstream mapping commits.
+- Existing-source gates **pass:** exact feature-off live and feature-on
+  paste parity; T12 UI suite passes all manual/parity/state/log-mock gates;
+  integrated defaults boot and nine NCAA drill-in comparisons pass. Final
+  T14 evidence `evidence/t14-20261004/run-20261004T204716.891119Z-nos2sttk/`,
+  source regression `evidence/t12-20261004/run-20261004T204735.831219Z-8qlbskfr/`.
+- **T15 stopped at a gate / Q10:** free-only five-fixture, 17-candidate
+  probe halted at request 5, HTTP 403 for
+  `pinnacle+5,pinnacle+30,betonline.ag`. No retry or subsequent history call.
+  Account before/after **10/250 → 10/250** (zero billable delta). Earlier
+  sandbox network failure happened before history and is retained. Only
+  first fixture partially covered: Hard Rock winner trails returned, all
+  after scheduled start; other completed batches returned no trails. This
+  cannot establish pregame coverage or absence across the sport. Details,
+  raw responses, partial summary and stop ledger in
+  `evidence/t15-20261004/coverage-1/`; report `BOOK_COVERAGE_2026-10.md`.
+- Independent T15 preparation `19db301`: Bovada in selectable five-book
+  default behind **off** `WVB_ENABLE_BOOK_SELECTION`; existing four books
+  remain live. Sharp-first ordering, cache keyed by books, stale card/board
+  cleared on selection change, zero calls on selection change, empty fetch
+  disabled. Mocked Bovada best lines with Pinnacle anchor **pass**. Final
+  joint T14/T15 UI evidence:
+  `evidence/t15-20261004/offline/run-20261004T204859.365387Z-0mys_8k4/`.
+  Real new-default live-fetch gate not run (Q11 spending decision). Five
+  books × one fresh fetch/day ≈150/month; twice/day ≈300, hence multiselect.
+- Protected RAPM/parms/meta hashes unchanged. This turn: **0 billable
+  OddsPapi calls, 0 Anthropic calls, 0 real Sheets writes**. No merge/push.
+  Preserved planner edits, reference files and others' evidence. No new
+  unattended process; original local watcher alone remains. Probe stopped;
+  do not restart without resolving Q10. Next: T14 review/cloud setup,
+  T15 Q10/Q11, and T13 acceptance on its retained branch. Carried the prior
+  T13 handoff below/above across this branch switch so shared history stays
+  visible; it does not represent new implementation or acceptance.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1588,3 +1695,39 @@ the initial-lineup complement as implemented or specify a different cutoff.
 The cutoff is a modeling choice, not established by the passing benchmarks;
 please rule before T13 acceptance. No numeric threshold or production change
 has been applied. Independent accepted T12 deployment continues.
+
+### Q10 — 2026-10-04 — T15 historical probe stopped on an access refusal
+
+The fifth free request returned HTTP 403 for the three-book batch
+`pinnacle+5,pinnacle+30,betonline.ag`; prior groups returned 200/404.
+`evidence/t15-20261004/coverage-1/ledger.json` records the stop and unchanged
+10/250 quota. The response does not establish which book is restricted.
+WORKER.md §3 requires stopping on authorization errors; §4 requires a
+question at a stop condition. No retry, variant substitution or further
+history requests were attempted. The unfinished five-fixture sweep remains
+explicit in `BOOK_COVERAGE_2026-10.md`.
+
+Recommended: authorize a revised free-only sweep omitting both Pinnacle
+variants, marking them access-unverified; include BetOnline in a fresh
+non-variant batch, plus the publicly verified `bookmaker.eu` candidate.
+Reuse every compatible cached response, retain this failed batch, and stop
+again on any authorization/rate-limit response. No billable catalog or
+fixture calls. Alternatively obtain provider clarification first. Please
+rule on the revised probe; a 403 is not evidence of no coverage.
+
+### Q11 — 2026-10-04 — T15 real-fetch acceptance gate needs an owner spending cap
+
+The prepared default has five books (Pinnacle/DK/FD/BetOnline/Bovada), so
+one uncached live gate costs at most **5 billable requests**. Offline
+best-line, anchor, source-parity and book-selection checks pass; the real
+fetch has not run. The T15 specification requests this gate, but no owner
+approval for its billable spending is recorded. WORKER.md §6 reserves paid
+calls for the owner's written approval; the standing push ruling expressly
+excludes spending.
+
+Recommended: owner approve one new-default live fetch with a hard cap of
+five calls, persistent per-book reservations/raw caches and before/after
+account checks, no automatic retry (empty/error calls count). Perform after
+the free-stage gate is resolved; if the evidence changes the proposed book
+set above five, obtain a revised cap first. No purchase or subscription
+change is proposed. Until then, keep T15 off and leave the real gate open.
