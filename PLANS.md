@@ -1262,6 +1262,62 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   by default pending acceptance. Only the existing local watcher remains
   unattended. Owner's key-rotation decision is recorded as final/closed.
 
+### 2026-10-04 16:04 EDT — T12 implementation complete, awaiting acceptance
+
+- **Confirmed:** `3aacdb1` adds the fourth source behind default-off `WVB_ENABLE_MANUAL_BOARD`.
+  Independent schedule/board loads, durable matches/exclusions/venue choices,
+  explicit confirmation and orientation, duplicate/unrated guards, per-game
+  cached shared Paste/Live evaluator, existing card and logging path reused.
+  Detailed handoff and commands: `MANUAL_BOARD_2026-10.md`.
+- **Gate (a), exact 3-game parity:** 18 market rows equal the pre-T12 Paste
+  path (`ef13b81`) for probabilities/edge/stake/absence annotations. ML
+  examples below show both manual and Paste values (identical):
+
+  | Game / pick | Model | Blend | Edge | Stake |
+  |---|---:|---:|---:|---:|
+  | Morgan St @ NC Central / away | .3679 | .4595 | .1252 | 22.50 |
+  | Butler @ Seton Hall / away | .8372 | .6204 | .2847 | 22.50 |
+  | Dayton @ Fordham / away | .9600 | .7218 | .3848 | 22.50 |
+
+- **Gates (b–d): pass.** Reversed ML/spreads/totals retain exact selected-team
+  prices; book-first identity is shown explicitly. Both a venue edit and a
+  match correction recompute 501 model calls versus 1,503 for all three games;
+  unchanged reprice is zero. Other card rows remain exact. No schedule
+  refetch except explicit fetch actions. Tested 3 matched, then 2 matched +
+  1 excluded, and unmatched states; counts reconcile. Duplicate confirmations
+  block pricing. Edits invalidate stale cards/log controls immediately.
+- **Gate (e), real slate:** September 30 free NCAA capture has 87 raw
+  listings − 1 duplicate = 86 games = 9 rated + 77 unrated. 12 free calls,
+  4.23s cold / .0067s warm. Replayed authentic cached DraftKings quotes as
+  reconstructed board text (integer American odds), not a live BetOnline
+  clipboard. Match-table dump: `Vanderbilt @ LSU → vanderbilt @ lsu,
+  7:00 PM, true home [6625618]; matched, same orientation, Home court`.
+  Board count 1 = 1 matched + 0 excluded + 0 unmatched; schedule unmatched 85.
+
+  | Card pick | Odds | Model | Blend | Edge | Stake |
+  |---|---:|---:|---:|---:|---:|
+  | Vanderbilt ML | -952 | .6324 | .8245 | -.0818 | 0 |
+  | Vanderbilt -2.5 | +114 | .2660 | .3823 | -.0870 | 0 |
+  | LSU ML | +575 | .3676 | .1755 | .0262 | 7.68 |
+  | LSU +2.5 | -145 | .7340 | .6177 | .0242 | 14.79 |
+
+  Current ratings used for UI validation only; not an historical performance
+  test or current recommendation. Full quote provenance, match table/card,
+  raw NCAA responses and all gate artifacts are linked from the handoff.
+- **Gate (f): pass.** Paste and mocked Live API cards equal the pre-T12
+  implementation exactly; source 3 passes nine exact 16-market boards and
+  rollback. T8 regression passes all seven stale-input controls and captured
+  mock log context. Two mocked manual paper records have the schedule's
+  date/time/teams and each game's actual venue mode; no real Sheets writes.
+- Test-time parser annotations initially differed after extracting the
+  evaluator; fixed tuple-key filtering and reran exact parity successfully.
+  Final evidence: `evidence/t12-20261004/run-20261004T195852.817138Z-uva9w_mg/`;
+  real replay: `evidence/t12-20261004/real-replay/run-20261004T195937.247920Z-1evw6cqb/`.
+- No billable OddsPapi or Anthropic calls. T12 stays unmerged/unpushed pending
+  acceptance. Preserved all concurrent planner edits and earlier evidence.
+  Existing watcher only; no new unattended work. Next: T13, authorized by the
+  newly recorded owner D1 ruling, on a separate branch after this handoff.
+
 ## 9. Open questions (append only)
 
 (none open)
