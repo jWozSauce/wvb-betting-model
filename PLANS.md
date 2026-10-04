@@ -1549,6 +1549,59 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   T14 additionally needs cloud mapping credential setup. Next: Q12 data,
   Q11 two-call approval, finish the real gate, then planner acceptance.
 
+### 2026-10-04 17:35 EDT — T15 revised coverage complete; live capture stopped at acceptance gate
+
+**T15: stopped at a gate; implementation prepared, not accepted.** Q10's
+revised free sweep and Q11's one-time owner-approved live capture were executed
+in order. Commit `10c105a` on `codex/live-team-mapping` contains the code,
+raw responses, quota ledgers, tests and `BOOK_COVERAGE_2026-10.md`.
+
+- **Confirmed:** 22 books × 5 fixtures = 110 historical checks; 36 new free
+  requests + four cached responses. Quota **15/250 → 15/250**. Pregame coverage:
+  DK 5/5, 1xBet 3/5, bwin 2/5, SBOBET 1/5, Hard Rock 1/5; the other 17 had
+  no trails in this sample. Pinnacle variants omitted as access-unverified.
+  Independent datetime-versus-pandas timing counts agree for all 110 pairs.
+  This independently completed sweep supersedes Q12's missing probe-artifact
+  dependency. Hard Rock's fifth fixture provides pregame evidence; earlier
+  post-start-only observations were incomplete, not evidence of universal absence.
+- **Prepared proposal:** anchor order SBOBET, DK, Hard Rock, 1xBet, bwin.
+  International books are anchor-only, excluded from actionable prices, with
+  visible role labels and disabled anchor-only fetches. Five calls/fetch means
+  150/month at one daily fetch, 300 at two; multiselect/cost display retained.
+  Legacy four-book rollback remains default until T15 acceptance.
+- **Confirmed spending:** one capture, **5/5 approved calls**, quota
+  **15/250 → 20/250**. Persisted reservations and raw caches; no retry.
+  SBOBET returned 200 empty; Hard Rock 404; DK, 1xBet and bwin returned fixtures.
+  Default output has one game/four market-side rows, all DK best price and anchor.
+  Independent best-price/devig verification passes all four. Real bwin prices
+  merge; an offline priority-sensitivity replay selects bwin anchors for the same
+  four actionable DK rows. This diagnostic is not a second live/default gate.
+- **Cannot verify / acceptance blocker:** Hard Rock live merging and SBOBET live
+  anchoring were not exercised because their capture was empty. Q13 asks how to
+  proceed with the incomplete gate. The original live ledger's `complete` means
+  capture finished, not acceptance; `offline-assessment.json` explicitly records
+  the incomplete gate, and the script's future status wording is corrected.
+- **Risk / unresolved:** 1xBet's six outcome-active rows have
+  `bookmakerIsActive=false`. The existing decoder uses outcome activity and book
+  suspension, ignoring this flag. None influenced default output. Q14 proposes
+  conservative exclusion pending documented semantics; no unverified repair made.
+- **Blocked on Q12:** full valid bookmaker catalog still absent. Limited fallback
+  is honestly labelled; no billable catalog request made. No need to re-authorize
+  the already-consumed Q11 capture; it cannot be repeated under that approval.
+
+Evidence: `evidence/t15-20261004/coverage-2/`, `live-gate-1/`,
+`offline/run-20261004T212758.176004Z-tdmb1y_3/`, and
+`budget/run-20261004T213409.391743Z-utww38il/` under the same T15 directory.
+Actual UI/mocked-provider role, rollback, cache/invalidation and anchor tests pass;
+empty/error/duplicate spending guards pass. Unsupported or over-five proposals
+are refused offline before requests. Staged exact-key scan and diff checks pass.
+No AI calls, real Sheets writes, protected artifact edits, production merge,
+default enablement or push. No job remains running; do not rerun live-gate-1.
+Planner edits remain unstaged and other participants' untracked files preserved.
+T13 and T14 remain implementation complete, awaiting explicit acceptance;
+next work is catalog receipt and rulings on the live gate/activity flag.
+
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1819,3 +1872,38 @@ Recommended: reuse the planner's existing artifacts, with no new catalog
 spend or duplicate probe. Then the worker can complete catalog integration
 and evidence review. Q11 remains the separate live-call spending decision,
 now at the new default's two-call ceiling.
+
+### Q13 — 2026-10-04 — T15 live gate missing Hard Rock and SBOBET coverage
+
+The one Q11-approved fetch used all five calls (15→20/250). Hard Rock returned
+404 and SBOBET an empty array. DK's four best-price/anchor rows pass, and real
+bwin merging is verified by offline cache replay, but the complete added-book
+gate cannot be declared passed. Evidence and preserved raws are in
+`evidence/t15-20261004/live-gate-1/`; implementation commit `10c105a`.
+WORKER.md §4 says to stop when an acceptance gate fails; §6 requires new written
+owner approval for paid calls outside the consumed one-time authorization.
+
+Recommended: keep T15 off and accept this as interim evidence only; review whether
+the free historical results plus offline merging are sufficient for acceptance
+with the stated live-coverage limit. If the original live gate remains required,
+a later live attempt needs a separately recorded owner cap and a new evidence
+directory. No retry or new paid request is proposed for execution under Q11,
+and no polling/automatic fetch will be installed to look for book availability.
+Please rule on the acceptance path; the full catalog remains separately Q12.
+
+### Q14 — 2026-10-04 — 1xBet activity flags conflict in live capture
+
+Both returned 1xBet fixtures have bookmakerIsActive=false but outcome-active
+prices; six supported rows decode, two on the default's Kentucky/Florida game.
+Current fetch_board filters suspension and outcome activity, not that book-level
+flag. None became a default anchor because DK outranks 1xBet; international
+prices cannot become bets. Raw evidence is `live-gate-1/1xbet.json` and the
+inventory in `offline-assessment.json`. The reviewed public schema examples
+show the field but did not establish which flag governs quote usability.
+
+Recommended conservative rule: exclude a book when bookmakerIsActive is
+explicitly false (retain current handling when missing), for both prices and
+anchors; verify using these caches plus missing/true/false mocked cases, without
+another paid call. WORKER.md §4 says not to guess a repair past a gate, so this
+policy change is proposed rather than silently inferred. Please approve that
+rule or supply the provider's governing semantics. Leave T15 default-off meanwhile.
