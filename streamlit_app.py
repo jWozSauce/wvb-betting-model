@@ -739,6 +739,12 @@ with tab_best:
         render_schedule(ratings, params, home_venues, render_pricing_panel)
     else:
         manual_mode = source_b == "Schedule + board (manual match)"
+        live_mapping_enabled = (source_b.startswith("Live API") and
+            os.environ.get("WVB_ENABLE_LIVE_TEAM_MAP", "0") == "1")
+        live_mapping = {}
+        if live_mapping_enabled:
+            import live_team_map
+            live_mapping = st.session_state.get("live_mapping", {})
         manual_run, manual_games, manual_unparsed, manual_inputs = False, [], [], {}
         if manual_mode:
             import manual_board
@@ -819,7 +825,7 @@ with tab_best:
 
         card_context = dict(pricing_context("Team Elo"),
                             venue_mode="per-game" if manual_mode else VENUE_SHORT.get(venue_b, venue_b))
-        if repair_flags.enabled() or manual_mode:
+        if repair_flags.enabled() or manual_mode or live_mapping_enabled:
             import hashlib
             card_inputs = dict(
                 context=card_context, source=source_b, paste=paste,
@@ -829,6 +835,8 @@ with tab_best:
                 availability=load_availability())
             if manual_mode:
                 card_inputs["manual"] = manual_inputs
+            if live_mapping_enabled:
+                card_inputs["live_mapping"] = live_mapping
             if ("best_card" in st.session_state and
                     st.session_state.get("best_inputs") != card_inputs):
                 for key in ("best_card", "best_unmatched", "best_low_conf",
@@ -850,22 +858,39 @@ with tab_best:
             if fc[0].button("Fetch odds & evaluate", type="primary"):
                 try:
                     games, nreq, quota = cached_api_board()
+                    if live_mapping_enabled:
+                        live_mapping = live_team_map.refresh(ratings.team.tolist(), live_team_map.credential())
+                        st.session_state.live_mapping = live_mapping
+                        st.session_state.live_games = games
                     st.caption(f"OddsPapi: {len(games)} pregame games fetched"
                                + (f" | {quota}" if quota else "")
                                + " (cached 10 min — re-clicks are free)")
                     run_eval = True
                 except Exception as e:
                     st.error(f"OddsPapi fetch failed: {safe_http.public_error(e)}")
+        if live_mapping_enabled:
+            live_mapping, changed = live_team_map.render(
+                st.session_state.get("live_games", []), ratings, live_mapping)
+            if changed:
+                games = st.session_state.live_games
+                run_eval = True
+            if not run_eval and st.session_state.get("live_games"):
+                if st.button("Evaluate saved live board", key="live_reprice"):
+                    games = st.session_state.live_games
+                    run_eval = True
+            card_inputs["live_mapping"] = dict(live_mapping)
         if run_eval:
             seos_all = ratings.team.tolist()
             team_fullnames = (dict(zip(ratings.team, ratings.name_full))
                               if "name_full" in ratings.columns else None)
             matched_pairs = []
             for g in games:
-                hm_, _ = paste_odds.match_team(g["home"], seos_all,
-                                               fullnames=team_fullnames)
-                am_, _ = paste_odds.match_team(g["away"], seos_all,
-                                               fullnames=team_fullnames)
+                if live_mapping_enabled:
+                    hm_, _ = live_team_map.resolve(g, "home", seos_all, team_fullnames, live_mapping)
+                    am_, _ = live_team_map.resolve(g, "away", seos_all, team_fullnames, live_mapping)
+                else:
+                    hm_, _ = paste_odds.match_team(g["home"], seos_all, fullnames=team_fullnames)
+                    am_, _ = paste_odds.match_team(g["away"], seos_all, fullnames=team_fullnames)
                 if hm_ and am_:
                     matched_pairs.append((am_, hm_))
             venue_info = {} if manual_mode else cached_venues(tuple(sorted(matched_pairs)))
@@ -880,6 +905,11 @@ with tab_best:
             for g in games:
                 if manual_mode:
                     h_match, a_match, hs, as_ = g["home"], g["away"], 1., 1.
+                elif live_mapping_enabled:
+                    h_match, hs = live_team_map.resolve(g, "home", seos, team_fullnames, live_mapping)
+                    a_match, as_ = live_team_map.resolve(g, "away", seos, team_fullnames, live_mapping)
+                    if h_match == a_match or min(hs, as_) < .8:
+                        h_match, a_match = None, None
                 else:
                     h_match, hs = paste_odds.match_team(g["home"], seos,
                                                         fullnames=team_fullnames)
@@ -911,7 +941,7 @@ with tab_best:
                         row["venue_mode"] = VENUE_SHORT[g["_venue_mode"]]
                         row["book_orientation"] = "book lists reversed" if g["_book_reversed"] else "same"
                 card_rows.extend(game_rows)
-            if repair_flags.enabled() or manual_mode:
+            if repair_flags.enabled() or manual_mode or live_mapping_enabled:
                 import copy
                 st.session_state.best_inputs = copy.deepcopy(card_inputs)
                 st.session_state.best_context = copy.deepcopy(card_context)

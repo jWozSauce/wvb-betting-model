@@ -181,6 +181,9 @@ def fetch_board(books=BOOKS, key: str | None = None, timeout: int = 60):
         if markets:
             games.append(dict(
                 away=away, home=home, markets=markets,
+                fixture_id=str(f["fixtureId"]),
+                home_participant_id=str(f["participant1Id"]),
+                away_participant_id=str(f["participant2Id"]),
                 time=start.strftime("%I:%M %p").lstrip("0"),
                 date=str(start.date()), _start=start))
     games.sort(key=lambda g: g.pop("_start"))

@@ -29,6 +29,9 @@ class Matching(unittest.TestCase):
   for case in cases:self.assertEqual(self.match(case['name']),case['expected'],case['name'])
   self.assertIsNone(self.match('USC Unknown Campus Trojans'))
   self.assertEqual(self.match('USC Upstate Spartans'),'usc-upstate')
+ def test_live_participant_regressions(self):
+  cases=json.loads((ROOT/'scripts/validation/fixtures/live_unmatched_teams.json').read_text())
+  for case in cases:self.assertEqual(self.match(case['name']),case['expected'],case['name'])
  def test_corpus(self):
   df=pd.read_csv(ROOT/'evidence/t1-20261001/matching-1/team_names.csv',keep_default_na=False)
   df['repaired']=df.input.map(self.match);df['repaired_verdict']=['unmatched' if pd.isna(x) else 'correct' if x==y else 'wrong' for x,y in zip(df.repaired,df.expected)]

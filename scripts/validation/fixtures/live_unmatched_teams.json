@@ -1,0 +1,918 @@
+[
+  {
+    "name": "Utah Tech Trailblazers",
+    "expected": null
+  },
+  {
+    "name": "Bowie State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "West Georgia Wolves",
+    "expected": null
+  },
+  {
+    "name": "Mercyhurst Lakers",
+    "expected": null
+  },
+  {
+    "name": "West Florida Argonauts",
+    "expected": null
+  },
+  {
+    "name": "Maryland Eastern Shore Hawks",
+    "expected": null
+  },
+  {
+    "name": "Kansas City Roos",
+    "expected": null
+  },
+  {
+    "name": "Toledo Rockets",
+    "expected": null
+  },
+  {
+    "name": "Denver Pioneers",
+    "expected": null
+  },
+  {
+    "name": "Western Illinois Leathernecks",
+    "expected": null
+  },
+  {
+    "name": "George Mason Patriots",
+    "expected": null
+  },
+  {
+    "name": "Siu Edwardsville Cougards",
+    "expected": null
+  },
+  {
+    "name": "Murray State Racers",
+    "expected": null
+  },
+  {
+    "name": "Northern Illinois Huskies",
+    "expected": null
+  },
+  {
+    "name": "Campbell Camels",
+    "expected": null
+  },
+  {
+    "name": "Virginia Cavaliers",
+    "expected": null
+  },
+  {
+    "name": "Nothern Iowa Panthers",
+    "expected": null
+  },
+  {
+    "name": "Central Connecticut Blue Devils",
+    "expected": null
+  },
+  {
+    "name": "UTRGV Vaqueros",
+    "expected": null
+  },
+  {
+    "name": "Robert Morris Colonials",
+    "expected": null
+  },
+  {
+    "name": "Louisiana Ragin Cajuns",
+    "expected": null
+  },
+  {
+    "name": "Texas State Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Coastal Carolina Chanticleers",
+    "expected": null
+  },
+  {
+    "name": "UT Arlington Mavs",
+    "expected": null
+  },
+  {
+    "name": "Arkansas State Red Wolves",
+    "expected": null
+  },
+  {
+    "name": "Colgate Raiders",
+    "expected": null
+  },
+  {
+    "name": "Xavier Musketeers",
+    "expected": null
+  },
+  {
+    "name": "Florida Atlantic Owls",
+    "expected": null
+  },
+  {
+    "name": "Stetson Hatters",
+    "expected": null
+  },
+  {
+    "name": "San Francisco Dons",
+    "expected": null
+  },
+  {
+    "name": "Louisiana Monroe Warhawks",
+    "expected": null
+  },
+  {
+    "name": "Akron Zips",
+    "expected": null
+  },
+  {
+    "name": "Penn Quakers",
+    "expected": null
+  },
+  {
+    "name": "Cal State Northridge Matadors",
+    "expected": null
+  },
+  {
+    "name": "Bucknell Bison",
+    "expected": null
+  },
+  {
+    "name": "Georgetown Hoyas",
+    "expected": null
+  },
+  {
+    "name": "Providence Friars",
+    "expected": null
+  },
+  {
+    "name": "Washington Huskies",
+    "expected": null
+  },
+  {
+    "name": "Long Beach State Beach",
+    "expected": null
+  },
+  {
+    "name": "Tulsa Golden Hurricane",
+    "expected": null
+  },
+  {
+    "name": "Charlotte 49ers",
+    "expected": null
+  },
+  {
+    "name": "Saint Louis Billikens",
+    "expected": null
+  },
+  {
+    "name": "University At Albany Great Danes",
+    "expected": null
+  },
+  {
+    "name": "Stony Brook Seawolves",
+    "expected": null
+  },
+  {
+    "name": "Umbc Retrievers",
+    "expected": null
+  },
+  {
+    "name": "Connecticut Huskies",
+    "expected": null
+  },
+  {
+    "name": "East Carolina Pirates",
+    "expected": null
+  },
+  {
+    "name": "Temple Owls",
+    "expected": null
+  },
+  {
+    "name": "Tulane Green Wave",
+    "expected": null
+  },
+  {
+    "name": "Ucf Knights",
+    "expected": null
+  },
+  {
+    "name": "Florida Gulf Coast Eagles",
+    "expected": null
+  },
+  {
+    "name": "Jacksonville Dolphins",
+    "expected": null
+  },
+  {
+    "name": "Kennesaw State Owls",
+    "expected": null
+  },
+  {
+    "name": "Liberty Lady Flames",
+    "expected": null
+  },
+  {
+    "name": "Lipscomb Bisons",
+    "expected": null
+  },
+  {
+    "name": "Njit Highlanders",
+    "expected": null
+  },
+  {
+    "name": "North Florida Ospreys",
+    "expected": null
+  },
+  {
+    "name": "Duquesne Dukes",
+    "expected": null
+  },
+  {
+    "name": "George Washington Revolutionaries",
+    "expected": null
+  },
+  {
+    "name": "Boston College Eagles",
+    "expected": null
+  },
+  {
+    "name": "Duke Blue Devils",
+    "expected": null
+  },
+  {
+    "name": "Notre Dame Fighting Irish",
+    "expected": null
+  },
+  {
+    "name": "Syracuse Orange",
+    "expected": null
+  },
+  {
+    "name": "Virginia Tech Hokies",
+    "expected": null
+  },
+  {
+    "name": "Wake Forest Demon Deacons",
+    "expected": null
+  },
+  {
+    "name": "Texas Tech Red Raiders",
+    "expected": null
+  },
+  {
+    "name": "Butler Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Depaul Blue Demons",
+    "expected": null
+  },
+  {
+    "name": "Seton Hall Pirates",
+    "expected": null
+  },
+  {
+    "name": "Idaho Vandals",
+    "expected": null
+  },
+  {
+    "name": "Idaho State Bengals",
+    "expected": null
+  },
+  {
+    "name": "Montana Grizzlies",
+    "expected": null
+  },
+  {
+    "name": "Montana State Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Northern Arizona Lumberjacks",
+    "expected": null
+  },
+  {
+    "name": "Portland State Viks",
+    "expected": null
+  },
+  {
+    "name": "Sacramento State Hornets",
+    "expected": null
+  },
+  {
+    "name": "Southern Utah Thunderbirds",
+    "expected": null
+  },
+  {
+    "name": "Charleston Southern Bucs",
+    "expected": null
+  },
+  {
+    "name": "Gardner Webb Runnin Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Hampton Pirates",
+    "expected": null
+  },
+  {
+    "name": "Radford Highlanders",
+    "expected": null
+  },
+  {
+    "name": "Unc Asheville Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Winthrop Eagles",
+    "expected": null
+  },
+  {
+    "name": "Ohio State Buckeyes",
+    "expected": null
+  },
+  {
+    "name": "Rutgers Scarlet Knights",
+    "expected": null
+  },
+  {
+    "name": "Cal State Fullerton Titans",
+    "expected": null
+  },
+  {
+    "name": "Hawaii Rainbow Wahine",
+    "expected": null
+  },
+  {
+    "name": "UC Irvine Anteaters",
+    "expected": null
+  },
+  {
+    "name": "UC Riverside Highlanders",
+    "expected": null
+  },
+  {
+    "name": "UC Santa Barbara Gauchos",
+    "expected": null
+  },
+  {
+    "name": "Charleston Cougars",
+    "expected": null
+  },
+  {
+    "name": "Delaware Blue Hens",
+    "expected": null
+  },
+  {
+    "name": "Elon Phoenix",
+    "expected": null
+  },
+  {
+    "name": "Hofstra Pride",
+    "expected": null
+  },
+  {
+    "name": "James Madison Dukes",
+    "expected": null
+  },
+  {
+    "name": "Northeastern Huskies",
+    "expected": null
+  },
+  {
+    "name": "Unc Wilmington Seahawks",
+    "expected": null
+  },
+  {
+    "name": "William And Mary Tribe",
+    "expected": null
+  },
+  {
+    "name": "Marshall Herd",
+    "expected": null
+  },
+  {
+    "name": "Middle Tennessee Blue Raiders",
+    "expected": null
+  },
+  {
+    "name": "Rice Owls",
+    "expected": null
+  },
+  {
+    "name": "Southern Miss Lady Eagles",
+    "expected": null
+  },
+  {
+    "name": "Uab Blazers",
+    "expected": null
+  },
+  {
+    "name": "UTSA Roadrunners",
+    "expected": null
+  },
+  {
+    "name": "Western Kentucky Lady Toppers",
+    "expected": null
+  },
+  {
+    "name": "Cleveland State Vikings",
+    "expected": null
+  },
+  {
+    "name": "Green Bay Phoenix",
+    "expected": null
+  },
+  {
+    "name": "IU Indy Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Northern Kentucky Norse",
+    "expected": null
+  },
+  {
+    "name": "Oakland Golden Grizzlies",
+    "expected": null
+  },
+  {
+    "name": "UIC Flames",
+    "expected": null
+  },
+  {
+    "name": "Wright State Raiders",
+    "expected": null
+  },
+  {
+    "name": "Youngstown State Penguins",
+    "expected": null
+  },
+  {
+    "name": "Columbia Lions",
+    "expected": null
+  },
+  {
+    "name": "Cornell Big Red",
+    "expected": null
+  },
+  {
+    "name": "Dartmouth Big Green",
+    "expected": null
+  },
+  {
+    "name": "Yale Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Canisius Golden Griffs",
+    "expected": null
+  },
+  {
+    "name": "Fairfield Stags",
+    "expected": null
+  },
+  {
+    "name": "Iona Gaels",
+    "expected": null
+  },
+  {
+    "name": "Manhattan Jaspers",
+    "expected": null
+  },
+  {
+    "name": "Marist Red Foxes",
+    "expected": null
+  },
+  {
+    "name": "Niagara Purple Eagles",
+    "expected": null
+  },
+  {
+    "name": "Quinnipiac Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Rider Broncs",
+    "expected": null
+  },
+  {
+    "name": "Saint Peters Peacocks",
+    "expected": null
+  },
+  {
+    "name": "Siena Saints",
+    "expected": null
+  },
+  {
+    "name": "Bowling Green Falcons",
+    "expected": null
+  },
+  {
+    "name": "Central Michigan Chippewas",
+    "expected": null
+  },
+  {
+    "name": "Eastern Michigan Eagles",
+    "expected": null
+  },
+  {
+    "name": "Kent State Golden Flashes",
+    "expected": null
+  },
+  {
+    "name": "Miami Ohio Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Ohio Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Coppin State Eagles",
+    "expected": null
+  },
+  {
+    "name": "Delaware State Hornets",
+    "expected": null
+  },
+  {
+    "name": "Florida A&M Rattlers",
+    "expected": null
+  },
+  {
+    "name": "Howard Bison",
+    "expected": null
+  },
+  {
+    "name": "North Carolina A&T Aggies",
+    "expected": null
+  },
+  {
+    "name": "North Carolina Central Eagles",
+    "expected": null
+  },
+  {
+    "name": "South Carolina Gamecocks",
+    "expected": null
+  },
+  {
+    "name": "Bradley Braves",
+    "expected": null
+  },
+  {
+    "name": "Drake Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Evansville Purple Aces",
+    "expected": null
+  },
+  {
+    "name": "Illinois State Redbirds",
+    "expected": null
+  },
+  {
+    "name": "Indiana State Sycamores",
+    "expected": null
+  },
+  {
+    "name": "Loyola Chicago Ramblers",
+    "expected": null
+  },
+  {
+    "name": "Harvard Crimson",
+    "expected": null
+  },
+  {
+    "name": "Southern Illinois Salukis",
+    "expected": null
+  },
+  {
+    "name": "Valparaiso Beacons",
+    "expected": null
+  },
+  {
+    "name": "Air Force Falcons",
+    "expected": null
+  },
+  {
+    "name": "New Haven Chargers",
+    "expected": null
+  },
+  {
+    "name": "Le Moyne Dolphins",
+    "expected": null
+  },
+  {
+    "name": "Stonehill Skyhawks",
+    "expected": null
+  },
+  {
+    "name": "Rutgers-Camden Scarlet Raptors",
+    "expected": null
+  },
+  {
+    "name": "Navy Mids",
+    "expected": null
+  },
+  {
+    "name": "Fresno State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Georgia Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "San Diego State Aztecs",
+    "expected": null
+  },
+  {
+    "name": "California Golden Bears",
+    "expected": null
+  },
+  {
+    "name": "Mississippi State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Loyola Marymount Lions",
+    "expected": null
+  },
+  {
+    "name": "Portland Pilots",
+    "expected": null
+  },
+  {
+    "name": "St. Thomas (MN) Tommies",
+    "expected": null
+  },
+  {
+    "name": "Alabama State Hornets",
+    "expected": null
+  },
+  {
+    "name": "South Dakota Coyotes",
+    "expected": null
+  },
+  {
+    "name": "Saint Mary\u00b4s Gaels",
+    "expected": null
+  },
+  {
+    "name": "Samford Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Pepperdine Waves",
+    "expected": null
+  },
+  {
+    "name": "Stephen F. Austin Lumberjacks",
+    "expected": null
+  },
+  {
+    "name": "East Tennessee State Bucs",
+    "expected": null
+  },
+  {
+    "name": "Bryant Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Arkansas Razorbacks",
+    "expected": null
+  },
+  {
+    "name": "Sacred Heart Pioneers",
+    "expected": null
+  },
+  {
+    "name": "Fairleigh Dickinson Knights",
+    "expected": null
+  },
+  {
+    "name": "Purdue Fort Wayne Mastodons",
+    "expected": null
+  },
+  {
+    "name": "Grand Canyon Antelopes",
+    "expected": null
+  },
+  {
+    "name": "American Eagles",
+    "expected": null
+  },
+  {
+    "name": "Austin Peay Governors",
+    "expected": null
+  },
+  {
+    "name": "Cal State Bakersfield Roadrunners",
+    "expected": null
+  },
+  {
+    "name": "Loyola Maryland Greyhounds",
+    "expected": null
+  },
+  {
+    "name": "Omaha Mavericks",
+    "expected": null
+  },
+  {
+    "name": "Seattle Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Liu Sharks",
+    "expected": null
+  },
+  {
+    "name": "North Alabama Lions",
+    "expected": null
+  },
+  {
+    "name": "Lehigh Mountain Hawks",
+    "expected": null
+  },
+  {
+    "name": "Eastern Kentucky Colonels",
+    "expected": null
+  },
+  {
+    "name": "North Dakota Fighting Hawks",
+    "expected": null
+  },
+  {
+    "name": "Holy Cross Crusaders",
+    "expected": null
+  },
+  {
+    "name": "Nevada Wolf Pack",
+    "expected": null
+  },
+  {
+    "name": "Tarleton State Texans",
+    "expected": null
+  },
+  {
+    "name": "New Mexico Lobos",
+    "expected": null
+  },
+  {
+    "name": "Southeast Missouri State Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Furman Paladins",
+    "expected": null
+  },
+  {
+    "name": "Wofford Terriers",
+    "expected": null
+  },
+  {
+    "name": "Alabama Crimson Tide",
+    "expected": null
+  },
+  {
+    "name": "UC San Diego Tritons",
+    "expected": null
+  },
+  {
+    "name": "California Baptist Lancers",
+    "expected": null
+  },
+  {
+    "name": "Army Black Knights",
+    "expected": null
+  },
+  {
+    "name": "Houston Christian Huskies",
+    "expected": null
+  },
+  {
+    "name": "Lafayette Leopards",
+    "expected": null
+  },
+  {
+    "name": "Nicholls Colonels",
+    "expected": null
+  },
+  {
+    "name": "LSU New Orleans Privateers",
+    "expected": null
+  },
+  {
+    "name": "Texas A&M\u2013Corpus Christi Islanders",
+    "expected": null
+  },
+  {
+    "name": "Incarnate Word Cardinals",
+    "expected": null
+  },
+  {
+    "name": "Sam Houston State Bearkats",
+    "expected": null
+  },
+  {
+    "name": "Prairie View AM Panthers",
+    "expected": null
+  },
+  {
+    "name": "Georgia Southern Eagles",
+    "expected": null
+  },
+  {
+    "name": "South Alabama Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Southern Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Wyoming Cowgirls",
+    "expected": null
+  },
+  {
+    "name": "Merrimack Warriors",
+    "expected": null
+  },
+  {
+    "name": "Arkansas Little Rock Trojans",
+    "expected": null
+  },
+  {
+    "name": "Western Carolina Catamounts",
+    "expected": null
+  },
+  {
+    "name": "Chattanooga Mocs",
+    "expected": null
+  },
+  {
+    "name": "Jacksonville State Gamecocks",
+    "expected": null
+  },
+  {
+    "name": "Ut Martin Skyhawks",
+    "expected": null
+  },
+  {
+    "name": "Morehead State Eagles",
+    "expected": null
+  },
+  {
+    "name": "East Texas AM Lions",
+    "expected": null
+  },
+  {
+    "name": "McNeese State Cowgirls",
+    "expected": null
+  },
+  {
+    "name": "Alcorn State Lady Braves",
+    "expected": null
+  },
+  {
+    "name": "Alabama Am Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Southeastern Louisiana Lions",
+    "expected": null
+  },
+  {
+    "name": "Northwestern State Demons",
+    "expected": null
+  },
+  {
+    "name": "Old Dominion Monarchs",
+    "expected": null
+  },
+  {
+    "name": "Southern Indiana Screaming Eagles",
+    "expected": null
+  },
+  {
+    "name": "Bellarmine Knights",
+    "expected": null
+  },
+  {
+    "name": "Lindenwood Lions",
+    "expected": null
+  },
+  {
+    "name": "Queens (NC) Royals",
+    "expected": null
+  },
+  {
+    "name": "Purdue Boilermakers",
+    "expected": "purdue"
+  }
+]

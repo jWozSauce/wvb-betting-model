@@ -14,3 +14,6 @@ backfill_*.log
 sheet_id.txt
 oddspapi_key.txt
 odds papi API.rtf
+# Local participant-map writer lock / atomic temporary files
+app_data/oddspapi_team_map.lock
+app_data/.team-map-*
