@@ -355,14 +355,17 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
         + "</div>",
         unsafe_allow_html=True)
 
+    replacement_enabled = os.environ.get("WVB_ENABLE_REPLACEMENT_LINEUPS", "0") == "1"
     model_mode = st.radio(
         "Pricing model",
         ["Team Elo", "Hybrid (Elo + lineup adjust)", "Player (RAPM)"],
         horizontal=True, key=panel_key("model"),
         help=("Team Elo does not automatically adjust for absences. Hybrid compares "
               "the selected lineup (initially last-match starters) with the season "
-              "rotation; unchanged selections can already differ from Team Elo. "
-              "Removing a player redistributes her weight to the remaining lineup. "
+              "rotation; unchanged selections can already differ from Team Elo. " +
+              ("Removed players can transfer their minutes to a replacement below. "
+               if replacement_enabled else
+               "Removing a player redistributes her weight to the remaining lineup. ") +
               "Player RAPM prices the selected lineup directly."
               if repair_flags.enabled() else
               "Team Elo: season-long team ratings. Hybrid: Elo baseline, "
@@ -381,7 +384,7 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                                ascending=False))
             if not len(tr):
                 col.error(f"No roster data for {team}.")
-                return None, []
+                return None, [], []
             default = tr[tr.in_last_lineup].player.tolist() \
                 or tr.player.head(6).tolist()
             sel = col.multiselect(
@@ -390,18 +393,15 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                 key=f"{key_prefix}lineup_{team}",
                 format_func=(lambda name: player_metrics.annotate(team, name, annotations))
                 if repair_flags.enabled() else str)
-            return tr.to_dict("records"), sel
+            return tr.to_dict("records"), sel, default
 
         lc = st.columns(2)
-        a_rows, a_sel = lineup_ui(away_team, lc[0])
-        h_rows, h_sel = lineup_ui(home_team, lc[1])
+        a_rows, a_sel, a_rotation = lineup_ui(away_team, lc[0])
+        h_rows, h_sel, h_rotation = lineup_ui(home_team, lc[1])
         if repair_flags.enabled() and (a_rows is None or h_rows is None):
             st.warning("Player pricing is unavailable without both rosters. "
                        "Choose Team Elo to price this match.")
             return
-        if not (a_sel and h_sel):
-            st.warning("Empty lineup — that side is priced as an exactly "
-                       "average team.")
         pt_weight = st.checkbox(
             "Weight lineup by playing time", value=True, key=panel_key("pt_weight"),
             help="The selection always normalizes to six on-court "
@@ -410,10 +410,32 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                  "selecting a full roster still prices like the real "
                  "rotation. Unchecked: everyone selected counts "
                  "equally (6/n each).")
-        h_sv, h_rc, cov_h = rapm_price.lineup_strength(
-            h_rows, set(h_sel), playtime_weighted=pt_weight)
-        a_sv, a_rc, cov_a = rapm_price.lineup_strength(
-            a_rows, set(a_sel), playtime_weighted=pt_weight)
+        replacement = False
+        if replacement_enabled:
+            replacement = st.radio(
+                "Removed minutes go to",
+                ["replacement-level sub (default)", "remaining selected players"],
+                key=panel_key("removal_mode"), horizontal=True) == "replacement-level sub (default)"
+        if not replacement and not (a_sel and h_sel):
+            st.warning("Empty lineup — that side is priced as an exactly average team.")
+        if replacement:
+            (h_sv, h_rc, cov_h), h_subs = rapm_price.replacement_strength(
+                h_rows, h_sel, h_rotation, pt_weight)
+            (a_sv, a_rc, cov_a), a_subs = rapm_price.replacement_strength(
+                a_rows, a_sel, a_rotation, pt_weight)
+            st.caption("Replacement bench: rated roster players outside the initial lineup and current selection. "
+                       "Use the lineup selector to add an actual substitute; additions take removed minutes "
+                       "at the same position first. Otherwise use the position bench average, then the team "
+                       "bench average, then zero (league average). The removed player's share is retained.")
+            for team, subs in ((away_team, a_subs), (home_team, h_subs)):
+                for sub in subs:
+                    st.write(f"{team}: {sub['player']} → {sub['target']} ({sub['impact_per_set']:+.2f} pts/set)")
+                    st.caption("Replacement pool: " + (", ".join(sub['members']) or "No available bench; coefficients 0"))
+        else:
+            h_sv, h_rc, cov_h = rapm_price.lineup_strength(
+                h_rows, set(h_sel), playtime_weighted=pt_weight)
+            a_sv, a_rc, cov_a = rapm_price.lineup_strength(
+                a_rows, set(a_sel), playtime_weighted=pt_weight)
 
     if model_mode != "Player (RAPM)":
         Xf = model.features(pd.DataFrame([{
