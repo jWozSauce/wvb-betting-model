@@ -1,0 +1,171 @@
+[
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "bet365",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "bet365-nj",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "betmgm",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "betrivers",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "bovada.lv",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "caesars",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "circasports",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "espnbet",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "fanatics",
+    "status": 404,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "hardrockbet",
+    "status": 200,
+    "trail_points": 2,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [
+      "Winner"
+    ],
+    "markets": [
+      "Winner"
+    ]
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "lowvig.ag",
+    "status": 200,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "pinnacle",
+    "status": 200,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "pinnacle+5",
+    "status": 403,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "pinnacle+30",
+    "status": 403,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  },
+  {
+    "fixture_id": "id2304384773534876",
+    "start_time": "2026-09-27T18:00:00.000Z",
+    "book": "betonline.ag",
+    "status": 403,
+    "trail_points": 0,
+    "pregame_points": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "markets": []
+  }
+]

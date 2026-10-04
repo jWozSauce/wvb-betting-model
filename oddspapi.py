@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import time
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -36,7 +37,12 @@ TOURNAMENT_NCAAW = "43847"
 SPORT_ID = 23
 # devig-anchor priority order (Pinnacle = sharp book); betonline.ag is the
 # book Josh actually bets, so its prices must be on the card
-BOOKS = ("pinnacle", "draftkings", "fanduel", "betonline.ag")
+LEGACY_BOOKS = ("pinnacle", "draftkings", "fanduel", "betonline.ag")
+BOOKS = (*LEGACY_BOOKS, "bovada.lv")
+
+def default_books():
+    return BOOKS if os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1" else LEGACY_BOOKS
+
 HERE = Path(__file__).resolve().parent
 LOCAL_KEY = HERE / "oddspapi_key.txt"  # gitignored
 ET = ZoneInfo("America/New_York")
@@ -116,10 +122,13 @@ def _pair_key(mk: str, side: str, point):
     return (mk, point)
 
 
-def fetch_board(books=BOOKS, key: str | None = None, timeout: int = 60):
+def fetch_board(books=None, key: str | None = None, timeout: int = 60):
     """One API request per book. Returns (games, n_requests) with games in
     paste_odds.parse_board shape + extras: each market has book / mkt_prob /
     devig_book, each game has date (ET) alongside time."""
+    books = default_books() if books is None else tuple(dict.fromkeys(books))
+    if not books:
+        return [], 0
     key = key or api_key()
     mktmap, names = _markets_map(), _participants()
     fixtures: dict = {}

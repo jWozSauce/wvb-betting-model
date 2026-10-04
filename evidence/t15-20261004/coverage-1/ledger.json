@@ -1,0 +1,49 @@
+{
+  "task": "T15",
+  "billable_cap": 0,
+  "requests": 5,
+  "state": "stopped",
+  "candidates": [
+    "bet365",
+    "bet365-nj",
+    "betmgm",
+    "betrivers",
+    "bovada.lv",
+    "caesars",
+    "circasports",
+    "espnbet",
+    "fanatics",
+    "hardrockbet",
+    "lowvig.ag",
+    "pinnacle",
+    "pinnacle+5",
+    "pinnacle+30",
+    "betonline.ag",
+    "draftkings",
+    "fanduel"
+  ],
+  "updated_at": "2026-10-04T20:43:27.429964+00:00",
+  "prior_attempts": [
+    {
+      "state": "stopped",
+      "error": "account: network request failed",
+      "updated_at": "2026-10-04T20:42:13.224356+00:00",
+      "requests": 0,
+      "review": "Sandbox network unavailable; retry only the free account check with network permission."
+    }
+  ],
+  "quota_before": {
+    "used": 10,
+    "limit": 250
+  },
+  "quota_after_probe": {
+    "used": 10,
+    "limit": 250
+  },
+  "error": "Request failed; details withheld.",
+  "quota_after_stop": {
+    "used": 10,
+    "limit": 250
+  },
+  "stop_detail": "HTTP 403 on pinnacle+5,pinnacle+30,betonline.ag; no retry or further history calls"
+}

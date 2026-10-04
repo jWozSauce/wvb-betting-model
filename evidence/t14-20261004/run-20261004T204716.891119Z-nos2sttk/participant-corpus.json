@@ -1,0 +1,2368 @@
+[
+  {
+    "participant_id": "1074744",
+    "name": "Utah Tech Trailblazers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "1088295",
+    "name": "Bowie State Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "1179139",
+    "name": "West Georgia Wolves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "1192083",
+    "name": "Mercyhurst Lakers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "1267282",
+    "name": "Vanderbilt Commodores",
+    "matched": "vanderbilt",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "1375582",
+    "name": "West Florida Argonauts",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "287441",
+    "name": "Maryland Eastern Shore Hawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "287443",
+    "name": "Kansas City Roos",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290570",
+    "name": "Toledo Rockets",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290628",
+    "name": "Denver Pioneers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290630",
+    "name": "Western Illinois Leathernecks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290632",
+    "name": "Davidson Wildcats",
+    "matched": "davidson",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "290634",
+    "name": "George Mason Patriots",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290636",
+    "name": "UCLA Bruins",
+    "matched": "ucla",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "290640",
+    "name": "Arizona Wildcats",
+    "matched": "arizona",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "290642",
+    "name": "Siu Edwardsville Cougards",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290644",
+    "name": "Murray State Racers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290648",
+    "name": "Northern Illinois Huskies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "290656",
+    "name": "Georgia State Panthers",
+    "matched": "georgia-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "290664",
+    "name": "Appalachian State Mountaineers",
+    "matched": "appalachian-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "290902",
+    "name": "Campbell Camels",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "292330",
+    "name": "Virginia Cavaliers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "292332",
+    "name": "Nothern Iowa Panthers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "292356",
+    "name": "Central Connecticut Blue Devils",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "294052",
+    "name": "UTRGV Vaqueros",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "294098",
+    "name": "Robert Morris Colonials",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "295874",
+    "name": "Norfolk State Spartans",
+    "matched": "norfolk-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "296276",
+    "name": "Louisiana Ragin Cajuns",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "297488",
+    "name": "Morgan State Bears",
+    "matched": "morgan-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "298860",
+    "name": "NC State Wolfpack",
+    "matched": "north-carolina-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "300230",
+    "name": "North Carolina Tar Heels",
+    "matched": "north-carolina",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "300576",
+    "name": "Texas State Bobcats",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "300578",
+    "name": "Coastal Carolina Chanticleers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "300580",
+    "name": "UT Arlington Mavs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "300582",
+    "name": "Arkansas State Red Wolves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "300700",
+    "name": "Colgate Raiders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "337295",
+    "name": "Purdue Boilermakers",
+    "matched": "purdue",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "375186",
+    "name": "Georgia Tech Yellow Jackets",
+    "matched": "georgia-tech",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "375192",
+    "name": "Xavier Musketeers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "377444",
+    "name": "Florida Atlantic Owls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "377446",
+    "name": "Stetson Hatters",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "377770",
+    "name": "BYU Cougars",
+    "matched": "byu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "379730",
+    "name": "San Francisco Dons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "379788",
+    "name": "Louisiana Monroe Warhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "379790",
+    "name": "Akron Zips",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "379794",
+    "name": "Penn Quakers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "383406",
+    "name": "UC Davis Aggies",
+    "matched": "uc-davis",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "383408",
+    "name": "Cal State Northridge Matadors",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "383658",
+    "name": "Bucknell Bison",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "386138",
+    "name": "San Jose State Spartans",
+    "matched": "san-jose-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "393588",
+    "name": "Georgetown Hoyas",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "393590",
+    "name": "Providence Friars",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "396378",
+    "name": "Washington Huskies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "396388",
+    "name": "Miami Hurricanes",
+    "matched": "miami-fl",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "397472",
+    "name": "Long Beach State Beach",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "399555",
+    "name": "Tulsa Golden Hurricane",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "399557",
+    "name": "Charlotte 49ers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "399561",
+    "name": "Saint Louis Billikens",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "399567",
+    "name": "Utah Utes",
+    "matched": "utah",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462175",
+    "name": "University At Albany Great Danes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462181",
+    "name": "Binghamton Bearcats",
+    "matched": "binghamton",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462191",
+    "name": "New Hampshire Wildcats",
+    "matched": "new-hampshire",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462193",
+    "name": "Stony Brook Seawolves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462197",
+    "name": "Umbc Retrievers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462199",
+    "name": "Cincinnati Bearcats",
+    "matched": "cincinnati",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462201",
+    "name": "Connecticut Huskies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462203",
+    "name": "East Carolina Pirates",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462205",
+    "name": "Houston Cougars",
+    "matched": "houston",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462209",
+    "name": "Memphis Tigers",
+    "matched": "memphis",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462211",
+    "name": "Smu Mustangs",
+    "matched": "smu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462213",
+    "name": "South Florida Bulls",
+    "matched": "south-fla",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462215",
+    "name": "Temple Owls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462217",
+    "name": "Tulane Green Wave",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462239",
+    "name": "Ucf Knights",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462241",
+    "name": "Wichita State Shockers",
+    "matched": "wichita-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462243",
+    "name": "Florida Gulf Coast Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462245",
+    "name": "Jacksonville Dolphins",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462247",
+    "name": "Kennesaw State Owls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462249",
+    "name": "Liberty Lady Flames",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462251",
+    "name": "Lipscomb Bisons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462253",
+    "name": "Njit Highlanders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462257",
+    "name": "North Florida Ospreys",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462259",
+    "name": "Dayton Flyers",
+    "matched": "dayton",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462261",
+    "name": "Duquesne Dukes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462263",
+    "name": "Fordham Rams",
+    "matched": "fordham",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462265",
+    "name": "George Washington Revolutionaries",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462269",
+    "name": "Rhode Island Rams",
+    "matched": "rhode-island",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462271",
+    "name": "Vcu Rams",
+    "matched": "vcu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462273",
+    "name": "Boston College Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462281",
+    "name": "Clemson Tigers",
+    "matched": "clemson",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462283",
+    "name": "Duke Blue Devils",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462285",
+    "name": "Florida State Seminoles",
+    "matched": "florida-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462289",
+    "name": "Louisville Cardinals",
+    "matched": "louisville",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462293",
+    "name": "Notre Dame Fighting Irish",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462295",
+    "name": "Pittsburgh Panthers",
+    "matched": "pittsburgh",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462299",
+    "name": "Syracuse Orange",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462301",
+    "name": "Virginia Tech Hokies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462303",
+    "name": "Wake Forest Demon Deacons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462311",
+    "name": "Baylor Bears",
+    "matched": "baylor",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462313",
+    "name": "Iowa State Cyclones",
+    "matched": "iowa-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462315",
+    "name": "Kansas Jayhawks",
+    "matched": "kansas",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462317",
+    "name": "Kansas State Wildcats",
+    "matched": "kansas-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462319",
+    "name": "Oklahoma Sooners",
+    "matched": "oklahoma",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462321",
+    "name": "Tcu Horned Frogs",
+    "matched": "tcu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462323",
+    "name": "Texas Longhorns",
+    "matched": "texas",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462325",
+    "name": "Texas Tech Red Raiders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462327",
+    "name": "West Virginia Mountaineers",
+    "matched": "west-virginia",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462329",
+    "name": "Butler Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462331",
+    "name": "Creighton Bluejays",
+    "matched": "creighton",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462333",
+    "name": "Depaul Blue Demons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462345",
+    "name": "Marquette Golden Eagles",
+    "matched": "marquette",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462347",
+    "name": "Seton Hall Pirates",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462349",
+    "name": "St. John's Red Storm",
+    "matched": "st-johns-ny",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462351",
+    "name": "Villanova Wildcats",
+    "matched": "villanova",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462355",
+    "name": "Idaho Vandals",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462357",
+    "name": "Idaho State Bengals",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462359",
+    "name": "Montana Grizzlies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462363",
+    "name": "Montana State Bobcats",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462365",
+    "name": "Northern Arizona Lumberjacks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462367",
+    "name": "Northern Colorado Bears",
+    "matched": "northern-colo",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462369",
+    "name": "Portland State Viks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462371",
+    "name": "Sacramento State Hornets",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462373",
+    "name": "Southern Utah Thunderbirds",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462375",
+    "name": "Weber State Wildcats",
+    "matched": "weber-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462381",
+    "name": "Charleston Southern Bucs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462383",
+    "name": "Gardner Webb Runnin Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462385",
+    "name": "Hampton Pirates",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462387",
+    "name": "High Point Panthers",
+    "matched": "high-point",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462389",
+    "name": "Radford Highlanders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462393",
+    "name": "Unc Asheville Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462395",
+    "name": "Usc Upstate Spartans",
+    "matched": "usc-upstate",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462397",
+    "name": "Winthrop Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462399",
+    "name": "Illinois Fighting Illini",
+    "matched": "illinois",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462401",
+    "name": "Indiana Hoosiers",
+    "matched": "indiana",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462403",
+    "name": "Iowa Hawkeyes",
+    "matched": "iowa",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462405",
+    "name": "Maryland Terrapins",
+    "matched": "maryland",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462409",
+    "name": "Michigan Wolverines",
+    "matched": "michigan",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462415",
+    "name": "Michigan State Spartans",
+    "matched": "michigan-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462417",
+    "name": "Minnesota Golden Gophers",
+    "matched": "minnesota",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462419",
+    "name": "Nebraska Huskers",
+    "matched": "nebraska",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462421",
+    "name": "Northwestern Wildcats",
+    "matched": "northwestern",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462423",
+    "name": "Ohio State Buckeyes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462427",
+    "name": "Penn State Nittany Lions",
+    "matched": "penn-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462435",
+    "name": "Rutgers Scarlet Knights",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462437",
+    "name": "Wisconsin Badgers",
+    "matched": "wisconsin",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462443",
+    "name": "Cal Poly Mustangs",
+    "matched": "cal-poly",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462447",
+    "name": "Cal State Fullerton Titans",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462453",
+    "name": "Hawaii Rainbow Wahine",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462457",
+    "name": "UC Irvine Anteaters",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462471",
+    "name": "UC Riverside Highlanders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462475",
+    "name": "UC Santa Barbara Gauchos",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462477",
+    "name": "Charleston Cougars",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462485",
+    "name": "Delaware Blue Hens",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462489",
+    "name": "Elon Phoenix",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462493",
+    "name": "Hofstra Pride",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462495",
+    "name": "James Madison Dukes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462497",
+    "name": "Northeastern Huskies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462501",
+    "name": "Towson Tigers",
+    "matched": "towson",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462505",
+    "name": "Unc Wilmington Seahawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462507",
+    "name": "William And Mary Tribe",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462509",
+    "name": "Fiu Panthers",
+    "matched": "fiu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462517",
+    "name": "Marshall Herd",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462519",
+    "name": "Middle Tennessee Blue Raiders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462521",
+    "name": "North Texas Mean Green",
+    "matched": "north-texas",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462523",
+    "name": "Rice Owls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462525",
+    "name": "Southern Miss Lady Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462527",
+    "name": "Uab Blazers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462529",
+    "name": "UTEP Miners",
+    "matched": "utep",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462531",
+    "name": "UTSA Roadrunners",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462535",
+    "name": "Western Kentucky Lady Toppers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462539",
+    "name": "Cleveland State Vikings",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462541",
+    "name": "Green Bay Phoenix",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462543",
+    "name": "IU Indy Jaguars",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462545",
+    "name": "Milwaukee Panthers",
+    "matched": "milwaukee",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462547",
+    "name": "Northern Kentucky Norse",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462551",
+    "name": "Oakland Golden Grizzlies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462555",
+    "name": "UIC Flames",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462559",
+    "name": "Wright State Raiders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462563",
+    "name": "Youngstown State Penguins",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462565",
+    "name": "Brown Bears",
+    "matched": "brown",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462567",
+    "name": "Columbia Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462569",
+    "name": "Cornell Big Red",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462571",
+    "name": "Dartmouth Big Green",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462593",
+    "name": "Princeton Tigers",
+    "matched": "princeton",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462595",
+    "name": "Yale Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462597",
+    "name": "Canisius Golden Griffs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462599",
+    "name": "Fairfield Stags",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462601",
+    "name": "Iona Gaels",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462603",
+    "name": "Manhattan Jaspers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462605",
+    "name": "Marist Red Foxes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462607",
+    "name": "Niagara Purple Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462609",
+    "name": "Quinnipiac Bobcats",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462611",
+    "name": "Rider Broncs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462613",
+    "name": "Saint Peters Peacocks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462615",
+    "name": "Siena Saints",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462617",
+    "name": "Ball State Cardinals",
+    "matched": "ball-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462619",
+    "name": "Bowling Green Falcons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462621",
+    "name": "Buffalo Bulls",
+    "matched": "buffalo",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462623",
+    "name": "Central Michigan Chippewas",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462625",
+    "name": "Eastern Michigan Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462627",
+    "name": "Kent State Golden Flashes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462629",
+    "name": "Miami Ohio Redhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462631",
+    "name": "Ohio Bobcats",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462633",
+    "name": "Western Michigan Broncos",
+    "matched": "western-mich",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462637",
+    "name": "Coppin State Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462639",
+    "name": "Delaware State Hornets",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462641",
+    "name": "Florida A&M Rattlers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462643",
+    "name": "Howard Bison",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462645",
+    "name": "North Carolina A&T Aggies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462647",
+    "name": "North Carolina Central Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462651",
+    "name": "South Carolina Gamecocks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462653",
+    "name": "Bradley Braves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462655",
+    "name": "Drake Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462657",
+    "name": "Evansville Purple Aces",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462659",
+    "name": "Illinois State Redbirds",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462661",
+    "name": "Indiana State Sycamores",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462663",
+    "name": "Loyola Chicago Ramblers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462667",
+    "name": "Harvard Crimson",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462669",
+    "name": "Missouri State Bears",
+    "matched": "missouri-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "462673",
+    "name": "Southern Illinois Salukis",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462675",
+    "name": "Valparaiso Beacons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "462677",
+    "name": "Air Force Falcons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "497554",
+    "name": "New Haven Chargers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "497560",
+    "name": "Le Moyne Dolphins",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "497564",
+    "name": "Stonehill Skyhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "500584",
+    "name": "Rutgers-Camden Scarlet Raptors",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "502902",
+    "name": "Navy Mids",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "502904",
+    "name": "Lsu Tigers",
+    "matched": "lsu",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502906",
+    "name": "Abilene Christian Wildcats",
+    "matched": "abilene-christian",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502908",
+    "name": "Fresno State Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "502912",
+    "name": "Tennessee Tech Golden Eagles",
+    "matched": "tennessee-tech",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502914",
+    "name": "Kentucky Wildcats",
+    "matched": "kentucky",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502916",
+    "name": "Florida Gators",
+    "matched": "florida",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502918",
+    "name": "Georgia Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "502920",
+    "name": "San Diego State Aztecs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "502922",
+    "name": "Oregon State Beavers",
+    "matched": "oregon-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "502924",
+    "name": "Utah Valley Wolverines",
+    "matched": "utah-valley",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "504952",
+    "name": "Colorado Buffaloes",
+    "matched": "colorado",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "504954",
+    "name": "California Golden Bears",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "504956",
+    "name": "Stanford Cardinal",
+    "matched": "stanford",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "505804",
+    "name": "Mississippi State Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "505806",
+    "name": "South Dakota State Jackrabbits",
+    "matched": "south-dakota-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "505810",
+    "name": "Arizona State Sun Devils",
+    "matched": "arizona-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "505812",
+    "name": "USC Trojans",
+    "matched": "southern-california",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "507534",
+    "name": "Loyola Marymount Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "507536",
+    "name": "Portland Pilots",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "509148",
+    "name": "St. Thomas (MN) Tommies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "512088",
+    "name": "Washington State Cougars",
+    "matched": "washington-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "513398",
+    "name": "Oregon Ducks",
+    "matched": "oregon",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522728",
+    "name": "Alabama State Hornets",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522730",
+    "name": "Tennessee Lady Volunteers",
+    "matched": "tennessee",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522732",
+    "name": "Colorado State Rams",
+    "matched": "colorado-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522736",
+    "name": "South Dakota Coyotes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522738",
+    "name": "Saint Mary\u00b4s Gaels",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522740",
+    "name": "Samford Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522742",
+    "name": "San Diego Toreros",
+    "matched": "san-diego",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522744",
+    "name": "Pepperdine Waves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522746",
+    "name": "Stephen F. Austin Lumberjacks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522752",
+    "name": "Missouri Tigers",
+    "matched": "missouri",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522754",
+    "name": "East Tennessee State Bucs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "522758",
+    "name": "New Mexico State Aggies",
+    "matched": "new-mexico-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "522762",
+    "name": "Bryant Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "529445",
+    "name": "Arkansas Razorbacks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "529447",
+    "name": "Auburn Tigers",
+    "matched": "auburn",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "529451",
+    "name": "Sacred Heart Pioneers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "529453",
+    "name": "Fairleigh Dickinson Knights",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "530311",
+    "name": "Purdue Fort Wayne Mastodons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "566203",
+    "name": "Grand Canyon Antelopes",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "592395",
+    "name": "American Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "592401",
+    "name": "Austin Peay Governors",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "592405",
+    "name": "Boise State Broncos",
+    "matched": "boise-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "592443",
+    "name": "Cal State Bakersfield Roadrunners",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "592469",
+    "name": "Eastern Illinois Panthers",
+    "matched": "eastern-ill",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "593094",
+    "name": "Loyola Maryland Greyhounds",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "593100",
+    "name": "Omaha Mavericks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "593102",
+    "name": "Pacific Tigers",
+    "matched": "pacific",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "593450",
+    "name": "Santa Clara Broncos",
+    "matched": "santa-clara",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "593462",
+    "name": "Seattle Redhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "593478",
+    "name": "Texas A&M Aggies",
+    "matched": "texas-am",
+    "score": 0.95,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "593492",
+    "name": "UNLV Rebels",
+    "matched": "unlv",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "597640",
+    "name": "Liu Sharks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "613130",
+    "name": "North Alabama Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "621574",
+    "name": "Grambling State Tigers",
+    "matched": "grambling",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "621576",
+    "name": "Lehigh Mountain Hawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "621592",
+    "name": "Eastern Kentucky Colonels",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "623928",
+    "name": "Utah State Aggies",
+    "matched": "utah-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "623930",
+    "name": "North Dakota Fighting Hawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "623934",
+    "name": "Holy Cross Crusaders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "624476",
+    "name": "Nevada Wolf Pack",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "624654",
+    "name": "Tarleton State Texans",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "625202",
+    "name": "New Mexico Lobos",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "625204",
+    "name": "Southeast Missouri State Redhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "625206",
+    "name": "Furman Paladins",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "625950",
+    "name": "Wofford Terriers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "626122",
+    "name": "Alabama Crimson Tide",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "626134",
+    "name": "UC San Diego Tritons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "626716",
+    "name": "California Baptist Lancers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "626934",
+    "name": "Army Black Knights",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "627948",
+    "name": "Houston Christian Huskies",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "628576",
+    "name": "Lafayette Leopards",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "628586",
+    "name": "Nicholls Colonels",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "628588",
+    "name": "LSU New Orleans Privateers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "628596",
+    "name": "Texas Southern Tigers",
+    "matched": "texas-southern",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "629226",
+    "name": "Texas A&M\u2013Corpus Christi Islanders",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "629620",
+    "name": "Mercer Bears",
+    "matched": "mercer",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "631802",
+    "name": "Ole Miss Rebels",
+    "matched": "ole-miss",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "633050",
+    "name": "Incarnate Word Cardinals",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "633052",
+    "name": "Sam Houston State Bearkats",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "633056",
+    "name": "Prairie View AM Panthers",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "633058",
+    "name": "Georgia Southern Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "633060",
+    "name": "South Alabama Jaguars",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "636776",
+    "name": "Lamar Cardinals",
+    "matched": "lamar",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "636778",
+    "name": "Tennessee State Tigers",
+    "matched": "tennessee-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "638084",
+    "name": "Southern Jaguars",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "638094",
+    "name": "Central Arkansas Bears",
+    "matched": "central-ark",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "640402",
+    "name": "Wyoming Cowgirls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "641186",
+    "name": "Merrimack Warriors",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "644826",
+    "name": "Troy Trojans",
+    "matched": "troy",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "651922",
+    "name": "Arkansas Little Rock Trojans",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "773154",
+    "name": "Belmont Bruins",
+    "matched": "belmont",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "777650",
+    "name": "Western Carolina Catamounts",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "777652",
+    "name": "Chattanooga Mocs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "781568",
+    "name": "Jacksonville State Gamecocks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "781742",
+    "name": "Ut Martin Skyhawks",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "787730",
+    "name": "Morehead State Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "787732",
+    "name": "Jackson State Tigers",
+    "matched": "jackson-st",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "825452",
+    "name": "East Texas AM Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "832460",
+    "name": "McNeese State Cowgirls",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "834516",
+    "name": "Unc Greensboro Spartans",
+    "matched": "unc-greensboro",
+    "score": 1.0,
+    "needs_confirmation": false
+  },
+  {
+    "participant_id": "834860",
+    "name": "Alcorn State Lady Braves",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "842972",
+    "name": "Alabama Am Bulldogs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "931551",
+    "name": "Southeastern Louisiana Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "931553",
+    "name": "Northwestern State Demons",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "931555",
+    "name": "Old Dominion Monarchs",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "936403",
+    "name": "Southern Indiana Screaming Eagles",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "937741",
+    "name": "Bellarmine Knights",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "938073",
+    "name": "Lindenwood Lions",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  },
+  {
+    "participant_id": "953047",
+    "name": "Queens (NC) Royals",
+    "matched": null,
+    "score": 0.0,
+    "needs_confirmation": true
+  }
+]

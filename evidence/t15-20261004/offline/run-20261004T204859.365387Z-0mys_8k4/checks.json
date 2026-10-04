@@ -1,0 +1,12 @@
+{
+  "bovada_best_lines": true,
+  "pinnacle_anchor_preserved": true,
+  "default_off_legacy_four": true,
+  "default_on_five": true,
+  "selection_order_sharp_first": true,
+  "cache_by_books": true,
+  "selection_change_no_fetch": true,
+  "empty_selection_no_fetch": true,
+  "real_paid_calls": 0,
+  "real_sheet_writes": 0
+}

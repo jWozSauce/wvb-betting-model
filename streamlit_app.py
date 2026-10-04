@@ -723,9 +723,10 @@ with tab_best:
     st.subheader("Best bets")
     schedule_enabled = os.environ.get("WVB_ENABLE_NCAA_SCHEDULE", "1") == "1"
     manual_enabled = os.environ.get("WVB_ENABLE_MANUAL_BOARD", "1") == "1"
+    books_enabled = os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1"
     source_b = st.radio(
         "Odds source",
-        ["Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"]
+        ["Live API (choose books)" if books_enabled else "Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"]
         + (["NCAA schedule (price everything)"] if schedule_enabled else [])
         + (["Schedule + board (manual match)"] if manual_enabled else []),
         horizontal=True, key="best_source",
@@ -741,6 +742,18 @@ with tab_best:
         manual_mode = source_b == "Schedule + board (manual match)"
         live_mapping_enabled = (source_b.startswith("Live API") and
             os.environ.get("WVB_ENABLE_LIVE_TEAM_MAP", "0") == "1")
+        import oddspapi
+        api_books = oddspapi.LEGACY_BOOKS
+        if source_b.startswith("Live API") and books_enabled:
+            selected_books = st.multiselect("Sportsbooks", oddspapi.BOOKS,
+                default=list(oddspapi.BOOKS), key="api_books")
+            api_books = tuple(b for b in oddspapi.BOOKS if b in selected_books)
+            st.caption(f"Each fresh fetch uses {len(api_books)} quota requests. "
+                       f"One per day ≈ {30*len(api_books)}/month; two per day ≈ "
+                       f"{60*len(api_books)}/month (250 limit). Cached re-clicks are free.")
+            if st.session_state.get("live_board_books") != api_books:
+                st.session_state.pop("live_games", None)
+                st.session_state.live_board_books = api_books
         live_mapping = {}
         if live_mapping_enabled:
             import live_team_map
@@ -811,9 +824,9 @@ with tab_best:
 
         @st.cache_data(ttl=600, show_spinner="Fetching live odds (one request "
                                              "per book)…")
-        def cached_api_board():
+        def cached_api_board(books):
             import oddspapi
-            games_, nreq_ = oddspapi.fetch_board()
+            games_, nreq_ = oddspapi.fetch_board(books=books)
             try:
                 acct = oddspapi.account()
                 used = acct.get("requests_used", acct.get("request_count", "?"))
@@ -825,7 +838,7 @@ with tab_best:
 
         card_context = dict(pricing_context("Team Elo"),
                             venue_mode="per-game" if manual_mode else VENUE_SHORT.get(venue_b, venue_b))
-        if repair_flags.enabled() or manual_mode or live_mapping_enabled:
+        if repair_flags.enabled() or manual_mode or live_mapping_enabled or books_enabled:
             import hashlib
             card_inputs = dict(
                 context=card_context, source=source_b, paste=paste,
@@ -835,6 +848,8 @@ with tab_best:
                 availability=load_availability())
             if manual_mode:
                 card_inputs["manual"] = manual_inputs
+            if source_b.startswith("Live API") and books_enabled:
+                card_inputs["books"] = api_books
             if live_mapping_enabled:
                 card_inputs["live_mapping"] = live_mapping
             if ("best_card" in st.session_state and
@@ -855,9 +870,9 @@ with tab_best:
                 run_eval = True
         else:
             fc = st.columns([2, 5])
-            if fc[0].button("Fetch odds & evaluate", type="primary"):
+            if fc[0].button("Fetch odds & evaluate", type="primary", disabled=not api_books):
                 try:
-                    games, nreq, quota = cached_api_board()
+                    games, nreq, quota = cached_api_board(api_books)
                     if live_mapping_enabled:
                         live_mapping = live_team_map.refresh(ratings.team.tolist(), live_team_map.credential())
                         st.session_state.live_mapping = live_mapping
@@ -941,7 +956,7 @@ with tab_best:
                         row["venue_mode"] = VENUE_SHORT[g["_venue_mode"]]
                         row["book_orientation"] = "book lists reversed" if g["_book_reversed"] else "same"
                 card_rows.extend(game_rows)
-            if repair_flags.enabled() or manual_mode or live_mapping_enabled:
+            if repair_flags.enabled() or manual_mode or live_mapping_enabled or books_enabled:
                 import copy
                 st.session_state.best_inputs = copy.deepcopy(card_inputs)
                 st.session_state.best_context = copy.deepcopy(card_context)

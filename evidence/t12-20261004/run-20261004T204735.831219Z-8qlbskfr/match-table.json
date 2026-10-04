@@ -1,0 +1,29 @@
+[
+  {
+    "board_#": 1,
+    "board": "North Carolina Central University @ Morgan State University",
+    "schedule": "morgan-st @ nc-central, 4:00 PM, true home [6628264]",
+    "status": "matched",
+    "orientation": "reversed",
+    "venue_mode": "Neutral (host/label matters)",
+    "reason": ""
+  },
+  {
+    "board_#": 2,
+    "board": "Butler University @ Seton Hall University",
+    "schedule": "col-of-charleston @ nc-at, 6:00 PM, venue ? [6624974]",
+    "status": "matched",
+    "orientation": "same",
+    "venue_mode": "Home court",
+    "reason": ""
+  },
+  {
+    "board_#": 3,
+    "board": "University of Dayton @ Fordham University",
+    "schedule": "dayton @ fordham, 5:00 PM, true home [6625020]",
+    "status": "matched",
+    "orientation": "same",
+    "venue_mode": "Home court",
+    "reason": ""
+  }
+]

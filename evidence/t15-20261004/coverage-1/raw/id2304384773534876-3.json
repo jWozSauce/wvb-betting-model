@@ -1,0 +1,47 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": "hardrockbet,lowvig.ag,pinnacle"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-04T20:43:22.029495+00:00",
+  "payload": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": {
+      "hardrockbet": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T19:49:14.208Z",
+                      "price": 1.606,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T19:49:14.208Z",
+                      "price": 2.25,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
