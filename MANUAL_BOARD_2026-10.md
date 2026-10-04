@@ -1,8 +1,8 @@
 # Schedule + board manual matching — T12
 
-Implementation complete, awaiting planner acceptance. Review with
-`WVB_ENABLE_MANUAL_BOARD=1 .venv/bin/streamlit run streamlit_app.py`.
-The fourth source is absent by default. This branch has not been deployed.
+Accepted by the planner on October 4 and enabled by default.
+Run `.venv/bin/streamlit run streamlit_app.py`; set
+`WVB_ENABLE_MANUAL_BOARD=0` to hide the fourth source for rollback.
 
 Choose a date, load the NCAA schedule and paste/parse a book board in either
 order. Each board row offers a schedule fixture, the schedule team represented
@@ -24,7 +24,7 @@ Validation on Streamlit 1.62.0 (all actual UI calls guarded from external I/O):
 - `PYTHONPATH=. .venv/bin/python scripts/validation/test_manual_board.py`
   passes 18-market exact parity across three games with pre-T12 Paste and
   Live API, reversed moneylines/spreads/totals, confirmation/duplicate guards,
-  state persistence, counts, default-off, and captured mock logging.
+  state persistence, counts, default-on/explicit-zero rollback, and captured mock logging.
   Initial three games: 1,503 model evaluations; unchanged reprice: zero;
   single venue change: 501; single match correction: 501. Only explicit fetch
   buttons fetched the mocked slate. Evidence:
@@ -53,5 +53,6 @@ Real-slate replay:
   Current ratings are used only for UI validation, not strategy backtesting.
   Existing parser is unchanged. No paid calls, real logging or grading occurred.
 
-No new background jobs. Planner acceptance is required before enabling or
-merging T12; the owner's standing push authorization applies after acceptance.
+No new background jobs. Integration/push is authorized by the October 4
+acceptance and the owner's standing authorization. See the worker log for the
+verified deployment commit and final default-on evidence.

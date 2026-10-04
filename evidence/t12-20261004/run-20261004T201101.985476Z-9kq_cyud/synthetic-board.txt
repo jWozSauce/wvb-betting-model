@@ -1,0 +1,6 @@
+Morgan State University +1.5 -110 o3.5 -115 +200
+North Carolina Central University -1.5 -110 u3.5 -105 +200
+Butler University +1.5 -110 o3.5 -115 +200
+Seton Hall University -1.5 -110 u3.5 -105 +200
+University of Dayton +1.5 -110 o3.5 -115 +200
+Fordham University -1.5 -110 u3.5 -105 +200

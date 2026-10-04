@@ -722,7 +722,7 @@ with tab_price:
 with tab_best:
     st.subheader("Best bets")
     schedule_enabled = os.environ.get("WVB_ENABLE_NCAA_SCHEDULE", "1") == "1"
-    manual_enabled = os.environ.get("WVB_ENABLE_MANUAL_BOARD", "0") == "1"
+    manual_enabled = os.environ.get("WVB_ENABLE_MANUAL_BOARD", "1") == "1"
     source_b = st.radio(
         "Odds source",
         ["Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"]

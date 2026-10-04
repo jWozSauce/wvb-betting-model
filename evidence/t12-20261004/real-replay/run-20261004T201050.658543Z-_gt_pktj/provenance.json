@@ -1,0 +1,17 @@
+{
+  "slate": "evidence/t12-20261004/real-slate/run-20261004T195743.899221Z-szg1csja/slate.json",
+  "quotes": "evidence/t3-20261001/run-3-corrected-matching/rebuilt_backtest.parquet",
+  "book": "draftkings",
+  "format": "American odds rounded to integer; reconstructed paste",
+  "date": "2026-09-30",
+  "matched": 1,
+  "excluded": 0,
+  "unmatched": 0,
+  "schedule_fetched": 86,
+  "schedule_unmatched": 85,
+  "markets": 4,
+  "external_io": "mocked; earlier free NCAA capture",
+  "real_paid_calls": 0,
+  "real_sheet_writes": 0,
+  "ratings": "current snapshot, not a historical model backtest"
+}

@@ -37,7 +37,8 @@ prefix = lambda i: f'manual:{day}:{bids[i]}'
 checks={}; parity=[]
 with ExitStack() as stack:
  guards(stack)
- stack.enter_context(patch.dict(os.environ, {'WVB_ENABLE_MANUAL_BOARD':'1'}))
+ stack.enter_context(patch.dict(os.environ, dict(os.environ)))
+ os.environ.pop('WVB_ENABLE_MANUAL_BOARD',None)
  fetch = stack.enter_context(patch('schedule_pricing.fetch_slate',return_value=copy.deepcopy(slate)))
  stack.enter_context(patch('vbstats.venues.slate_venues',return_value={}))
  log = stack.enter_context(patch('bet_log.log_bets',return_value=1))
@@ -148,12 +149,12 @@ with ExitStack() as stack:
  assert fetch.call_count==2
  state=app.session_state.manual_boards[str(day)]
  assert sum(state['counts'].values())==3
- # The source is absent without its review switch.
- os.environ.pop('WVB_ENABLE_MANUAL_BOARD')
+ # Explicit zero hides the accepted source for rollback.
+ os.environ['WVB_ENABLE_MANUAL_BOARD']='0'
  off=new_app(source);assert mb.SOURCE not in element(off.radio,'Odds source').options
  checks=dict(exact_existing_paste=True,exact_existing_live_api=True,one_rematch_model_calls=rematch_calls,three_game_manual_parity=True,reversed_all_markets=True,
              confirmation_required=True,duplicates_blocked=True,counts_reconcile=True,
-             independent_reloads_preserve_decisions=True,source_date_state=True,default_off=True,
+             independent_reloads_preserve_decisions=True,source_date_state=True,accepted_default_on=True,explicit_zero_rollback=True,
              first_price_model_calls=first_calls,one_venue_change_model_calls=venue_calls,
              unchanged_game_rows_exact=True,schedule_fetches=fetch.call_count,
              mock_logged_rows=len(log.call_args.args[0]),real_writes=0,real_paid_calls=0)
