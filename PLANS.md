@@ -1218,6 +1218,22 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Preserved the planner's uncommitted plan/infrastructure changes. Next:
   planner resolves Q8 and reviews T10/T11.
 
+### 2026-10-04 12:14 EDT — Q8 resolved; single watcher verified
+
+- **Coordination: accepted/resolved by the planner's October 4 Q8 ruling.**
+  Verified read-only: `local.codex.plans-watcher.wvb-plans` is running
+  (PID 68550); launchctl cannot find `local.codex.plans-watcher.volleyball-plans`
+  (exit 113), and that duplicate's plist and state directory are absent.
+  The planner retained the original watcher, superseding the worker's Q8
+  recommendation to retain the newer one. No worker service changes were needed.
+- **Confirmed:** one of the two identified wake services remains. Its log is
+  `~/.codex/plans-watchers/wvb-plans/watcher.log`. Scheduled automation
+  deletion was completed in `61cb884`; no new polling was configured.
+- Reviewed the verified plan diff: no new app task or T10/T11 acceptance.
+  Both remain **implementation complete, awaiting acceptance**; production
+  defaults and deployment remain unchanged. No paid calls or protected-data
+  writes. Next action belongs to planner review of the existing T10/T11 evidence.
+
 ## 9. Open questions (append only)
 
 (none open)
