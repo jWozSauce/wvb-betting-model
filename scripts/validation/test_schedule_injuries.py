@@ -43,7 +43,8 @@ with ExitStack() as stack:
     # Restore the real analyzer behind the existing cache; only its HTTP client is fake.
     stack.enter_context(patch('vbstats.injury_ai.analyze_team', analyze_team))
     stack.enter_context(patch('anthropic.Anthropic', return_value=client))
-    stack.enter_context(patch.dict(os.environ, {'WVB_ENABLE_SCHEDULE_INJURIES': '1'}))
+    stack.enter_context(patch.dict(os.environ, dict(os.environ)))
+    os.environ.pop('WVB_ENABLE_SCHEDULE_INJURIES', None)
     fetch = stack.enter_context(patch('schedule_pricing.fetch_slate', return_value=copy.deepcopy(slate)))
     st.cache_data.clear()
     app = new_app(source)
@@ -79,8 +80,8 @@ with ExitStack() as stack:
     assert counts['same_manual_match'] == 2
     assert injuries(app, 0) == drill_in
     assert fetch.call_count == 1
-    # Review gate: omitted switch preserves deployed behavior.
-    os.environ.pop('WVB_ENABLE_SCHEDULE_INJURIES')
+    # Explicit zero is the rollback switch after acceptance.
+    os.environ['WVB_ENABLE_SCHEDULE_INJURIES'] = '0'
     st.cache_data.clear()
     disabled = new_app(source)
     element(disabled.radio, 'Odds source').set_value(sp.SOURCE)
@@ -97,5 +98,5 @@ with ExitStack() as stack:
 out = new_run(ROOT/'evidence/t10-20261002')
 (out/'injury-cache.json').write_text(json.dumps(dict(cumulative_client_calls=counts,
     called_teams=called_teams, injury_sections=drill_in, shared_section_equal=True,
-    cache_ttl_seconds=3600, real_api_calls=0, review_default_off=True), indent=2))
-print('PASS shared injury sections, explicit selection, cache reuse, default-off review gate')
+    cache_ttl_seconds=3600, real_api_calls=0, accepted_default_on=True, explicit_zero_rollback=True), indent=2))
+print('PASS shared injury sections, explicit selection, cache reuse, default-on and explicit-zero rollback')

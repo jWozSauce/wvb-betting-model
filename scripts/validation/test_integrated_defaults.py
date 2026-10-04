@@ -22,7 +22,8 @@ rows = []
 with ExitStack() as stack:
     guards(stack)
     stack.enter_context(patch.dict(os.environ, dict(os.environ)))
-    for key in ('WVB_ENABLE_REPAIRS', 'WVB_ENABLE_NCAA_SCHEDULE'):
+    for key in ('WVB_ENABLE_REPAIRS', 'WVB_ENABLE_NCAA_SCHEDULE',
+                'WVB_ENABLE_INLINE_DRILL_IN', 'WVB_ENABLE_SCHEDULE_INJURIES'):
         os.environ.pop(key, None)
     assert repair_flags.enabled()
     fetch = stack.enter_context(patch('schedule_pricing.fetch_slate', return_value=copy.deepcopy(slate)))

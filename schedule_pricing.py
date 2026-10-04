@@ -198,7 +198,7 @@ def render_schedule(ratings, params, home_venues, render_panel):
                "Spreads (home / away)", "Totals (under / over)", "Full prices"]
     for col, label in zip(st.columns(widths), headers):
         col.markdown(f"**{label}**")
-    inline_panel = os.environ.get("WVB_ENABLE_INLINE_DRILL_IN") == "1"
+    inline_panel = os.environ.get("WVB_ENABLE_INLINE_DRILL_IN", "1") == "1"
     panel_container = None
     def select_game(cid):
         # Callbacks run before rendering any row, so moving the selection
@@ -257,4 +257,4 @@ def render_schedule(ratings, params, home_venues, render_panel):
                      key_prefix=f"ncaa:{date_key}:{selected['contest_id']}:",
                      default_date=day,
                      default_time="" if game_time(selected) == "TBA" else game_time(selected),
-                     show_news=os.environ.get("WVB_ENABLE_SCHEDULE_INJURIES") == "1")
+                     show_news=os.environ.get("WVB_ENABLE_SCHEDULE_INJURIES", "1") == "1")
