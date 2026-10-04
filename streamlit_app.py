@@ -733,7 +733,8 @@ with tab_best:
         help="Live API pulls the whole NCAA W slate from OddsPapi — one "
              "request per book (free tier: 250/month). Each market shows "
              "the BEST price across books; the blend anchor devigs the "
-             "sharpest book quoting both sides (Pinnacle first).")
+             + ("first selected book quoting both sides (DraftKings before Hard Rock by default)."
+                if books_enabled else "sharpest book quoting both sides (Pinnacle first)."))
     if source_b == "NCAA schedule (price everything)":
         from schedule_pricing import render_schedule
         home_venues = pd.read_parquet(f"{HERE}/app_data/home_venues.parquet")
@@ -745,9 +746,16 @@ with tab_best:
         import oddspapi
         api_books = oddspapi.LEGACY_BOOKS
         if source_b.startswith("Live API") and books_enabled:
-            selected_books = st.multiselect("Sportsbooks", oddspapi.BOOKS,
+            try:
+                available_books, catalog_complete = oddspapi.available_books()
+            except (ValueError, OSError):
+                available_books, catalog_complete = tuple(dict.fromkeys(
+                    (*oddspapi.BOOKS, *oddspapi.LEGACY_BOOKS))), False
+            if not catalog_complete:
+                st.caption("Full bookmaker catalog is unavailable; showing known books only.")
+            selected_books = st.multiselect("Sportsbooks", available_books,
                 default=list(oddspapi.BOOKS), key="api_books")
-            api_books = tuple(b for b in oddspapi.BOOKS if b in selected_books)
+            api_books = oddspapi.order_books(selected_books)
             st.caption(f"Each fresh fetch uses {len(api_books)} quota requests. "
                        f"One per day ≈ {30*len(api_books)}/month; two per day ≈ "
                        f"{60*len(api_books)}/month (250 limit). Cached re-clicks are free.")

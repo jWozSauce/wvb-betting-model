@@ -35,11 +35,38 @@ import safe_http
 API = "https://api.oddspapi.io/v4"
 TOURNAMENT_NCAAW = "43847"
 SPORT_ID = 23
-# devig-anchor priority order (Pinnacle = sharp book); betonline.ag is the
-# book Josh actually bets, so its prices must be on the card
+# Legacy rollback set; T15 defaults follow the planner coverage ruling.
 LEGACY_BOOKS = ("pinnacle", "draftkings", "fanduel", "betonline.ag")
-# T15 amendment: new books require real historical coverage first.
-BOOKS = LEGACY_BOOKS
+BOOKS = ("draftkings", "hardrockbet")
+# Non-default sharp books retain priority when the owner explicitly tests them.
+ANCHOR_PRIORITY = ("pinnacle", "pinnacle+5", "pinnacle+30", *BOOKS)
+
+
+def available_books():
+    """Read a supplied provider catalog without making a billable catalog call.
+
+    Until the planner supplies that artifact, show the known existing/default
+    books only and explicitly report that the catalog is incomplete.
+    """
+    path = HERE / "app_data" / "oddspapi_bookmakers.json"
+    if not path.exists():
+        return tuple(dict.fromkeys((*BOOKS, *LEGACY_BOOKS))), False
+    raw = json.loads(path.read_text())
+    if (not isinstance(raw, list) or not raw or
+            any(not isinstance(row, dict) or not isinstance(row.get("slug"), str)
+                or not row["slug"].strip() for row in raw)):
+        raise ValueError("Invalid bookmaker catalog")
+    slugs = set(row["slug"] for row in raw)
+    if not set(BOOKS) <= slugs:
+        raise ValueError("Bookmaker catalog is missing a default book")
+    return tuple(sorted(slugs)), True
+
+
+def order_books(selected):
+    """Stable anchor priority, independent of multiselect click order."""
+    chosen = set(selected)
+    return tuple(b for b in ANCHOR_PRIORITY if b in chosen) + tuple(
+        sorted(chosen - set(ANCHOR_PRIORITY)))
 
 def default_books():
     return BOOKS if os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1" else LEGACY_BOOKS

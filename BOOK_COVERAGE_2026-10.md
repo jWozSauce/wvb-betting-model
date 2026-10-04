@@ -1,5 +1,52 @@
 # OddsPapi coverage and Bovada — T15, October 4, 2026
 
+## Current status — planner stage-1 ruling received October 4
+
+**T15 stage 2 in progress; blocked on catalog/probe artifacts and live-call approval.**
+The planner reports a completed five-fixture × 18-candidate free probe:
+DraftKings 5/5 (ML/spread), Hard Rock 5/5 (ML), others absent on that sample.
+These are planner-reported results, not worker-verified pregame trails: raw
+responses, times and quota evidence have not yet been placed in this checkout.
+Q12 requests those artifacts plus the full valid bookmaker catalog. No second
+coverage sweep was started; the earlier worker access-error stop remains preserved.
+
+The updated review path now defaults to **DraftKings, Hard Rock**, in that anchor
+order. Old Pinnacle/FanDuel/BetOnline defaults are removed from the enabled review
+path, with explicit legacy rollback when `WVB_ENABLE_BOOK_SELECTION=0` (still the
+default until acceptance). One fresh fetch costs 2 requests: 60/month at one/day,
+120 at two/day, 180 at three/day (30-day assumptions). Non-default selections still
+show their own cost. Choosing a sharp Pinnacle variant places it before the default
+books for anchoring, without changing the best-line calculation.
+
+`oddspapi.available_books()` reads the provider-schema array at
+`app_data/oddspapi_bookmakers.json` without a billable catalog call. This artifact
+is missing: the UI explicitly labels a limited fallback of known default/legacy
+books. It does not claim the full catalog is available. Once the supplied catalog
+is installed, every valid slug becomes selectable, including non-default books
+for manual retesting. A catalog entry is not a claim of NCAA coverage. BetOnline
+and Bovada website odds remain usable through T12's paste/bookmarklet flow.
+
+Offline gate passes at
+`evidence/t15-20261004/offline/run-20261004T205643.616145Z-2f155run/checks.json`:
+2-request default, Hard Rock best-price merge, DK anchor, optional Pinnacle anchor,
+full supplied-catalog parsing (temporary representative fixture only), missing and
+invalid catalog handling, cache-by-selection, stale-board invalidation and no calls
+on selection change/empty selection. T14's confirmation/persistence suite also
+passes after this amendment. No real external calls occurred this turn.
+
+The real two-book gate is prepared as `scripts/validation/live_book_gate.py`; it
+requires recorded owner approval then `--owner-approved-two-calls`, caps reservations
+at two, caches each raw response, refuses rerunning an attempted ledger, and records
+account counts. Offline ledger guards also pass (two-call cap, empty responses counted, duplicate
+attempt refused, first-call 403 stops, quota checked on stop), in
+`evidence/t15-20261004/budget/run-20261004T205853.059216Z-4epebqdi/`.
+It has not been run against the provider. Once
+captured, the live prices still need comparison against each book's raw quotes to
+complete the unchanged best-line/anchor acceptance gate. Q11 spending remains open;
+its earlier five-call proposal is reduced to two for the new default.
+
+## Earlier worker probe and preparation (superseded where noted)
+
 **Stopped at a gate.** The free historical coverage probe stopped at HTTP 403
 on its fifth request. It did not retry or continue past that authorization error.
 The required five-fixture coverage sweep and real new-default live fetch are not

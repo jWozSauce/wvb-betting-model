@@ -1,0 +1,9 @@
+{
+  "cap_two": true,
+  "reserve_before_call": true,
+  "empty_counts": true,
+  "duplicate_attempt_refused": true,
+  "authorization_error_stops_first_call": true,
+  "quota_checked_on_stop": true,
+  "real_calls": 0
+}

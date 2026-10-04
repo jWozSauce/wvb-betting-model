@@ -1,0 +1,16 @@
+{
+  "hardrock_best_lines": true,
+  "draftkings_default_anchor": true,
+  "optional_pinnacle_anchor": true,
+  "default_off_legacy_four": true,
+  "default_on_two_requests": true,
+  "catalog_consumed_without_fetch": true,
+  "missing_catalog_label": true,
+  "invalid_catalog_rejected": true,
+  "nondefault_books_not_auto_selected": true,
+  "cache_by_books": true,
+  "selection_change_no_fetch": true,
+  "empty_selection_no_fetch": true,
+  "real_paid_calls": 0,
+  "real_sheet_writes": 0
+}
