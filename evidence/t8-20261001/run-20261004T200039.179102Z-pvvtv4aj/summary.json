@@ -1,0 +1,16 @@
+{
+  "invalidated_controls": [
+    "Bankroll",
+    "Conservative (p20 of posterior)",
+    "Model weight in market blend",
+    "Min edge",
+    "Venue for ALL games on this slate",
+    "Kelly fraction",
+    "Edge cap"
+  ],
+  "baseline_stake": 31.5,
+  "bankroll_doubling_after_reevaluate": 63.0,
+  "mock_logged_rows": 1,
+  "logged_snapshot_exact": true,
+  "real_writes": 0
+}

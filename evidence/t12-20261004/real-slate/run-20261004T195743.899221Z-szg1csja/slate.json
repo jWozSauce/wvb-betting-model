@@ -1,0 +1,830 @@
+{
+  "priced": [
+    {
+      "contest_id": "6625063",
+      "division": 1,
+      "home": "hampton",
+      "away": "norfolk-st",
+      "teams": "Hampton vs Norfolk St.",
+      "start_epoch": 1790805600,
+      "venue": "",
+      "ncaa_home": "hampton",
+      "ncaa_away": "norfolk-st",
+      "host_swapped": false,
+      "site": "venue ?",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6625855",
+      "division": 1,
+      "home": "new-hampshire",
+      "away": "stonehill",
+      "teams": "New Hampshire vs Stonehill",
+      "start_epoch": 1790805600,
+      "venue": "Lundholm Gymnasium, Durham, NH",
+      "ncaa_home": "new-hampshire",
+      "ncaa_away": "stonehill",
+      "host_swapped": false,
+      "site": "true home",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6626341",
+      "division": 1,
+      "home": "louisville",
+      "away": "notre-dame",
+      "teams": "Louisville vs Notre Dame",
+      "start_epoch": 1790805600,
+      "venue": "L&N Federal Credit Union Arena, Louisville, KY",
+      "ncaa_home": "louisville",
+      "ncaa_away": "notre-dame",
+      "host_swapped": false,
+      "site": "true home",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6625100",
+      "division": 1,
+      "home": "mississippi-val",
+      "away": "jackson-st",
+      "teams": "Mississippi Val. vs Jackson St.",
+      "start_epoch": 1790809200,
+      "venue": "Harrison HPER Complex, Itta Bena, MS",
+      "ncaa_home": "mississippi-val",
+      "ncaa_away": "jackson-st",
+      "host_swapped": false,
+      "site": "true home",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6625618",
+      "division": 1,
+      "home": "lsu",
+      "away": "vanderbilt",
+      "teams": "LSU vs Vanderbilt",
+      "start_epoch": 1790809200,
+      "venue": "Maravich Assembly Center, Baton Rouge, LA",
+      "ncaa_home": "lsu",
+      "ncaa_away": "vanderbilt",
+      "host_swapped": false,
+      "site": "true home",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6626438",
+      "division": 1,
+      "home": "valparaiso",
+      "away": "ill-chicago",
+      "teams": "Valparaiso vs UIC",
+      "start_epoch": 1790809200,
+      "venue": "",
+      "ncaa_home": "valparaiso",
+      "ncaa_away": "ill-chicago",
+      "host_swapped": false,
+      "site": "venue ?",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6627735",
+      "division": 1,
+      "home": "ark-pine-bluff",
+      "away": "grambling",
+      "teams": "Ark.-Pine Bluff vs Grambling",
+      "start_epoch": 1790809200,
+      "venue": "H.O. Clemmons Arena, Pine Bluff, AR",
+      "ncaa_home": "ark-pine-bluff",
+      "ncaa_away": "grambling",
+      "host_swapped": false,
+      "site": "true home",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6625541",
+      "division": 1,
+      "home": "memphis",
+      "away": "uab",
+      "teams": "Memphis vs UAB",
+      "start_epoch": 1790811000,
+      "venue": "",
+      "ncaa_home": "memphis",
+      "ncaa_away": "uab",
+      "host_swapped": false,
+      "site": "venue ?",
+      "venue_mode": "Home court"
+    },
+    {
+      "contest_id": "6626291",
+      "division": 1,
+      "home": "depaul",
+      "away": "marquette",
+      "teams": "DePaul vs Marquette",
+      "start_epoch": 1790812800,
+      "venue": "",
+      "ncaa_home": "depaul",
+      "ncaa_away": "marquette",
+      "host_swapped": false,
+      "site": "venue ?",
+      "venue_mode": "Home court"
+    }
+  ],
+  "unpriced": [
+    {
+      "contest_id": "6644728",
+      "division": 3,
+      "home": "austin",
+      "away": "mary-hardin-baylor",
+      "teams": "Austin vs Mary Hardin-Baylor",
+      "start_epoch": 1790744400,
+      "reason": "unrated team: mary-hardin-baylor, austin"
+    },
+    {
+      "contest_id": "6631104",
+      "division": 2,
+      "home": "texas-tyler",
+      "away": "st-edwards",
+      "teams": "UT Tyler vs St. Edward's",
+      "start_epoch": 1790794800,
+      "reason": "unrated team: st-edwards"
+    },
+    {
+      "contest_id": "6635060",
+      "division": 3,
+      "home": "penn-st-altoona",
+      "away": "penn-st-behrend",
+      "teams": "Penn St.-Altoona vs Penn St.-Behrend",
+      "start_epoch": 1790802000,
+      "reason": "unrated team: penn-st-behrend, penn-st-altoona"
+    },
+    {
+      "contest_id": "6636485",
+      "division": 3,
+      "home": "johnson-wales-ri",
+      "away": "roger-williams",
+      "teams": "JWU (Providence) vs Roger Williams",
+      "start_epoch": 1790802000,
+      "reason": "unrated team: roger-williams, johnson-wales-ri"
+    },
+    {
+      "contest_id": "6638481",
+      "division": 3,
+      "home": "plymouth-st",
+      "away": "rivier",
+      "teams": "Plymouth St. vs Rivier",
+      "start_epoch": 1790802000,
+      "reason": "unrated team: rivier, plymouth-st"
+    },
+    {
+      "contest_id": "6640901",
+      "division": 3,
+      "home": "johnson-st",
+      "away": "vermont-tech",
+      "teams": "VTSU-Johnson vs VTSU Randolph",
+      "start_epoch": 1790802000,
+      "reason": "unrated team: vermont-tech, johnson-st"
+    },
+    {
+      "contest_id": "6629610",
+      "division": 2,
+      "home": "benedict",
+      "away": "clinton",
+      "teams": "Benedict vs Clinton",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: clinton, benedict"
+    },
+    {
+      "contest_id": "6630960",
+      "division": 2,
+      "home": "cedarville",
+      "away": "indianapolis",
+      "teams": "Cedarville vs UIndy",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: indianapolis, cedarville"
+    },
+    {
+      "contest_id": "6631080",
+      "division": 2,
+      "home": "glenville-st",
+      "away": "ursuline",
+      "teams": "Glenville St. vs Ursuline",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: ursuline, glenville-st"
+    },
+    {
+      "contest_id": "6633224",
+      "division": 3,
+      "home": "bethany-wv",
+      "away": "franciscan",
+      "teams": "Bethany (WV) vs Franciscan",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: franciscan, bethany-wv"
+    },
+    {
+      "contest_id": "6633663",
+      "division": 3,
+      "home": "carlow",
+      "away": "pitt-bradford",
+      "teams": "Carlow vs Pitt.-Bradford",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: pitt-bradford, carlow"
+    },
+    {
+      "contest_id": "6634040",
+      "division": 3,
+      "home": "lasell",
+      "away": "brandeis",
+      "teams": "Lasell vs Brandeis",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: brandeis, lasell"
+    },
+    {
+      "contest_id": "6634783",
+      "division": 3,
+      "home": "mcla",
+      "away": "worcester-st",
+      "teams": "MCLA vs Worcester St.",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: worcester-st, mcla"
+    },
+    {
+      "contest_id": "6635860",
+      "division": 3,
+      "home": "brevard",
+      "away": "salem",
+      "teams": "Brevard vs Salem (NC)",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: salem, brevard"
+    },
+    {
+      "contest_id": "6636440",
+      "division": 3,
+      "home": "nc-wesleyan",
+      "away": "peace",
+      "teams": "N.C. Wesleyan vs William Peace",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: peace, nc-wesleyan"
+    },
+    {
+      "contest_id": "6636770",
+      "division": 3,
+      "home": "fitchburg-st",
+      "away": "framingham-st",
+      "teams": "Fitchburg St. vs Framingham St.",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: framingham-st, fitchburg-st"
+    },
+    {
+      "contest_id": "6637616",
+      "division": 3,
+      "home": "ithaca",
+      "away": "rochester-inst",
+      "teams": "Ithaca vs RIT",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: rochester-inst, ithaca"
+    },
+    {
+      "contest_id": "6637887",
+      "division": 3,
+      "home": "shenandoah",
+      "away": "east-mennonite",
+      "teams": "Shenandoah vs East. Mennonite",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: east-mennonite, shenandoah"
+    },
+    {
+      "contest_id": "6637952",
+      "division": 2,
+      "home": "clark-atlanta",
+      "away": "agnes-scott",
+      "teams": "Clark Atlanta vs Agnes Scott",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: agnes-scott, clark-atlanta"
+    },
+    {
+      "contest_id": "6638274",
+      "division": 3,
+      "home": "mitchell",
+      "away": "bridgewater-st",
+      "teams": "Mitchell vs Bridgewater St.",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: bridgewater-st, mitchell"
+    },
+    {
+      "contest_id": "6638395",
+      "division": 3,
+      "home": "hartwick",
+      "away": "sage-colleges",
+      "teams": "Hartwick vs Russell Sage",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: sage-colleges, hartwick"
+    },
+    {
+      "contest_id": "6644626",
+      "division": 3,
+      "home": "western-conn-st",
+      "away": "trinity-ct",
+      "teams": "WestConn vs Trinity (CT)",
+      "start_epoch": 1790805600,
+      "reason": "unrated team: trinity-ct, western-conn-st"
+    },
+    {
+      "contest_id": "6634018",
+      "division": 3,
+      "home": "lynchburg",
+      "away": "va-wesleyan",
+      "teams": "Lynchburg vs Batten",
+      "start_epoch": 1790807400,
+      "reason": "unrated team: va-wesleyan, lynchburg"
+    },
+    {
+      "contest_id": "6635441",
+      "division": 3,
+      "home": "roanoke",
+      "away": "averett",
+      "teams": "Roanoke vs Averett",
+      "start_epoch": 1790807400,
+      "reason": "unrated team: averett, roanoke"
+    },
+    {
+      "contest_id": "6628719",
+      "division": 2,
+      "home": "mercy",
+      "away": "queens-ny",
+      "teams": "Mercy vs Queens (NY)",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: queens-ny, mercy"
+    },
+    {
+      "contest_id": "6628899",
+      "division": 2,
+      "home": "texas-dallas",
+      "away": "st-marys-tx",
+      "teams": "UT Dallas  vs St. Mary's (TX)",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: st-marys-tx, texas-dallas"
+    },
+    {
+      "contest_id": "6630017",
+      "division": 2,
+      "home": "albany-st-ga",
+      "away": "allen",
+      "teams": "Albany St. (GA) vs Allen",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: albany-st-ga"
+    },
+    {
+      "contest_id": "6630779",
+      "division": 2,
+      "home": "chestnut-hill",
+      "away": "shippensburg",
+      "teams": "Chestnut Hill vs Shippensburg",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: shippensburg, chestnut-hill"
+    },
+    {
+      "contest_id": "6632019",
+      "division": 3,
+      "home": "allegheny",
+      "away": "hiram",
+      "teams": "Allegheny vs Hiram",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: hiram, allegheny"
+    },
+    {
+      "contest_id": "6632111",
+      "division": 3,
+      "home": "greensboro",
+      "away": "pfeiffer",
+      "teams": "Greensboro vs Pfeiffer",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: pfeiffer, greensboro"
+    },
+    {
+      "contest_id": "6632361",
+      "division": 3,
+      "home": "oberlin",
+      "away": "capital",
+      "teams": "Oberlin vs Capital",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: capital, oberlin"
+    },
+    {
+      "contest_id": "6632636",
+      "division": 3,
+      "home": "hilbert",
+      "away": "la-roche",
+      "teams": "Hilbert vs La Roche",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: la-roche, hilbert"
+    },
+    {
+      "contest_id": "6632654",
+      "division": 3,
+      "home": "grove-city",
+      "away": "geneva",
+      "teams": "Grove City vs Geneva",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: geneva, grove-city"
+    },
+    {
+      "contest_id": "6632858",
+      "division": 3,
+      "home": "emmanuel-ma",
+      "away": "rhode-island-col",
+      "teams": "Emmanuel (MA) vs Rhode Island Col.",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: rhode-island-col, emmanuel-ma"
+    },
+    {
+      "contest_id": "6632860",
+      "division": 3,
+      "home": "union-ny",
+      "away": "middlebury",
+      "teams": "Union (NY) vs Middlebury",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: middlebury, union-ny"
+    },
+    {
+      "contest_id": "6632949",
+      "division": 3,
+      "home": "bryn-mawr",
+      "away": "immaculata",
+      "teams": "Bryn Mawr vs Immaculata",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: immaculata, bryn-mawr"
+    },
+    {
+      "contest_id": "6633011",
+      "division": 3,
+      "home": "wilkes",
+      "away": "gwynedd-mercy",
+      "teams": "Wilkes vs Gwynedd Mercy",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: gwynedd-mercy, wilkes"
+    },
+    {
+      "contest_id": "6633055",
+      "division": 3,
+      "home": "hanover",
+      "away": "asbury",
+      "teams": "Hanover vs Asbury",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: asbury, hanover"
+    },
+    {
+      "contest_id": "6633699",
+      "division": 3,
+      "home": "guilford",
+      "away": "randolph",
+      "teams": "Guilford vs Randolph",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: randolph, guilford"
+    },
+    {
+      "contest_id": "6633725",
+      "division": 3,
+      "home": "ohio-northern",
+      "away": "otterbein",
+      "teams": "Ohio Northern vs Otterbein",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: otterbein, ohio-northern"
+    },
+    {
+      "contest_id": "6633866",
+      "division": 3,
+      "home": "maryville-tn",
+      "away": "sewanee",
+      "teams": "Maryville (TN) vs Sewanee",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: sewanee, maryville-tn"
+    },
+    {
+      "contest_id": "6634058",
+      "division": 3,
+      "home": "pitt-greensburg",
+      "away": "mt-aloysius",
+      "teams": "Pitt.-Greensburg vs Mount Aloysius",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: mt-aloysius, pitt-greensburg"
+    },
+    {
+      "contest_id": "6634332",
+      "division": 3,
+      "home": "earlham",
+      "away": "anderson-in",
+      "teams": "Earlham vs Anderson (IN)",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: anderson-in, earlham"
+    },
+    {
+      "contest_id": "6634509",
+      "division": 3,
+      "home": "westminster-pa",
+      "away": "thiel",
+      "teams": "Westminster (PA) vs Thiel",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: thiel, westminster-pa"
+    },
+    {
+      "contest_id": "6634756",
+      "division": 3,
+      "home": "penn-st-brandywine",
+      "away": "penn-st-abington",
+      "teams": "Penn St. Brandywine vs Penn St.-Abington",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: penn-st-abington, penn-st-brandywine"
+    },
+    {
+      "contest_id": "6635073",
+      "division": 3,
+      "home": "st-francis-pa",
+      "away": "wash-jeff",
+      "teams": "Saint Francis vs Wash. & Jeff.",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: wash-jeff"
+    },
+    {
+      "contest_id": "6635276",
+      "division": 3,
+      "home": "st-marys-md",
+      "away": "lancaster-bible",
+      "teams": "St. Mary's (MD) vs Lancaster Bible",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: lancaster-bible, st-marys-md"
+    },
+    {
+      "contest_id": "6635525",
+      "division": 3,
+      "home": "western-new-eng",
+      "away": "umass-boston",
+      "teams": "Western New Eng. vs UMass Boston",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: umass-boston, western-new-eng"
+    },
+    {
+      "contest_id": "6635586",
+      "division": 3,
+      "home": "goucher",
+      "away": "washington-col",
+      "teams": "Goucher vs Washington Col.",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: washington-col, goucher"
+    },
+    {
+      "contest_id": "6635950",
+      "division": 3,
+      "home": "salem-st",
+      "away": "westfield-st",
+      "teams": "Salem St. vs Westfield St.",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: westfield-st, salem-st"
+    },
+    {
+      "contest_id": "6636245",
+      "division": 3,
+      "home": "carnegie-mellon",
+      "away": "kenyon",
+      "teams": "Carnegie Mellon vs Kenyon",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: kenyon, carnegie-mellon"
+    },
+    {
+      "contest_id": "6636412",
+      "division": 3,
+      "home": "lagrange",
+      "away": "huntingdon",
+      "teams": "LaGrange vs Huntingdon",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: huntingdon, lagrange"
+    },
+    {
+      "contest_id": "6636433",
+      "division": 3,
+      "home": "gettysburg",
+      "away": "catholic",
+      "teams": "Gettysburg vs Catholic",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: catholic, gettysburg"
+    },
+    {
+      "contest_id": "6636514",
+      "division": 3,
+      "home": "chatham",
+      "away": "waynesburg",
+      "teams": "Chatham vs Waynesburg",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: waynesburg, chatham"
+    },
+    {
+      "contest_id": "6636593",
+      "division": 3,
+      "home": "gallaudet",
+      "away": "marymount-va",
+      "teams": "Gallaudet vs Marymount (VA)",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: marymount-va, gallaudet"
+    },
+    {
+      "contest_id": "6636618",
+      "division": 3,
+      "home": "castleton",
+      "away": "cobleskill-st",
+      "teams": "VTSU Castleton vs SUNY Cobleskill ",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: cobleskill-st, castleton"
+    },
+    {
+      "contest_id": "6637553",
+      "division": 3,
+      "home": "wilson",
+      "away": "penn-st-mont-alto",
+      "teams": "Wilson vs Penn St.-Mont Alto",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: penn-st-mont-alto, wilson"
+    },
+    {
+      "contest_id": "6637691",
+      "division": 3,
+      "home": "muskingum",
+      "away": "john-carroll",
+      "teams": "Muskingum vs John Carroll",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: john-carroll, muskingum"
+    },
+    {
+      "contest_id": "6638127",
+      "division": 2,
+      "home": "drury",
+      "away": "southwest-baptist",
+      "teams": "Drury vs Southwest Baptist",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: southwest-baptist, drury"
+    },
+    {
+      "contest_id": "6639739",
+      "division": 2,
+      "home": "neb-kearney",
+      "away": "ark-fort-smith",
+      "teams": "Neb.-Kearney vs Ark.-Fort Smith",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: ark-fort-smith, neb-kearney"
+    },
+    {
+      "contest_id": "6639949",
+      "division": 3,
+      "home": "penn-tech",
+      "away": "penn-st-harrisburg",
+      "teams": "Penn College vs Penn St. Harrisburg",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: penn-st-harrisburg, penn-tech"
+    },
+    {
+      "contest_id": "6640196",
+      "division": 3,
+      "home": "penn-st-berks",
+      "away": "cedar-crest",
+      "teams": "Penn St.-Berks vs Cedar Crest",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: cedar-crest, penn-st-berks"
+    },
+    {
+      "contest_id": "6640198",
+      "division": 3,
+      "home": "notre-dame-md",
+      "away": "cairn",
+      "teams": "Notre Dame (MD) vs Cairn",
+      "start_epoch": 1790809200,
+      "reason": "unrated team: cairn, notre-dame-md"
+    },
+    {
+      "contest_id": "6644725",
+      "division": 2,
+      "home": "west-virginia-st",
+      "away": "",
+      "teams": "West Virginia St. vs Shawnee State ",
+      "start_epoch": 1790809200,
+      "reason": "invalid/missing team or home label"
+    },
+    {
+      "contest_id": "6628993",
+      "division": 2,
+      "home": "concordia-irvine",
+      "away": "cal-st-la",
+      "teams": "CUI vs Cal State LA",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: cal-st-la, concordia-irvine"
+    },
+    {
+      "contest_id": "6632712",
+      "division": 3,
+      "home": "st-olaf",
+      "away": "bethel-mn",
+      "teams": "St. Olaf vs Bethel (MN)",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: bethel-mn, st-olaf"
+    },
+    {
+      "contest_id": "6633315",
+      "division": 3,
+      "home": "wis-la-crosse",
+      "away": "wis-stout",
+      "teams": "Wis.-La Crosse vs Wis.-Stout",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: wis-stout, wis-la-crosse"
+    },
+    {
+      "contest_id": "6634137",
+      "division": 3,
+      "home": "loras",
+      "away": "wis-platteville",
+      "teams": "Loras vs Wis.-Platteville",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: wis-platteville, loras"
+    },
+    {
+      "contest_id": "6634451",
+      "division": 3,
+      "home": "wis-eau-claire",
+      "away": "northwestern-st-paul",
+      "teams": "Wis.-Eau Claire vs Northwestern-St. Paul",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: northwestern-st-paul, wis-eau-claire"
+    },
+    {
+      "contest_id": "6634489",
+      "division": 3,
+      "home": "carroll-wi",
+      "away": "north-central-il",
+      "teams": "Carroll (WI) vs North Central (IL)",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: north-central-il, carroll-wi"
+    },
+    {
+      "contest_id": "6634588",
+      "division": 3,
+      "home": "neb-wesleyan",
+      "away": "st-mary-ne",
+      "teams": "Neb. Wesleyan vs St. Mary (NE)",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: st-mary-ne, neb-wesleyan"
+    },
+    {
+      "contest_id": "6635119",
+      "division": 3,
+      "home": "ill-wesleyan",
+      "away": "wheaton-il",
+      "teams": "Ill. Wesleyan vs Wheaton (IL)",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: wheaton-il, ill-wesleyan"
+    },
+    {
+      "contest_id": "6638505",
+      "division": 3,
+      "home": "greenville",
+      "away": "eureka",
+      "teams": "Greenville vs Eureka",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: eureka, greenville"
+    },
+    {
+      "contest_id": "6640189",
+      "division": 3,
+      "home": "augustana-il",
+      "away": "carthage",
+      "teams": "Augustana (IL) vs Carthage",
+      "start_epoch": 1790812800,
+      "reason": "unrated team: carthage, augustana-il"
+    },
+    {
+      "contest_id": "6636057",
+      "division": 3,
+      "home": "wis-lutheran",
+      "away": "marian-wi",
+      "teams": "Wis. Lutheran vs Marian (WI)",
+      "start_epoch": 1790813700,
+      "reason": "unrated team: marian-wi, wis-lutheran"
+    },
+    {
+      "contest_id": "6630083",
+      "division": 2,
+      "home": "point-loma",
+      "away": "vanguard",
+      "teams": "Point Loma vs Vanguard",
+      "start_epoch": 1790816400,
+      "reason": "unrated team: vanguard"
+    },
+    {
+      "contest_id": "6638974",
+      "division": 2,
+      "home": "westmont-college",
+      "away": "biola",
+      "teams": "Westmont vs Biola",
+      "start_epoch": 1790820000,
+      "reason": "unrated team: biola, westmont-college"
+    }
+  ],
+  "fetched": 86,
+  "raw_count": 87,
+  "duplicates": 1,
+  "date": "2026-09-30",
+  "retrieved_at": "2026-10-04T19:57:48.180516+00:00"
+}

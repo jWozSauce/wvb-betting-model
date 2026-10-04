@@ -11,7 +11,7 @@ with ExitStack() as stack:
  guards(stack);stack.enter_context(patch.dict(os.environ,{'WVB_ENABLE_REPAIRS':'1'}));stack.enter_context(patch('vbstats.venues.slate_venues',return_value={}))
  # Override the safety guard with a capture-only mock, never a worksheet.
  log=stack.enter_context(patch('bet_log.log_bets',return_value=1))
- at=new_app((ROOT/'streamlit_app.py').read_text().replace('absents_map = load_availability()', 'absents_map = {}')); element(at.radio,'Odds source').set_value('Paste a board');check(at.run())
+ at=new_app((ROOT/'streamlit_app.py').read_text().replace('absents = load_availability()', 'absents = {}')); element(at.radio,'Odds source').set_value('Paste a board');check(at.run())
  element(at.text_area,'Pasted board').set_value('Wisconsin -110\nNebraska -110')
  def evaluate():element(at.button,'Parse & evaluate').click();check(at.run())
  evaluate();old=at.session_state.best_card.stake.sum();assert old>0

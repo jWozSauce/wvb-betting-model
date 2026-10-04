@@ -722,10 +722,12 @@ with tab_price:
 with tab_best:
     st.subheader("Best bets")
     schedule_enabled = os.environ.get("WVB_ENABLE_NCAA_SCHEDULE", "1") == "1"
+    manual_enabled = os.environ.get("WVB_ENABLE_MANUAL_BOARD", "0") == "1"
     source_b = st.radio(
         "Odds source",
         ["Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"]
-        + (["NCAA schedule (price everything)"] if schedule_enabled else []),
+        + (["NCAA schedule (price everything)"] if schedule_enabled else [])
+        + (["Schedule + board (manual match)"] if manual_enabled else []),
         horizontal=True, key="best_source",
         help="Live API pulls the whole NCAA W slate from OddsPapi — one "
              "request per book (free tier: 250/month). Each market shows "
@@ -736,6 +738,12 @@ with tab_best:
         home_venues = pd.read_parquet(f"{HERE}/app_data/home_venues.parquet")
         render_schedule(ratings, params, home_venues, render_pricing_panel)
     else:
+        manual_mode = source_b == "Schedule + board (manual match)"
+        manual_run, manual_games, manual_unparsed, manual_inputs = False, [], [], {}
+        if manual_mode:
+            import manual_board
+            manual_run, manual_games, manual_unparsed, manual_inputs = manual_board.render(
+                ratings, pd.read_parquet(f"{HERE}/app_data/home_venues.parquet"))
         paste = ""
         if source_b == "Paste a board":
             st.caption(
@@ -763,13 +771,15 @@ with tab_best:
             paste = st.text_area("Pasted board", height=200,
                                  placeholder="Paste the sportsbook page text "
                                              "here…")
-        venue_b = st.selectbox(
-            "Venue for ALL games on this slate", ["Home court",
-            "Neutral (host/label matters)", "True toss-up (symmetrized)"],
-            key="best_venue",
-            help="Applied to every parsed game on the next Parse & evaluate. "
-                 "Home court is right for normal slates; use toss-up for "
-                 "tournament days where the book's home label is arbitrary.")
+        venue_b = "Home court"
+        if not manual_mode:
+            venue_b = st.selectbox(
+                "Venue for ALL games on this slate", ["Home court",
+                "Neutral (host/label matters)", "True toss-up (symmetrized)"],
+                key="best_venue",
+                help="Applied to every parsed game on the next Parse & evaluate. "
+                     "Home court is right for normal slates; use toss-up for "
+                     "tournament days where the book's home label is arbitrary.")
         neutral_b = venue_b != "Home court"
         tossup_b = venue_b.startswith("True toss-up")
         @st.cache_data(ttl=3600, show_spinner="Looking up venues on the NCAA "
@@ -808,8 +818,8 @@ with tab_best:
             return games_, nreq_, quota
 
         card_context = dict(pricing_context("Team Elo"),
-                            venue_mode=VENUE_SHORT.get(venue_b, venue_b))
-        if repair_flags.enabled():
+                            venue_mode="per-game" if manual_mode else VENUE_SHORT.get(venue_b, venue_b))
+        if repair_flags.enabled() or manual_mode:
             import hashlib
             card_inputs = dict(
                 context=card_context, source=source_b, paste=paste,
@@ -817,6 +827,8 @@ with tab_best:
                     ratings, index=True).values.tobytes()).hexdigest(),
                 model=hashlib.sha256(params.tobytes() + param_draws.tobytes()).hexdigest(),
                 availability=load_availability())
+            if manual_mode:
+                card_inputs["manual"] = manual_inputs
             if ("best_card" in st.session_state and
                     st.session_state.get("best_inputs") != card_inputs):
                 for key in ("best_card", "best_unmatched", "best_low_conf",
@@ -827,7 +839,9 @@ with tab_best:
                         "to refresh prices and stakes.")
 
         run_eval, games, unparsed, n_oddsless = False, [], [], 0
-        if source_b == "Paste a board":
+        if manual_mode:
+            run_eval, games, unparsed = manual_run, manual_games, manual_unparsed
+        elif source_b == "Paste a board":
             if st.button("Parse & evaluate", type="primary") and paste.strip():
                 games, unparsed, n_oddsless = paste_odds.parse_board(paste)
                 run_eval = True
@@ -854,7 +868,7 @@ with tab_best:
                                                fullnames=team_fullnames)
                 if hm_ and am_:
                     matched_pairs.append((am_, hm_))
-            venue_info = cached_venues(tuple(sorted(matched_pairs)))
+            venue_info = {} if manual_mode else cached_venues(tuple(sorted(matched_pairs)))
             if not games and n_oddsless >= 2:
                 st.error(
                     f"Found ~{n_oddsless // 2} games but NO odds in the paste — "
@@ -864,10 +878,13 @@ with tab_best:
             seos = ratings.team.tolist()
             card_rows, unmatched, low_conf = [], [], []
             for g in games:
-                h_match, hs = paste_odds.match_team(g["home"], seos,
-                                                    fullnames=team_fullnames)
-                a_match, as_ = paste_odds.match_team(g["away"], seos,
-                                                    fullnames=team_fullnames)
+                if manual_mode:
+                    h_match, a_match, hs, as_ = g["home"], g["away"], 1., 1.
+                else:
+                    h_match, hs = paste_odds.match_team(g["home"], seos,
+                                                        fullnames=team_fullnames)
+                    a_match, as_ = paste_odds.match_team(g["away"], seos,
+                                                        fullnames=team_fullnames)
                 if not h_match or not a_match:
                     unmatched.append(f"{g['away']} @ {g['home']} "
                                      f"(match scores {as_:.2f}/{hs:.2f})")
@@ -877,108 +894,24 @@ with tab_best:
                     low_conf.append(f"“{g['away']}”→{a_match} / "
                                     f"“{g['home']}”→{h_match} "
                                     f"(confidence {match_conf:.2f})")
-                h = ratings[ratings.team == h_match].iloc[0]
-                a = ratings[ratings.team == a_match].iloc[0]
-                Xg = model.features(pd.DataFrame([{
-                    "home_serve_elo": h.serve_elo,
-                    "home_receive_elo": h.receive_elo, "home_conf_elo": h.conf_elo,
-                    "away_serve_elo": a.serve_elo,
-                    "away_receive_elo": a.receive_elo, "away_conf_elo": a.conf_elo,
-                    "is_neutral": neutral_b,
-                }]))
-                Xgf = model.features(pd.DataFrame([{
-                    "home_serve_elo": a.serve_elo,
-                    "home_receive_elo": a.receive_elo, "home_conf_elo": a.conf_elo,
-                    "away_serve_elo": h.serve_elo,
-                    "away_receive_elo": h.receive_elo, "away_conf_elo": h.conf_elo,
-                    "is_neutral": neutral_b,
-                }]))
-
-                def probs6_b(pv):
-                    p = model.set_score_probs(Xg, pv)[0]
-                    if tossup_b:
-                        p = 0.5 * (p + model.set_score_probs(Xgf, pv)[0][::-1])
-                    return p
-
-                probs_pt = probs6_b(params)
-                draws_g = np.stack([probs6_b(d) for d in param_draws])
-                mkt_devigs = paste_odds.market_devig(g["markets"])
-                for mkt_i, mkt in enumerate(g["markets"]):
-                    p = paste_odds.price_market(probs_pt, mkt["market"],
-                                                mkt["side"], mkt["point"])
-                    if p is None:
-                        continue
-                    p_draws = np.array([
-                        paste_odds.price_market(dp, mkt["market"], mkt["side"],
-                                                mkt["point"]) for dp in draws_g])
-                    p_lo = float(np.percentile(p_draws, CONSERVATIVE_Q))
-                    implied = kelly.american_to_prob(mkt["odds"])
-                    # market blend: shrink model toward the de-vigged book price
-                    # (WPO); unpaired markets shrink toward the vig-included
-                    # implied instead (more conservative)
-                    # API markets carry their own devig anchor (sharpest book
-                    # quoting both sides); pasted boards pair complements here
-                    p_mkt = mkt.get("mkt_prob") or mkt_devigs[mkt_i]
-                    mkt_paired = p_mkt is not None
-                    if not mkt_paired:
-                        p_mkt = implied
-                    p_blend = kelly.blend_prob(p, p_mkt, w_model)
-                    p_lo_blend = kelly.blend_prob(p_lo, p_mkt, w_model)
-                    p_basis = p_lo_blend if conservative else p_blend
-                    edge = p_basis - implied
-                    stake_ = (kelly.kelly_stake(bankroll, kfrac, mkt["odds"],
-                                                p_basis, edge_cap)
-                              if edge >= value_req else 0.0)
-                    side_team = (h_match if mkt["side"] == "home" else
-                                 a_match if mkt["side"] == "away" else mkt["side"])
-                    bet_label_ = (f"{side_team} ML" if mkt["market"] == "ml" else
-                                  f"{side_team} {mkt['point']:+g} sets"
-                                  if mkt["market"] == "spread" else
-                                  f"{mkt['side'].title()} {mkt['point']:g} sets")
-                    vi = venue_info.get((a_match, h_match), {})
-                    absents_map = load_availability()
-                    absence_annotations = (load_player_annotations()
-                                           if repair_flags.enabled() else {})
-                    absent_note = "; ".join(
-                        f"{t}: {', '.join(player_metrics.annotate(t, n.split(' (')[0], absence_annotations) if repair_flags.enabled() else n.split(' (')[0] for n in absents_map[t])}"
-                        for t in (a_match, h_match) if t in absents_map)
-                    # betting AGAINST a shorthanded team measured -33% ROI in
-                    # the paper log: the book prices the absence before Elo does
-                    if mkt["side"] == "home":
-                        vs_short = a_match in absents_map
-                    elif mkt["side"] == "away":
-                        vs_short = h_match in absents_map
-                    else:  # totals: risky if either lineup is shorthanded
-                        vs_short = (a_match in absents_map
-                                    or h_match in absents_map)
-                    card_rows.append({
-                        "⚠": "⚠️" if match_conf < 0.8 else "",
-                        "⚕opp": "⚕" if vs_short else "",
-                        "vs_shorthanded": vs_short,
-                        "⚕ absent": absent_note,
-                        "match_conf": match_conf,
-                        "game_#": g.get("board_pos"),
-                        "time": g.get("time", ""),
-                        "game_date": g.get("date", ""),
-                        "matchup": f"{a_match} @ {h_match}",
-                        "site": vi.get("site", ""),
-                        "venue": vi.get("venue", ""),
-                        "bet": bet_label_, "odds": mkt["odds"],
-                        "book": mkt.get("book", ""),
-                        "model_prob": round(p, 4),
-                        "mkt_prob": round(p_mkt, 4),
-                        "blend_prob": round(p_blend, 4),
-                        "devig": (f"wpo ({mkt['devig_book']})"
-                                  if mkt.get("devig_book")
-                                  else "wpo" if mkt_paired else "one-sided"),
-                        f"p{CONSERVATIVE_Q}": round(p_lo, 4),
-                        "edge": round(edge, 4), "stake": stake_,
-                        "fair_odds": kelly.prob_to_american(p_blend),
-                        "market": mkt["market"], "side": mkt["side"],
-                        "point": mkt["point"],
-                        "away_team": a_match, "home_team": h_match,
-                    })
-            if repair_flags.enabled():
+                from board_pricing import evaluate_game
+                absents = load_availability()
+                annotations = load_player_annotations() if repair_flags.enabled() else {}
+                game_rows = evaluate_game(
+                    g, h_match, a_match, match_conf,
+                    ratings[ratings.team == h_match].iloc[0],
+                    ratings[ratings.team == a_match].iloc[0], g.get("_venue_mode", venue_b),
+                    params, param_draws, card_context,
+                    g.get("_schedule", venue_info.get((a_match, h_match), {})),
+                    {t: absents[t] for t in (a_match, h_match) if t in absents},
+                    {k: v for k, v in annotations.items() if k[0] in (a_match, h_match)},
+                    repair_flags.enabled(), CONSERVATIVE_Q)
+                if manual_mode:
+                    for row in game_rows:
+                        row["venue_mode"] = VENUE_SHORT[g["_venue_mode"]]
+                        row["book_orientation"] = "book lists reversed" if g["_book_reversed"] else "same"
+                card_rows.extend(game_rows)
+            if repair_flags.enabled() or manual_mode:
                 import copy
                 st.session_state.best_inputs = copy.deepcopy(card_inputs)
                 st.session_state.best_context = copy.deepcopy(card_context)
@@ -1002,7 +935,7 @@ with tab_best:
 
         if "best_card" in st.session_state:
             card = st.session_state.best_card
-            logged_context = (st.session_state.best_context if repair_flags.enabled()
+            logged_context = (st.session_state.best_context if (repair_flags.enabled() or manual_mode)
                               else card_context)
             st.caption(f"{st.session_state.best_n_games} games parsed, "
                        f"{len(card)} markets priced.")
@@ -1071,7 +1004,7 @@ with tab_best:
                             profit="", graded_at="",
                             mkt_prob=getattr(r, "mkt_prob", ""),
                             blend_prob=getattr(r, "blend_prob", ""),
-                            **logged_context,
+                            **dict(logged_context, venue_mode=getattr(r, "venue_mode", logged_context["venue_mode"])),
                             game_time=paste_odds.game_time_et(
                                 getattr(r, "time", ""), now))
                             for r in trackable.itertuples()]
@@ -1111,7 +1044,7 @@ with tab_best:
                                 profit="", graded_at="",
                                 mkt_prob=getattr(r, "mkt_prob", ""),
                                 blend_prob=getattr(r, "blend_prob", ""),
-                                **logged_context,
+                                **dict(logged_context, venue_mode=getattr(r, "venue_mode", logged_context["venue_mode"])),
                                 game_time=paste_odds.game_time_et(
                                     getattr(r, "time", ""), now))
                                 for r in picks.itertuples()]

@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-30",
+  "first_load_seconds": 4.230158374994062,
+  "warm_load_seconds": 0.006704166007693857,
+  "requests": 12,
+  "rated": 9,
+  "unpriced": 77,
+  "fetched": 86,
+  "raw_count": 87,
+  "duplicates": 1,
+  "progress": [
+    {
+      "fraction": 0.0,
+      "message": "Fetching NCAA Division 1 schedule\u2026"
+    },
+    {
+      "fraction": 0.1,
+      "message": "Fetching NCAA Division 2 schedule\u2026"
+    },
+    {
+      "fraction": 0.2,
+      "message": "Fetching NCAA Division 3 schedule\u2026"
+    },
+    {
+      "fraction": 0.3,
+      "message": "Venue 1/9: norfolk-st @ hampton"
+    },
+    {
+      "fraction": 0.37777777777777777,
+      "message": "Venue 2/9: stonehill @ new-hampshire"
+    },
+    {
+      "fraction": 0.45555555555555555,
+      "message": "Venue 3/9: notre-dame @ louisville"
+    },
+    {
+      "fraction": 0.5333333333333332,
+      "message": "Venue 4/9: jackson-st @ mississippi-val"
+    },
+    {
+      "fraction": 0.6111111111111112,
+      "message": "Venue 5/9: vanderbilt @ lsu"
+    },
+    {
+      "fraction": 0.6888888888888889,
+      "message": "Venue 6/9: ill-chicago @ valparaiso"
+    },
+    {
+      "fraction": 0.7666666666666666,
+      "message": "Venue 7/9: grambling @ ark-pine-bluff"
+    },
+    {
+      "fraction": 0.8444444444444443,
+      "message": "Venue 8/9: uab @ memphis"
+    },
+    {
+      "fraction": 0.9222222222222223,
+      "message": "Venue 9/9: marquette @ depaul"
+    },
+    {
+      "fraction": 1.0,
+      "message": "Loaded 9 rated games; 77 not priced"
+    }
+  ]
+}
