@@ -1349,6 +1349,32 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   to perform its authorized integration and named display-only repair.
   No paid calls, Sheets writes, additional background services or polling.
 
+### 2026-10-04 16:12 EDT — T12 accepted and deployed to origin/main
+
+- **T12: accepted** by the October 4 planner ruling; integrated under the
+  owner's standing push authorization. Branch was already based on current
+  origin/main; fast-forwarded main to `8ddd3ae`. Separate `f78c4ec` enables
+  `WVB_ENABLE_MANUAL_BOARD` by default. Push succeeded:
+  `ef13b81..f78c4ec main -> main`. Publication is verified; cloud runtime
+  was not independently inspected. `WVB_ENABLE_MANUAL_BOARD=0` rolls back
+  the fourth source without affecting sources 1–3.
+- **Named display repair: confirmed** in `8ddd3ae`: only the displayed
+  copy's `point` becomes a string. Pricing and logged handicaps remain
+  unchanged numeric values. The final real-slate replay log contains zero
+  ArrowTypeError warnings; baseline-app comparisons still emit the old
+  warnings when deliberately executing the pre-repair code.
+- Final default-on boot/parity/state/cache/rollback suite passes, with zero
+  real external calls or writes. Evidence:
+  `evidence/t12-20261004/run-20261004T201101.985476Z-9kq_cyud/` and
+  `evidence/t12-20261004/real-replay/run-20261004T201050.658543Z-_gt_pktj/`.
+  Report updated: `MANUAL_BOARD_2026-10.md`.
+- Unaccepted T13 remains isolated at `4ebdbd5` on
+  `codex/replacement-lineups`, blocked on Q9's modeling definition.
+  No T13 product code was merged or deployed. Planner's 221 uncommitted
+  plan lines, reference files, infrastructure and rerun artifacts are
+  preserved. No new unattended jobs; existing watcher remains the sole
+  wake mechanism. Next: resolve Q9, amend T13 if needed, then planner review.
+
 ## 9. Open questions (append only)
 
 (none open)
