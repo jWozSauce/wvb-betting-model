@@ -1318,6 +1318,37 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Existing watcher only; no new unattended work. Next: T13, authorized by the
   newly recorded owner D1 ruling, on a separate branch after this handoff.
 
+### 2026-10-04 16:11 EDT — T13 interim implementation; bench definition blocked on Q9
+
+- **Interim result / blocked on Q9:** `4ebdbd5` on
+  `codex/replacement-lineups` implements default-off replacement slots,
+  explicit substitute override, tier/pool labels and legacy toggle. No
+  coefficient, fit, or hybrid reference changes. Report on that branch:
+  `REPLACEMENT_LINEUPS_2026-10.md`.
+- **Measured gates pass under the documented initial-lineup-complement
+  interpretation:** four removals vs Kansas at home, playtime weighted;
+  same October 4 data for both semantics. Player ML before → old removal →
+  replacement: Murray .881897 → .771336 → .622239; Babcock .765506 →
+  .518869 → .481156; Sigler .881897 → .898772 → .779731; Watson .765506 →
+  .814679 → .743631. Hybrid: Murray .951979 → .891003 → .788312; Babcock
+  .822149 → .594147 → .556218; Sigler .951979 → .960097 → .896190; Watson
+  .822149 → .862909 → .803412. Directional gate passes for Sigler/Watson.
+- Exact no-edit strengths across all roster teams in both weighting modes;
+  exact untouched/full-roster UI boards in Player and Hybrid; redistribution
+  toggle exact; explicit actual substitute consumes the removed slot instead
+  of receiving duplicate weight; no-rated-bench fallback is zero; five
+  computed/displayed labels verified. Protected artifact hashes unchanged.
+  Evidence on T13 branch:
+  `evidence/t13-20261004/run-20261004T200816.370126Z-i6y7y_vy/`.
+- **Risk, medium:** outside-last-lineup is not synonymous with low starts.
+  Nebraska's Reilly (40 starts) and Adriano (29) enter the overall bench;
+  both exceed some selected players' starts. Q9 requests a precise bench
+  definition instead of silently imposing a cutoff. T13 remains off and
+  unpushed; this issue applies beyond the four passing benchmarks.
+- T12 was accepted while this work ran; return to `codex/manual-schedule-board`
+  to perform its authorized integration and named display-only repair.
+  No paid calls, Sheets writes, additional background services or polling.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1513,3 +1544,21 @@ because a new session began; the new instruction expressly deletes the
 scheduled automation but does not expressly retire the prior local service.
 The scheduled automation is already deleted; only duplicate-service cleanup
 awaits this ruling.
+
+### Q9 — 2026-10-04 — T13 needs a precise bench eligibility rule
+
+The initial-lineup complement includes Nebraska season regulars Reilly
+(40 starts) and Adriano (29), despite the spec equating outside the current
+rotation with low/zero starts. The default-off implementation in `4ebdbd5`
+passes the four removal and no-edit gates, but its overall-bench tier can
+therefore treat an absent regular as a replacement. Pools are visible in the UI.
+
+**Recommendation:** define eligible bench explicitly as fitted roster players
+outside the initial/current selected lineup with starts strictly below half
+the team's maximum starts (exclude removed players as today). This would
+exclude Reilly and Adriano while retaining lower-usage substitutes; position,
+overall-team and zero fallback order stays unchanged. Alternatively accept
+the initial-lineup complement as implemented or specify a different cutoff.
+The cutoff is a modeling choice, not established by the passing benchmarks;
+please rule before T13 acceptance. No numeric threshold or production change
+has been applied. Independent accepted T12 deployment continues.
