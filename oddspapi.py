@@ -38,7 +38,8 @@ SPORT_ID = 23
 # devig-anchor priority order (Pinnacle = sharp book); betonline.ag is the
 # book Josh actually bets, so its prices must be on the card
 LEGACY_BOOKS = ("pinnacle", "draftkings", "fanduel", "betonline.ag")
-BOOKS = (*LEGACY_BOOKS, "bovada.lv")
+# T15 amendment: new books require real historical coverage first.
+BOOKS = LEGACY_BOOKS
 
 def default_books():
     return BOOKS if os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1" else LEGACY_BOOKS

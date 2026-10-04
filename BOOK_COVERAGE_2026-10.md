@@ -35,14 +35,18 @@ Only Michigan State–Penn State was attempted before the stop:
 Post-start is a timing classification, not proof of a provider's live-status flag.
 A one-fixture absence is not evidence that a book never covers NCAA women.
 A batch 403 does not identify which member caused the refusal. Existing cached
-history separately contains pregame DraftKings/FanDuel/BetOnline quotes, but it
+history contains pregame DraftKings quotes only (89 fixtures in the extension), but it
 cannot substitute for the requested new sweep.
 
 Independent preparation completed: `WVB_ENABLE_BOOK_SELECTION=1` enables a
-book multiselect with Pinnacle, DraftKings, FanDuel, BetOnline and Bovada by default.
+book multiselect with the existing Pinnacle, DraftKings, FanDuel and BetOnline set.
 The switch defaults **0**; the deployed four-book behavior stays intact until
-acceptance. Bovada is included because the owner requested it regardless of probe
-coverage. No further book was promoted on incomplete or post-start-only evidence.
+acceptance. The planner amendment arrived during handoff and supersedes the earlier
+unconditional Bovada addition: Bovada is now absent from BOOKS and from selectable
+options until real historical coverage is found. Earlier mock Bovada decoder work
+is retained as a test, not coverage evidence. No new book is promoted on incomplete
+or post-start-only evidence. BetOnline website odds remain available through the
+T12 paste/bookmarklet manual-match flow regardless of current API availability.
 Selections are always ordered sharp-first; each cache key includes the selected
 books. Changing selection invalidates the prior card/saved board, without a fetch.
 Empty selection disables fetching. Mocked Bovada best prices merge while Pinnacle
@@ -53,9 +57,9 @@ five books = 150. At two/day, five books = 300, above the 250 allowance (and the
 plan's ~180 soft ceiling). The actual owner's frequency is unknown, so the
 multiselect is provided rather than silently fixing a larger set. Three selected
 books at two/day = 180. Cache hits cost zero; each uncached book consumes one
-request even if empty. The required real gate at the prepared default has a
-maximum cost of **5 billable requests**; written owner spending approval is still
-needed. Any later evidence-based expansion needs a revised cap before that gate.
+request even if empty. The current unexpanded set costs **4 billable requests** per fresh fetch.
+Q11 proposed a ceiling of five for an eventual evidenced expansion; written owner
+spending approval is still needed before any billable gate. Any later evidence-based expansion needs a revised cap before that gate.
 
 Sources: [request accounting](https://oddspapi.io/us/docs/requests-and-quota),
 [historical schema, maximum three books, and 5-second cooldown](https://oddspapi.io/us/docs/get-historical-odds),
@@ -68,3 +72,15 @@ pass in `evidence/t14-20261004/run-20261004T204716.891119Z-nos2sttk/` and
 `evidence/t12-20261004/run-20261004T204735.831219Z-8qlbskfr/`. An initial test-harness
 timeout was traced to patching Python's shared `time.sleep` while AppTest booted;
 the harness no longer patches that clock, and the completed suite passes.
+
+October 4 amendment correction: the first report draft incorrectly attributed
+FanDuel/BetOnline quotes to the saved historical table. Inspection shows DraftKings
+only (77 fixtures in the original, 89 in the extension). This has been corrected
+above. A one-time live 404 cannot establish that a provider has never carried a
+book; the incomplete historical sweep remains the test of that claim.
+
+Amended final offline gate passes at
+`evidence/t15-20261004/offline/run-20261004T205226.652906Z-nn6kacsi/checks.json`:
+Bovada is excluded from UI choices/defaults; explicit synthetic decoder input
+still proves the prepared best-line/anchor merge. Joint T14/T15 UI, cache,
+invalidation and empty-selection checks remain green.

@@ -1482,6 +1482,31 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   T13 handoff below/above across this branch switch so shared history stays
   visible; it does not represent new implementation or acceptance.
 
+### 2026-10-04 16:53 EDT — T15 amendment applied; coverage remains stopped
+
+- **T15 stopped at a gate**, Q10/Q11 unchanged. At final handoff a new
+  19-line planner amendment required historical evidence before adding
+  Bovada. Earlier unconditional five-book preparation is superseded:
+  Bovada is now excluded from BOOKS and selectable/default choices; current
+  four-book set remains. Book selector itself still defaults off.
+- **Pass:** reran the offline test with both T14 and T15 enabled; existing
+  four choices, cache by selected books, stale card/board invalidation,
+  no request on selection changes, and disabled empty fetch all pass.
+  Explicit synthetic Bovada input still tests merge/anchor mechanics but
+  is not coverage evidence. Final evidence:
+  `evidence/t15-20261004/offline/run-20261004T205226.652906Z-nn6kacsi/`.
+- **Correction to report draft:** saved historical tables contain only
+  DraftKings quotes (77 original fixtures, 89 extension), not the three
+  bookmakers the draft named. Corrected `BOOK_COVERAGE_2026-10.md`.
+  Planner's observed BetOnline live 404 establishes no board at that time,
+  not that OddsPapi has never carried it; unfinished history probe is still
+  needed. BetOnline website path remains T12 paste/bookmarklet/manual match.
+- Current set costs four calls/fresh fetch; Q11's proposed maximum five is
+  conditional on any later evidenced expansion and owner approval. No
+  new network calls, production pushes, protected-data writes or jobs.
+  Planner-owned additions preserved; T13 still awaits acceptance and T14
+  awaits review/cloud credential setup. Resume T15 only after Q10 ruling.
+
 ## 9. Open questions (append only)
 
 (none open)
