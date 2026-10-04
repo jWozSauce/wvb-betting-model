@@ -1192,6 +1192,32 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   no duplicate service was started. Worker questions will use Q headings;
   planner rulings must use separate non-Q headings to trigger delivery.
 
+### 2026-10-04 11:09 EDT — Scheduled automation deleted; duplicate local watchers found
+
+- **Coordination: implementation complete.** Applied the October 4 planner
+  instruction: the native automation tool confirmed deletion of
+  `check-volleyball-plan-until-5-pm`; its local automation directory is absent.
+  No recurring or in-session plan checks were created. Prior handoff: `9053595`.
+- Reviewed the changes since that handoff together with §6, §7 and §9.
+  The only new assignment is coordination cleanup. T10/T11 remain
+  **implementation complete, awaiting acceptance** (implementation `4e3c958`
+  and `09e5e72`, handoffs `2352853` and `f4f7d84`). No new acceptance or
+  implementation authorization was recorded; D1 remains the owner's decision.
+- **Risk, medium: duplicate wake services.** Read-only launchctl inspection
+  confirms both `local.codex.plans-watcher.wvb-plans` (PID 68550) and
+  `local.codex.plans-watcher.volleyball-plans` (PID 97955) are running.
+  Their state ledgers both record a queued delivery at 2026-10-04 15:07:40 UTC:
+  old receipt `01a10774-d87e-7641-a6f7-9480c647f851`, new receipt
+  `01a10774-d83e-7b42-84fa-c8832492c361`. The new watcher accepted the
+  notification hash `624edb7929174dac8ef975ebf77a052eff3dd0a45f891765561864576b01419d`.
+  This demonstrates duplicate queueing, not merely two installed definitions.
+- Asked Q8 before stopping either planner-installed service. Both remain
+  unattended, with logs and state under their respective
+  `~/.codex/plans-watchers/{wvb-plans,volleyball-plans}/` directories.
+  No app changes, paid API calls, protected-data writes or push occurred.
+  Preserved the planner's uncommitted plan/infrastructure changes. Next:
+  planner resolves Q8 and reviews T10/T11.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1374,3 +1400,16 @@ regression-test with fake credentials that neither UI text nor logs includes
 them. Review historical exposure privately before deciding whether rotation
 is needed. Do not print real keys or assume exposure occurred. T1 is
 report-only, so this audit does not change the exception path.
+
+### Q8 — 2026-10-04 — Retire the superseded duplicate watcher?
+
+Both the October 3 `wvb-plans` and October 4 `volleyball-plans` launch agents
+are running and queued this same plan update within 60 ms of each other
+(see the worker log). Recommendation: retire only the older `wvb-plans`
+service using its documented removal command, preserving the newer
+`volleyball-plans` watcher. Please confirm or have its installing planner
+remove it. WORKER.md §3 says not to terminate someone else's job merely
+because a new session began; the new instruction expressly deletes the
+scheduled automation but does not expressly retire the prior local service.
+The scheduled automation is already deleted; only duplicate-service cleanup
+awaits this ruling.
