@@ -31,7 +31,8 @@ for home,away,player in audit.CASES:
  note=notes[0]
  # Independent slot arithmetic, not the assembly implementation.
  original=next(r for r in hrows if r['player']==player)
- pool=[r for r in hrows if r['player'] not in initial and r['position']==original['position'] and (r['serve'] or r['recv'])]
+ pool=[r for r in hrows if r['player'] not in initial and r['position']==original['position'] and (r['serve'] or r['recv'])
+       and r['sets_started_cur'] < max(x['sets_started_cur'] for x in hrows)/2]
  expected_sv=float(np.mean([r['serve'] for r in pool]));expected_rc=float(np.mean([r['recv'] for r in pool]))
  assert note['tier']=='position bench'
  assert note['serve']==expected_sv and note['recv']==expected_rc
@@ -61,13 +62,21 @@ for home,away,player in audit.CASES:
 hrows=rapm[rapm.team=='nebraska'].sort_values(['sets_started_cur','recv'],ascending=False).to_dict('records')
 initial=audit.defaults(hrows)
 _,note=rp.replacement_strength(hrows,initial-{'Ryan Hunter'},initial)
-assert note[0]['tier']=='team bench';labels+=note
+assert note[0]['tier']=='team bench'
+assert not {'Bergen Reilly','Virginia Adriano'} & set(note[0]['members'])
+labels+=note
 # No available rated bench: a rotation-only team uses zero coefficients, keeps six shares.
 only=[dict(player='A',position='OH',serve=.02,recv=.01,sets_started_cur=4),
       dict(player='B',position='S',serve=.01,recv=.02,sets_started_cur=2)]
 strength,notes=rp.replacement_strength(only+[dict(player='Unrated',position='OH',serve=0.,recv=0.,sets_started_cur=0)],{'B'},{'A','B'})
 assert notes[0]['tier']=='league average' and notes[0]['serve']==notes[0]['recv']==0
 assert strength[:2]==rp.lineup_strength([dict(only[0],serve=0.,recv=0.),only[1]],{'A','B'})[:2]
+# The Q9 cutoff is strict; a fitted player exactly at half is not eligible.
+cutoff_rows = [dict(player='Starter',position='OH',serve=.02,recv=.01,sets_started_cur=10),
+               dict(player='Half',position='OH',serve=.5,recv=.5,sets_started_cur=5),
+               dict(player='Low',position='OH',serve=.003,recv=.002,sets_started_cur=4)]
+_, boundary = rp.replacement_strength(cutoff_rows,set(),{'Starter'})
+assert boundary[0]['members']==['Low'] and boundary[0]['serve']==.003
 # Explicit substitute takes the removed slot's weight, rather than both slot and own minutes.
 actual=[*only,dict(player='C',position='OH',serve=.005,recv=.006,sets_started_cur=0)]
 rs,names,ns=rp.replacement_lineup(actual,{'B','C'},{'A','B'})

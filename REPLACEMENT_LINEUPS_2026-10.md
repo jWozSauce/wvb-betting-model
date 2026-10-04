@@ -1,7 +1,8 @@
 # T13 — replacement lineup review
 
-Interim implementation; blocked on Q9's bench-definition ruling before final
-acceptance. Review with `WVB_ENABLE_REPLACEMENT_LINEUPS=1`. Default remains off.
+Implementation complete, awaiting planner acceptance. Q9 approved the precise
+bench criterion on October 4; implemented and revalidated below. Review with
+`WVB_ENABLE_REPLACEMENT_LINEUPS=1`. Default remains off.
 No fitted coefficients, fitting code, or hybrid reference construction changed.
 
 Removed initial-lineup players keep their original smoothed playing-time share
@@ -13,13 +14,13 @@ own weights. The existing normalization keeps six shares. The unchanged path
 calls the original function with identical rows, order and selections.
 
 The panel identifies every substitute, tier and pool, and includes the legacy
-redistribution toggle. Explicit additions override synthetic slots. Current
-bench interpretation is fitted roster players outside the initial lineup and
-current selection. This is reviewable but needs clarification: absence from the
-last lineup does not establish low playing time. Nebraska's Bergen Reilly
-(40 starts) and Virginia Adriano (29) enter the overall bench under that rule.
-No unapproved numeric cutoff was introduced. Q9 proposes a precise low-start
-criterion for the planner to decide before acceptance.
+redistribution toggle. Explicit additions override synthetic slots. Per Q9,
+eligible bench players have fitted coefficients, are outside the initial and
+current selected lineups, and have starts strictly below half the team's maximum.
+Removed players are excluded. The boundary is strict; exactly-half players do
+not qualify. Nebraska's Reilly (40 starts) and Adriano (29) are now excluded.
+No-edit behavior, including already-absent players in the initial lineup,
+remains unchanged. Explicit added replacements may override the synthetic pool.
 
 Same-setting benchmarks vs Kansas, home court, playtime weighted, current
 October 4 snapshots; values are home match-win probabilities. Both old and new
@@ -34,12 +35,15 @@ use the identical snapshot (earlier T4 numbers used older data).
 
 `PYTHONPATH=. .venv/bin/python scripts/validation/test_replacement_lineups.py`
 passes independent slot-weight arithmetic, exact untouched selection and full
-roster strengths for every roster team in both weighting modes, both UI pricing
+roster strengths for all 365 roster teams in both weighting modes, both UI pricing
 modes, exact legacy-toggle parity, explicit substitution, unrated-bench fallback,
 and five displayed label checks. Protected artifacts retain their SHA256 hashes.
-Evidence: `evidence/t13-20261004/run-20261004T200816.370126Z-i6y7y_vy/`.
+Evidence: `evidence/t13-20261004/run-20261004T201407.708539Z-eg98tbg0/`.
 
 The benchmark directional gate passes, but does not establish that all substitute
 estimates are worse than all removed players. No such clamp is applied. Bench
-qualification is a modeling definition, not something to silently infer from
-these four favorable results. Zero paid requests, real Sheets writes or deploys.
+qualification follows the recorded planner ruling; no further modeling cutoff
+was inferred from these benchmark results. Zero paid requests, real Sheets
+writes or deploys. The four same-position pools are unchanged by Q9; the
+fifth (Ryan Hunter, overall bench) drops to +0.148172 points/set and excludes
+the two absent regulars. All five displayed labels match their computed values.

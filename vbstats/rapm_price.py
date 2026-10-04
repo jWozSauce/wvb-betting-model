@@ -106,7 +106,8 @@ def replacement_lineup(rapm_rows, selected, rotation):
 
     Rotation is the panel's initial lineup, not the hybrid season reference.
     Bench means fitted roster members outside that rotation and outside the selected
-    lineup. Explicit additions replace removed slots, same position first, then
+    lineup, with starts strictly below half the team maximum (Q9 ruling).
+    Explicit additions replace removed slots, same position first, then
     roster order. Extra additions retain their own playing-time weights.
     """
     selected, rotation = set(selected), set(rotation)
@@ -114,8 +115,10 @@ def replacement_lineup(rapm_rows, selected, rotation):
     if not removed:
         return rapm_rows, selected, []  # untouched arithmetic and ordering
     additions = [r for r in rapm_rows if r['player'] in selected - rotation]
+    cutoff = max((r.get('sets_started_cur', 0) for r in rapm_rows), default=0) / 2
     bench = [r for r in rapm_rows if r['player'] not in rotation | selected
-             and (r['serve'] or r['recv'])]
+             and (r['serve'] or r['recv'])
+             and r.get('sets_started_cur', 0) < cutoff]
     assignments = {}
     # Reserve position-matched explicit substitutes before cross-position ones.
     for r in removed:

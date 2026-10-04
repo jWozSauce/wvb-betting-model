@@ -423,7 +423,8 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                 h_rows, h_sel, h_rotation, pt_weight)
             (a_sv, a_rc, cov_a), a_subs = rapm_price.replacement_strength(
                 a_rows, a_sel, a_rotation, pt_weight)
-            st.caption("Replacement bench: rated roster players outside the initial lineup and current selection. "
+            st.caption("Replacement bench: rated roster players outside the initial lineup and current selection, "
+                       "with starts strictly below half the team maximum. "
                        "Use the lineup selector to add an actual substitute; additions take removed minutes "
                        "at the same position first. Otherwise use the position bench average, then the team "
                        "bench average, then zero (league average). The removed player's share is retained.")
