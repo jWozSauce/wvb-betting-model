@@ -1,0 +1,28 @@
+{
+  "task": "T15 live gate",
+  "cap": 5,
+  "books": [
+    "sbobet",
+    "draftkings",
+    "hardrockbet",
+    "1xbet",
+    "bwin"
+  ],
+  "reserved": [
+    "sbobet",
+    "draftkings",
+    "hardrockbet",
+    "1xbet",
+    "bwin"
+  ],
+  "state": "complete",
+  "updated_at": "2026-10-04T21:28:55.415858+00:00",
+  "quota_before": {
+    "used": 15,
+    "limit": 250
+  },
+  "quota_after": {
+    "used": 20,
+    "limit": 250
+  }
+}

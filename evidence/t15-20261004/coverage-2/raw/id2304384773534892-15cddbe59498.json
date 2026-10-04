@@ -1,0 +1,15 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534892",
+    "bookmakers": "betrivers,bovada.lv,caesars"
+  },
+  "status": 404,
+  "retrieved_at": "2026-10-04T21:25:14.896067+00:00",
+  "payload": {
+    "error": {
+      "message": "No historical odds found.",
+      "code": "NOT_FOUND",
+      "details": "Please check the provided filters and try again."
+    }
+  }
+}

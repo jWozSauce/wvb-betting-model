@@ -1,0 +1,50 @@
+[
+  {
+    "away": "Kentucky Wildcats",
+    "home": "Florida Gators",
+    "markets": [
+      {
+        "market": "ml",
+        "side": "away",
+        "point": "",
+        "odds": -260,
+        "book": "draftkings",
+        "mkt_prob": 0.6916,
+        "devig_book": "draftkings"
+      },
+      {
+        "market": "ml",
+        "side": "home",
+        "point": "",
+        "odds": 195,
+        "book": "draftkings",
+        "mkt_prob": 0.3084,
+        "devig_book": "draftkings"
+      },
+      {
+        "market": "spread",
+        "side": "away",
+        "point": -1.5,
+        "odds": -105,
+        "book": "draftkings",
+        "mkt_prob": 0.4783,
+        "devig_book": "draftkings"
+      },
+      {
+        "market": "spread",
+        "side": "home",
+        "point": 1.5,
+        "odds": -125,
+        "book": "draftkings",
+        "mkt_prob": 0.5217,
+        "devig_book": "draftkings"
+      }
+    ],
+    "fixture_id": "id2304384773535046",
+    "home_participant_id": "502916",
+    "away_participant_id": "502914",
+    "time": "8:30 PM",
+    "date": "2026-10-04",
+    "board_pos": 1
+  }
+]

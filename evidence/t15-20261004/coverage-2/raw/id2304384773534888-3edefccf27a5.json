@@ -1,0 +1,15 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534888",
+    "bookmakers": "1xbet,bwin,unibet"
+  },
+  "status": 404,
+  "retrieved_at": "2026-10-04T21:24:08.283876+00:00",
+  "payload": {
+    "error": {
+      "message": "No historical odds found.",
+      "code": "NOT_FOUND",
+      "details": "Please check the provided filters and try again."
+    }
+  }
+}

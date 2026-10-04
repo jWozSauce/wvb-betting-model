@@ -1,0 +1,435 @@
+{
+  "state": "stopped_at_acceptance_gate",
+  "capture_complete": true,
+  "default_replay_identical": true,
+  "default_markets_verified": 4,
+  "live_requests": 5,
+  "quota_before": 15,
+  "quota_after": 20,
+  "additional_requests": 0,
+  "fixture_inventory": [
+    {
+      "book": "draftkings",
+      "fixture_id": "id2304384773535018",
+      "start_time": "2026-10-04T17:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": false,
+      "supported_active_outcomes": 0,
+      "decoded_rows": []
+    },
+    {
+      "book": "draftkings",
+      "fixture_id": "id2304384773535044",
+      "start_time": "2026-10-04T22:00:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": false,
+      "supported_active_outcomes": 0,
+      "decoded_rows": []
+    },
+    {
+      "book": "draftkings",
+      "fixture_id": "id2304384773535046",
+      "start_time": "2026-10-05T00:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": false,
+      "supported_active_outcomes": 4,
+      "decoded_rows": [
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": -125,
+          "dec": 1.8
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": -105,
+          "dec": 1.952
+        },
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -260,
+          "dec": 1.385
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 195,
+          "dec": 2.95
+        }
+      ]
+    },
+    {
+      "book": "1xbet",
+      "fixture_id": "id2304384773535018",
+      "start_time": "2026-10-04T17:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": false,
+      "suspended": false,
+      "supported_active_outcomes": 4,
+      "decoded_rows": [
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 177,
+          "dec": 2.77
+        },
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -244,
+          "dec": 1.41
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": -110,
+          "dec": 1.91
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": -125,
+          "dec": 1.8
+        }
+      ]
+    },
+    {
+      "book": "1xbet",
+      "fixture_id": "id2304384773535046",
+      "start_time": "2026-10-05T00:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": false,
+      "suspended": false,
+      "supported_active_outcomes": 2,
+      "decoded_rows": [
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -287,
+          "dec": 1.349
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 184,
+          "dec": 2.844
+        }
+      ]
+    },
+    {
+      "book": "bwin",
+      "fixture_id": "id2304384773535018",
+      "start_time": "2026-10-04T17:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": true,
+      "supported_active_outcomes": 12,
+      "decoded_rows": [
+        {
+          "market": "spread",
+          "side": "home",
+          "point": -2.5,
+          "odds": 550,
+          "dec": 6.5
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": 2.5,
+          "odds": -1000,
+          "dec": 1.1
+        },
+        {
+          "market": "total",
+          "side": "under",
+          "point": 4.5,
+          "odds": -250,
+          "dec": 1.4
+        },
+        {
+          "market": "total",
+          "side": "over",
+          "point": 4.5,
+          "odds": 175,
+          "dec": 2.75
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": -192,
+          "dec": 1.52
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": 137,
+          "dec": 2.37
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -2.5,
+          "odds": 380,
+          "dec": 4.8
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 2.5,
+          "odds": -625,
+          "dec": 1.16
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": 1.5,
+          "odds": -294,
+          "dec": 1.34
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": -1.5,
+          "odds": 200,
+          "dec": 3.0
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 105,
+          "dec": 2.05
+        },
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -147,
+          "dec": 1.68
+        }
+      ]
+    },
+    {
+      "book": "bwin",
+      "fixture_id": "id2304384773535044",
+      "start_time": "2026-10-04T22:00:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": false,
+      "supported_active_outcomes": 12,
+      "decoded_rows": [
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -118,
+          "dec": 1.85
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": -118,
+          "dec": 1.85
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": -2.5,
+          "odds": 450,
+          "dec": 5.5
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": 2.5,
+          "odds": -714,
+          "dec": 1.14
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -2.5,
+          "odds": 450,
+          "dec": 5.5
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 2.5,
+          "odds": -769,
+          "dec": 1.13
+        },
+        {
+          "market": "total",
+          "side": "over",
+          "point": 4.5,
+          "odds": 180,
+          "dec": 2.8
+        },
+        {
+          "market": "total",
+          "side": "under",
+          "point": 4.5,
+          "odds": -256,
+          "dec": 1.39
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": -233,
+          "dec": 1.43
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": 160,
+          "dec": 2.6
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": 1.5,
+          "odds": -233,
+          "dec": 1.43
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": -1.5,
+          "odds": 165,
+          "dec": 2.65
+        }
+      ]
+    },
+    {
+      "book": "bwin",
+      "fixture_id": "id2304384773535046",
+      "start_time": "2026-10-05T00:30:00.000Z",
+      "status_id": 0,
+      "bookmaker_is_active": true,
+      "suspended": false,
+      "supported_active_outcomes": 6,
+      "decoded_rows": [
+        {
+          "market": "total",
+          "side": "over",
+          "point": 3.5,
+          "odds": -204,
+          "dec": 1.49
+        },
+        {
+          "market": "total",
+          "side": "under",
+          "point": 3.5,
+          "odds": 145,
+          "dec": 2.45
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": -139,
+          "dec": 1.72
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": 100,
+          "dec": 2.0
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 190,
+          "dec": 2.9
+        },
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -270,
+          "dec": 1.37
+        }
+      ]
+    }
+  ],
+  "bwin_first_diagnostic": [
+    {
+      "away": "Kentucky Wildcats",
+      "home": "Florida Gators",
+      "markets": [
+        {
+          "market": "ml",
+          "side": "away",
+          "point": "",
+          "odds": -260,
+          "book": "draftkings",
+          "mkt_prob": 0.6925,
+          "devig_book": "bwin"
+        },
+        {
+          "market": "ml",
+          "side": "home",
+          "point": "",
+          "odds": 195,
+          "book": "draftkings",
+          "mkt_prob": 0.3075,
+          "devig_book": "bwin"
+        },
+        {
+          "market": "spread",
+          "side": "away",
+          "point": -1.5,
+          "odds": -105,
+          "book": "draftkings",
+          "mkt_prob": 0.5408,
+          "devig_book": "bwin"
+        },
+        {
+          "market": "spread",
+          "side": "home",
+          "point": 1.5,
+          "odds": -125,
+          "book": "draftkings",
+          "mkt_prob": 0.4592,
+          "devig_book": "bwin"
+        }
+      ],
+      "fixture_id": "id2304384773535046",
+      "home_participant_id": "502916",
+      "away_participant_id": "502914",
+      "time": "8:30 PM",
+      "date": "2026-10-04",
+      "board_pos": 1
+    }
+  ],
+  "remaining": [
+    "Hard Rock returned HTTP 404; its live merge cannot be verified.",
+    "SBOBET returned an empty array; its live anchor cannot be verified.",
+    "1xBet returned outcome-active prices with bookmakerIsActive=false; semantics need review before relying on that fallback.",
+    "Full bookmaker catalog is absent (Q12)."
+  ],
+  "caveat": "Original ledger complete denotes capture/replay completion, not T15 acceptance. Altered anchor priority is offline diagnostic evidence only."
+}

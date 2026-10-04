@@ -1,0 +1,105 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": "betonline.ag,draftkings,fanduel"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-04T21:22:55.049787+00:00",
+  "payload": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": {
+      "draftkings": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:01.278Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T18:01:54.515Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:01.278Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T18:01:54.515Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "2323": {
+            "outcomes": {
+              "2323": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:01.278Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T18:01:54.515Z",
+                      "price": 2.3,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "2324": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T04:53:01.278Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T18:01:54.515Z",
+                      "price": 1.602,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

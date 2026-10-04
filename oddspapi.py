@@ -37,9 +37,10 @@ TOURNAMENT_NCAAW = "43847"
 SPORT_ID = 23
 # Legacy rollback set; T15 defaults follow the planner coverage ruling.
 LEGACY_BOOKS = ("pinnacle", "draftkings", "fanduel", "betonline.ag")
-BOOKS = ("draftkings", "hardrockbet")
+BOOKS = ("sbobet", "draftkings", "hardrockbet", "1xbet", "bwin")
 # Non-default sharp books retain priority when the owner explicitly tests them.
-ANCHOR_PRIORITY = ("pinnacle", "pinnacle+5", "pinnacle+30", *BOOKS)
+ANCHOR_ONLY_BOOKS = frozenset({"1xbet", "bwin", "unibet", "sbobet", "bcgame", "cloudbet"})
+ANCHOR_PRIORITY = ("pinnacle", "pinnacle+5", "pinnacle+30", "sbobet", "draftkings", "hardrockbet", "1xbet", "bwin")
 
 
 def available_books():
@@ -190,6 +191,8 @@ def fetch_board(books=None, key: str | None = None, timeout: int = 60):
 
         best: dict = {}  # (market, side, point) -> best-priced row
         for bk in books:
+            if bk in ANCHOR_ONLY_BOOKS:
+                continue  # information-only books cannot supply actionable bet prices
             for row in fx["books"].get(bk, []):
                 k = (row["market"], row["side"], row["point"])
                 if k not in best or row["dec"] > best[k]["dec"]:

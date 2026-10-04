@@ -1,0 +1,275 @@
+[
+  {
+    "book": "bet365",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "bet365-nj",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "betmgm",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "betrivers",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "bovada.lv",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "caesars",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "circasports",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "espnbet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "fanatics",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "hardrockbet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 2,
+    "pregame_fixtures": 1,
+    "pregame_markets": [
+      "Winner"
+    ],
+    "post_start_markets": [
+      "Winner"
+    ],
+    "supported_pregame_markets": [
+      "Winner"
+    ]
+  },
+  {
+    "book": "lowvig.ag",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "pinnacle",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "betonline.ag",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "draftkings",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 5,
+    "pregame_fixtures": 5,
+    "pregame_markets": [
+      "Set Handicap",
+      "Winner"
+    ],
+    "post_start_markets": [
+      "Set Handicap",
+      "Winner"
+    ],
+    "supported_pregame_markets": [
+      "Set Handicap",
+      "Winner"
+    ]
+  },
+  {
+    "book": "fanduel",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "bookmaker.eu",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "1xbet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 3,
+    "pregame_fixtures": 3,
+    "pregame_markets": [
+      "First Set Winner",
+      "Second Set Winner",
+      "Set Handicap",
+      "Third Set Winner",
+      "Total Sets Over Under",
+      "Winner"
+    ],
+    "post_start_markets": [
+      "First Set Winner",
+      "Fourth Set Winner",
+      "Second Set Winner",
+      "Third Set Winner",
+      "Winner"
+    ],
+    "supported_pregame_markets": [
+      "Set Handicap",
+      "Total Sets Over Under",
+      "Winner"
+    ]
+  },
+  {
+    "book": "bwin",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 2,
+    "pregame_fixtures": 2,
+    "pregame_markets": [
+      "First Set Winner",
+      "Set Handicap",
+      "Total Sets Over Under",
+      "Winner"
+    ],
+    "post_start_markets": [
+      "First Set Winner",
+      "Fourth Set Winner",
+      "Second Set Winner",
+      "Third Set Winner",
+      "Winner"
+    ],
+    "supported_pregame_markets": [
+      "Set Handicap",
+      "Total Sets Over Under",
+      "Winner"
+    ]
+  },
+  {
+    "book": "unibet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "sbobet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 2,
+    "pregame_fixtures": 1,
+    "pregame_markets": [
+      "Winner"
+    ],
+    "post_start_markets": [
+      "Winner"
+    ],
+    "supported_pregame_markets": [
+      "Winner"
+    ]
+  },
+  {
+    "book": "bcgame",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  },
+  {
+    "book": "cloudbet",
+    "fixtures_checked": 5,
+    "blocked_statuses": [],
+    "fixtures_with_trails": 0,
+    "pregame_fixtures": 0,
+    "pregame_markets": [],
+    "post_start_markets": [],
+    "supported_pregame_markets": []
+  }
+]

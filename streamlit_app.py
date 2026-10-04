@@ -733,7 +733,7 @@ with tab_best:
         help="Live API pulls the whole NCAA W slate from OddsPapi — one "
              "request per book (free tier: 250/month). Each market shows "
              "the BEST price across books; the blend anchor devigs the "
-             + ("first selected book quoting both sides (DraftKings before Hard Rock by default)."
+             + ("highest-priority selected book quoting both sides. Anchor-only books supply no bet prices."
                 if books_enabled else "sharpest book quoting both sides (Pinnacle first)."))
     if source_b == "NCAA schedule (price everything)":
         from schedule_pricing import render_schedule
@@ -754,8 +754,11 @@ with tab_best:
             if not catalog_complete:
                 st.caption("Full bookmaker catalog is unavailable; showing known books only.")
             selected_books = st.multiselect("Sportsbooks", available_books,
-                default=list(oddspapi.BOOKS), key="api_books")
+                default=list(oddspapi.BOOKS), key="api_books",
+                format_func=lambda b: f"{b} (anchor only)" if b in oddspapi.ANCHOR_ONLY_BOOKS else b)
             api_books = oddspapi.order_books(selected_books)
+            if set(api_books) & oddspapi.ANCHOR_ONLY_BOOKS:
+                st.caption("Anchor-only books inform fair probabilities; their odds are never offered as bets.")
             st.caption(f"Each fresh fetch uses {len(api_books)} quota requests. "
                        f"One per day ≈ {30*len(api_books)}/month; two per day ≈ "
                        f"{60*len(api_books)}/month (250 limit). Cached re-clicks are free.")
@@ -878,7 +881,7 @@ with tab_best:
                 run_eval = True
         else:
             fc = st.columns([2, 5])
-            if fc[0].button("Fetch odds & evaluate", type="primary", disabled=not api_books):
+            if fc[0].button("Fetch odds & evaluate", type="primary", disabled=not (set(api_books) - oddspapi.ANCHOR_ONLY_BOOKS)):
                 try:
                     games, nreq, quota = cached_api_board(api_books)
                     if live_mapping_enabled:

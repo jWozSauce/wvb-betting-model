@@ -1,0 +1,6 @@
+{
+  "fixture_book_pairs": 110,
+  "all_counts_equal": true,
+  "comparison": "datetime.fromisoformat versus pandas classification",
+  "strictly_before_start": true
+}

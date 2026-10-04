@@ -1,0 +1,12 @@
+{
+  "book": "hardrockbet",
+  "status": 404,
+  "retrieved_at": "2026-10-04T21:28:47.904049+00:00",
+  "payload": {
+    "error": {
+      "message": "No fixtures found for the specified tournament IDs and bookmaker.",
+      "code": "FIXTURE_NOT_FOUND",
+      "details": "Please check the provided tournament IDs and try again."
+    }
+  }
+}

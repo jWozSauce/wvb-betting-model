@@ -1,0 +1,103 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": "sbobet,bcgame,cloudbet"
+  },
+  "status": 200,
+  "retrieved_at": "2026-10-04T21:23:12.164428+00:00",
+  "payload": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": {
+      "sbobet": {
+        "markets": {
+          "231": {
+            "outcomes": {
+              "231": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T17:02:15.262Z",
+                      "price": 1.64,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:12:21.514Z",
+                      "price": 1.63,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:15:09.087Z",
+                      "price": 1.75,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:49:47.790Z",
+                      "price": 1.63,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:55:05.930Z",
+                      "price": 1.63,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              },
+              "232": {
+                "players": {
+                  "0": [
+                    {
+                      "createdAt": "2026-09-27T17:02:15.262Z",
+                      "price": 2.11,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:12:21.514Z",
+                      "price": 2.12,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:15:09.087Z",
+                      "price": 1.95,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:49:47.790Z",
+                      "price": 2.12,
+                      "limit": null,
+                      "active": true,
+                      "exchangeMeta": null
+                    },
+                    {
+                      "createdAt": "2026-09-27T17:55:05.930Z",
+                      "price": 2.12,
+                      "limit": null,
+                      "active": false,
+                      "exchangeMeta": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

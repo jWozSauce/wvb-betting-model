@@ -1,0 +1,835 @@
+{
+  "book": "bwin",
+  "status": 200,
+  "retrieved_at": "2026-10-04T21:28:50.718877+00:00",
+  "payload": [
+    {
+      "fixtureId": "id2304384773535018",
+      "participant1Id": 300230,
+      "participant2Id": 375186,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-04T17:30:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T16:51:44.006Z",
+      "bookmakerOdds": {
+        "bwin": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "5:1257899",
+          "fixturePath": "https://sports.bwin.com/en/sports/events/5:1257899",
+          "suspended": true,
+          "markets": {
+            "2319": {
+              "bookmakerMarketId": "65690945",
+              "marketActive": true,
+              "outcomes": {
+                "2319": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690945-159908559&type=Single",
+                      "bookmakerOutcomeId": "159908559",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 6.5,
+                      "priceAmerican": "550",
+                      "priceFractional": "11/2",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2320": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690945-159908560&type=Single",
+                      "bookmakerOutcomeId": "159908560",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.1,
+                      "priceAmerican": "-1000",
+                      "priceFractional": "1/10",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2317": {
+              "bookmakerMarketId": "65700774",
+              "marketActive": true,
+              "outcomes": {
+                "2318": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65700774-159929990&type=Single",
+                      "bookmakerOutcomeId": "159929990",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.4,
+                      "priceAmerican": "-250",
+                      "priceFractional": "2/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2317": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65700774-159929989&type=Single",
+                      "bookmakerOutcomeId": "159929989",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.75,
+                      "priceAmerican": "175",
+                      "priceFractional": "7/4",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2335": {
+              "bookmakerMarketId": "65690934",
+              "marketActive": true,
+              "outcomes": {
+                "2335": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690934-159908526&type=Single",
+                      "bookmakerOutcomeId": "159908526",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.52,
+                      "priceAmerican": "-192",
+                      "priceFractional": "13/25",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2336": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690934-159908527&type=Single",
+                      "bookmakerOutcomeId": "159908527",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.37,
+                      "priceAmerican": "137",
+                      "priceFractional": "137/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "233": {
+              "bookmakerMarketId": "65690933",
+              "marketActive": true,
+              "outcomes": {
+                "233": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690933-159908524&type=Single",
+                      "bookmakerOutcomeId": "159908524",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.95,
+                      "priceAmerican": "-105",
+                      "priceFractional": "19/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "234": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690933-159908525&type=Single",
+                      "bookmakerOutcomeId": "159908525",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.75,
+                      "priceAmerican": "-133",
+                      "priceFractional": "3/4",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2339": {
+              "bookmakerMarketId": "65690946",
+              "marketActive": true,
+              "outcomes": {
+                "2340": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690946-159908562&type=Single",
+                      "bookmakerOutcomeId": "159908562",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 4.8,
+                      "priceAmerican": "380",
+                      "priceFractional": "19/5",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2339": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690946-159908561&type=Single",
+                      "bookmakerOutcomeId": "159908561",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.16,
+                      "priceAmerican": "-625",
+                      "priceFractional": "4/25",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2323": {
+              "bookmakerMarketId": "65690948",
+              "marketActive": true,
+              "outcomes": {
+                "2324": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690948-159908566&type=Single",
+                      "bookmakerOutcomeId": "159908566",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.34,
+                      "priceAmerican": "-294",
+                      "priceFractional": "17/50",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2323": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690948-159908565&type=Single",
+                      "bookmakerOutcomeId": "159908565",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 3.0,
+                      "priceAmerican": "200",
+                      "priceFractional": "2/1",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "231": {
+              "bookmakerMarketId": "65690940",
+              "marketActive": true,
+              "outcomes": {
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690940-159908545&type=Single",
+                      "bookmakerOutcomeId": "159908545",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.05,
+                      "priceAmerican": "105",
+                      "priceFractional": "21/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257899?options=5:1257899-65690940-159908546&type=Single",
+                      "bookmakerOutcomeId": "159908546",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.845Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.68,
+                      "priceAmerican": "-147",
+                      "priceFractional": "17/25",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "id2304384773535044",
+      "participant1Id": 462417,
+      "participant2Id": 462437,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-04T22:00:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T19:53:07.698Z",
+      "bookmakerOdds": {
+        "bwin": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "5:1257918",
+          "fixturePath": "https://sports.bwin.com/en/sports/events/5:1257918",
+          "suspended": false,
+          "markets": {
+            "231": {
+              "bookmakerMarketId": "65723566",
+              "marketActive": true,
+              "outcomes": {
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723566-159978900&type=Single",
+                      "bookmakerOutcomeId": "159978900",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.85,
+                      "priceAmerican": "-118",
+                      "priceFractional": "17/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723566-159978899&type=Single",
+                      "bookmakerOutcomeId": "159978899",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.85,
+                      "priceAmerican": "-118",
+                      "priceFractional": "17/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2319": {
+              "bookmakerMarketId": "65735694",
+              "marketActive": true,
+              "outcomes": {
+                "2319": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735694-160005052&type=Single",
+                      "bookmakerOutcomeId": "160005052",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 5.5,
+                      "priceAmerican": "450",
+                      "priceFractional": "9/2",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2320": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735694-160005053&type=Single",
+                      "bookmakerOutcomeId": "160005053",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.14,
+                      "priceAmerican": "-714",
+                      "priceFractional": "7/50",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2339": {
+              "bookmakerMarketId": "65735693",
+              "marketActive": true,
+              "outcomes": {
+                "2340": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735693-160005051&type=Single",
+                      "bookmakerOutcomeId": "160005051",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 5.5,
+                      "priceAmerican": "450",
+                      "priceFractional": "9/2",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2339": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735693-160005050&type=Single",
+                      "bookmakerOutcomeId": "160005050",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.13,
+                      "priceAmerican": "-769",
+                      "priceFractional": "13/100",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2317": {
+              "bookmakerMarketId": "65736383",
+              "marketActive": true,
+              "outcomes": {
+                "2317": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65736383-160006658&type=Single",
+                      "bookmakerOutcomeId": "160006658",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.8,
+                      "priceAmerican": "180",
+                      "priceFractional": "9/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2318": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65736383-160006659&type=Single",
+                      "bookmakerOutcomeId": "160006659",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.39,
+                      "priceAmerican": "-256",
+                      "priceFractional": "39/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2335": {
+              "bookmakerMarketId": "65735695",
+              "marketActive": true,
+              "outcomes": {
+                "2335": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735695-160005054&type=Single",
+                      "bookmakerOutcomeId": "160005054",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.43,
+                      "priceAmerican": "-233",
+                      "priceFractional": "43/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2336": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65735695-160005055&type=Single",
+                      "bookmakerOutcomeId": "160005055",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.6,
+                      "priceAmerican": "160",
+                      "priceFractional": "8/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "233": {
+              "bookmakerMarketId": "65723565",
+              "marketActive": true,
+              "outcomes": {
+                "234": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723565-159978898&type=Single",
+                      "bookmakerOutcomeId": "159978898",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.85,
+                      "priceAmerican": "-118",
+                      "priceFractional": "17/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "233": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723565-159978897&type=Single",
+                      "bookmakerOutcomeId": "159978897",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.85,
+                      "priceAmerican": "-118",
+                      "priceFractional": "17/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2323": {
+              "bookmakerMarketId": "65723556",
+              "marketActive": true,
+              "outcomes": {
+                "2324": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723556-159978876&type=Single",
+                      "bookmakerOutcomeId": "159978876",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.43,
+                      "priceAmerican": "-233",
+                      "priceFractional": "43/100",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2323": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257918?options=5:1257918-65723556-159978875&type=Single",
+                      "bookmakerOutcomeId": "159978875",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T20:07:14.530Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.65,
+                      "priceAmerican": "165",
+                      "priceFractional": "33/20",
+                      "mainLine": false,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "id2304384773535046",
+      "participant1Id": 502916,
+      "participant2Id": 502914,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-05T00:30:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T16:51:44.079Z",
+      "bookmakerOdds": {
+        "bwin": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "5:1257920",
+          "fixturePath": "https://sports.bwin.com/en/sports/events/5:1257920",
+          "suspended": false,
+          "markets": {
+            "2313": {
+              "bookmakerMarketId": "65682508",
+              "marketActive": true,
+              "outcomes": {
+                "2313": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682508-159889677&type=Single",
+                      "bookmakerOutcomeId": "159889677",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.49,
+                      "priceAmerican": "-204",
+                      "priceFractional": "49/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2314": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682508-159889678&type=Single",
+                      "bookmakerOutcomeId": "159889678",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.45,
+                      "priceAmerican": "145",
+                      "priceFractional": "29/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "233": {
+              "bookmakerMarketId": "65682501",
+              "marketActive": true,
+              "outcomes": {
+                "233": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682501-159889661&type=Single",
+                      "bookmakerOutcomeId": "159889661",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.4,
+                      "priceAmerican": "140",
+                      "priceFractional": "7/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "234": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682501-159889662&type=Single",
+                      "bookmakerOutcomeId": "159889662",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.51,
+                      "priceAmerican": "-196",
+                      "priceFractional": "51/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2335": {
+              "bookmakerMarketId": "65682513",
+              "marketActive": true,
+              "outcomes": {
+                "2336": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682513-159889688&type=Single",
+                      "bookmakerOutcomeId": "159889688",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.72,
+                      "priceAmerican": "-139",
+                      "priceFractional": "18/25",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2335": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682513-159889687&type=Single",
+                      "bookmakerOutcomeId": "159889687",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.0,
+                      "priceAmerican": "100",
+                      "priceFractional": "1/1",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "231": {
+              "bookmakerMarketId": "65682504",
+              "marketActive": true,
+              "outcomes": {
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682504-159889667&type=Single",
+                      "bookmakerOutcomeId": "159889667",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.9,
+                      "priceAmerican": "190",
+                      "priceFractional": "19/10",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sports.bwin.com/en/sports/events/5:1257920?options=5:1257920-65682504-159889668&type=Single",
+                      "bookmakerOutcomeId": "159889668",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:06:44.859Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.37,
+                      "priceAmerican": "-270",
+                      "priceFractional": "37/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

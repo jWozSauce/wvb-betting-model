@@ -1,0 +1,18 @@
+{
+  "games": 1,
+  "markets_checked": 4,
+  "selected_books": [
+    "sbobet",
+    "draftkings",
+    "hardrockbet",
+    "1xbet",
+    "bwin"
+  ],
+  "actionable_books": [
+    "draftkings"
+  ],
+  "anchor_books": [
+    "draftkings"
+  ],
+  "billable_delta": 5
+}

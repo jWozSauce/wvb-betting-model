@@ -1,0 +1,16 @@
+{
+  "params": {
+    "fixtureId": "id2304384773534876",
+    "bookmakers": "bet365,bet365-nj,betmgm"
+  },
+  "status": 404,
+  "retrieved_at": "2026-10-04T20:43:05.176190+00:00",
+  "payload": {
+    "error": {
+      "message": "No historical odds found.",
+      "code": "NOT_FOUND",
+      "details": "Please check the provided filters and try again."
+    }
+  },
+  "reused_from": "evidence/t15-20261004/coverage-1/raw/id2304384773534876-0.json"
+}

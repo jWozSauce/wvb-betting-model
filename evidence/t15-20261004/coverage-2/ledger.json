@@ -1,0 +1,64 @@
+{
+  "task": "T15 Q10 revised",
+  "billable_cap": 0,
+  "requests": 36,
+  "reused": 4,
+  "state": "complete",
+  "groups": [
+    [
+      "bet365",
+      "bet365-nj",
+      "betmgm"
+    ],
+    [
+      "betrivers",
+      "bovada.lv",
+      "caesars"
+    ],
+    [
+      "circasports",
+      "espnbet",
+      "fanatics"
+    ],
+    [
+      "hardrockbet",
+      "lowvig.ag",
+      "pinnacle"
+    ],
+    [
+      "betonline.ag",
+      "draftkings",
+      "fanduel"
+    ],
+    [
+      "bookmaker.eu"
+    ],
+    [
+      "1xbet",
+      "bwin",
+      "unibet"
+    ],
+    [
+      "sbobet",
+      "bcgame",
+      "cloudbet"
+    ]
+  ],
+  "access_unverified": [
+    "pinnacle+5",
+    "pinnacle+30"
+  ],
+  "quota_before": {
+    "used": 15,
+    "limit": 250
+  },
+  "updated_at": "2026-10-04T21:26:39.975788+00:00",
+  "quota_after_probe": {
+    "used": 15,
+    "limit": 250
+  },
+  "quota_after": {
+    "used": 15,
+    "limit": 250
+  }
+}

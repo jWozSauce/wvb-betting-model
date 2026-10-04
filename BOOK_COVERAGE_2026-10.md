@@ -1,6 +1,100 @@
 # OddsPapi coverage and Bovada — T15, October 4, 2026
 
-## Current status — planner stage-1 ruling received October 4
+## Current status — Q10 revised sweep completed; final default proposed
+
+The revised free sweep is complete: **22 candidates × 5 fixtures = 110 checks**,
+36 new historical calls plus four compatible cached responses. Account usage
+**15/250 → 15/250**, billable delta zero. Evidence:
+`evidence/t15-20261004/coverage-2/` (raw responses, fixtures, timestamp bounds,
+summary, ledger and independent datetime-versus-pandas timing check).
+
+| Book | Any trails | Pregame fixtures | Supported pregame markets | Proposed role |
+|---|---:|---:|---|---|
+| DraftKings | 5/5 | 5/5 | Winner, set handicap | Bet prices and anchor |
+| 1xBet | 3/5 | 3/5 | Winner, set handicap, total sets | Anchor only |
+| bwin | 2/5 | 2/5 | Winner, set handicap, total sets | Anchor only |
+| SBOBET | 2/5 | 1/5 | Winner | Anchor only |
+| Hard Rock | 2/5 | 1/5 | Winner | Bet prices and anchor |
+| Other 17 candidates | 0/5 each | 0/5 each | None returned | Excluded from default |
+
+The 17 are bet365, bet365-nj, betmgm, betrivers, bovada.lv, caesars,
+circasports, espnbet, fanatics, lowvig.ag, pinnacle, betonline.ag, fanduel,
+bookmaker.eu, unibet, bcgame and cloudbet. Pinnacle +5/+30 were deliberately
+omitted under Q10 and remain access-unverified, not classified as absent.
+No-trail results apply to this five-fixture sample, not all NCAA volleyball.
+Pregame means strictly before the provider's scheduled startTime; exact-start
+and later timestamps count as post-start. Separate set-winner trails are reported
+but are not supported by the current full-match pricer.
+
+Final proposal, in anchor order: **SBOBET, DraftKings, Hard Rock, 1xBet, bwin**.
+SBOBET supplies the sharp ML anchor where available; DK/Hard Rock remain bettable
+sources; 1xBet/bwin add complementary pregame market coverage as fallback anchors.
+All five meet the recorded pregame-evidence criterion. The international books
+cannot win best-price selection, create a bet row, or be fetched alone from the
+UI; they only inform the devig anchor for a line a bettable book quotes. Labels
+make that distinction visible. Non-default Pinnacle variants retain sharp-first
+priority if explicitly selected for a test. No subscription/access claim is made.
+
+Five books cost 5 per uncached fetch: 150/month at one daily fetch, 300 at two.
+The multiselect and per-selection cost display are therefore retained; owner can
+reduce to the two bettable books (60/month at one/day). More coverage is not a
+claim of better predictive accuracy. The full catalog remains missing (Q12);
+known-books fallback is explicitly labelled, and no billable catalog fetch ran.
+
+The new default remains behind default-off `WVB_ENABLE_BOOK_SELECTION` pending
+acceptance. The owner approved ONE live test capped at five calls in Q11 after
+this proposal. The gate uses persisted reservations, raw caches, before/after
+quota and an independent selection/anchor check; no retry. Its live result is
+recorded below after execution. This supersedes the earlier hardcoded two-book
+proposal and its deferred two-call script described in the historical notes.
+
+
+## Live gate — capture complete; acceptance gate incomplete
+
+The Q11-approved fetch ran once on October 4 at approximately 17:28 EDT.
+All **5/5** reservations were used; account quota **15/250 → 20/250**.
+No retry, additional live fetch, catalog call, or AI call ran.
+
+| Selected book | Response | Result |
+|---|---|---|
+| SBOBET | 200, empty array | Live anchor cannot be verified |
+| DraftKings | 200, 3 fixtures | 1 fixture with 4 supported active outcome rows |
+| Hard Rock | 404 | Live merge cannot be verified |
+| 1xBet | 200, 2 fixtures | 6 supported outcome-active rows; bookmakerIsActive=false |
+| bwin | 200, 3 fixtures | 18 supported active rows across 2 unsuspended fixtures; third suspended |
+
+The default returns Kentucky at Florida with four rows, DraftKings best price
+and anchor throughout. Independent best-price and devig checks pass on all four.
+International-only markets do not become bet rows. The real bwin ML/spread prices
+were merged internally; DK wins anchor priority. An **offline sensitivity check**
+on the exact caches with bwin first produces the same four actionable DK rows,
+now anchored to bwin, with ML probabilities independently checked. This proves
+real bwin-schema merging, but is not a second live/default acceptance test.
+
+1xBet's active outcome flags conflict with bookmakerIsActive=false. The existing
+parser uses outcome activity plus suspension, not this book-level flag. Those
+quotes did not win any default anchor or bet row. Their suitability as a fallback
+is **cannot verify** until that flag's meaning is resolved; no schema guess was
+implemented. This limitation is separate from historical pregame coverage.
+
+Evidence: `evidence/t15-20261004/live-gate-1/` includes per-book raw captures,
+ledger, decoded board, summary and `offline-assessment.json`. The original ledger's
+`complete` means capture/replay finished, **not T15 acceptance**; the separate
+assessment explicitly records `stopped_at_acceptance_gate`. The script now uses
+`capture_complete_awaiting_acceptance` to remove that ambiguity on future approved
+uses. Duplicate invocation remains refused; all existing captures are preserved.
+
+The exact gate cannot be declared passed because Hard Rock and SBOBET produced
+no usable board. Q13 asks the planner to assess these results and the activity flag,
+with no further paid execution authorized. Q12's catalog portion remains open;
+the new independently audited sweep supersedes its missing historical-probe
+artifact dependency. No acceptance, production merge, enablement or push occurred.
+
+Offline checks: final five-book selection/role UI, legacy rollback, cache and
+invalidation checks, selection/anchor verifier, and budget/error-stop guards pass.
+Timing counts independently agree for all 110 historical fixture/book checks.
+
+## Prior status — planner stage-1 ruling received October 4
 
 **T15 stage 2 in progress; blocked on catalog/probe artifacts and live-call approval.**
 The planner reports a completed five-fixture × 18-candidate free probe:

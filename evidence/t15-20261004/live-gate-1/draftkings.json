@@ -1,0 +1,331 @@
+{
+  "book": "draftkings",
+  "status": 200,
+  "retrieved_at": "2026-10-04T21:28:46.388923+00:00",
+  "payload": [
+    {
+      "fixtureId": "id2304384773535018",
+      "participant1Id": 300230,
+      "participant2Id": 375186,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-04T17:30:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T16:51:44.006Z",
+      "bookmakerOdds": {
+        "draftkings": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "34773786",
+          "fixturePath": "https://sportsbook.draftkings.com/event/34773786",
+          "suspended": false,
+          "markets": {
+            "2335": {
+              "bookmakerMarketId": "2_86591777",
+              "marketActive": false,
+              "outcomes": {
+                "2336": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773786?outcomes=0HC86591777N150_3",
+                      "bookmakerOutcomeId": "0HC86591777N150_3",
+                      "bookmakerChangedAt": "2026-10-04T17:30:06.617Z",
+                      "changedAt": "2026-10-04T17:30:06.776Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.54,
+                      "priceAmerican": "154",
+                      "priceFractional": "77/50",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2335": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773786?outcomes=0HC86591777P150_1",
+                      "bookmakerOutcomeId": "0HC86591777P150_1",
+                      "bookmakerChangedAt": "2026-10-04T17:30:06.617Z",
+                      "changedAt": "2026-10-04T17:30:06.776Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.5,
+                      "priceAmerican": "-200",
+                      "priceFractional": "1/2",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "231": {
+              "bookmakerMarketId": "1_86591777",
+              "marketActive": false,
+              "outcomes": {
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773786?outcomes=0ML86591777_3",
+                      "bookmakerOutcomeId": "0ML86591777_3",
+                      "bookmakerChangedAt": "2026-10-04T17:30:06.617Z",
+                      "changedAt": "2026-10-04T17:30:06.776Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.69,
+                      "priceAmerican": "-145",
+                      "priceFractional": "69/100",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773786?outcomes=0ML86591777_1",
+                      "bookmakerOutcomeId": "0ML86591777_1",
+                      "bookmakerChangedAt": "2026-10-04T17:30:06.617Z",
+                      "changedAt": "2026-10-04T17:30:06.776Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.14,
+                      "priceAmerican": "114",
+                      "priceFractional": "57/50",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "id2304384773535044",
+      "participant1Id": 462417,
+      "participant2Id": 462437,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-04T22:00:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T19:53:07.698Z",
+      "bookmakerOdds": {
+        "draftkings": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "34773782",
+          "fixturePath": "https://sportsbook.draftkings.com/event/34773782",
+          "suspended": false,
+          "markets": {
+            "231": {
+              "bookmakerMarketId": "1_86591773",
+              "marketActive": true,
+              "outcomes": {
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773782?outcomes=0ML86591773_3",
+                      "bookmakerOutcomeId": "0ML86591773_3",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T21:24:49.060Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.769,
+                      "priceAmerican": "-130",
+                      "priceFractional": "10/13",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773782?outcomes=0ML86591773_1",
+                      "bookmakerOutcomeId": "0ML86591773_1",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T21:24:49.060Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.0,
+                      "priceAmerican": "100",
+                      "priceFractional": "1/1",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "2323": {
+              "bookmakerMarketId": "2_86591773",
+              "marketActive": true,
+              "outcomes": {
+                "2323": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773782?outcomes=0HC86591773N150_1",
+                      "bookmakerOutcomeId": "0HC86591773N150_1",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T21:24:49.060Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.9,
+                      "priceAmerican": "190",
+                      "priceFractional": "19/10",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2324": {
+                  "players": {
+                    "0": {
+                      "active": false,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773782?outcomes=0HC86591773P150_3",
+                      "bookmakerOutcomeId": "0HC86591773P150_3",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T21:24:49.060Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.4,
+                      "priceAmerican": "-250",
+                      "priceFractional": "2/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "fixtureId": "id2304384773535046",
+      "participant1Id": 502916,
+      "participant2Id": 502914,
+      "sportId": 23,
+      "tournamentId": 43847,
+      "seasonId": 145134,
+      "statusId": 0,
+      "hasOdds": true,
+      "startTime": "2026-10-05T00:30:00.000Z",
+      "trueStartTime": null,
+      "trueEndTime": null,
+      "updatedAt": "2026-10-04T16:51:44.079Z",
+      "bookmakerOdds": {
+        "draftkings": {
+          "bookmakerIsActive": true,
+          "bookmakerFixtureId": "34773779",
+          "fixturePath": "https://sportsbook.draftkings.com/event/34773779",
+          "suspended": false,
+          "markets": {
+            "2335": {
+              "bookmakerMarketId": "2_86591770",
+              "marketActive": true,
+              "outcomes": {
+                "2335": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773779?outcomes=0HC86591770P150_1",
+                      "bookmakerOutcomeId": "0HC86591770P150_1",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:20:03.743Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.8,
+                      "priceAmerican": "-125",
+                      "priceFractional": "4/5",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "2336": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773779?outcomes=0HC86591770N150_3",
+                      "bookmakerOutcomeId": "0HC86591770N150_3",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:20:03.743Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.952,
+                      "priceAmerican": "-105",
+                      "priceFractional": "79/83",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            },
+            "231": {
+              "bookmakerMarketId": "1_86591770",
+              "marketActive": true,
+              "outcomes": {
+                "232": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773779?outcomes=0ML86591770_3",
+                      "bookmakerOutcomeId": "0ML86591770_3",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:20:03.743Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 1.385,
+                      "priceAmerican": "-260",
+                      "priceFractional": "5/13",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                },
+                "231": {
+                  "players": {
+                    "0": {
+                      "active": true,
+                      "betslip": "https://sportsbook.draftkings.com/event/34773779?outcomes=0ML86591770_1",
+                      "bookmakerOutcomeId": "0ML86591770_1",
+                      "bookmakerChangedAt": null,
+                      "changedAt": "2026-10-04T17:20:03.743Z",
+                      "limit": null,
+                      "playerName": null,
+                      "price": 2.95,
+                      "priceAmerican": "195",
+                      "priceFractional": "39/20",
+                      "mainLine": true,
+                      "exchangeMeta": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
