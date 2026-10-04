@@ -1,0 +1,57 @@
+{
+  "row_adjacency": true,
+  "checked_row_indices": [
+    63,
+    2,
+    124
+  ],
+  "single_panel": true,
+  "close_restores_plain_rows": true,
+  "source_date_state_preserved": true,
+  "slate_fetches": 1,
+  "parity": [
+    {
+      "row": 63,
+      "home": "la-lafayette",
+      "away": "arkansas-st",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "row": 63,
+      "home": "la-lafayette",
+      "away": "arkansas-st",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    },
+    {
+      "row": 2,
+      "home": "fordham",
+      "away": "dayton",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "row": 2,
+      "home": "fordham",
+      "away": "dayton",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    },
+    {
+      "row": 124,
+      "home": "california",
+      "away": "virginia",
+      "venue": "Home court",
+      "markets": 16
+    },
+    {
+      "row": 124,
+      "home": "california",
+      "away": "virginia",
+      "venue": "Neutral (host/label matters)",
+      "markets": 16
+    }
+  ],
+  "external_io": "mocked"
+}

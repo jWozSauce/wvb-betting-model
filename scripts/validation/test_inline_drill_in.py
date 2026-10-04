@@ -21,7 +21,9 @@ def assert_adjacent(app, index):
     game = games[index]
     label = f"{game['away']} @ {game['home']}"
     blocks = list(app.tabs[1].children.values())
-    row_index = next(i for i,b in enumerate(blocks) if b.type == 'flex_container'
+    # Streamlit has used both horizontal and flex_container for columns.
+    # Identify the row by its content; adjacency remains the assertion.
+    row_index = next(i for i,b in enumerate(blocks) if hasattr(b, 'children')
                      and any(n.type == 'markdown' and n.value == label for n in b))
     panel = blocks[row_index+1]
     assert any(n.type == 'button' and n.label == '✕' for n in panel)
@@ -53,6 +55,9 @@ with ExitStack() as stack:
     saved=copy.deepcopy(app.session_state.ncaa_slates[str(day)])
     element(app.radio,'Odds source').set_value('Paste a board');check(app.run())
     element(app.radio,'Odds source').set_value(sp.SOURCE);check(app.run())
+    # Streamlit removes hidden widgets; returning uses today's date. Reopen
+    # the captured slate's date before checking its durable per-date state.
+    app.date_input(key='ncaa_date').set_value(day);check(app.run())
     assert_adjacent(app,indices[-1])
     app.date_input(key='ncaa_date').set_value(day-dt.timedelta(days=1));check(app.run())
     app.date_input(key='ncaa_date').set_value(day);check(app.run())
