@@ -1602,6 +1602,34 @@ T13 and T14 remain implementation complete, awaiting explicit acceptance;
 next work is catalog receipt and rulings on the live gate/activity flag.
 
 
+### 2026-10-04 18:52 EDT — T13/T14 accepted; T15 acceptance condition still blocks deployment
+
+**T13 and T14: accepted. T15: accepted subject to live-gate completion;
+deployment stopped at that gate.** Reviewed the new owner finalization approval
+and planner's combined acceptance ruling (35 new planner lines). The prior
+implementation/evidence commits remain `bfddef3` on `codex/replacement-lineups`
+and `10c105a`/`3f72023` on `codex/live-team-mapping`. No implementation changes
+were requested by this ruling, and the existing validations need no duplicate run.
+
+The requested Q11 capture already ran at 17:28 EDT: all **5/5 calls consumed**,
+quota **15→20/250**, preserved in `evidence/t15-20261004/live-gate-1/ledger.json`.
+Its `offline-assessment.json` records the incomplete gate: Hard Rock 404 and
+SBOBET empty. Four DK rows passed price/anchor checks and cached bwin merging
+passed, as reported at 17:35. **Cannot verify:** the required complete added-book
+live merge. The new ruling explicitly says "if the live gate fails, stop and ask
+rather than deploying" and makes integration authorization conditional on passing.
+It references the already-approved Q11 fetch; it does not grant another five calls
+or resolve Q13. No additional fetch, default enablement, merge to main or push ran.
+
+Q13 already asks for the acceptance path on this exact capture; no duplicate
+spending question is needed. Q14's explicit-false activity rule and Q12's missing
+catalog are also unanswered. The T14 cloud token note is acknowledged; credential
+setup remains with the owner/planner as directed. Next: planner rule on Q13 and
+Q14 and supply/resolve the catalog, then finish the permitted integration and
+post-deploy verification. No worker job is running and no monitor was added.
+Existing planner edits and unrelated files are preserved; production is unchanged.
+
+
 ## 9. Open questions (append only)
 
 (none open)
