@@ -1234,6 +1234,34 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   defaults and deployment remain unchanged. No paid calls or protected-data
   writes. Next action belongs to planner review of the existing T10/T11 evidence.
 
+### 2026-10-04 15:52 EDT — T10/T11 accepted, integrated and pushed; T12 starts
+
+- **T10/T11: accepted** by the October 4 planner ruling, then integrated
+  under the owner's recorded standing authorization for pushes of accepted
+  work. Rebased onto ratings-bot `01578e6` without conflicts, fast-forwarded
+  local main to `0a1103e`, and enabled both feature defaults separately in
+  `ef13b81`. `git push origin main` succeeded: `01578e6..ef13b81`.
+  This confirms publication; the deployed cloud runtime was not inspected.
+- **Named T11 test repair: confirmed.** Removed dependence on Streamlit's
+  internal `flex_container` name and explicitly reopened the captured date
+  after source switching. The suite passes on Streamlit 1.62.0: adjacent
+  rows 63/2/124, six exact 16-market boards, close, saved per-date state,
+  one mocked fetch. Evidence: `evidence/t11-20261002/run-20261004T194909.951916Z-hp1wi1gr/inline-panel.json`.
+- Default-on boot and nine exact drill-in boards pass against the original
+  pricing path, plus explicit-zero rollback. Injury test verifies real
+  cache with mocked client: 0 calls on load/reprice, 2 first drill-in,
+  still 2 repeat/across tabs/rollback. Evidence:
+  `evidence/integration-20261001/run-20261004T195012.749394Z-_zs3ha2m/defaults.json`
+  and `evidence/t10-20261002/run-20261004T195006.124372Z-ufgxqtkz/injury-cache.json`.
+- No real Anthropic/OddsPapi calls or Sheets writes. Preserved planner
+  edits via path-scoped stash and restored them; backup branch
+  `codex/accepted-t10-t11-20261004` retains the original accepted history.
+  Reference files, planner test output and infrastructure remain untouched.
+- **T12: in progress** on `codex/manual-schedule-board`; dependency is met.
+  Will reuse the paste evaluator/logging path and keep this new source off
+  by default pending acceptance. Only the existing local watcher remains
+  unattended. Owner's key-rotation decision is recorded as final/closed.
+
 ## 9. Open questions (append only)
 
 (none open)
