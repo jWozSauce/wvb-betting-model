@@ -1375,6 +1375,52 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   preserved. No new unattended jobs; existing watcher remains the sole
   wake mechanism. Next: resolve Q9, amend T13 if needed, then planner review.
 
+### 2026-10-04 16:15 EDT — T13 implementation complete, awaiting acceptance; Q9 applied
+
+- **Q9 resolved / T13 implementation complete, awaiting acceptance.**
+  Applied the planner's approved strict low-start rule in `736f3f7`, on
+  `codex/replacement-lineups` after rebasing the isolated implementation
+  onto deployed main (`aafab84`; initial implementation now `df13c5f`).
+  `WVB_ENABLE_REPLACEMENT_LINEUPS` remains default-off; no T13 push/merge.
+- Bench eligibility now requires fitted coefficients, exclusion from both
+  initial/current selection (and of removed players), and starts strictly
+  below half the team maximum. Position → overall bench → zero tier order
+  is unchanged. Exactly-half boundary regression passes. Reilly (40) and
+  Adriano (29) are excluded; their removal from the pool is reflected in
+  the UI. Explicit actual additions override synthetic replacements.
+- **Gate (a), pass:** four vs-Kansas, home-court, playtime-weighted cases
+  republished with identical current data for both semantics. Values below
+  are before removal / redistribution / replacement:
+
+  | Removed | Player ML | Hybrid ML |
+  |---|---|---|
+  | Murray | .881897 / .771336 / .622239 | .951979 / .891003 / .788312 |
+  | Babcock | .765506 / .518869 / .481156 | .822149 / .594147 / .556218 |
+  | Sigler | .881897 / .898772 / .779731 | .951979 / .960097 / .896190 |
+  | Watson | .765506 / .814679 / .743631 | .822149 / .862909 / .803412 |
+
+  Sigler/Watson replacement removals lower both prices. Q9 did not change
+  these four position pools; it changes broader fallback pools.
+- **Gates (b–e), pass:** no-rated-bench fallback (including a zero-coefficient
+  bench row), exact no-edit strengths for 365 teams × 2 weighting modes ×
+  initial/full-roster selections, exact untouched/full-roster UI boards in
+  Player and Hybrid, exact redistribution toggle, explicit actual substitute
+  override without double weighting, five displayed labels matching computed
+  values. Ryan Hunter's fallback pool now gives +.148172 points/set and
+  excludes the two absent regulars; displayed +0.15. Independent slot-weight
+  arithmetic checked; reference construction and fitted files unchanged.
+- Evidence: `evidence/t13-20261004/run-20261004T201407.708539Z-eg98tbg0/`
+  (`removals.csv`, `labels.json`, `checks.json`, including protected SHA256s).
+  Handoff: `REPLACEMENT_LINEUPS_2026-10.md`; rerun
+  `PYTHONPATH=. .venv/bin/python scripts/validation/test_replacement_lineups.py`.
+- Limits: benchmarks use October 4 coefficients/ratings, so old/new are
+  directly comparable but differ from the older T4 snapshot. No guarantee
+  that every weak player's removal decreases price; the specified two-case
+  direction is verified, with no artificial clamp. Zero real paid requests
+  or Sheets writes. Preserved planner edits and other participants' artifacts.
+  Existing watcher only; next action is planner acceptance of T13, then the
+  already-authorized integration/default enablement/boot/push sequence.
+
 ## 9. Open questions (append only)
 
 (none open)
