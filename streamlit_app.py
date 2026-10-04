@@ -1058,7 +1058,9 @@ with tab_best:
                     st.info("No bets clear the min-edge gate — that's the normal "
                             "result most days.")
                 with st.expander("All priced markets"):
-                    st.dataframe(card.sort_values("edge", ascending=False),
+                    display_card = card.sort_values("edge", ascending=False).copy()
+                    display_card["point"] = display_card["point"].astype(str)
+                    st.dataframe(display_card,
                                  width="stretch", height=400)
             if st.session_state.best_unparsed:
                 with st.expander(
