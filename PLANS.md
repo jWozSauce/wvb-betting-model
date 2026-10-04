@@ -1507,6 +1507,48 @@ and initial report: `6549efc`. No merge, push, or deployment performed.
   Planner-owned additions preserved; T13 still awaits acceptance and T14
   awaits review/cloud credential setup. Resume T15 only after Q10 ruling.
 
+### 2026-10-04 17:00 EDT — T15 stage 2 amended; offline checks pass, artifacts and live gate remain
+
+- **T15 in progress / blocked on Q12 and Q11.** Read the new planner
+  stage-1 completion note; it supersedes the need to resume the worker's
+  stopped probe (Q10). No history sweep restarted. Planner reports DK and
+  Hard Rock 5/5; worker has not received raw trails/start-time comparisons
+  or quota evidence and does not claim independent verification.
+- Implemented the new stage-2 specification in `096c148` on
+  `codex/live-team-mapping`: review default DraftKings → Hard Rock, both
+  for fetch and anchor order. Old four-book default survives only under
+  the feature's off/rollback path; `WVB_ENABLE_BOOK_SELECTION` remains off
+  until acceptance. Explicitly selected Pinnacle variants precede majors.
+- **Confirmed/pass, offline:** two-request default, mocked Hard Rock best
+  prices merged with DK anchor, optional Pinnacle anchor, book-keyed cache,
+  no fetch on selection change, stale board/card invalidation, empty
+  selection disabled. Catalog loader accepts the provider list schema and
+  enables all supplied slugs without an API catalog call. Missing catalog
+  gets an honest known-books-only label; malformed catalogs are rejected.
+  A temporary representative catalog was tested, not passed off as the
+  real full list. Evidence:
+  `evidence/t15-20261004/offline/run-20261004T205643.616145Z-2f155run/`.
+  T14 actual UI/persistence regression passes again at
+  `evidence/t14-20261004/run-20261004T205638.480890Z-3usiv2up/`.
+- **Cannot verify / incomplete:** full valid slug list absent from checkout,
+  and no raw planner probe artifact location supplied. Q12 requests both.
+  New default quota math: 2/fetch, 60/120/180 monthly at 1/2/3 daily fresh
+  fetches. Q11 proposed spend is now reduced to **2 calls**, not five;
+  no owner billable approval yet recorded. Real live gate still unrun.
+- Prepared `scripts/validation/live_book_gate.py`: explicit approved-run
+  argument, fixed two-call cap, reservation before each call, raw caches,
+  refusal to repeat an attempted ledger, account checks and immediate
+  authorization-error stop. Offline empty/403/duplicate/cap tests pass:
+  `evidence/t15-20261004/budget/run-20261004T205853.059216Z-4epebqdi/`.
+  Real prices must still be checked against captured per-book quotes when
+  owner approval arrives. No claims of real Hard Rock live verification.
+- Updated `BOOK_COVERAGE_2026-10.md`; historical worker stop and correction
+  remain visible. This turn **zero external requests, zero billable/AI
+  calls, zero Sheets writes**. No merge/push; no new background process.
+  Planner modifications preserved. T13/T14 remain awaiting acceptance;
+  T14 additionally needs cloud mapping credential setup. Next: Q12 data,
+  Q11 two-call approval, finish the real gate, then planner acceptance.
+
 ## 9. Open questions (append only)
 
 (none open)
@@ -1756,3 +1798,24 @@ account checks, no automatic retry (empty/error calls count). Perform after
 the free-stage gate is resolved; if the evidence changes the proposed book
 set above five, obtain a revised cap first. No purchase or subscription
 change is proposed. Until then, keep T15 off and leave the real gate open.
+
+### Q12 — 2026-10-04 — Supply the full bookmaker catalog and completed probe artifacts
+
+The new stage-2 default is prepared and tested in `096c148`, but the
+project has neither the full valid bookmaker catalog nor the planner's
+five-fixture/18-candidate raw probe and before/after quota evidence.
+The requested full-list UI cannot be completed from the 18 candidate
+names alone; `/bookmakers` is billable, so the worker did not fetch it.
+The current UI explicitly labels a limited known-books fallback.
+
+Please place the cached provider array (objects with `slug`) at
+`app_data/oddspapi_bookmakers.json`, or provide its existing location and
+authorize reading it if outside this project. Please also supply the
+probe artifact location, including fixture start times/trail timestamps,
+so pregame coverage can be distinguished from post-start-only history.
+The worker's earlier Hard Rock sample was post-start-only; that is why
+5/5 trails alone is insufficient to independently verify the pregame claim.
+Recommended: reuse the planner's existing artifacts, with no new catalog
+spend or duplicate probe. Then the worker can complete catalog integration
+and evidence review. Q11 remains the separate live-call spending decision,
+now at the new default's two-call ceiling.
