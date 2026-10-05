@@ -1,0 +1,3 @@
+⚠,⚕opp,vs_shorthanded,⚕ absent,match_conf,game_#,time,game_date,matchup,site,venue,bet,odds,book,model_prob,mkt_prob,blend_prob,devig,p20,edge,stake,fair_odds,market,side,point,away_team,home_team
+,,False,,1.0,1,7:00 PM,2026-10-04,purdue @ washington,,,washington ML,150,,0.6051,0.4381,0.4885,wpo,0.5999,0.0868,25.0,105,ml,home,,purdue,washington
+,,False,,1.0,1,7:00 PM,2026-10-04,purdue @ washington,,,purdue ML,-110,,0.3949,0.5619,0.5115,wpo,0.3895,-0.014,0.0,-105,ml,away,,purdue,washington

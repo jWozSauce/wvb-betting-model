@@ -41,6 +41,13 @@ def resolve(game, side, seos, fullnames, mapping):
     if pid in mapping:
         seo=mapping[pid]
         return (seo,1.) if seo in seos else (None,0.)
+    if os.environ.get('WVB_ENABLE_LEARNED_MATCHING','0')=='1':
+        import learned_matching
+        try:
+            rules=learned_matching.rules_for(mapping,seos,fullnames)
+            return learned_matching.apply(game[side],seos,fullnames,rules)
+        except (OSError,ValueError,KeyError,TypeError):
+            return None,0.  # Missing validation evidence must never enable a rule.
     return paste_odds.match_team(game[side],seos,fullnames=fullnames)
 
 

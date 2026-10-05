@@ -1,0 +1,7302 @@
+[
+  {
+    "name": "abilene-christian",
+    "expected": "abilene-christian"
+  },
+  {
+    "name": "Abilene Christian University",
+    "expected": "abilene-christian"
+  },
+  {
+    "name": "abilene christian",
+    "expected": "abilene-christian"
+  },
+  {
+    "name": "Abilene Christian",
+    "expected": "abilene-christian"
+  },
+  {
+    "name": "air-force",
+    "expected": "air-force"
+  },
+  {
+    "name": "U.S. Air Force Academy",
+    "expected": "air-force"
+  },
+  {
+    "name": "air force",
+    "expected": "air-force"
+  },
+  {
+    "name": "Air Force",
+    "expected": "air-force"
+  },
+  {
+    "name": "akron",
+    "expected": "akron"
+  },
+  {
+    "name": "University of Akron",
+    "expected": "akron"
+  },
+  {
+    "name": "akron",
+    "expected": "akron"
+  },
+  {
+    "name": "Akron",
+    "expected": "akron"
+  },
+  {
+    "name": "ala-huntsville",
+    "expected": "ala-huntsville"
+  },
+  {
+    "name": "ala-huntsville",
+    "expected": "ala-huntsville"
+  },
+  {
+    "name": "ala huntsville",
+    "expected": "ala-huntsville"
+  },
+  {
+    "name": "alabama",
+    "expected": "alabama"
+  },
+  {
+    "name": "University of Alabama",
+    "expected": "alabama"
+  },
+  {
+    "name": "alabama",
+    "expected": "alabama"
+  },
+  {
+    "name": "Alabama",
+    "expected": "alabama"
+  },
+  {
+    "name": "alabama-am",
+    "expected": "alabama-am"
+  },
+  {
+    "name": "Alabama A&M University",
+    "expected": "alabama-am"
+  },
+  {
+    "name": "alabama am",
+    "expected": "alabama-am"
+  },
+  {
+    "name": "Alabama A&M",
+    "expected": "alabama-am"
+  },
+  {
+    "name": "alabama-st",
+    "expected": "alabama-st"
+  },
+  {
+    "name": "Alabama State University",
+    "expected": "alabama-st"
+  },
+  {
+    "name": "alabama st",
+    "expected": "alabama-st"
+  },
+  {
+    "name": "Alabama St.",
+    "expected": "alabama-st"
+  },
+  {
+    "name": "albany-ny",
+    "expected": "albany-ny"
+  },
+  {
+    "name": "University at Albany",
+    "expected": "albany-ny"
+  },
+  {
+    "name": "albany ny",
+    "expected": "albany-ny"
+  },
+  {
+    "name": "UAlbany",
+    "expected": "albany-ny"
+  },
+  {
+    "name": "alcorn",
+    "expected": "alcorn"
+  },
+  {
+    "name": "Alcorn State University",
+    "expected": "alcorn"
+  },
+  {
+    "name": "alcorn",
+    "expected": "alcorn"
+  },
+  {
+    "name": "Alcorn",
+    "expected": "alcorn"
+  },
+  {
+    "name": "allen",
+    "expected": "allen"
+  },
+  {
+    "name": "allen",
+    "expected": "allen"
+  },
+  {
+    "name": "allen",
+    "expected": "allen"
+  },
+  {
+    "name": "am-corpus-chris",
+    "expected": "am-corpus-chris"
+  },
+  {
+    "name": "Texas A&M University-Corpus Christi",
+    "expected": "am-corpus-chris"
+  },
+  {
+    "name": "am corpus chris",
+    "expected": "am-corpus-chris"
+  },
+  {
+    "name": "A&M-Corpus Christi",
+    "expected": "am-corpus-chris"
+  },
+  {
+    "name": "american",
+    "expected": "american"
+  },
+  {
+    "name": "American University",
+    "expected": "american"
+  },
+  {
+    "name": "american",
+    "expected": "american"
+  },
+  {
+    "name": "American",
+    "expected": "american"
+  },
+  {
+    "name": "appalachian-st",
+    "expected": "appalachian-st"
+  },
+  {
+    "name": "Appalachian State University",
+    "expected": "appalachian-st"
+  },
+  {
+    "name": "appalachian st",
+    "expected": "appalachian-st"
+  },
+  {
+    "name": "App State",
+    "expected": "appalachian-st"
+  },
+  {
+    "name": "appstate",
+    "expected": "appalachian-st"
+  },
+  {
+    "name": "arizona",
+    "expected": "arizona"
+  },
+  {
+    "name": "University of Arizona",
+    "expected": "arizona"
+  },
+  {
+    "name": "arizona",
+    "expected": "arizona"
+  },
+  {
+    "name": "Arizona",
+    "expected": "arizona"
+  },
+  {
+    "name": "arizona-st",
+    "expected": "arizona-st"
+  },
+  {
+    "name": "Arizona State University",
+    "expected": "arizona-st"
+  },
+  {
+    "name": "arizona st",
+    "expected": "arizona-st"
+  },
+  {
+    "name": "Arizona St.",
+    "expected": "arizona-st"
+  },
+  {
+    "name": "ark-monticello",
+    "expected": "ark-monticello"
+  },
+  {
+    "name": "ark-monticello",
+    "expected": "ark-monticello"
+  },
+  {
+    "name": "ark monticello",
+    "expected": "ark-monticello"
+  },
+  {
+    "name": "ark-pine-bluff",
+    "expected": "ark-pine-bluff"
+  },
+  {
+    "name": "University of Arkansas, Pine Bluff",
+    "expected": "ark-pine-bluff"
+  },
+  {
+    "name": "ark pine bluff",
+    "expected": "ark-pine-bluff"
+  },
+  {
+    "name": "Ark.-Pine Bluff",
+    "expected": "ark-pine-bluff"
+  },
+  {
+    "name": "arkansas",
+    "expected": "arkansas"
+  },
+  {
+    "name": "University of Arkansas, Fayetteville",
+    "expected": "arkansas"
+  },
+  {
+    "name": "arkansas",
+    "expected": "arkansas"
+  },
+  {
+    "name": "Arkansas",
+    "expected": "arkansas"
+  },
+  {
+    "name": "arkansas-st",
+    "expected": "arkansas-st"
+  },
+  {
+    "name": "Arkansas State University",
+    "expected": "arkansas-st"
+  },
+  {
+    "name": "arkansas st",
+    "expected": "arkansas-st"
+  },
+  {
+    "name": "Arkansas St.",
+    "expected": "arkansas-st"
+  },
+  {
+    "name": "army",
+    "expected": "army"
+  },
+  {
+    "name": "U.S. Military Academy",
+    "expected": "army"
+  },
+  {
+    "name": "army",
+    "expected": "army"
+  },
+  {
+    "name": "Army West Point",
+    "expected": "army"
+  },
+  {
+    "name": "aub-montgomery",
+    "expected": "aub-montgomery"
+  },
+  {
+    "name": "aub-montgomery",
+    "expected": "aub-montgomery"
+  },
+  {
+    "name": "aub montgomery",
+    "expected": "aub-montgomery"
+  },
+  {
+    "name": "auburn",
+    "expected": "auburn"
+  },
+  {
+    "name": "Auburn University",
+    "expected": "auburn"
+  },
+  {
+    "name": "auburn",
+    "expected": "auburn"
+  },
+  {
+    "name": "Auburn",
+    "expected": "auburn"
+  },
+  {
+    "name": "austin-peay",
+    "expected": "austin-peay"
+  },
+  {
+    "name": "Austin Peay State University",
+    "expected": "austin-peay"
+  },
+  {
+    "name": "austin peay",
+    "expected": "austin-peay"
+  },
+  {
+    "name": "Austin Peay",
+    "expected": "austin-peay"
+  },
+  {
+    "name": "bakersfield",
+    "expected": "bakersfield"
+  },
+  {
+    "name": "California State University, Bakersfield",
+    "expected": "bakersfield"
+  },
+  {
+    "name": "bakersfield",
+    "expected": "bakersfield"
+  },
+  {
+    "name": "CSU Bakersfield",
+    "expected": "bakersfield"
+  },
+  {
+    "name": "ball-st",
+    "expected": "ball-st"
+  },
+  {
+    "name": "Ball State University",
+    "expected": "ball-st"
+  },
+  {
+    "name": "ball st",
+    "expected": "ball-st"
+  },
+  {
+    "name": "Ball St.",
+    "expected": "ball-st"
+  },
+  {
+    "name": "baylor",
+    "expected": "baylor"
+  },
+  {
+    "name": "Baylor University",
+    "expected": "baylor"
+  },
+  {
+    "name": "baylor",
+    "expected": "baylor"
+  },
+  {
+    "name": "Baylor",
+    "expected": "baylor"
+  },
+  {
+    "name": "bellarmine",
+    "expected": "bellarmine"
+  },
+  {
+    "name": "Bellarmine University",
+    "expected": "bellarmine"
+  },
+  {
+    "name": "bellarmine",
+    "expected": "bellarmine"
+  },
+  {
+    "name": "Bellarmine",
+    "expected": "bellarmine"
+  },
+  {
+    "name": "belmont",
+    "expected": "belmont"
+  },
+  {
+    "name": "Belmont University",
+    "expected": "belmont"
+  },
+  {
+    "name": "belmont",
+    "expected": "belmont"
+  },
+  {
+    "name": "Belmont",
+    "expected": "belmont"
+  },
+  {
+    "name": "bethune-cookman",
+    "expected": "bethune-cookman"
+  },
+  {
+    "name": "Bethune-Cookman University",
+    "expected": "bethune-cookman"
+  },
+  {
+    "name": "bethune cookman",
+    "expected": "bethune-cookman"
+  },
+  {
+    "name": "Bethune-Cookman",
+    "expected": "bethune-cookman"
+  },
+  {
+    "name": "binghamton",
+    "expected": "binghamton"
+  },
+  {
+    "name": "Binghamton University",
+    "expected": "binghamton"
+  },
+  {
+    "name": "binghamton",
+    "expected": "binghamton"
+  },
+  {
+    "name": "Binghamton",
+    "expected": "binghamton"
+  },
+  {
+    "name": "boise-st",
+    "expected": "boise-st"
+  },
+  {
+    "name": "Boise State University",
+    "expected": "boise-st"
+  },
+  {
+    "name": "boise st",
+    "expected": "boise-st"
+  },
+  {
+    "name": "Boise St.",
+    "expected": "boise-st"
+  },
+  {
+    "name": "boston-college",
+    "expected": "boston-college"
+  },
+  {
+    "name": "Boston College",
+    "expected": "boston-college"
+  },
+  {
+    "name": "boston college",
+    "expected": "boston-college"
+  },
+  {
+    "name": "Boston College",
+    "expected": "boston-college"
+  },
+  {
+    "name": "bowie-st",
+    "expected": "bowie-st"
+  },
+  {
+    "name": "Bowie State University",
+    "expected": "bowie-st"
+  },
+  {
+    "name": "bowie st",
+    "expected": "bowie-st"
+  },
+  {
+    "name": "Bowie St.",
+    "expected": "bowie-st"
+  },
+  {
+    "name": "bowling-green",
+    "expected": "bowling-green"
+  },
+  {
+    "name": "Bowling Green State University",
+    "expected": "bowling-green"
+  },
+  {
+    "name": "bowling green",
+    "expected": "bowling-green"
+  },
+  {
+    "name": "Bowling Green",
+    "expected": "bowling-green"
+  },
+  {
+    "name": "bradley",
+    "expected": "bradley"
+  },
+  {
+    "name": "Bradley University",
+    "expected": "bradley"
+  },
+  {
+    "name": "bradley",
+    "expected": "bradley"
+  },
+  {
+    "name": "Bradley",
+    "expected": "bradley"
+  },
+  {
+    "name": "brown",
+    "expected": "brown"
+  },
+  {
+    "name": "Brown University",
+    "expected": "brown"
+  },
+  {
+    "name": "brown",
+    "expected": "brown"
+  },
+  {
+    "name": "Brown",
+    "expected": "brown"
+  },
+  {
+    "name": "bryant",
+    "expected": "bryant"
+  },
+  {
+    "name": "Bryant University",
+    "expected": "bryant"
+  },
+  {
+    "name": "bryant",
+    "expected": "bryant"
+  },
+  {
+    "name": "Bryant",
+    "expected": "bryant"
+  },
+  {
+    "name": "bucknell",
+    "expected": "bucknell"
+  },
+  {
+    "name": "Bucknell University",
+    "expected": "bucknell"
+  },
+  {
+    "name": "bucknell",
+    "expected": "bucknell"
+  },
+  {
+    "name": "Bucknell",
+    "expected": "bucknell"
+  },
+  {
+    "name": "buffalo",
+    "expected": "buffalo"
+  },
+  {
+    "name": "University at Buffalo, the State University of New York",
+    "expected": "buffalo"
+  },
+  {
+    "name": "buffalo",
+    "expected": "buffalo"
+  },
+  {
+    "name": "Buffalo",
+    "expected": "buffalo"
+  },
+  {
+    "name": "butler",
+    "expected": "butler"
+  },
+  {
+    "name": "Butler University",
+    "expected": "butler"
+  },
+  {
+    "name": "butler",
+    "expected": "butler"
+  },
+  {
+    "name": "Butler",
+    "expected": "butler"
+  },
+  {
+    "name": "byu",
+    "expected": "byu"
+  },
+  {
+    "name": "Brigham Young University",
+    "expected": "byu"
+  },
+  {
+    "name": "byu",
+    "expected": "byu"
+  },
+  {
+    "name": "BYU",
+    "expected": "byu"
+  },
+  {
+    "name": "byu",
+    "expected": "byu"
+  },
+  {
+    "name": "cal-poly",
+    "expected": "cal-poly"
+  },
+  {
+    "name": "California Polytechnic State University",
+    "expected": "cal-poly"
+  },
+  {
+    "name": "cal poly",
+    "expected": "cal-poly"
+  },
+  {
+    "name": "Cal Poly",
+    "expected": "cal-poly"
+  },
+  {
+    "name": "cal-st-fullerton",
+    "expected": "cal-st-fullerton"
+  },
+  {
+    "name": "California State University, Fullerton",
+    "expected": "cal-st-fullerton"
+  },
+  {
+    "name": "cal st fullerton",
+    "expected": "cal-st-fullerton"
+  },
+  {
+    "name": "Cal St. Fullerton",
+    "expected": "cal-st-fullerton"
+  },
+  {
+    "name": "cal-st-northridge",
+    "expected": "cal-st-northridge"
+  },
+  {
+    "name": "California State University, Northridge",
+    "expected": "cal-st-northridge"
+  },
+  {
+    "name": "cal st northridge",
+    "expected": "cal-st-northridge"
+  },
+  {
+    "name": "CSUN",
+    "expected": "cal-st-northridge"
+  },
+  {
+    "name": "csun",
+    "expected": "cal-st-northridge"
+  },
+  {
+    "name": "california",
+    "expected": "california"
+  },
+  {
+    "name": "University of California, Berkeley",
+    "expected": "california"
+  },
+  {
+    "name": "california",
+    "expected": "california"
+  },
+  {
+    "name": "California",
+    "expected": "california"
+  },
+  {
+    "name": "california-baptist",
+    "expected": "california-baptist"
+  },
+  {
+    "name": "California Baptist University",
+    "expected": "california-baptist"
+  },
+  {
+    "name": "california baptist",
+    "expected": "california-baptist"
+  },
+  {
+    "name": "California Baptist",
+    "expected": "california-baptist"
+  },
+  {
+    "name": "campbell",
+    "expected": "campbell"
+  },
+  {
+    "name": "Campbell University",
+    "expected": "campbell"
+  },
+  {
+    "name": "campbell",
+    "expected": "campbell"
+  },
+  {
+    "name": "Campbell",
+    "expected": "campbell"
+  },
+  {
+    "name": "canisius",
+    "expected": "canisius"
+  },
+  {
+    "name": "Canisius University",
+    "expected": "canisius"
+  },
+  {
+    "name": "canisius",
+    "expected": "canisius"
+  },
+  {
+    "name": "Canisius",
+    "expected": "canisius"
+  },
+  {
+    "name": "central-ark",
+    "expected": "central-ark"
+  },
+  {
+    "name": "University of Central Arkansas",
+    "expected": "central-ark"
+  },
+  {
+    "name": "central ark",
+    "expected": "central-ark"
+  },
+  {
+    "name": "Central Ark.",
+    "expected": "central-ark"
+  },
+  {
+    "name": "central-conn-st",
+    "expected": "central-conn-st"
+  },
+  {
+    "name": "Central Connecticut State University",
+    "expected": "central-conn-st"
+  },
+  {
+    "name": "central conn st",
+    "expected": "central-conn-st"
+  },
+  {
+    "name": "Central Conn. St.",
+    "expected": "central-conn-st"
+  },
+  {
+    "name": "central-mich",
+    "expected": "central-mich"
+  },
+  {
+    "name": "Central Michigan University",
+    "expected": "central-mich"
+  },
+  {
+    "name": "central mich",
+    "expected": "central-mich"
+  },
+  {
+    "name": "Central Mich.",
+    "expected": "central-mich"
+  },
+  {
+    "name": "charleston-so",
+    "expected": "charleston-so"
+  },
+  {
+    "name": "Charleston Southern University",
+    "expected": "charleston-so"
+  },
+  {
+    "name": "charleston so",
+    "expected": "charleston-so"
+  },
+  {
+    "name": "Charleston So.",
+    "expected": "charleston-so"
+  },
+  {
+    "name": "charlotte",
+    "expected": "charlotte"
+  },
+  {
+    "name": "The University of North Carolina at Charlotte",
+    "expected": "charlotte"
+  },
+  {
+    "name": "charlotte",
+    "expected": "charlotte"
+  },
+  {
+    "name": "Charlotte",
+    "expected": "charlotte"
+  },
+  {
+    "name": "chattanooga",
+    "expected": "chattanooga"
+  },
+  {
+    "name": "University of Tennessee at Chattanooga",
+    "expected": "chattanooga"
+  },
+  {
+    "name": "chattanooga",
+    "expected": "chattanooga"
+  },
+  {
+    "name": "Chattanooga",
+    "expected": "chattanooga"
+  },
+  {
+    "name": "chicago-st",
+    "expected": "chicago-st"
+  },
+  {
+    "name": "Chicago State University",
+    "expected": "chicago-st"
+  },
+  {
+    "name": "chicago st",
+    "expected": "chicago-st"
+  },
+  {
+    "name": "Chicago St.",
+    "expected": "chicago-st"
+  },
+  {
+    "name": "christian-bros",
+    "expected": "christian-bros"
+  },
+  {
+    "name": "christian-bros",
+    "expected": "christian-bros"
+  },
+  {
+    "name": "christian bros",
+    "expected": "christian-bros"
+  },
+  {
+    "name": "cincinnati",
+    "expected": "cincinnati"
+  },
+  {
+    "name": "University of Cincinnati",
+    "expected": "cincinnati"
+  },
+  {
+    "name": "cincinnati",
+    "expected": "cincinnati"
+  },
+  {
+    "name": "Cincinnati",
+    "expected": "cincinnati"
+  },
+  {
+    "name": "citadel",
+    "expected": "citadel"
+  },
+  {
+    "name": "The Citadel",
+    "expected": "citadel"
+  },
+  {
+    "name": "citadel",
+    "expected": "citadel"
+  },
+  {
+    "name": "The Citadel",
+    "expected": "citadel"
+  },
+  {
+    "name": "claflin",
+    "expected": "claflin"
+  },
+  {
+    "name": "Claflin University",
+    "expected": "claflin"
+  },
+  {
+    "name": "claflin",
+    "expected": "claflin"
+  },
+  {
+    "name": "Claflin",
+    "expected": "claflin"
+  },
+  {
+    "name": "clemson",
+    "expected": "clemson"
+  },
+  {
+    "name": "Clemson University",
+    "expected": "clemson"
+  },
+  {
+    "name": "clemson",
+    "expected": "clemson"
+  },
+  {
+    "name": "Clemson",
+    "expected": "clemson"
+  },
+  {
+    "name": "cleveland-st",
+    "expected": "cleveland-st"
+  },
+  {
+    "name": "Cleveland State University",
+    "expected": "cleveland-st"
+  },
+  {
+    "name": "cleveland st",
+    "expected": "cleveland-st"
+  },
+  {
+    "name": "Cleveland St.",
+    "expected": "cleveland-st"
+  },
+  {
+    "name": "coastal-caro",
+    "expected": "coastal-caro"
+  },
+  {
+    "name": "Coastal Carolina University",
+    "expected": "coastal-caro"
+  },
+  {
+    "name": "coastal caro",
+    "expected": "coastal-caro"
+  },
+  {
+    "name": "Coastal Carolina",
+    "expected": "coastal-caro"
+  },
+  {
+    "name": "col-of-charleston",
+    "expected": "col-of-charleston"
+  },
+  {
+    "name": "College of Charleston (South Carolina)",
+    "expected": "col-of-charleston"
+  },
+  {
+    "name": "col of charleston",
+    "expected": "col-of-charleston"
+  },
+  {
+    "name": "Col. of Charleston",
+    "expected": "col-of-charleston"
+  },
+  {
+    "name": "colgate",
+    "expected": "colgate"
+  },
+  {
+    "name": "Colgate University",
+    "expected": "colgate"
+  },
+  {
+    "name": "colgate",
+    "expected": "colgate"
+  },
+  {
+    "name": "Colgate",
+    "expected": "colgate"
+  },
+  {
+    "name": "colorado",
+    "expected": "colorado"
+  },
+  {
+    "name": "University of Colorado Boulder",
+    "expected": "colorado"
+  },
+  {
+    "name": "colorado",
+    "expected": "colorado"
+  },
+  {
+    "name": "Colorado",
+    "expected": "colorado"
+  },
+  {
+    "name": "colorado-st",
+    "expected": "colorado-st"
+  },
+  {
+    "name": "Colorado State University",
+    "expected": "colorado-st"
+  },
+  {
+    "name": "colorado st",
+    "expected": "colorado-st"
+  },
+  {
+    "name": "Colorado St.",
+    "expected": "colorado-st"
+  },
+  {
+    "name": "columbia",
+    "expected": "columbia"
+  },
+  {
+    "name": "Columbia University-Barnard College",
+    "expected": "columbia"
+  },
+  {
+    "name": "columbia",
+    "expected": "columbia"
+  },
+  {
+    "name": "Columbia",
+    "expected": "columbia"
+  },
+  {
+    "name": "coppin-st",
+    "expected": "coppin-st"
+  },
+  {
+    "name": "Coppin State University",
+    "expected": "coppin-st"
+  },
+  {
+    "name": "coppin st",
+    "expected": "coppin-st"
+  },
+  {
+    "name": "Coppin St.",
+    "expected": "coppin-st"
+  },
+  {
+    "name": "cornell",
+    "expected": "cornell"
+  },
+  {
+    "name": "Cornell University",
+    "expected": "cornell"
+  },
+  {
+    "name": "cornell",
+    "expected": "cornell"
+  },
+  {
+    "name": "Cornell",
+    "expected": "cornell"
+  },
+  {
+    "name": "creighton",
+    "expected": "creighton"
+  },
+  {
+    "name": "Creighton University",
+    "expected": "creighton"
+  },
+  {
+    "name": "creighton",
+    "expected": "creighton"
+  },
+  {
+    "name": "Creighton",
+    "expected": "creighton"
+  },
+  {
+    "name": "dartmouth",
+    "expected": "dartmouth"
+  },
+  {
+    "name": "Dartmouth College",
+    "expected": "dartmouth"
+  },
+  {
+    "name": "dartmouth",
+    "expected": "dartmouth"
+  },
+  {
+    "name": "Dartmouth",
+    "expected": "dartmouth"
+  },
+  {
+    "name": "davidson",
+    "expected": "davidson"
+  },
+  {
+    "name": "Davidson College",
+    "expected": "davidson"
+  },
+  {
+    "name": "davidson",
+    "expected": "davidson"
+  },
+  {
+    "name": "Davidson",
+    "expected": "davidson"
+  },
+  {
+    "name": "dayton",
+    "expected": "dayton"
+  },
+  {
+    "name": "University of Dayton",
+    "expected": "dayton"
+  },
+  {
+    "name": "dayton",
+    "expected": "dayton"
+  },
+  {
+    "name": "Dayton",
+    "expected": "dayton"
+  },
+  {
+    "name": "delaware",
+    "expected": "delaware"
+  },
+  {
+    "name": "University of Delaware",
+    "expected": "delaware"
+  },
+  {
+    "name": "delaware",
+    "expected": "delaware"
+  },
+  {
+    "name": "Delaware",
+    "expected": "delaware"
+  },
+  {
+    "name": "delaware-st",
+    "expected": "delaware-st"
+  },
+  {
+    "name": "Delaware State University",
+    "expected": "delaware-st"
+  },
+  {
+    "name": "delaware st",
+    "expected": "delaware-st"
+  },
+  {
+    "name": "Delaware St.",
+    "expected": "delaware-st"
+  },
+  {
+    "name": "denver",
+    "expected": "denver"
+  },
+  {
+    "name": "University of Denver",
+    "expected": "denver"
+  },
+  {
+    "name": "denver",
+    "expected": "denver"
+  },
+  {
+    "name": "Denver",
+    "expected": "denver"
+  },
+  {
+    "name": "depaul",
+    "expected": "depaul"
+  },
+  {
+    "name": "DePaul University",
+    "expected": "depaul"
+  },
+  {
+    "name": "depaul",
+    "expected": "depaul"
+  },
+  {
+    "name": "DePaul",
+    "expected": "depaul"
+  },
+  {
+    "name": "dillard",
+    "expected": "dillard"
+  },
+  {
+    "name": "Dillard",
+    "expected": "dillard"
+  },
+  {
+    "name": "dillard",
+    "expected": "dillard"
+  },
+  {
+    "name": "Dillard",
+    "expected": "dillard"
+  },
+  {
+    "name": "drake",
+    "expected": "drake"
+  },
+  {
+    "name": "Drake University",
+    "expected": "drake"
+  },
+  {
+    "name": "drake",
+    "expected": "drake"
+  },
+  {
+    "name": "Drake",
+    "expected": "drake"
+  },
+  {
+    "name": "duke",
+    "expected": "duke"
+  },
+  {
+    "name": "Duke University",
+    "expected": "duke"
+  },
+  {
+    "name": "duke",
+    "expected": "duke"
+  },
+  {
+    "name": "Duke",
+    "expected": "duke"
+  },
+  {
+    "name": "duquesne",
+    "expected": "duquesne"
+  },
+  {
+    "name": "Duquesne University",
+    "expected": "duquesne"
+  },
+  {
+    "name": "duquesne",
+    "expected": "duquesne"
+  },
+  {
+    "name": "Duquesne",
+    "expected": "duquesne"
+  },
+  {
+    "name": "east-carolina",
+    "expected": "east-carolina"
+  },
+  {
+    "name": "East Carolina University",
+    "expected": "east-carolina"
+  },
+  {
+    "name": "east carolina",
+    "expected": "east-carolina"
+  },
+  {
+    "name": "East Carolina",
+    "expected": "east-carolina"
+  },
+  {
+    "name": "east-tenn-st",
+    "expected": "east-tenn-st"
+  },
+  {
+    "name": "East Tennessee State University",
+    "expected": "east-tenn-st"
+  },
+  {
+    "name": "east tenn st",
+    "expected": "east-tenn-st"
+  },
+  {
+    "name": "ETSU",
+    "expected": "east-tenn-st"
+  },
+  {
+    "name": "etsu",
+    "expected": "east-tenn-st"
+  },
+  {
+    "name": "eastern-ill",
+    "expected": "eastern-ill"
+  },
+  {
+    "name": "Eastern Illinois University",
+    "expected": "eastern-ill"
+  },
+  {
+    "name": "eastern ill",
+    "expected": "eastern-ill"
+  },
+  {
+    "name": "Eastern Ill.",
+    "expected": "eastern-ill"
+  },
+  {
+    "name": "eastern-ky",
+    "expected": "eastern-ky"
+  },
+  {
+    "name": "Eastern Kentucky University",
+    "expected": "eastern-ky"
+  },
+  {
+    "name": "eastern ky",
+    "expected": "eastern-ky"
+  },
+  {
+    "name": "Eastern Ky.",
+    "expected": "eastern-ky"
+  },
+  {
+    "name": "eastern-mich",
+    "expected": "eastern-mich"
+  },
+  {
+    "name": "Eastern Michigan University",
+    "expected": "eastern-mich"
+  },
+  {
+    "name": "eastern mich",
+    "expected": "eastern-mich"
+  },
+  {
+    "name": "Eastern Mich.",
+    "expected": "eastern-mich"
+  },
+  {
+    "name": "eastern-wash",
+    "expected": "eastern-wash"
+  },
+  {
+    "name": "Eastern Washington University",
+    "expected": "eastern-wash"
+  },
+  {
+    "name": "eastern wash",
+    "expected": "eastern-wash"
+  },
+  {
+    "name": "Eastern Wash.",
+    "expected": "eastern-wash"
+  },
+  {
+    "name": "elon",
+    "expected": "elon"
+  },
+  {
+    "name": "Elon University",
+    "expected": "elon"
+  },
+  {
+    "name": "elon",
+    "expected": "elon"
+  },
+  {
+    "name": "Elon",
+    "expected": "elon"
+  },
+  {
+    "name": "erskine",
+    "expected": "erskine"
+  },
+  {
+    "name": "Erskine College",
+    "expected": "erskine"
+  },
+  {
+    "name": "erskine",
+    "expected": "erskine"
+  },
+  {
+    "name": "Erskine",
+    "expected": "erskine"
+  },
+  {
+    "name": "evansville",
+    "expected": "evansville"
+  },
+  {
+    "name": "University of Evansville",
+    "expected": "evansville"
+  },
+  {
+    "name": "evansville",
+    "expected": "evansville"
+  },
+  {
+    "name": "Evansville",
+    "expected": "evansville"
+  },
+  {
+    "name": "fairfield",
+    "expected": "fairfield"
+  },
+  {
+    "name": "Fairfield University",
+    "expected": "fairfield"
+  },
+  {
+    "name": "fairfield",
+    "expected": "fairfield"
+  },
+  {
+    "name": "Fairfield",
+    "expected": "fairfield"
+  },
+  {
+    "name": "fdu",
+    "expected": "fdu"
+  },
+  {
+    "name": "Fairleigh Dickinson University, Metropolitan Campus",
+    "expected": "fdu"
+  },
+  {
+    "name": "fdu",
+    "expected": "fdu"
+  },
+  {
+    "name": "FDU",
+    "expected": "fdu"
+  },
+  {
+    "name": "ferris-st",
+    "expected": "ferris-st"
+  },
+  {
+    "name": "ferris-st",
+    "expected": "ferris-st"
+  },
+  {
+    "name": "ferris st",
+    "expected": "ferris-st"
+  },
+  {
+    "name": "fgcu",
+    "expected": "fgcu"
+  },
+  {
+    "name": "Florida Gulf Coast University",
+    "expected": "fgcu"
+  },
+  {
+    "name": "fgcu",
+    "expected": "fgcu"
+  },
+  {
+    "name": "FGCU",
+    "expected": "fgcu"
+  },
+  {
+    "name": "fgcu",
+    "expected": "fgcu"
+  },
+  {
+    "name": "fiu",
+    "expected": "fiu"
+  },
+  {
+    "name": "Florida International University",
+    "expected": "fiu"
+  },
+  {
+    "name": "fiu",
+    "expected": "fiu"
+  },
+  {
+    "name": "FIU",
+    "expected": "fiu"
+  },
+  {
+    "name": "fiu",
+    "expected": "fiu"
+  },
+  {
+    "name": "fla-atlantic",
+    "expected": "fla-atlantic"
+  },
+  {
+    "name": "Florida Atlantic University",
+    "expected": "fla-atlantic"
+  },
+  {
+    "name": "fla atlantic",
+    "expected": "fla-atlantic"
+  },
+  {
+    "name": "Fla. Atlantic",
+    "expected": "fla-atlantic"
+  },
+  {
+    "name": "fau",
+    "expected": "fla-atlantic"
+  },
+  {
+    "name": "fla-southern",
+    "expected": "fla-southern"
+  },
+  {
+    "name": "Florida Southern College",
+    "expected": "fla-southern"
+  },
+  {
+    "name": "fla southern",
+    "expected": "fla-southern"
+  },
+  {
+    "name": "Fla. Southern",
+    "expected": "fla-southern"
+  },
+  {
+    "name": "florida",
+    "expected": "florida"
+  },
+  {
+    "name": "University of Florida",
+    "expected": "florida"
+  },
+  {
+    "name": "florida",
+    "expected": "florida"
+  },
+  {
+    "name": "Florida",
+    "expected": "florida"
+  },
+  {
+    "name": "florida-am",
+    "expected": "florida-am"
+  },
+  {
+    "name": "Florida A&M University",
+    "expected": "florida-am"
+  },
+  {
+    "name": "florida am",
+    "expected": "florida-am"
+  },
+  {
+    "name": "Florida A&M",
+    "expected": "florida-am"
+  },
+  {
+    "name": "florida-st",
+    "expected": "florida-st"
+  },
+  {
+    "name": "Florida State University",
+    "expected": "florida-st"
+  },
+  {
+    "name": "florida st",
+    "expected": "florida-st"
+  },
+  {
+    "name": "Florida St.",
+    "expected": "florida-st"
+  },
+  {
+    "name": "fordham",
+    "expected": "fordham"
+  },
+  {
+    "name": "Fordham University",
+    "expected": "fordham"
+  },
+  {
+    "name": "fordham",
+    "expected": "fordham"
+  },
+  {
+    "name": "Fordham",
+    "expected": "fordham"
+  },
+  {
+    "name": "fort-valley-st",
+    "expected": "fort-valley-st"
+  },
+  {
+    "name": "Fort Valley State University",
+    "expected": "fort-valley-st"
+  },
+  {
+    "name": "fort valley st",
+    "expected": "fort-valley-st"
+  },
+  {
+    "name": "fresno-st",
+    "expected": "fresno-st"
+  },
+  {
+    "name": "California State University, Fresno",
+    "expected": "fresno-st"
+  },
+  {
+    "name": "fresno st",
+    "expected": "fresno-st"
+  },
+  {
+    "name": "Fresno St.",
+    "expected": "fresno-st"
+  },
+  {
+    "name": "furman",
+    "expected": "furman"
+  },
+  {
+    "name": "Furman University",
+    "expected": "furman"
+  },
+  {
+    "name": "furman",
+    "expected": "furman"
+  },
+  {
+    "name": "Furman",
+    "expected": "furman"
+  },
+  {
+    "name": "ga-southern",
+    "expected": "ga-southern"
+  },
+  {
+    "name": "Georgia Southern University",
+    "expected": "ga-southern"
+  },
+  {
+    "name": "ga southern",
+    "expected": "ga-southern"
+  },
+  {
+    "name": "Ga. Southern",
+    "expected": "ga-southern"
+  },
+  {
+    "name": "georgiasouthern",
+    "expected": "ga-southern"
+  },
+  {
+    "name": "gardner-webb",
+    "expected": "gardner-webb"
+  },
+  {
+    "name": "Gardner-Webb University",
+    "expected": "gardner-webb"
+  },
+  {
+    "name": "gardner webb",
+    "expected": "gardner-webb"
+  },
+  {
+    "name": "Gardner-Webb",
+    "expected": "gardner-webb"
+  },
+  {
+    "name": "george-mason",
+    "expected": "george-mason"
+  },
+  {
+    "name": "George Mason University",
+    "expected": "george-mason"
+  },
+  {
+    "name": "george mason",
+    "expected": "george-mason"
+  },
+  {
+    "name": "George Mason",
+    "expected": "george-mason"
+  },
+  {
+    "name": "george-washington",
+    "expected": "george-washington"
+  },
+  {
+    "name": "George Washington University",
+    "expected": "george-washington"
+  },
+  {
+    "name": "george washington",
+    "expected": "george-washington"
+  },
+  {
+    "name": "George Washington",
+    "expected": "george-washington"
+  },
+  {
+    "name": "georgetown",
+    "expected": "georgetown"
+  },
+  {
+    "name": "Georgetown University",
+    "expected": "georgetown"
+  },
+  {
+    "name": "georgetown",
+    "expected": "georgetown"
+  },
+  {
+    "name": "Georgetown",
+    "expected": "georgetown"
+  },
+  {
+    "name": "georgia",
+    "expected": "georgia"
+  },
+  {
+    "name": "University of Georgia",
+    "expected": "georgia"
+  },
+  {
+    "name": "georgia",
+    "expected": "georgia"
+  },
+  {
+    "name": "Georgia",
+    "expected": "georgia"
+  },
+  {
+    "name": "georgia-st",
+    "expected": "georgia-st"
+  },
+  {
+    "name": "Georgia State University",
+    "expected": "georgia-st"
+  },
+  {
+    "name": "georgia st",
+    "expected": "georgia-st"
+  },
+  {
+    "name": "Georgia St.",
+    "expected": "georgia-st"
+  },
+  {
+    "name": "georgia-tech",
+    "expected": "georgia-tech"
+  },
+  {
+    "name": "Georgia Institute of Technology",
+    "expected": "georgia-tech"
+  },
+  {
+    "name": "georgia tech",
+    "expected": "georgia-tech"
+  },
+  {
+    "name": "Georgia Tech",
+    "expected": "georgia-tech"
+  },
+  {
+    "name": "gonzaga",
+    "expected": "gonzaga"
+  },
+  {
+    "name": "Gonzaga University",
+    "expected": "gonzaga"
+  },
+  {
+    "name": "gonzaga",
+    "expected": "gonzaga"
+  },
+  {
+    "name": "Gonzaga",
+    "expected": "gonzaga"
+  },
+  {
+    "name": "grambling",
+    "expected": "grambling"
+  },
+  {
+    "name": "Grambling State University",
+    "expected": "grambling"
+  },
+  {
+    "name": "grambling",
+    "expected": "grambling"
+  },
+  {
+    "name": "Grambling",
+    "expected": "grambling"
+  },
+  {
+    "name": "grand-canyon",
+    "expected": "grand-canyon"
+  },
+  {
+    "name": "Grand Canyon University",
+    "expected": "grand-canyon"
+  },
+  {
+    "name": "grand canyon",
+    "expected": "grand-canyon"
+  },
+  {
+    "name": "Grand Canyon",
+    "expected": "grand-canyon"
+  },
+  {
+    "name": "green-bay",
+    "expected": "green-bay"
+  },
+  {
+    "name": "University of Wisconsin-Green Bay",
+    "expected": "green-bay"
+  },
+  {
+    "name": "green bay",
+    "expected": "green-bay"
+  },
+  {
+    "name": "Green Bay",
+    "expected": "green-bay"
+  },
+  {
+    "name": "hampton",
+    "expected": "hampton"
+  },
+  {
+    "name": "Hampton University",
+    "expected": "hampton"
+  },
+  {
+    "name": "hampton",
+    "expected": "hampton"
+  },
+  {
+    "name": "Hampton",
+    "expected": "hampton"
+  },
+  {
+    "name": "harvard",
+    "expected": "harvard"
+  },
+  {
+    "name": "Harvard University",
+    "expected": "harvard"
+  },
+  {
+    "name": "harvard",
+    "expected": "harvard"
+  },
+  {
+    "name": "Harvard",
+    "expected": "harvard"
+  },
+  {
+    "name": "hawaii",
+    "expected": "hawaii"
+  },
+  {
+    "name": "University of Hawaii, Manoa",
+    "expected": "hawaii"
+  },
+  {
+    "name": "hawaii",
+    "expected": "hawaii"
+  },
+  {
+    "name": "Hawaii",
+    "expected": "hawaii"
+  },
+  {
+    "name": "hawaii",
+    "expected": "hawaii"
+  },
+  {
+    "name": "henderson-st",
+    "expected": "henderson-st"
+  },
+  {
+    "name": "Henderson State University",
+    "expected": "henderson-st"
+  },
+  {
+    "name": "henderson st",
+    "expected": "henderson-st"
+  },
+  {
+    "name": "Henderson St.",
+    "expected": "henderson-st"
+  },
+  {
+    "name": "high-point",
+    "expected": "high-point"
+  },
+  {
+    "name": "High Point University",
+    "expected": "high-point"
+  },
+  {
+    "name": "high point",
+    "expected": "high-point"
+  },
+  {
+    "name": "High Point",
+    "expected": "high-point"
+  },
+  {
+    "name": "hofstra",
+    "expected": "hofstra"
+  },
+  {
+    "name": "Hofstra University",
+    "expected": "hofstra"
+  },
+  {
+    "name": "hofstra",
+    "expected": "hofstra"
+  },
+  {
+    "name": "Hofstra",
+    "expected": "hofstra"
+  },
+  {
+    "name": "holy-cross",
+    "expected": "holy-cross"
+  },
+  {
+    "name": "College of the Holy Cross",
+    "expected": "holy-cross"
+  },
+  {
+    "name": "holy cross",
+    "expected": "holy-cross"
+  },
+  {
+    "name": "Holy Cross",
+    "expected": "holy-cross"
+  },
+  {
+    "name": "houston",
+    "expected": "houston"
+  },
+  {
+    "name": "University of Houston",
+    "expected": "houston"
+  },
+  {
+    "name": "houston",
+    "expected": "houston"
+  },
+  {
+    "name": "Houston",
+    "expected": "houston"
+  },
+  {
+    "name": "houston-christian",
+    "expected": "houston-christian"
+  },
+  {
+    "name": "Houston Christian University",
+    "expected": "houston-christian"
+  },
+  {
+    "name": "houston christian",
+    "expected": "houston-christian"
+  },
+  {
+    "name": "Houston Christian",
+    "expected": "houston-christian"
+  },
+  {
+    "name": "howard",
+    "expected": "howard"
+  },
+  {
+    "name": "Howard University",
+    "expected": "howard"
+  },
+  {
+    "name": "howard",
+    "expected": "howard"
+  },
+  {
+    "name": "Howard",
+    "expected": "howard"
+  },
+  {
+    "name": "idaho",
+    "expected": "idaho"
+  },
+  {
+    "name": "University of Idaho",
+    "expected": "idaho"
+  },
+  {
+    "name": "idaho",
+    "expected": "idaho"
+  },
+  {
+    "name": "Idaho",
+    "expected": "idaho"
+  },
+  {
+    "name": "idaho-st",
+    "expected": "idaho-st"
+  },
+  {
+    "name": "Idaho State University",
+    "expected": "idaho-st"
+  },
+  {
+    "name": "idaho st",
+    "expected": "idaho-st"
+  },
+  {
+    "name": "Idaho St.",
+    "expected": "idaho-st"
+  },
+  {
+    "name": "ill-chicago",
+    "expected": "ill-chicago"
+  },
+  {
+    "name": "University of Illinois Chicago",
+    "expected": "ill-chicago"
+  },
+  {
+    "name": "ill chicago",
+    "expected": "ill-chicago"
+  },
+  {
+    "name": "UIC",
+    "expected": "ill-chicago"
+  },
+  {
+    "name": "uic",
+    "expected": "ill-chicago"
+  },
+  {
+    "name": "illinois",
+    "expected": "illinois"
+  },
+  {
+    "name": "University of Illinois Urbana-Champaign",
+    "expected": "illinois"
+  },
+  {
+    "name": "illinois",
+    "expected": "illinois"
+  },
+  {
+    "name": "Illinois",
+    "expected": "illinois"
+  },
+  {
+    "name": "illinois-st",
+    "expected": "illinois-st"
+  },
+  {
+    "name": "Illinois State University",
+    "expected": "illinois-st"
+  },
+  {
+    "name": "illinois st",
+    "expected": "illinois-st"
+  },
+  {
+    "name": "Illinois St.",
+    "expected": "illinois-st"
+  },
+  {
+    "name": "indiana",
+    "expected": "indiana"
+  },
+  {
+    "name": "Indiana University, Bloomington",
+    "expected": "indiana"
+  },
+  {
+    "name": "indiana",
+    "expected": "indiana"
+  },
+  {
+    "name": "Indiana",
+    "expected": "indiana"
+  },
+  {
+    "name": "indiana-st",
+    "expected": "indiana-st"
+  },
+  {
+    "name": "Indiana State University",
+    "expected": "indiana-st"
+  },
+  {
+    "name": "indiana st",
+    "expected": "indiana-st"
+  },
+  {
+    "name": "Indiana St.",
+    "expected": "indiana-st"
+  },
+  {
+    "name": "iona",
+    "expected": "iona"
+  },
+  {
+    "name": "Iona University",
+    "expected": "iona"
+  },
+  {
+    "name": "iona",
+    "expected": "iona"
+  },
+  {
+    "name": "Iona",
+    "expected": "iona"
+  },
+  {
+    "name": "iowa",
+    "expected": "iowa"
+  },
+  {
+    "name": "University of Iowa",
+    "expected": "iowa"
+  },
+  {
+    "name": "iowa",
+    "expected": "iowa"
+  },
+  {
+    "name": "Iowa",
+    "expected": "iowa"
+  },
+  {
+    "name": "iowa-st",
+    "expected": "iowa-st"
+  },
+  {
+    "name": "Iowa State University",
+    "expected": "iowa-st"
+  },
+  {
+    "name": "iowa st",
+    "expected": "iowa-st"
+  },
+  {
+    "name": "Iowa St.",
+    "expected": "iowa-st"
+  },
+  {
+    "name": "ipfw",
+    "expected": "ipfw"
+  },
+  {
+    "name": "Purdue University Fort Wayne",
+    "expected": "ipfw"
+  },
+  {
+    "name": "ipfw",
+    "expected": "ipfw"
+  },
+  {
+    "name": "Purdue Fort Wayne",
+    "expected": "ipfw"
+  },
+  {
+    "name": "iu-indy",
+    "expected": "iu-indy"
+  },
+  {
+    "name": "Indiana University Indianapolis",
+    "expected": "iu-indy"
+  },
+  {
+    "name": "iu indy",
+    "expected": "iu-indy"
+  },
+  {
+    "name": "IU Indy",
+    "expected": "iu-indy"
+  },
+  {
+    "name": "iupui",
+    "expected": "iu-indy"
+  },
+  {
+    "name": "jackson-st",
+    "expected": "jackson-st"
+  },
+  {
+    "name": "Jackson State University",
+    "expected": "jackson-st"
+  },
+  {
+    "name": "jackson st",
+    "expected": "jackson-st"
+  },
+  {
+    "name": "Jackson St.",
+    "expected": "jackson-st"
+  },
+  {
+    "name": "jacksonville",
+    "expected": "jacksonville"
+  },
+  {
+    "name": "Jacksonville University",
+    "expected": "jacksonville"
+  },
+  {
+    "name": "jacksonville",
+    "expected": "jacksonville"
+  },
+  {
+    "name": "Jacksonville",
+    "expected": "jacksonville"
+  },
+  {
+    "name": "jacksonville-st",
+    "expected": "jacksonville-st"
+  },
+  {
+    "name": "Jacksonville State University",
+    "expected": "jacksonville-st"
+  },
+  {
+    "name": "jacksonville st",
+    "expected": "jacksonville-st"
+  },
+  {
+    "name": "Jacksonville St.",
+    "expected": "jacksonville-st"
+  },
+  {
+    "name": "james-madison",
+    "expected": "james-madison"
+  },
+  {
+    "name": "James Madison University",
+    "expected": "james-madison"
+  },
+  {
+    "name": "james madison",
+    "expected": "james-madison"
+  },
+  {
+    "name": "James Madison",
+    "expected": "james-madison"
+  },
+  {
+    "name": "kansas",
+    "expected": "kansas"
+  },
+  {
+    "name": "University of Kansas",
+    "expected": "kansas"
+  },
+  {
+    "name": "kansas",
+    "expected": "kansas"
+  },
+  {
+    "name": "Kansas",
+    "expected": "kansas"
+  },
+  {
+    "name": "kansas-st",
+    "expected": "kansas-st"
+  },
+  {
+    "name": "Kansas State University",
+    "expected": "kansas-st"
+  },
+  {
+    "name": "kansas st",
+    "expected": "kansas-st"
+  },
+  {
+    "name": "Kansas St.",
+    "expected": "kansas-st"
+  },
+  {
+    "name": "kennesaw-st",
+    "expected": "kennesaw-st"
+  },
+  {
+    "name": "Kennesaw State University",
+    "expected": "kennesaw-st"
+  },
+  {
+    "name": "kennesaw st",
+    "expected": "kennesaw-st"
+  },
+  {
+    "name": "Kennesaw St.",
+    "expected": "kennesaw-st"
+  },
+  {
+    "name": "kent-st",
+    "expected": "kent-st"
+  },
+  {
+    "name": "Kent State University",
+    "expected": "kent-st"
+  },
+  {
+    "name": "kent st",
+    "expected": "kent-st"
+  },
+  {
+    "name": "Kent St.",
+    "expected": "kent-st"
+  },
+  {
+    "name": "kentucky",
+    "expected": "kentucky"
+  },
+  {
+    "name": "University of Kentucky",
+    "expected": "kentucky"
+  },
+  {
+    "name": "kentucky",
+    "expected": "kentucky"
+  },
+  {
+    "name": "Kentucky",
+    "expected": "kentucky"
+  },
+  {
+    "name": "la-lafayette",
+    "expected": "la-lafayette"
+  },
+  {
+    "name": "University of Louisiana at Lafayette",
+    "expected": "la-lafayette"
+  },
+  {
+    "name": "la lafayette",
+    "expected": "la-lafayette"
+  },
+  {
+    "name": "Louisiana",
+    "expected": "la-lafayette"
+  },
+  {
+    "name": "ull",
+    "expected": "la-lafayette"
+  },
+  {
+    "name": "la-monroe",
+    "expected": "la-monroe"
+  },
+  {
+    "name": "University of Louisiana Monroe",
+    "expected": "la-monroe"
+  },
+  {
+    "name": "la monroe",
+    "expected": "la-monroe"
+  },
+  {
+    "name": "ULM",
+    "expected": "la-monroe"
+  },
+  {
+    "name": "ulm",
+    "expected": "la-monroe"
+  },
+  {
+    "name": "lafayette",
+    "expected": "lafayette"
+  },
+  {
+    "name": "Lafayette College",
+    "expected": "lafayette"
+  },
+  {
+    "name": "lafayette",
+    "expected": "lafayette"
+  },
+  {
+    "name": "Lafayette",
+    "expected": "lafayette"
+  },
+  {
+    "name": "lamar",
+    "expected": "lamar"
+  },
+  {
+    "name": "Lamar University",
+    "expected": "lamar"
+  },
+  {
+    "name": "lamar",
+    "expected": "lamar"
+  },
+  {
+    "name": "Lamar University",
+    "expected": "lamar"
+  },
+  {
+    "name": "le-moyne",
+    "expected": "le-moyne"
+  },
+  {
+    "name": "Le Moyne College",
+    "expected": "le-moyne"
+  },
+  {
+    "name": "le moyne",
+    "expected": "le-moyne"
+  },
+  {
+    "name": "Le Moyne",
+    "expected": "le-moyne"
+  },
+  {
+    "name": "lee",
+    "expected": "lee"
+  },
+  {
+    "name": "lee",
+    "expected": "lee"
+  },
+  {
+    "name": "lee",
+    "expected": "lee"
+  },
+  {
+    "name": "lees-mcrae",
+    "expected": "lees-mcrae"
+  },
+  {
+    "name": "lees-mcrae",
+    "expected": "lees-mcrae"
+  },
+  {
+    "name": "lees mcrae",
+    "expected": "lees-mcrae"
+  },
+  {
+    "name": "lehigh",
+    "expected": "lehigh"
+  },
+  {
+    "name": "Lehigh University",
+    "expected": "lehigh"
+  },
+  {
+    "name": "lehigh",
+    "expected": "lehigh"
+  },
+  {
+    "name": "Lehigh",
+    "expected": "lehigh"
+  },
+  {
+    "name": "lemoyne-owen",
+    "expected": "lemoyne-owen"
+  },
+  {
+    "name": "lemoyne-owen",
+    "expected": "lemoyne-owen"
+  },
+  {
+    "name": "lemoyne owen",
+    "expected": "lemoyne-owen"
+  },
+  {
+    "name": "liberty",
+    "expected": "liberty"
+  },
+  {
+    "name": "Liberty University",
+    "expected": "liberty"
+  },
+  {
+    "name": "liberty",
+    "expected": "liberty"
+  },
+  {
+    "name": "Liberty",
+    "expected": "liberty"
+  },
+  {
+    "name": "lindenwood-mo",
+    "expected": "lindenwood-mo"
+  },
+  {
+    "name": "Lindenwood University",
+    "expected": "lindenwood-mo"
+  },
+  {
+    "name": "lindenwood mo",
+    "expected": "lindenwood-mo"
+  },
+  {
+    "name": "Lindenwood",
+    "expected": "lindenwood-mo"
+  },
+  {
+    "name": "lipscomb",
+    "expected": "lipscomb"
+  },
+  {
+    "name": "Lipscomb University",
+    "expected": "lipscomb"
+  },
+  {
+    "name": "lipscomb",
+    "expected": "lipscomb"
+  },
+  {
+    "name": "Lipscomb",
+    "expected": "lipscomb"
+  },
+  {
+    "name": "long-beach-st",
+    "expected": "long-beach-st"
+  },
+  {
+    "name": "Long Beach State University",
+    "expected": "long-beach-st"
+  },
+  {
+    "name": "long beach st",
+    "expected": "long-beach-st"
+  },
+  {
+    "name": "Long Beach St.",
+    "expected": "long-beach-st"
+  },
+  {
+    "name": "long-island",
+    "expected": "long-island"
+  },
+  {
+    "name": "Long Island University",
+    "expected": "long-island"
+  },
+  {
+    "name": "long island",
+    "expected": "long-island"
+  },
+  {
+    "name": "LIU",
+    "expected": "long-island"
+  },
+  {
+    "name": "liu",
+    "expected": "long-island"
+  },
+  {
+    "name": "louisiana-tech",
+    "expected": "louisiana-tech"
+  },
+  {
+    "name": "Louisiana Tech University",
+    "expected": "louisiana-tech"
+  },
+  {
+    "name": "louisiana tech",
+    "expected": "louisiana-tech"
+  },
+  {
+    "name": "Louisiana Tech",
+    "expected": "louisiana-tech"
+  },
+  {
+    "name": "louisville",
+    "expected": "louisville"
+  },
+  {
+    "name": "University of Louisville",
+    "expected": "louisville"
+  },
+  {
+    "name": "louisville",
+    "expected": "louisville"
+  },
+  {
+    "name": "Louisville",
+    "expected": "louisville"
+  },
+  {
+    "name": "loyola-chicago",
+    "expected": "loyola-chicago"
+  },
+  {
+    "name": "Loyola University Chicago",
+    "expected": "loyola-chicago"
+  },
+  {
+    "name": "loyola chicago",
+    "expected": "loyola-chicago"
+  },
+  {
+    "name": "Loyola Chicago",
+    "expected": "loyola-chicago"
+  },
+  {
+    "name": "loyola-maryland",
+    "expected": "loyola-maryland"
+  },
+  {
+    "name": "Loyola University Maryland",
+    "expected": "loyola-maryland"
+  },
+  {
+    "name": "loyola maryland",
+    "expected": "loyola-maryland"
+  },
+  {
+    "name": "Loyola Maryland",
+    "expected": "loyola-maryland"
+  },
+  {
+    "name": "loyola-marymount",
+    "expected": "loyola-marymount"
+  },
+  {
+    "name": "Loyola Marymount University",
+    "expected": "loyola-marymount"
+  },
+  {
+    "name": "loyola marymount",
+    "expected": "loyola-marymount"
+  },
+  {
+    "name": "LMU (CA)",
+    "expected": "loyola-marymount"
+  },
+  {
+    "name": "lmu",
+    "expected": "loyola-marymount"
+  },
+  {
+    "name": "lsu",
+    "expected": "lsu"
+  },
+  {
+    "name": "Louisiana State University",
+    "expected": "lsu"
+  },
+  {
+    "name": "lsu",
+    "expected": "lsu"
+  },
+  {
+    "name": "LSU",
+    "expected": "lsu"
+  },
+  {
+    "name": "lsu",
+    "expected": "lsu"
+  },
+  {
+    "name": "manhattan",
+    "expected": "manhattan"
+  },
+  {
+    "name": "Manhattan University",
+    "expected": "manhattan"
+  },
+  {
+    "name": "manhattan",
+    "expected": "manhattan"
+  },
+  {
+    "name": "Manhattan",
+    "expected": "manhattan"
+  },
+  {
+    "name": "marist",
+    "expected": "marist"
+  },
+  {
+    "name": "Marist University",
+    "expected": "marist"
+  },
+  {
+    "name": "marist",
+    "expected": "marist"
+  },
+  {
+    "name": "Marist",
+    "expected": "marist"
+  },
+  {
+    "name": "marquette",
+    "expected": "marquette"
+  },
+  {
+    "name": "Marquette University",
+    "expected": "marquette"
+  },
+  {
+    "name": "marquette",
+    "expected": "marquette"
+  },
+  {
+    "name": "Marquette",
+    "expected": "marquette"
+  },
+  {
+    "name": "marshall",
+    "expected": "marshall"
+  },
+  {
+    "name": "Marshall University",
+    "expected": "marshall"
+  },
+  {
+    "name": "marshall",
+    "expected": "marshall"
+  },
+  {
+    "name": "Marshall",
+    "expected": "marshall"
+  },
+  {
+    "name": "maryland",
+    "expected": "maryland"
+  },
+  {
+    "name": "University of Maryland, College Park",
+    "expected": "maryland"
+  },
+  {
+    "name": "maryland",
+    "expected": "maryland"
+  },
+  {
+    "name": "Maryland",
+    "expected": "maryland"
+  },
+  {
+    "name": "mcneese",
+    "expected": "mcneese"
+  },
+  {
+    "name": "McNeese State University",
+    "expected": "mcneese"
+  },
+  {
+    "name": "mcneese",
+    "expected": "mcneese"
+  },
+  {
+    "name": "McNeese",
+    "expected": "mcneese"
+  },
+  {
+    "name": "memphis",
+    "expected": "memphis"
+  },
+  {
+    "name": "University of Memphis",
+    "expected": "memphis"
+  },
+  {
+    "name": "memphis",
+    "expected": "memphis"
+  },
+  {
+    "name": "Memphis",
+    "expected": "memphis"
+  },
+  {
+    "name": "mercer",
+    "expected": "mercer"
+  },
+  {
+    "name": "Mercer University",
+    "expected": "mercer"
+  },
+  {
+    "name": "mercer",
+    "expected": "mercer"
+  },
+  {
+    "name": "Mercer",
+    "expected": "mercer"
+  },
+  {
+    "name": "mercyhurst",
+    "expected": "mercyhurst"
+  },
+  {
+    "name": "Mercyhurst University",
+    "expected": "mercyhurst"
+  },
+  {
+    "name": "mercyhurst",
+    "expected": "mercyhurst"
+  },
+  {
+    "name": "Mercyhurst",
+    "expected": "mercyhurst"
+  },
+  {
+    "name": "merrimack",
+    "expected": "merrimack"
+  },
+  {
+    "name": "Merrimack College",
+    "expected": "merrimack"
+  },
+  {
+    "name": "merrimack",
+    "expected": "merrimack"
+  },
+  {
+    "name": "Merrimack",
+    "expected": "merrimack"
+  },
+  {
+    "name": "miami-fl",
+    "expected": "miami-fl"
+  },
+  {
+    "name": "University of Miami (Florida)",
+    "expected": "miami-fl"
+  },
+  {
+    "name": "miami fl",
+    "expected": "miami-fl"
+  },
+  {
+    "name": "Miami (FL)",
+    "expected": "miami-fl"
+  },
+  {
+    "name": "miami",
+    "expected": "miami-fl"
+  },
+  {
+    "name": "miami-oh",
+    "expected": "miami-oh"
+  },
+  {
+    "name": "Miami University (Ohio)",
+    "expected": "miami-oh"
+  },
+  {
+    "name": "miami oh",
+    "expected": "miami-oh"
+  },
+  {
+    "name": "Miami (OH)",
+    "expected": "miami-oh"
+  },
+  {
+    "name": "miamioh",
+    "expected": "miami-oh"
+  },
+  {
+    "name": "michigan",
+    "expected": "michigan"
+  },
+  {
+    "name": "University of Michigan",
+    "expected": "michigan"
+  },
+  {
+    "name": "michigan",
+    "expected": "michigan"
+  },
+  {
+    "name": "Michigan",
+    "expected": "michigan"
+  },
+  {
+    "name": "michigan-st",
+    "expected": "michigan-st"
+  },
+  {
+    "name": "Michigan State University",
+    "expected": "michigan-st"
+  },
+  {
+    "name": "michigan st",
+    "expected": "michigan-st"
+  },
+  {
+    "name": "Michigan St.",
+    "expected": "michigan-st"
+  },
+  {
+    "name": "middle-tenn",
+    "expected": "middle-tenn"
+  },
+  {
+    "name": "Middle Tennessee State University",
+    "expected": "middle-tenn"
+  },
+  {
+    "name": "middle tenn",
+    "expected": "middle-tenn"
+  },
+  {
+    "name": "Middle Tenn.",
+    "expected": "middle-tenn"
+  },
+  {
+    "name": "miles",
+    "expected": "miles"
+  },
+  {
+    "name": "miles",
+    "expected": "miles"
+  },
+  {
+    "name": "miles",
+    "expected": "miles"
+  },
+  {
+    "name": "milwaukee",
+    "expected": "milwaukee"
+  },
+  {
+    "name": "University of Wisconsin-Milwaukee",
+    "expected": "milwaukee"
+  },
+  {
+    "name": "milwaukee",
+    "expected": "milwaukee"
+  },
+  {
+    "name": "Milwaukee",
+    "expected": "milwaukee"
+  },
+  {
+    "name": "minnesota",
+    "expected": "minnesota"
+  },
+  {
+    "name": "University of Minnesota, Twin Cities",
+    "expected": "minnesota"
+  },
+  {
+    "name": "minnesota",
+    "expected": "minnesota"
+  },
+  {
+    "name": "Minnesota",
+    "expected": "minnesota"
+  },
+  {
+    "name": "mississippi-christ",
+    "expected": "mississippi-christ"
+  },
+  {
+    "name": "mississippi-christ",
+    "expected": "mississippi-christ"
+  },
+  {
+    "name": "mississippi christ",
+    "expected": "mississippi-christ"
+  },
+  {
+    "name": "mississippi-st",
+    "expected": "mississippi-st"
+  },
+  {
+    "name": "Mississippi State University",
+    "expected": "mississippi-st"
+  },
+  {
+    "name": "mississippi st",
+    "expected": "mississippi-st"
+  },
+  {
+    "name": "Mississippi St.",
+    "expected": "mississippi-st"
+  },
+  {
+    "name": "mississippi-val",
+    "expected": "mississippi-val"
+  },
+  {
+    "name": "Mississippi Valley State University",
+    "expected": "mississippi-val"
+  },
+  {
+    "name": "mississippi val",
+    "expected": "mississippi-val"
+  },
+  {
+    "name": "Mississippi Val.",
+    "expected": "mississippi-val"
+  },
+  {
+    "name": "missouri",
+    "expected": "missouri"
+  },
+  {
+    "name": "University of Missouri, Columbia",
+    "expected": "missouri"
+  },
+  {
+    "name": "missouri",
+    "expected": "missouri"
+  },
+  {
+    "name": "Missouri",
+    "expected": "missouri"
+  },
+  {
+    "name": "missouri-snt",
+    "expected": "missouri-snt"
+  },
+  {
+    "name": "Missouri University of Science and Technology",
+    "expected": "missouri-snt"
+  },
+  {
+    "name": "missouri snt",
+    "expected": "missouri-snt"
+  },
+  {
+    "name": "Missouri S&T",
+    "expected": "missouri-snt"
+  },
+  {
+    "name": "missouri-st",
+    "expected": "missouri-st"
+  },
+  {
+    "name": "Missouri State University",
+    "expected": "missouri-st"
+  },
+  {
+    "name": "missouri st",
+    "expected": "missouri-st"
+  },
+  {
+    "name": "Missouri St.",
+    "expected": "missouri-st"
+  },
+  {
+    "name": "mo-western-st",
+    "expected": "mo-western-st"
+  },
+  {
+    "name": "mo-western-st",
+    "expected": "mo-western-st"
+  },
+  {
+    "name": "mo western st",
+    "expected": "mo-western-st"
+  },
+  {
+    "name": "montana",
+    "expected": "montana"
+  },
+  {
+    "name": "University of Montana",
+    "expected": "montana"
+  },
+  {
+    "name": "montana",
+    "expected": "montana"
+  },
+  {
+    "name": "Montana",
+    "expected": "montana"
+  },
+  {
+    "name": "montana-st",
+    "expected": "montana-st"
+  },
+  {
+    "name": "Montana State University-Bozeman",
+    "expected": "montana-st"
+  },
+  {
+    "name": "montana st",
+    "expected": "montana-st"
+  },
+  {
+    "name": "Montana St.",
+    "expected": "montana-st"
+  },
+  {
+    "name": "montevallo",
+    "expected": "montevallo"
+  },
+  {
+    "name": "montevallo",
+    "expected": "montevallo"
+  },
+  {
+    "name": "montevallo",
+    "expected": "montevallo"
+  },
+  {
+    "name": "montreat",
+    "expected": "montreat"
+  },
+  {
+    "name": "Montreat",
+    "expected": "montreat"
+  },
+  {
+    "name": "montreat",
+    "expected": "montreat"
+  },
+  {
+    "name": "Montreat",
+    "expected": "montreat"
+  },
+  {
+    "name": "morehead-st",
+    "expected": "morehead-st"
+  },
+  {
+    "name": "Morehead State University",
+    "expected": "morehead-st"
+  },
+  {
+    "name": "morehead st",
+    "expected": "morehead-st"
+  },
+  {
+    "name": "Morehead St.",
+    "expected": "morehead-st"
+  },
+  {
+    "name": "morgan-st",
+    "expected": "morgan-st"
+  },
+  {
+    "name": "Morgan State University",
+    "expected": "morgan-st"
+  },
+  {
+    "name": "morgan st",
+    "expected": "morgan-st"
+  },
+  {
+    "name": "Morgan St.",
+    "expected": "morgan-st"
+  },
+  {
+    "name": "murray-st",
+    "expected": "murray-st"
+  },
+  {
+    "name": "Murray State University",
+    "expected": "murray-st"
+  },
+  {
+    "name": "murray st",
+    "expected": "murray-st"
+  },
+  {
+    "name": "Murray St.",
+    "expected": "murray-st"
+  },
+  {
+    "name": "navy",
+    "expected": "navy"
+  },
+  {
+    "name": "U.S. Naval Academy",
+    "expected": "navy"
+  },
+  {
+    "name": "navy",
+    "expected": "navy"
+  },
+  {
+    "name": "Navy",
+    "expected": "navy"
+  },
+  {
+    "name": "nc-at",
+    "expected": "nc-at"
+  },
+  {
+    "name": "North Carolina A&T State University",
+    "expected": "nc-at"
+  },
+  {
+    "name": "nc at",
+    "expected": "nc-at"
+  },
+  {
+    "name": "N.C. A&T",
+    "expected": "nc-at"
+  },
+  {
+    "name": "northcarolinaat",
+    "expected": "nc-at"
+  },
+  {
+    "name": "ncat",
+    "expected": "nc-at"
+  },
+  {
+    "name": "nc-central",
+    "expected": "nc-central"
+  },
+  {
+    "name": "North Carolina Central University",
+    "expected": "nc-central"
+  },
+  {
+    "name": "nc central",
+    "expected": "nc-central"
+  },
+  {
+    "name": "N.C. Central",
+    "expected": "nc-central"
+  },
+  {
+    "name": "neb-omaha",
+    "expected": "neb-omaha"
+  },
+  {
+    "name": "University of Nebraska at Omaha",
+    "expected": "neb-omaha"
+  },
+  {
+    "name": "neb omaha",
+    "expected": "neb-omaha"
+  },
+  {
+    "name": "Omaha",
+    "expected": "neb-omaha"
+  },
+  {
+    "name": "omaha",
+    "expected": "neb-omaha"
+  },
+  {
+    "name": "nebraska",
+    "expected": "nebraska"
+  },
+  {
+    "name": "University of Nebraska-Lincoln",
+    "expected": "nebraska"
+  },
+  {
+    "name": "nebraska",
+    "expected": "nebraska"
+  },
+  {
+    "name": "Nebraska",
+    "expected": "nebraska"
+  },
+  {
+    "name": "nevada",
+    "expected": "nevada"
+  },
+  {
+    "name": "University of Nevada, Reno",
+    "expected": "nevada"
+  },
+  {
+    "name": "nevada",
+    "expected": "nevada"
+  },
+  {
+    "name": "Nevada",
+    "expected": "nevada"
+  },
+  {
+    "name": "new-hampshire",
+    "expected": "new-hampshire"
+  },
+  {
+    "name": "University of New Hampshire",
+    "expected": "new-hampshire"
+  },
+  {
+    "name": "new hampshire",
+    "expected": "new-hampshire"
+  },
+  {
+    "name": "New Hampshire",
+    "expected": "new-hampshire"
+  },
+  {
+    "name": "new-haven",
+    "expected": "new-haven"
+  },
+  {
+    "name": "University of New Haven",
+    "expected": "new-haven"
+  },
+  {
+    "name": "new haven",
+    "expected": "new-haven"
+  },
+  {
+    "name": "New Haven",
+    "expected": "new-haven"
+  },
+  {
+    "name": "new-mexico",
+    "expected": "new-mexico"
+  },
+  {
+    "name": "University of New Mexico",
+    "expected": "new-mexico"
+  },
+  {
+    "name": "new mexico",
+    "expected": "new-mexico"
+  },
+  {
+    "name": "New Mexico",
+    "expected": "new-mexico"
+  },
+  {
+    "name": "new-mexico-st",
+    "expected": "new-mexico-st"
+  },
+  {
+    "name": "New Mexico State University",
+    "expected": "new-mexico-st"
+  },
+  {
+    "name": "new mexico st",
+    "expected": "new-mexico-st"
+  },
+  {
+    "name": "New Mexico St.",
+    "expected": "new-mexico-st"
+  },
+  {
+    "name": "new-orleans",
+    "expected": "new-orleans"
+  },
+  {
+    "name": "LSU New Orleans",
+    "expected": "new-orleans"
+  },
+  {
+    "name": "new orleans",
+    "expected": "new-orleans"
+  },
+  {
+    "name": "LSU New Orleans ",
+    "expected": "new-orleans"
+  },
+  {
+    "name": "uno",
+    "expected": "new-orleans"
+  },
+  {
+    "name": "niagara",
+    "expected": "niagara"
+  },
+  {
+    "name": "Niagara University",
+    "expected": "niagara"
+  },
+  {
+    "name": "niagara",
+    "expected": "niagara"
+  },
+  {
+    "name": "Niagara",
+    "expected": "niagara"
+  },
+  {
+    "name": "nicholls-st",
+    "expected": "nicholls-st"
+  },
+  {
+    "name": "Nicholls State University",
+    "expected": "nicholls-st"
+  },
+  {
+    "name": "nicholls st",
+    "expected": "nicholls-st"
+  },
+  {
+    "name": "Nicholls",
+    "expected": "nicholls-st"
+  },
+  {
+    "name": "njit",
+    "expected": "njit"
+  },
+  {
+    "name": "New Jersey Institute of Technology",
+    "expected": "njit"
+  },
+  {
+    "name": "njit",
+    "expected": "njit"
+  },
+  {
+    "name": "NJIT",
+    "expected": "njit"
+  },
+  {
+    "name": "norfolk-st",
+    "expected": "norfolk-st"
+  },
+  {
+    "name": "Norfolk State University",
+    "expected": "norfolk-st"
+  },
+  {
+    "name": "norfolk st",
+    "expected": "norfolk-st"
+  },
+  {
+    "name": "Norfolk St.",
+    "expected": "norfolk-st"
+  },
+  {
+    "name": "north-ala",
+    "expected": "north-ala"
+  },
+  {
+    "name": "University of North Alabama",
+    "expected": "north-ala"
+  },
+  {
+    "name": "north ala",
+    "expected": "north-ala"
+  },
+  {
+    "name": "North Ala.",
+    "expected": "north-ala"
+  },
+  {
+    "name": "north-carolina",
+    "expected": "north-carolina"
+  },
+  {
+    "name": "University of North Carolina, Chapel Hill",
+    "expected": "north-carolina"
+  },
+  {
+    "name": "north carolina",
+    "expected": "north-carolina"
+  },
+  {
+    "name": "North Carolina",
+    "expected": "north-carolina"
+  },
+  {
+    "name": "unc",
+    "expected": "north-carolina"
+  },
+  {
+    "name": "north-carolina-st",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "North Carolina State University",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "north carolina st",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "NC State",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "ncstate",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "ncst",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "northcarolinastate",
+    "expected": "north-carolina-st"
+  },
+  {
+    "name": "north-dakota",
+    "expected": "north-dakota"
+  },
+  {
+    "name": "University of North Dakota",
+    "expected": "north-dakota"
+  },
+  {
+    "name": "north dakota",
+    "expected": "north-dakota"
+  },
+  {
+    "name": "North Dakota",
+    "expected": "north-dakota"
+  },
+  {
+    "name": "north-dakota-st",
+    "expected": "north-dakota-st"
+  },
+  {
+    "name": "North Dakota State University",
+    "expected": "north-dakota-st"
+  },
+  {
+    "name": "north dakota st",
+    "expected": "north-dakota-st"
+  },
+  {
+    "name": "North Dakota St.",
+    "expected": "north-dakota-st"
+  },
+  {
+    "name": "north-florida",
+    "expected": "north-florida"
+  },
+  {
+    "name": "University of North Florida",
+    "expected": "north-florida"
+  },
+  {
+    "name": "north florida",
+    "expected": "north-florida"
+  },
+  {
+    "name": "North Florida",
+    "expected": "north-florida"
+  },
+  {
+    "name": "unf",
+    "expected": "north-florida"
+  },
+  {
+    "name": "north-texas",
+    "expected": "north-texas"
+  },
+  {
+    "name": "University of North Texas",
+    "expected": "north-texas"
+  },
+  {
+    "name": "north texas",
+    "expected": "north-texas"
+  },
+  {
+    "name": "North Texas",
+    "expected": "north-texas"
+  },
+  {
+    "name": "northeastern",
+    "expected": "northeastern"
+  },
+  {
+    "name": "Northeastern University",
+    "expected": "northeastern"
+  },
+  {
+    "name": "northeastern",
+    "expected": "northeastern"
+  },
+  {
+    "name": "Northeastern",
+    "expected": "northeastern"
+  },
+  {
+    "name": "northern-ariz",
+    "expected": "northern-ariz"
+  },
+  {
+    "name": "Northern Arizona University",
+    "expected": "northern-ariz"
+  },
+  {
+    "name": "northern ariz",
+    "expected": "northern-ariz"
+  },
+  {
+    "name": "Northern Ariz.",
+    "expected": "northern-ariz"
+  },
+  {
+    "name": "northern-colo",
+    "expected": "northern-colo"
+  },
+  {
+    "name": "University of Northern Colorado",
+    "expected": "northern-colo"
+  },
+  {
+    "name": "northern colo",
+    "expected": "northern-colo"
+  },
+  {
+    "name": "Northern Colo.",
+    "expected": "northern-colo"
+  },
+  {
+    "name": "northern-ill",
+    "expected": "northern-ill"
+  },
+  {
+    "name": "Northern Illinois University",
+    "expected": "northern-ill"
+  },
+  {
+    "name": "northern ill",
+    "expected": "northern-ill"
+  },
+  {
+    "name": "NIU",
+    "expected": "northern-ill"
+  },
+  {
+    "name": "northern-ky",
+    "expected": "northern-ky"
+  },
+  {
+    "name": "Northern Kentucky University",
+    "expected": "northern-ky"
+  },
+  {
+    "name": "northern ky",
+    "expected": "northern-ky"
+  },
+  {
+    "name": "Northern Ky.",
+    "expected": "northern-ky"
+  },
+  {
+    "name": "northern-mich",
+    "expected": "northern-mich"
+  },
+  {
+    "name": "northern-mich",
+    "expected": "northern-mich"
+  },
+  {
+    "name": "northern mich",
+    "expected": "northern-mich"
+  },
+  {
+    "name": "northwestern",
+    "expected": "northwestern"
+  },
+  {
+    "name": "Northwestern University",
+    "expected": "northwestern"
+  },
+  {
+    "name": "northwestern",
+    "expected": "northwestern"
+  },
+  {
+    "name": "Northwestern",
+    "expected": "northwestern"
+  },
+  {
+    "name": "northwestern-st",
+    "expected": "northwestern-st"
+  },
+  {
+    "name": "Northwestern State University",
+    "expected": "northwestern-st"
+  },
+  {
+    "name": "northwestern st",
+    "expected": "northwestern-st"
+  },
+  {
+    "name": "Northwestern St.",
+    "expected": "northwestern-st"
+  },
+  {
+    "name": "notre-dame",
+    "expected": "notre-dame"
+  },
+  {
+    "name": "University of Notre Dame",
+    "expected": "notre-dame"
+  },
+  {
+    "name": "notre dame",
+    "expected": "notre-dame"
+  },
+  {
+    "name": "Notre Dame",
+    "expected": "notre-dame"
+  },
+  {
+    "name": "oakland",
+    "expected": "oakland"
+  },
+  {
+    "name": "Oakland University",
+    "expected": "oakland"
+  },
+  {
+    "name": "oakland",
+    "expected": "oakland"
+  },
+  {
+    "name": "Oakland",
+    "expected": "oakland"
+  },
+  {
+    "name": "ohio",
+    "expected": "ohio"
+  },
+  {
+    "name": "Ohio University",
+    "expected": "ohio"
+  },
+  {
+    "name": "ohio",
+    "expected": "ohio"
+  },
+  {
+    "name": "Ohio",
+    "expected": "ohio"
+  },
+  {
+    "name": "ohio-st",
+    "expected": "ohio-st"
+  },
+  {
+    "name": "The Ohio State University",
+    "expected": "ohio-st"
+  },
+  {
+    "name": "ohio st",
+    "expected": "ohio-st"
+  },
+  {
+    "name": "Ohio St.",
+    "expected": "ohio-st"
+  },
+  {
+    "name": "oklahoma",
+    "expected": "oklahoma"
+  },
+  {
+    "name": "University of Oklahoma",
+    "expected": "oklahoma"
+  },
+  {
+    "name": "oklahoma",
+    "expected": "oklahoma"
+  },
+  {
+    "name": "Oklahoma",
+    "expected": "oklahoma"
+  },
+  {
+    "name": "old-dominion",
+    "expected": "old-dominion"
+  },
+  {
+    "name": "Old Dominion University",
+    "expected": "old-dominion"
+  },
+  {
+    "name": "old dominion",
+    "expected": "old-dominion"
+  },
+  {
+    "name": "Old Dominion",
+    "expected": "old-dominion"
+  },
+  {
+    "name": "ole-miss",
+    "expected": "ole-miss"
+  },
+  {
+    "name": "University of Mississippi",
+    "expected": "ole-miss"
+  },
+  {
+    "name": "ole miss",
+    "expected": "ole-miss"
+  },
+  {
+    "name": "Ole Miss",
+    "expected": "ole-miss"
+  },
+  {
+    "name": "olemiss",
+    "expected": "ole-miss"
+  },
+  {
+    "name": "oral-roberts",
+    "expected": "oral-roberts"
+  },
+  {
+    "name": "Oral Roberts University",
+    "expected": "oral-roberts"
+  },
+  {
+    "name": "oral roberts",
+    "expected": "oral-roberts"
+  },
+  {
+    "name": "Oral Roberts",
+    "expected": "oral-roberts"
+  },
+  {
+    "name": "oregon",
+    "expected": "oregon"
+  },
+  {
+    "name": "University of Oregon",
+    "expected": "oregon"
+  },
+  {
+    "name": "oregon",
+    "expected": "oregon"
+  },
+  {
+    "name": "Oregon",
+    "expected": "oregon"
+  },
+  {
+    "name": "oregon-st",
+    "expected": "oregon-st"
+  },
+  {
+    "name": "Oregon State University",
+    "expected": "oregon-st"
+  },
+  {
+    "name": "oregon st",
+    "expected": "oregon-st"
+  },
+  {
+    "name": "Oregon St.",
+    "expected": "oregon-st"
+  },
+  {
+    "name": "pacific",
+    "expected": "pacific"
+  },
+  {
+    "name": "University of the Pacific",
+    "expected": "pacific"
+  },
+  {
+    "name": "pacific",
+    "expected": "pacific"
+  },
+  {
+    "name": "Pacific",
+    "expected": "pacific"
+  },
+  {
+    "name": "palm-beach-atl",
+    "expected": "palm-beach-atl"
+  },
+  {
+    "name": "palm-beach-atl",
+    "expected": "palm-beach-atl"
+  },
+  {
+    "name": "palm beach atl",
+    "expected": "palm-beach-atl"
+  },
+  {
+    "name": "paul-quinn",
+    "expected": "paul-quinn"
+  },
+  {
+    "name": "paul-quinn",
+    "expected": "paul-quinn"
+  },
+  {
+    "name": "paul quinn",
+    "expected": "paul-quinn"
+  },
+  {
+    "name": "penn",
+    "expected": "penn"
+  },
+  {
+    "name": "University of Pennsylvania",
+    "expected": "penn"
+  },
+  {
+    "name": "penn",
+    "expected": "penn"
+  },
+  {
+    "name": "Penn",
+    "expected": "penn"
+  },
+  {
+    "name": "penn-st",
+    "expected": "penn-st"
+  },
+  {
+    "name": "Pennsylvania State University",
+    "expected": "penn-st"
+  },
+  {
+    "name": "penn st",
+    "expected": "penn-st"
+  },
+  {
+    "name": "Penn St.",
+    "expected": "penn-st"
+  },
+  {
+    "name": "pennstate",
+    "expected": "penn-st"
+  },
+  {
+    "name": "pepperdine",
+    "expected": "pepperdine"
+  },
+  {
+    "name": "Pepperdine University",
+    "expected": "pepperdine"
+  },
+  {
+    "name": "pepperdine",
+    "expected": "pepperdine"
+  },
+  {
+    "name": "Pepperdine",
+    "expected": "pepperdine"
+  },
+  {
+    "name": "pittsburgh",
+    "expected": "pittsburgh"
+  },
+  {
+    "name": "University of Pittsburgh",
+    "expected": "pittsburgh"
+  },
+  {
+    "name": "pittsburgh",
+    "expected": "pittsburgh"
+  },
+  {
+    "name": "Pittsburgh",
+    "expected": "pittsburgh"
+  },
+  {
+    "name": "pitt",
+    "expected": "pittsburgh"
+  },
+  {
+    "name": "point-loma",
+    "expected": "point-loma"
+  },
+  {
+    "name": "point-loma",
+    "expected": "point-loma"
+  },
+  {
+    "name": "point loma",
+    "expected": "point-loma"
+  },
+  {
+    "name": "portland",
+    "expected": "portland"
+  },
+  {
+    "name": "University of Portland",
+    "expected": "portland"
+  },
+  {
+    "name": "portland",
+    "expected": "portland"
+  },
+  {
+    "name": "Portland",
+    "expected": "portland"
+  },
+  {
+    "name": "portland-st",
+    "expected": "portland-st"
+  },
+  {
+    "name": "Portland State University",
+    "expected": "portland-st"
+  },
+  {
+    "name": "portland st",
+    "expected": "portland-st"
+  },
+  {
+    "name": "Portland St.",
+    "expected": "portland-st"
+  },
+  {
+    "name": "prairie-view",
+    "expected": "prairie-view"
+  },
+  {
+    "name": "Prairie View A&M University",
+    "expected": "prairie-view"
+  },
+  {
+    "name": "prairie view",
+    "expected": "prairie-view"
+  },
+  {
+    "name": "Prairie View",
+    "expected": "prairie-view"
+  },
+  {
+    "name": "presbyterian",
+    "expected": "presbyterian"
+  },
+  {
+    "name": "Presbyterian College",
+    "expected": "presbyterian"
+  },
+  {
+    "name": "presbyterian",
+    "expected": "presbyterian"
+  },
+  {
+    "name": "Presbyterian",
+    "expected": "presbyterian"
+  },
+  {
+    "name": "princeton",
+    "expected": "princeton"
+  },
+  {
+    "name": "Princeton University",
+    "expected": "princeton"
+  },
+  {
+    "name": "princeton",
+    "expected": "princeton"
+  },
+  {
+    "name": "Princeton",
+    "expected": "princeton"
+  },
+  {
+    "name": "providence",
+    "expected": "providence"
+  },
+  {
+    "name": "Providence College",
+    "expected": "providence"
+  },
+  {
+    "name": "providence",
+    "expected": "providence"
+  },
+  {
+    "name": "Providence",
+    "expected": "providence"
+  },
+  {
+    "name": "purdue",
+    "expected": "purdue"
+  },
+  {
+    "name": "Purdue University",
+    "expected": "purdue"
+  },
+  {
+    "name": "purdue",
+    "expected": "purdue"
+  },
+  {
+    "name": "Purdue",
+    "expected": "purdue"
+  },
+  {
+    "name": "queens-nc",
+    "expected": "queens-nc"
+  },
+  {
+    "name": "Queens University of Charlotte",
+    "expected": "queens-nc"
+  },
+  {
+    "name": "queens nc",
+    "expected": "queens-nc"
+  },
+  {
+    "name": "Queens (NC)",
+    "expected": "queens-nc"
+  },
+  {
+    "name": "quinnipiac",
+    "expected": "quinnipiac"
+  },
+  {
+    "name": "Quinnipiac University",
+    "expected": "quinnipiac"
+  },
+  {
+    "name": "quinnipiac",
+    "expected": "quinnipiac"
+  },
+  {
+    "name": "Quinnipiac",
+    "expected": "quinnipiac"
+  },
+  {
+    "name": "radford",
+    "expected": "radford"
+  },
+  {
+    "name": "Radford University",
+    "expected": "radford"
+  },
+  {
+    "name": "radford",
+    "expected": "radford"
+  },
+  {
+    "name": "Radford",
+    "expected": "radford"
+  },
+  {
+    "name": "regis-co",
+    "expected": "regis-co"
+  },
+  {
+    "name": "regis-co",
+    "expected": "regis-co"
+  },
+  {
+    "name": "regis co",
+    "expected": "regis-co"
+  },
+  {
+    "name": "rhode-island",
+    "expected": "rhode-island"
+  },
+  {
+    "name": "University of Rhode Island",
+    "expected": "rhode-island"
+  },
+  {
+    "name": "rhode island",
+    "expected": "rhode-island"
+  },
+  {
+    "name": "Rhode Island",
+    "expected": "rhode-island"
+  },
+  {
+    "name": "rice",
+    "expected": "rice"
+  },
+  {
+    "name": "Rice University",
+    "expected": "rice"
+  },
+  {
+    "name": "rice",
+    "expected": "rice"
+  },
+  {
+    "name": "Rice",
+    "expected": "rice"
+  },
+  {
+    "name": "rider",
+    "expected": "rider"
+  },
+  {
+    "name": "Rider University",
+    "expected": "rider"
+  },
+  {
+    "name": "rider",
+    "expected": "rider"
+  },
+  {
+    "name": "Rider",
+    "expected": "rider"
+  },
+  {
+    "name": "robert-morris",
+    "expected": "robert-morris"
+  },
+  {
+    "name": "Robert Morris University",
+    "expected": "robert-morris"
+  },
+  {
+    "name": "robert morris",
+    "expected": "robert-morris"
+  },
+  {
+    "name": "Robert Morris",
+    "expected": "robert-morris"
+  },
+  {
+    "name": "rust",
+    "expected": "rust"
+  },
+  {
+    "name": "rust",
+    "expected": "rust"
+  },
+  {
+    "name": "rust",
+    "expected": "rust"
+  },
+  {
+    "name": "rutgers",
+    "expected": "rutgers"
+  },
+  {
+    "name": "Rutgers, The State University of New Jersey, New Brunswick",
+    "expected": "rutgers"
+  },
+  {
+    "name": "rutgers",
+    "expected": "rutgers"
+  },
+  {
+    "name": "Rutgers",
+    "expected": "rutgers"
+  },
+  {
+    "name": "rutgers-camden",
+    "expected": "rutgers-camden"
+  },
+  {
+    "name": "Rutgers, The State Univ. of New Jersey, Camden",
+    "expected": "rutgers-camden"
+  },
+  {
+    "name": "rutgers camden",
+    "expected": "rutgers-camden"
+  },
+  {
+    "name": "Rutgers-Camden",
+    "expected": "rutgers-camden"
+  },
+  {
+    "name": "sacramento-st",
+    "expected": "sacramento-st"
+  },
+  {
+    "name": "California State University, Sacramento",
+    "expected": "sacramento-st"
+  },
+  {
+    "name": "sacramento st",
+    "expected": "sacramento-st"
+  },
+  {
+    "name": "Sacramento St.",
+    "expected": "sacramento-st"
+  },
+  {
+    "name": "sacred-heart",
+    "expected": "sacred-heart"
+  },
+  {
+    "name": "Sacred Heart University",
+    "expected": "sacred-heart"
+  },
+  {
+    "name": "sacred heart",
+    "expected": "sacred-heart"
+  },
+  {
+    "name": "Sacred Heart",
+    "expected": "sacred-heart"
+  },
+  {
+    "name": "saint-louis",
+    "expected": "saint-louis"
+  },
+  {
+    "name": "Saint Louis University",
+    "expected": "saint-louis"
+  },
+  {
+    "name": "saint louis",
+    "expected": "saint-louis"
+  },
+  {
+    "name": "Saint Louis",
+    "expected": "saint-louis"
+  },
+  {
+    "name": "slu",
+    "expected": "saint-louis"
+  },
+  {
+    "name": "sam-houston-st",
+    "expected": "sam-houston-st"
+  },
+  {
+    "name": "Sam Houston State University",
+    "expected": "sam-houston-st"
+  },
+  {
+    "name": "sam houston st",
+    "expected": "sam-houston-st"
+  },
+  {
+    "name": "Sam Houston",
+    "expected": "sam-houston-st"
+  },
+  {
+    "name": "samford",
+    "expected": "samford"
+  },
+  {
+    "name": "Samford University",
+    "expected": "samford"
+  },
+  {
+    "name": "samford",
+    "expected": "samford"
+  },
+  {
+    "name": "Samford",
+    "expected": "samford"
+  },
+  {
+    "name": "san-diego",
+    "expected": "san-diego"
+  },
+  {
+    "name": "University of San Diego",
+    "expected": "san-diego"
+  },
+  {
+    "name": "san diego",
+    "expected": "san-diego"
+  },
+  {
+    "name": "San Diego",
+    "expected": "san-diego"
+  },
+  {
+    "name": "usd",
+    "expected": "san-diego"
+  },
+  {
+    "name": "san-diego-st",
+    "expected": "san-diego-st"
+  },
+  {
+    "name": "San Diego State University",
+    "expected": "san-diego-st"
+  },
+  {
+    "name": "san diego st",
+    "expected": "san-diego-st"
+  },
+  {
+    "name": "San Diego St.",
+    "expected": "san-diego-st"
+  },
+  {
+    "name": "san-francisco",
+    "expected": "san-francisco"
+  },
+  {
+    "name": "University of San Francisco",
+    "expected": "san-francisco"
+  },
+  {
+    "name": "san francisco",
+    "expected": "san-francisco"
+  },
+  {
+    "name": "San Francisco",
+    "expected": "san-francisco"
+  },
+  {
+    "name": "san-jose-st",
+    "expected": "san-jose-st"
+  },
+  {
+    "name": "San Jose State University",
+    "expected": "san-jose-st"
+  },
+  {
+    "name": "san jose st",
+    "expected": "san-jose-st"
+  },
+  {
+    "name": "San Jose St.",
+    "expected": "san-jose-st"
+  },
+  {
+    "name": "santa-clara",
+    "expected": "santa-clara"
+  },
+  {
+    "name": "Santa Clara University",
+    "expected": "santa-clara"
+  },
+  {
+    "name": "santa clara",
+    "expected": "santa-clara"
+  },
+  {
+    "name": "Santa Clara",
+    "expected": "santa-clara"
+  },
+  {
+    "name": "seattle",
+    "expected": "seattle"
+  },
+  {
+    "name": "Seattle University",
+    "expected": "seattle"
+  },
+  {
+    "name": "seattle",
+    "expected": "seattle"
+  },
+  {
+    "name": "Seattle U",
+    "expected": "seattle"
+  },
+  {
+    "name": "seattle-pacific",
+    "expected": "seattle-pacific"
+  },
+  {
+    "name": "seattle-pacific",
+    "expected": "seattle-pacific"
+  },
+  {
+    "name": "seattle pacific",
+    "expected": "seattle-pacific"
+  },
+  {
+    "name": "seton-hall",
+    "expected": "seton-hall"
+  },
+  {
+    "name": "Seton Hall University",
+    "expected": "seton-hall"
+  },
+  {
+    "name": "seton hall",
+    "expected": "seton-hall"
+  },
+  {
+    "name": "Seton Hall",
+    "expected": "seton-hall"
+  },
+  {
+    "name": "siena",
+    "expected": "siena"
+  },
+  {
+    "name": "Siena University",
+    "expected": "siena"
+  },
+  {
+    "name": "siena",
+    "expected": "siena"
+  },
+  {
+    "name": "Siena",
+    "expected": "siena"
+  },
+  {
+    "name": "siu-edwardsville",
+    "expected": "siu-edwardsville"
+  },
+  {
+    "name": "Southern Illinois University Edwardsville",
+    "expected": "siu-edwardsville"
+  },
+  {
+    "name": "siu edwardsville",
+    "expected": "siu-edwardsville"
+  },
+  {
+    "name": "SIUE",
+    "expected": "siu-edwardsville"
+  },
+  {
+    "name": "smu",
+    "expected": "smu"
+  },
+  {
+    "name": "Southern Methodist University",
+    "expected": "smu"
+  },
+  {
+    "name": "smu",
+    "expected": "smu"
+  },
+  {
+    "name": "SMU",
+    "expected": "smu"
+  },
+  {
+    "name": "smu",
+    "expected": "smu"
+  },
+  {
+    "name": "south-ala",
+    "expected": "south-ala"
+  },
+  {
+    "name": "University of South Alabama",
+    "expected": "south-ala"
+  },
+  {
+    "name": "south ala",
+    "expected": "south-ala"
+  },
+  {
+    "name": "South Alabama",
+    "expected": "south-ala"
+  },
+  {
+    "name": "south-carolina",
+    "expected": "south-carolina"
+  },
+  {
+    "name": "University of South Carolina, Columbia",
+    "expected": "south-carolina"
+  },
+  {
+    "name": "south carolina",
+    "expected": "south-carolina"
+  },
+  {
+    "name": "South Carolina",
+    "expected": "south-carolina"
+  },
+  {
+    "name": "south-carolina-st",
+    "expected": "south-carolina-st"
+  },
+  {
+    "name": "South Carolina State University",
+    "expected": "south-carolina-st"
+  },
+  {
+    "name": "south carolina st",
+    "expected": "south-carolina-st"
+  },
+  {
+    "name": "South Carolina St.",
+    "expected": "south-carolina-st"
+  },
+  {
+    "name": "south-dakota",
+    "expected": "south-dakota"
+  },
+  {
+    "name": "University of South Dakota",
+    "expected": "south-dakota"
+  },
+  {
+    "name": "south dakota",
+    "expected": "south-dakota"
+  },
+  {
+    "name": "South Dakota",
+    "expected": "south-dakota"
+  },
+  {
+    "name": "south-dakota-st",
+    "expected": "south-dakota-st"
+  },
+  {
+    "name": "South Dakota State University",
+    "expected": "south-dakota-st"
+  },
+  {
+    "name": "south dakota st",
+    "expected": "south-dakota-st"
+  },
+  {
+    "name": "South Dakota St.",
+    "expected": "south-dakota-st"
+  },
+  {
+    "name": "south-fla",
+    "expected": "south-fla"
+  },
+  {
+    "name": "University of South Florida",
+    "expected": "south-fla"
+  },
+  {
+    "name": "south fla",
+    "expected": "south-fla"
+  },
+  {
+    "name": "South Fla.",
+    "expected": "south-fla"
+  },
+  {
+    "name": "usf",
+    "expected": "south-fla"
+  },
+  {
+    "name": "southeast-mo-st",
+    "expected": "southeast-mo-st"
+  },
+  {
+    "name": "Southeast Missouri State University",
+    "expected": "southeast-mo-st"
+  },
+  {
+    "name": "southeast mo st",
+    "expected": "southeast-mo-st"
+  },
+  {
+    "name": "Southeast Mo. St.",
+    "expected": "southeast-mo-st"
+  },
+  {
+    "name": "southeastern-la",
+    "expected": "southeastern-la"
+  },
+  {
+    "name": "Southeastern Louisiana University",
+    "expected": "southeastern-la"
+  },
+  {
+    "name": "southeastern la",
+    "expected": "southeastern-la"
+  },
+  {
+    "name": "Southeastern La.",
+    "expected": "southeastern-la"
+  },
+  {
+    "name": "southern-california",
+    "expected": "southern-california"
+  },
+  {
+    "name": "University of Southern California",
+    "expected": "southern-california"
+  },
+  {
+    "name": "southern california",
+    "expected": "southern-california"
+  },
+  {
+    "name": "Southern California",
+    "expected": "southern-california"
+  },
+  {
+    "name": "usc",
+    "expected": "southern-california"
+  },
+  {
+    "name": "southern-ill",
+    "expected": "southern-ill"
+  },
+  {
+    "name": "Southern Illinois University at Carbondale",
+    "expected": "southern-ill"
+  },
+  {
+    "name": "southern ill",
+    "expected": "southern-ill"
+  },
+  {
+    "name": "Southern Ill.",
+    "expected": "southern-ill"
+  },
+  {
+    "name": "southern-ind",
+    "expected": "southern-ind"
+  },
+  {
+    "name": "University of Southern Indiana",
+    "expected": "southern-ind"
+  },
+  {
+    "name": "southern ind",
+    "expected": "southern-ind"
+  },
+  {
+    "name": "Southern Ind.",
+    "expected": "southern-ind"
+  },
+  {
+    "name": "southern-miss",
+    "expected": "southern-miss"
+  },
+  {
+    "name": "The University of Southern Mississippi",
+    "expected": "southern-miss"
+  },
+  {
+    "name": "southern miss",
+    "expected": "southern-miss"
+  },
+  {
+    "name": "Southern Miss.",
+    "expected": "southern-miss"
+  },
+  {
+    "name": "southern-no",
+    "expected": "southern-no"
+  },
+  {
+    "name": "Southern-N.O.",
+    "expected": "southern-no"
+  },
+  {
+    "name": "southern no",
+    "expected": "southern-no"
+  },
+  {
+    "name": "Southern-N.O.",
+    "expected": "southern-no"
+  },
+  {
+    "name": "southern-u",
+    "expected": "southern-u"
+  },
+  {
+    "name": "Southern University, Baton Rouge",
+    "expected": "southern-u"
+  },
+  {
+    "name": "southern u",
+    "expected": "southern-u"
+  },
+  {
+    "name": "Southern U.",
+    "expected": "southern-u"
+  },
+  {
+    "name": "southern-utah",
+    "expected": "southern-utah"
+  },
+  {
+    "name": "Southern Utah University",
+    "expected": "southern-utah"
+  },
+  {
+    "name": "southern utah",
+    "expected": "southern-utah"
+  },
+  {
+    "name": "Southern Utah",
+    "expected": "southern-utah"
+  },
+  {
+    "name": "southwest-minn-st",
+    "expected": "southwest-minn-st"
+  },
+  {
+    "name": "Southwest Minnesota State University",
+    "expected": "southwest-minn-st"
+  },
+  {
+    "name": "southwest minn st",
+    "expected": "southwest-minn-st"
+  },
+  {
+    "name": "Southwest Minn. St.",
+    "expected": "southwest-minn-st"
+  },
+  {
+    "name": "spring-hill",
+    "expected": "spring-hill"
+  },
+  {
+    "name": "spring-hill",
+    "expected": "spring-hill"
+  },
+  {
+    "name": "spring hill",
+    "expected": "spring-hill"
+  },
+  {
+    "name": "st-francis-pa",
+    "expected": "st-francis-pa"
+  },
+  {
+    "name": "st-francis-pa",
+    "expected": "st-francis-pa"
+  },
+  {
+    "name": "st francis pa",
+    "expected": "st-francis-pa"
+  },
+  {
+    "name": "st-johns-ny",
+    "expected": "st-johns-ny"
+  },
+  {
+    "name": "St. John's University (New York)",
+    "expected": "st-johns-ny"
+  },
+  {
+    "name": "st johns ny",
+    "expected": "st-johns-ny"
+  },
+  {
+    "name": "St. John's (NY)",
+    "expected": "st-johns-ny"
+  },
+  {
+    "name": "stjohns",
+    "expected": "st-johns-ny"
+  },
+  {
+    "name": "st-marys-ca",
+    "expected": "st-marys-ca"
+  },
+  {
+    "name": "Saint Mary's College of California",
+    "expected": "st-marys-ca"
+  },
+  {
+    "name": "st marys ca",
+    "expected": "st-marys-ca"
+  },
+  {
+    "name": "Saint Mary's (CA)",
+    "expected": "st-marys-ca"
+  },
+  {
+    "name": "st-peters",
+    "expected": "st-peters"
+  },
+  {
+    "name": "Saint Peter's University",
+    "expected": "st-peters"
+  },
+  {
+    "name": "st peters",
+    "expected": "st-peters"
+  },
+  {
+    "name": "Saint Peter's",
+    "expected": "st-peters"
+  },
+  {
+    "name": "st-thomas-mn",
+    "expected": "st-thomas-mn"
+  },
+  {
+    "name": "University of St. Thomas (Minnesota)",
+    "expected": "st-thomas-mn"
+  },
+  {
+    "name": "st thomas mn",
+    "expected": "st-thomas-mn"
+  },
+  {
+    "name": "St. Thomas (MN)",
+    "expected": "st-thomas-mn"
+  },
+  {
+    "name": "stanford",
+    "expected": "stanford"
+  },
+  {
+    "name": "Stanford University",
+    "expected": "stanford"
+  },
+  {
+    "name": "stanford",
+    "expected": "stanford"
+  },
+  {
+    "name": "Stanford",
+    "expected": "stanford"
+  },
+  {
+    "name": "stephen-f-austin",
+    "expected": "stephen-f-austin"
+  },
+  {
+    "name": "Stephen F. Austin State University",
+    "expected": "stephen-f-austin"
+  },
+  {
+    "name": "stephen f austin",
+    "expected": "stephen-f-austin"
+  },
+  {
+    "name": "SFA",
+    "expected": "stephen-f-austin"
+  },
+  {
+    "name": "sfa",
+    "expected": "stephen-f-austin"
+  },
+  {
+    "name": "stetson",
+    "expected": "stetson"
+  },
+  {
+    "name": "Stetson University",
+    "expected": "stetson"
+  },
+  {
+    "name": "stetson",
+    "expected": "stetson"
+  },
+  {
+    "name": "Stetson",
+    "expected": "stetson"
+  },
+  {
+    "name": "stonehill",
+    "expected": "stonehill"
+  },
+  {
+    "name": "Stonehill College",
+    "expected": "stonehill"
+  },
+  {
+    "name": "stonehill",
+    "expected": "stonehill"
+  },
+  {
+    "name": "Stonehill",
+    "expected": "stonehill"
+  },
+  {
+    "name": "stony-brook",
+    "expected": "stony-brook"
+  },
+  {
+    "name": "Stony Brook University",
+    "expected": "stony-brook"
+  },
+  {
+    "name": "stony brook",
+    "expected": "stony-brook"
+  },
+  {
+    "name": "Stony Brook",
+    "expected": "stony-brook"
+  },
+  {
+    "name": "syracuse",
+    "expected": "syracuse"
+  },
+  {
+    "name": "Syracuse University",
+    "expected": "syracuse"
+  },
+  {
+    "name": "syracuse",
+    "expected": "syracuse"
+  },
+  {
+    "name": "Syracuse",
+    "expected": "syracuse"
+  },
+  {
+    "name": "tampa",
+    "expected": "tampa"
+  },
+  {
+    "name": "University of Tampa",
+    "expected": "tampa"
+  },
+  {
+    "name": "tampa",
+    "expected": "tampa"
+  },
+  {
+    "name": "Tampa",
+    "expected": "tampa"
+  },
+  {
+    "name": "tarleton-st",
+    "expected": "tarleton-st"
+  },
+  {
+    "name": "Tarleton State University",
+    "expected": "tarleton-st"
+  },
+  {
+    "name": "tarleton st",
+    "expected": "tarleton-st"
+  },
+  {
+    "name": "Tarleton St.",
+    "expected": "tarleton-st"
+  },
+  {
+    "name": "tcu",
+    "expected": "tcu"
+  },
+  {
+    "name": "Texas Christian University",
+    "expected": "tcu"
+  },
+  {
+    "name": "tcu",
+    "expected": "tcu"
+  },
+  {
+    "name": "TCU",
+    "expected": "tcu"
+  },
+  {
+    "name": "tcu",
+    "expected": "tcu"
+  },
+  {
+    "name": "temple",
+    "expected": "temple"
+  },
+  {
+    "name": "Temple University",
+    "expected": "temple"
+  },
+  {
+    "name": "temple",
+    "expected": "temple"
+  },
+  {
+    "name": "Temple",
+    "expected": "temple"
+  },
+  {
+    "name": "tennessee",
+    "expected": "tennessee"
+  },
+  {
+    "name": "University of Tennessee, Knoxville",
+    "expected": "tennessee"
+  },
+  {
+    "name": "tennessee",
+    "expected": "tennessee"
+  },
+  {
+    "name": "Tennessee",
+    "expected": "tennessee"
+  },
+  {
+    "name": "tennessee-st",
+    "expected": "tennessee-st"
+  },
+  {
+    "name": "Tennessee State University",
+    "expected": "tennessee-st"
+  },
+  {
+    "name": "tennessee st",
+    "expected": "tennessee-st"
+  },
+  {
+    "name": "Tennessee St.",
+    "expected": "tennessee-st"
+  },
+  {
+    "name": "tennessee-tech",
+    "expected": "tennessee-tech"
+  },
+  {
+    "name": "Tennessee Technological University",
+    "expected": "tennessee-tech"
+  },
+  {
+    "name": "tennessee tech",
+    "expected": "tennessee-tech"
+  },
+  {
+    "name": "Tennessee Tech",
+    "expected": "tennessee-tech"
+  },
+  {
+    "name": "tex-am-commerce",
+    "expected": "tex-am-commerce"
+  },
+  {
+    "name": "East Texas A&M University",
+    "expected": "tex-am-commerce"
+  },
+  {
+    "name": "tex am commerce",
+    "expected": "tex-am-commerce"
+  },
+  {
+    "name": "East Texas A&M",
+    "expected": "tex-am-commerce"
+  },
+  {
+    "name": "texas",
+    "expected": "texas"
+  },
+  {
+    "name": "University of Texas at Austin",
+    "expected": "texas"
+  },
+  {
+    "name": "texas",
+    "expected": "texas"
+  },
+  {
+    "name": "Texas",
+    "expected": "texas"
+  },
+  {
+    "name": "texas-am",
+    "expected": "texas-am"
+  },
+  {
+    "name": "Texas A&M University, College Station",
+    "expected": "texas-am"
+  },
+  {
+    "name": "texas am",
+    "expected": "texas-am"
+  },
+  {
+    "name": "Texas A&M",
+    "expected": "texas-am"
+  },
+  {
+    "name": "texas-arlington",
+    "expected": "texas-arlington"
+  },
+  {
+    "name": "University of Texas at Arlington",
+    "expected": "texas-arlington"
+  },
+  {
+    "name": "texas arlington",
+    "expected": "texas-arlington"
+  },
+  {
+    "name": "UT Arlington",
+    "expected": "texas-arlington"
+  },
+  {
+    "name": "uta",
+    "expected": "texas-arlington"
+  },
+  {
+    "name": "texas-southern",
+    "expected": "texas-southern"
+  },
+  {
+    "name": "Texas Southern University",
+    "expected": "texas-southern"
+  },
+  {
+    "name": "texas southern",
+    "expected": "texas-southern"
+  },
+  {
+    "name": "Texas Southern",
+    "expected": "texas-southern"
+  },
+  {
+    "name": "texas-st",
+    "expected": "texas-st"
+  },
+  {
+    "name": "Texas State University",
+    "expected": "texas-st"
+  },
+  {
+    "name": "texas st",
+    "expected": "texas-st"
+  },
+  {
+    "name": "Texas St.",
+    "expected": "texas-st"
+  },
+  {
+    "name": "texas-tech",
+    "expected": "texas-tech"
+  },
+  {
+    "name": "Texas Tech University",
+    "expected": "texas-tech"
+  },
+  {
+    "name": "texas tech",
+    "expected": "texas-tech"
+  },
+  {
+    "name": "Texas Tech",
+    "expected": "texas-tech"
+  },
+  {
+    "name": "texas-tyler",
+    "expected": "texas-tyler"
+  },
+  {
+    "name": "The University of Texas at Tyler",
+    "expected": "texas-tyler"
+  },
+  {
+    "name": "texas tyler",
+    "expected": "texas-tyler"
+  },
+  {
+    "name": "UT Tyler",
+    "expected": "texas-tyler"
+  },
+  {
+    "name": "toledo",
+    "expected": "toledo"
+  },
+  {
+    "name": "University of Toledo",
+    "expected": "toledo"
+  },
+  {
+    "name": "toledo",
+    "expected": "toledo"
+  },
+  {
+    "name": "Toledo",
+    "expected": "toledo"
+  },
+  {
+    "name": "tougaloo",
+    "expected": "tougaloo"
+  },
+  {
+    "name": "tougaloo",
+    "expected": "tougaloo"
+  },
+  {
+    "name": "tougaloo",
+    "expected": "tougaloo"
+  },
+  {
+    "name": "towson",
+    "expected": "towson"
+  },
+  {
+    "name": "Towson University",
+    "expected": "towson"
+  },
+  {
+    "name": "towson",
+    "expected": "towson"
+  },
+  {
+    "name": "Towson",
+    "expected": "towson"
+  },
+  {
+    "name": "trevecca-nazarene",
+    "expected": "trevecca-nazarene"
+  },
+  {
+    "name": "trevecca-nazarene",
+    "expected": "trevecca-nazarene"
+  },
+  {
+    "name": "trevecca nazarene",
+    "expected": "trevecca-nazarene"
+  },
+  {
+    "name": "troy",
+    "expected": "troy"
+  },
+  {
+    "name": "Troy University",
+    "expected": "troy"
+  },
+  {
+    "name": "troy",
+    "expected": "troy"
+  },
+  {
+    "name": "Troy",
+    "expected": "troy"
+  },
+  {
+    "name": "tulane",
+    "expected": "tulane"
+  },
+  {
+    "name": "Tulane University",
+    "expected": "tulane"
+  },
+  {
+    "name": "tulane",
+    "expected": "tulane"
+  },
+  {
+    "name": "Tulane",
+    "expected": "tulane"
+  },
+  {
+    "name": "tulsa",
+    "expected": "tulsa"
+  },
+  {
+    "name": "The University of Tulsa",
+    "expected": "tulsa"
+  },
+  {
+    "name": "tulsa",
+    "expected": "tulsa"
+  },
+  {
+    "name": "Tulsa",
+    "expected": "tulsa"
+  },
+  {
+    "name": "tuskegee",
+    "expected": "tuskegee"
+  },
+  {
+    "name": "Tuskegee University",
+    "expected": "tuskegee"
+  },
+  {
+    "name": "tuskegee",
+    "expected": "tuskegee"
+  },
+  {
+    "name": "Tuskegee",
+    "expected": "tuskegee"
+  },
+  {
+    "name": "uab",
+    "expected": "uab"
+  },
+  {
+    "name": "University of Alabama at Birmingham",
+    "expected": "uab"
+  },
+  {
+    "name": "uab",
+    "expected": "uab"
+  },
+  {
+    "name": "UAB",
+    "expected": "uab"
+  },
+  {
+    "name": "uab",
+    "expected": "uab"
+  },
+  {
+    "name": "ualr",
+    "expected": "ualr"
+  },
+  {
+    "name": "University of Arkansas at Little Rock",
+    "expected": "ualr"
+  },
+  {
+    "name": "ualr",
+    "expected": "ualr"
+  },
+  {
+    "name": "Little Rock",
+    "expected": "ualr"
+  },
+  {
+    "name": "uc-davis",
+    "expected": "uc-davis"
+  },
+  {
+    "name": "University of California, Davis",
+    "expected": "uc-davis"
+  },
+  {
+    "name": "uc davis",
+    "expected": "uc-davis"
+  },
+  {
+    "name": "UC Davis",
+    "expected": "uc-davis"
+  },
+  {
+    "name": "ucd",
+    "expected": "uc-davis"
+  },
+  {
+    "name": "uc-irvine",
+    "expected": "uc-irvine"
+  },
+  {
+    "name": "University of California, Irvine",
+    "expected": "uc-irvine"
+  },
+  {
+    "name": "uc irvine",
+    "expected": "uc-irvine"
+  },
+  {
+    "name": "UC Irvine",
+    "expected": "uc-irvine"
+  },
+  {
+    "name": "uci",
+    "expected": "uc-irvine"
+  },
+  {
+    "name": "uc-riverside",
+    "expected": "uc-riverside"
+  },
+  {
+    "name": "University of California, Riverside",
+    "expected": "uc-riverside"
+  },
+  {
+    "name": "uc riverside",
+    "expected": "uc-riverside"
+  },
+  {
+    "name": "UC Riverside",
+    "expected": "uc-riverside"
+  },
+  {
+    "name": "uc-san-diego",
+    "expected": "uc-san-diego"
+  },
+  {
+    "name": "University of California, San Diego",
+    "expected": "uc-san-diego"
+  },
+  {
+    "name": "uc san diego",
+    "expected": "uc-san-diego"
+  },
+  {
+    "name": "UC San Diego",
+    "expected": "uc-san-diego"
+  },
+  {
+    "name": "ucsd",
+    "expected": "uc-san-diego"
+  },
+  {
+    "name": "uc-santa-barbara",
+    "expected": "uc-santa-barbara"
+  },
+  {
+    "name": "University of California, Santa Barbara",
+    "expected": "uc-santa-barbara"
+  },
+  {
+    "name": "uc santa barbara",
+    "expected": "uc-santa-barbara"
+  },
+  {
+    "name": "UC Santa Barbara",
+    "expected": "uc-santa-barbara"
+  },
+  {
+    "name": "ucsb",
+    "expected": "uc-santa-barbara"
+  },
+  {
+    "name": "ucf",
+    "expected": "ucf"
+  },
+  {
+    "name": "University of Central Florida",
+    "expected": "ucf"
+  },
+  {
+    "name": "ucf",
+    "expected": "ucf"
+  },
+  {
+    "name": "UCF",
+    "expected": "ucf"
+  },
+  {
+    "name": "ucf",
+    "expected": "ucf"
+  },
+  {
+    "name": "ucla",
+    "expected": "ucla"
+  },
+  {
+    "name": "University of California, Los Angeles",
+    "expected": "ucla"
+  },
+  {
+    "name": "ucla",
+    "expected": "ucla"
+  },
+  {
+    "name": "UCLA",
+    "expected": "ucla"
+  },
+  {
+    "name": "uconn",
+    "expected": "uconn"
+  },
+  {
+    "name": "University of Connecticut",
+    "expected": "uconn"
+  },
+  {
+    "name": "uconn",
+    "expected": "uconn"
+  },
+  {
+    "name": "UConn",
+    "expected": "uconn"
+  },
+  {
+    "name": "uiw",
+    "expected": "uiw"
+  },
+  {
+    "name": "University of the Incarnate Word",
+    "expected": "uiw"
+  },
+  {
+    "name": "uiw",
+    "expected": "uiw"
+  },
+  {
+    "name": "UIW",
+    "expected": "uiw"
+  },
+  {
+    "name": "umbc",
+    "expected": "umbc"
+  },
+  {
+    "name": "University of Maryland, Baltimore County",
+    "expected": "umbc"
+  },
+  {
+    "name": "umbc",
+    "expected": "umbc"
+  },
+  {
+    "name": "UMBC",
+    "expected": "umbc"
+  },
+  {
+    "name": "umbc",
+    "expected": "umbc"
+  },
+  {
+    "name": "umes",
+    "expected": "umes"
+  },
+  {
+    "name": "University of Maryland Eastern Shore",
+    "expected": "umes"
+  },
+  {
+    "name": "umes",
+    "expected": "umes"
+  },
+  {
+    "name": "UMES",
+    "expected": "umes"
+  },
+  {
+    "name": "umkc",
+    "expected": "umkc"
+  },
+  {
+    "name": "University of Missouri-Kansas City",
+    "expected": "umkc"
+  },
+  {
+    "name": "umkc",
+    "expected": "umkc"
+  },
+  {
+    "name": "Kansas City",
+    "expected": "umkc"
+  },
+  {
+    "name": "umkc",
+    "expected": "umkc"
+  },
+  {
+    "name": "unc-asheville",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "University of North Carolina Asheville",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "unc asheville",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "UNC Asheville",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "uncasheville",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "unca",
+    "expected": "unc-asheville"
+  },
+  {
+    "name": "unc-greensboro",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "The University of North Carolina at Greensboro",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "unc greensboro",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "UNC Greensboro",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "uncgreensboro",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "uncg",
+    "expected": "unc-greensboro"
+  },
+  {
+    "name": "unc-wilmington",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "University of North Carolina Wilmington",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "unc wilmington",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "UNCW",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "uncw",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "uncwilmington",
+    "expected": "unc-wilmington"
+  },
+  {
+    "name": "uni",
+    "expected": "uni"
+  },
+  {
+    "name": "University of Northern Iowa",
+    "expected": "uni"
+  },
+  {
+    "name": "uni",
+    "expected": "uni"
+  },
+  {
+    "name": "UNI",
+    "expected": "uni"
+  },
+  {
+    "name": "union-tn",
+    "expected": "union-tn"
+  },
+  {
+    "name": "union-tn",
+    "expected": "union-tn"
+  },
+  {
+    "name": "union tn",
+    "expected": "union-tn"
+  },
+  {
+    "name": "unlv",
+    "expected": "unlv"
+  },
+  {
+    "name": "University of Nevada, Las Vegas",
+    "expected": "unlv"
+  },
+  {
+    "name": "unlv",
+    "expected": "unlv"
+  },
+  {
+    "name": "UNLV",
+    "expected": "unlv"
+  },
+  {
+    "name": "usc-upstate",
+    "expected": "usc-upstate"
+  },
+  {
+    "name": "University of South Carolina Upstate",
+    "expected": "usc-upstate"
+  },
+  {
+    "name": "usc upstate",
+    "expected": "usc-upstate"
+  },
+  {
+    "name": "USC Upstate",
+    "expected": "usc-upstate"
+  },
+  {
+    "name": "ut-martin",
+    "expected": "ut-martin"
+  },
+  {
+    "name": "University of Tennessee at Martin",
+    "expected": "ut-martin"
+  },
+  {
+    "name": "ut martin",
+    "expected": "ut-martin"
+  },
+  {
+    "name": "UT Martin",
+    "expected": "ut-martin"
+  },
+  {
+    "name": "utah",
+    "expected": "utah"
+  },
+  {
+    "name": "University of Utah",
+    "expected": "utah"
+  },
+  {
+    "name": "utah",
+    "expected": "utah"
+  },
+  {
+    "name": "Utah",
+    "expected": "utah"
+  },
+  {
+    "name": "utah-st",
+    "expected": "utah-st"
+  },
+  {
+    "name": "Utah State University",
+    "expected": "utah-st"
+  },
+  {
+    "name": "utah st",
+    "expected": "utah-st"
+  },
+  {
+    "name": "Utah St.",
+    "expected": "utah-st"
+  },
+  {
+    "name": "utah-tech",
+    "expected": "utah-tech"
+  },
+  {
+    "name": "Utah Tech University",
+    "expected": "utah-tech"
+  },
+  {
+    "name": "utah tech",
+    "expected": "utah-tech"
+  },
+  {
+    "name": "Utah Tech",
+    "expected": "utah-tech"
+  },
+  {
+    "name": "utah-valley",
+    "expected": "utah-valley"
+  },
+  {
+    "name": "Utah Valley University",
+    "expected": "utah-valley"
+  },
+  {
+    "name": "utah valley",
+    "expected": "utah-valley"
+  },
+  {
+    "name": "Utah Valley",
+    "expected": "utah-valley"
+  },
+  {
+    "name": "utep",
+    "expected": "utep"
+  },
+  {
+    "name": "University of Texas at El Paso",
+    "expected": "utep"
+  },
+  {
+    "name": "utep",
+    "expected": "utep"
+  },
+  {
+    "name": "UTEP",
+    "expected": "utep"
+  },
+  {
+    "name": "utep",
+    "expected": "utep"
+  },
+  {
+    "name": "utrgv",
+    "expected": "utrgv"
+  },
+  {
+    "name": "The University of Texas Rio Grande Valley",
+    "expected": "utrgv"
+  },
+  {
+    "name": "utrgv",
+    "expected": "utrgv"
+  },
+  {
+    "name": "UTRGV",
+    "expected": "utrgv"
+  },
+  {
+    "name": "utrgv",
+    "expected": "utrgv"
+  },
+  {
+    "name": "utsa",
+    "expected": "utsa"
+  },
+  {
+    "name": "University of Texas at San Antonio",
+    "expected": "utsa"
+  },
+  {
+    "name": "utsa",
+    "expected": "utsa"
+  },
+  {
+    "name": "UTSA",
+    "expected": "utsa"
+  },
+  {
+    "name": "valdosta-st",
+    "expected": "valdosta-st"
+  },
+  {
+    "name": "valdosta-st",
+    "expected": "valdosta-st"
+  },
+  {
+    "name": "valdosta st",
+    "expected": "valdosta-st"
+  },
+  {
+    "name": "valparaiso",
+    "expected": "valparaiso"
+  },
+  {
+    "name": "Valparaiso University",
+    "expected": "valparaiso"
+  },
+  {
+    "name": "valparaiso",
+    "expected": "valparaiso"
+  },
+  {
+    "name": "Valparaiso",
+    "expected": "valparaiso"
+  },
+  {
+    "name": "vanderbilt",
+    "expected": "vanderbilt"
+  },
+  {
+    "name": "Vanderbilt University",
+    "expected": "vanderbilt"
+  },
+  {
+    "name": "vanderbilt",
+    "expected": "vanderbilt"
+  },
+  {
+    "name": "Vanderbilt",
+    "expected": "vanderbilt"
+  },
+  {
+    "name": "vcu",
+    "expected": "vcu"
+  },
+  {
+    "name": "Virginia Commonwealth University",
+    "expected": "vcu"
+  },
+  {
+    "name": "vcu",
+    "expected": "vcu"
+  },
+  {
+    "name": "VCU",
+    "expected": "vcu"
+  },
+  {
+    "name": "vcu",
+    "expected": "vcu"
+  },
+  {
+    "name": "villanova",
+    "expected": "villanova"
+  },
+  {
+    "name": "Villanova University",
+    "expected": "villanova"
+  },
+  {
+    "name": "villanova",
+    "expected": "villanova"
+  },
+  {
+    "name": "Villanova",
+    "expected": "villanova"
+  },
+  {
+    "name": "virginia",
+    "expected": "virginia"
+  },
+  {
+    "name": "University of Virginia",
+    "expected": "virginia"
+  },
+  {
+    "name": "virginia",
+    "expected": "virginia"
+  },
+  {
+    "name": "Virginia",
+    "expected": "virginia"
+  },
+  {
+    "name": "virginia-tech",
+    "expected": "virginia-tech"
+  },
+  {
+    "name": "Virginia Polytechnic Institute and State University",
+    "expected": "virginia-tech"
+  },
+  {
+    "name": "virginia tech",
+    "expected": "virginia-tech"
+  },
+  {
+    "name": "Virginia Tech",
+    "expected": "virginia-tech"
+  },
+  {
+    "name": "wake-forest",
+    "expected": "wake-forest"
+  },
+  {
+    "name": "Wake Forest University",
+    "expected": "wake-forest"
+  },
+  {
+    "name": "wake forest",
+    "expected": "wake-forest"
+  },
+  {
+    "name": "Wake Forest",
+    "expected": "wake-forest"
+  },
+  {
+    "name": "washington",
+    "expected": "washington"
+  },
+  {
+    "name": "University of Washington",
+    "expected": "washington"
+  },
+  {
+    "name": "washington",
+    "expected": "washington"
+  },
+  {
+    "name": "Washington",
+    "expected": "washington"
+  },
+  {
+    "name": "washington-st",
+    "expected": "washington-st"
+  },
+  {
+    "name": "Washington State University",
+    "expected": "washington-st"
+  },
+  {
+    "name": "washington st",
+    "expected": "washington-st"
+  },
+  {
+    "name": "Washington St.",
+    "expected": "washington-st"
+  },
+  {
+    "name": "weber-st",
+    "expected": "weber-st"
+  },
+  {
+    "name": "Weber State University",
+    "expected": "weber-st"
+  },
+  {
+    "name": "weber st",
+    "expected": "weber-st"
+  },
+  {
+    "name": "Weber St.",
+    "expected": "weber-st"
+  },
+  {
+    "name": "west-ala",
+    "expected": "west-ala"
+  },
+  {
+    "name": "west-ala",
+    "expected": "west-ala"
+  },
+  {
+    "name": "west ala",
+    "expected": "west-ala"
+  },
+  {
+    "name": "west-florida",
+    "expected": "west-florida"
+  },
+  {
+    "name": "University of West Florida",
+    "expected": "west-florida"
+  },
+  {
+    "name": "west florida",
+    "expected": "west-florida"
+  },
+  {
+    "name": "West Florida",
+    "expected": "west-florida"
+  },
+  {
+    "name": "west-ga",
+    "expected": "west-ga"
+  },
+  {
+    "name": "University of West Georgia",
+    "expected": "west-ga"
+  },
+  {
+    "name": "west ga",
+    "expected": "west-ga"
+  },
+  {
+    "name": "West Ga.",
+    "expected": "west-ga"
+  },
+  {
+    "name": "west-virginia",
+    "expected": "west-virginia"
+  },
+  {
+    "name": "West Virginia University",
+    "expected": "west-virginia"
+  },
+  {
+    "name": "west virginia",
+    "expected": "west-virginia"
+  },
+  {
+    "name": "West Virginia",
+    "expected": "west-virginia"
+  },
+  {
+    "name": "western-caro",
+    "expected": "western-caro"
+  },
+  {
+    "name": "Western Carolina University",
+    "expected": "western-caro"
+  },
+  {
+    "name": "western caro",
+    "expected": "western-caro"
+  },
+  {
+    "name": "Western Caro.",
+    "expected": "western-caro"
+  },
+  {
+    "name": "western-ill",
+    "expected": "western-ill"
+  },
+  {
+    "name": "Western Illinois University",
+    "expected": "western-ill"
+  },
+  {
+    "name": "western ill",
+    "expected": "western-ill"
+  },
+  {
+    "name": "Western Ill.",
+    "expected": "western-ill"
+  },
+  {
+    "name": "western-ky",
+    "expected": "western-ky"
+  },
+  {
+    "name": "Western Kentucky University",
+    "expected": "western-ky"
+  },
+  {
+    "name": "western ky",
+    "expected": "western-ky"
+  },
+  {
+    "name": "Western Ky.",
+    "expected": "western-ky"
+  },
+  {
+    "name": "western-mich",
+    "expected": "western-mich"
+  },
+  {
+    "name": "Western Michigan University",
+    "expected": "western-mich"
+  },
+  {
+    "name": "western mich",
+    "expected": "western-mich"
+  },
+  {
+    "name": "Western Mich.",
+    "expected": "western-mich"
+  },
+  {
+    "name": "wheeling-jesuit",
+    "expected": "wheeling-jesuit"
+  },
+  {
+    "name": "Wheeling University",
+    "expected": "wheeling-jesuit"
+  },
+  {
+    "name": "wheeling jesuit",
+    "expected": "wheeling-jesuit"
+  },
+  {
+    "name": "Wheeling",
+    "expected": "wheeling-jesuit"
+  },
+  {
+    "name": "wichita-st",
+    "expected": "wichita-st"
+  },
+  {
+    "name": "Wichita State University",
+    "expected": "wichita-st"
+  },
+  {
+    "name": "wichita st",
+    "expected": "wichita-st"
+  },
+  {
+    "name": "Wichita St.",
+    "expected": "wichita-st"
+  },
+  {
+    "name": "wiley",
+    "expected": "wiley"
+  },
+  {
+    "name": "Wiley",
+    "expected": "wiley"
+  },
+  {
+    "name": "wiley",
+    "expected": "wiley"
+  },
+  {
+    "name": "Wiley",
+    "expected": "wiley"
+  },
+  {
+    "name": "william-mary",
+    "expected": "william-mary"
+  },
+  {
+    "name": "William & Mary",
+    "expected": "william-mary"
+  },
+  {
+    "name": "william mary",
+    "expected": "william-mary"
+  },
+  {
+    "name": "William & Mary",
+    "expected": "william-mary"
+  },
+  {
+    "name": "winthrop",
+    "expected": "winthrop"
+  },
+  {
+    "name": "Winthrop University",
+    "expected": "winthrop"
+  },
+  {
+    "name": "winthrop",
+    "expected": "winthrop"
+  },
+  {
+    "name": "Winthrop",
+    "expected": "winthrop"
+  },
+  {
+    "name": "wisconsin",
+    "expected": "wisconsin"
+  },
+  {
+    "name": "University of Wisconsin-Madison",
+    "expected": "wisconsin"
+  },
+  {
+    "name": "wisconsin",
+    "expected": "wisconsin"
+  },
+  {
+    "name": "Wisconsin",
+    "expected": "wisconsin"
+  },
+  {
+    "name": "wofford",
+    "expected": "wofford"
+  },
+  {
+    "name": "Wofford College",
+    "expected": "wofford"
+  },
+  {
+    "name": "wofford",
+    "expected": "wofford"
+  },
+  {
+    "name": "Wofford",
+    "expected": "wofford"
+  },
+  {
+    "name": "wright-st",
+    "expected": "wright-st"
+  },
+  {
+    "name": "Wright State University",
+    "expected": "wright-st"
+  },
+  {
+    "name": "wright st",
+    "expected": "wright-st"
+  },
+  {
+    "name": "Wright St.",
+    "expected": "wright-st"
+  },
+  {
+    "name": "wyoming",
+    "expected": "wyoming"
+  },
+  {
+    "name": "University of Wyoming",
+    "expected": "wyoming"
+  },
+  {
+    "name": "wyoming",
+    "expected": "wyoming"
+  },
+  {
+    "name": "Wyoming",
+    "expected": "wyoming"
+  },
+  {
+    "name": "xavier",
+    "expected": "xavier"
+  },
+  {
+    "name": "Xavier University",
+    "expected": "xavier"
+  },
+  {
+    "name": "xavier",
+    "expected": "xavier"
+  },
+  {
+    "name": "Xavier",
+    "expected": "xavier"
+  },
+  {
+    "name": "yale",
+    "expected": "yale"
+  },
+  {
+    "name": "Yale University",
+    "expected": "yale"
+  },
+  {
+    "name": "yale",
+    "expected": "yale"
+  },
+  {
+    "name": "Yale",
+    "expected": "yale"
+  },
+  {
+    "name": "youngstown-st",
+    "expected": "youngstown-st"
+  },
+  {
+    "name": "Youngstown State University",
+    "expected": "youngstown-st"
+  },
+  {
+    "name": "youngstown st",
+    "expected": "youngstown-st"
+  },
+  {
+    "name": "Youngstown St.",
+    "expected": "youngstown-st"
+  },
+  {
+    "name": "Utah Tech Trailblazers",
+    "expected": null
+  },
+  {
+    "name": "Bowie State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "West Georgia Wolves",
+    "expected": null
+  },
+  {
+    "name": "Mercyhurst Lakers",
+    "expected": null
+  },
+  {
+    "name": "West Florida Argonauts",
+    "expected": null
+  },
+  {
+    "name": "Maryland Eastern Shore Hawks",
+    "expected": null
+  },
+  {
+    "name": "Kansas City Roos",
+    "expected": null
+  },
+  {
+    "name": "Toledo Rockets",
+    "expected": null
+  },
+  {
+    "name": "Denver Pioneers",
+    "expected": null
+  },
+  {
+    "name": "Western Illinois Leathernecks",
+    "expected": null
+  },
+  {
+    "name": "George Mason Patriots",
+    "expected": null
+  },
+  {
+    "name": "Siu Edwardsville Cougards",
+    "expected": null
+  },
+  {
+    "name": "Murray State Racers",
+    "expected": null
+  },
+  {
+    "name": "Northern Illinois Huskies",
+    "expected": null
+  },
+  {
+    "name": "Campbell Camels",
+    "expected": null
+  },
+  {
+    "name": "Virginia Cavaliers",
+    "expected": null
+  },
+  {
+    "name": "Nothern Iowa Panthers",
+    "expected": null
+  },
+  {
+    "name": "Central Connecticut Blue Devils",
+    "expected": null
+  },
+  {
+    "name": "UTRGV Vaqueros",
+    "expected": null
+  },
+  {
+    "name": "Robert Morris Colonials",
+    "expected": null
+  },
+  {
+    "name": "Louisiana Ragin Cajuns",
+    "expected": null
+  },
+  {
+    "name": "Texas State Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Coastal Carolina Chanticleers",
+    "expected": null
+  },
+  {
+    "name": "UT Arlington Mavs",
+    "expected": null
+  },
+  {
+    "name": "Arkansas State Red Wolves",
+    "expected": null
+  },
+  {
+    "name": "Colgate Raiders",
+    "expected": null
+  },
+  {
+    "name": "Xavier Musketeers",
+    "expected": null
+  },
+  {
+    "name": "Florida Atlantic Owls",
+    "expected": null
+  },
+  {
+    "name": "Stetson Hatters",
+    "expected": null
+  },
+  {
+    "name": "San Francisco Dons",
+    "expected": null
+  },
+  {
+    "name": "Louisiana Monroe Warhawks",
+    "expected": null
+  },
+  {
+    "name": "Akron Zips",
+    "expected": null
+  },
+  {
+    "name": "Penn Quakers",
+    "expected": null
+  },
+  {
+    "name": "Cal State Northridge Matadors",
+    "expected": null
+  },
+  {
+    "name": "Bucknell Bison",
+    "expected": null
+  },
+  {
+    "name": "Georgetown Hoyas",
+    "expected": null
+  },
+  {
+    "name": "Providence Friars",
+    "expected": null
+  },
+  {
+    "name": "Washington Huskies",
+    "expected": null
+  },
+  {
+    "name": "Long Beach State Beach",
+    "expected": null
+  },
+  {
+    "name": "Tulsa Golden Hurricane",
+    "expected": null
+  },
+  {
+    "name": "Charlotte 49ers",
+    "expected": null
+  },
+  {
+    "name": "Saint Louis Billikens",
+    "expected": null
+  },
+  {
+    "name": "University At Albany Great Danes",
+    "expected": null
+  },
+  {
+    "name": "Stony Brook Seawolves",
+    "expected": null
+  },
+  {
+    "name": "Umbc Retrievers",
+    "expected": null
+  },
+  {
+    "name": "Connecticut Huskies",
+    "expected": null
+  },
+  {
+    "name": "East Carolina Pirates",
+    "expected": null
+  },
+  {
+    "name": "Temple Owls",
+    "expected": null
+  },
+  {
+    "name": "Tulane Green Wave",
+    "expected": null
+  },
+  {
+    "name": "Ucf Knights",
+    "expected": null
+  },
+  {
+    "name": "Florida Gulf Coast Eagles",
+    "expected": null
+  },
+  {
+    "name": "Jacksonville Dolphins",
+    "expected": null
+  },
+  {
+    "name": "Kennesaw State Owls",
+    "expected": null
+  },
+  {
+    "name": "Liberty Lady Flames",
+    "expected": null
+  },
+  {
+    "name": "Lipscomb Bisons",
+    "expected": null
+  },
+  {
+    "name": "Njit Highlanders",
+    "expected": null
+  },
+  {
+    "name": "North Florida Ospreys",
+    "expected": null
+  },
+  {
+    "name": "Duquesne Dukes",
+    "expected": null
+  },
+  {
+    "name": "George Washington Revolutionaries",
+    "expected": null
+  },
+  {
+    "name": "Boston College Eagles",
+    "expected": null
+  },
+  {
+    "name": "Duke Blue Devils",
+    "expected": null
+  },
+  {
+    "name": "Notre Dame Fighting Irish",
+    "expected": null
+  },
+  {
+    "name": "Syracuse Orange",
+    "expected": null
+  },
+  {
+    "name": "Virginia Tech Hokies",
+    "expected": null
+  },
+  {
+    "name": "Wake Forest Demon Deacons",
+    "expected": null
+  },
+  {
+    "name": "Texas Tech Red Raiders",
+    "expected": null
+  },
+  {
+    "name": "Butler Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Depaul Blue Demons",
+    "expected": null
+  },
+  {
+    "name": "Seton Hall Pirates",
+    "expected": null
+  },
+  {
+    "name": "Idaho Vandals",
+    "expected": null
+  },
+  {
+    "name": "Idaho State Bengals",
+    "expected": null
+  },
+  {
+    "name": "Montana Grizzlies",
+    "expected": null
+  },
+  {
+    "name": "Montana State Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Northern Arizona Lumberjacks",
+    "expected": null
+  },
+  {
+    "name": "Portland State Viks",
+    "expected": null
+  },
+  {
+    "name": "Sacramento State Hornets",
+    "expected": null
+  },
+  {
+    "name": "Southern Utah Thunderbirds",
+    "expected": null
+  },
+  {
+    "name": "Charleston Southern Bucs",
+    "expected": null
+  },
+  {
+    "name": "Gardner Webb Runnin Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Hampton Pirates",
+    "expected": null
+  },
+  {
+    "name": "Radford Highlanders",
+    "expected": null
+  },
+  {
+    "name": "Unc Asheville Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Winthrop Eagles",
+    "expected": null
+  },
+  {
+    "name": "Ohio State Buckeyes",
+    "expected": null
+  },
+  {
+    "name": "Rutgers Scarlet Knights",
+    "expected": null
+  },
+  {
+    "name": "Cal State Fullerton Titans",
+    "expected": null
+  },
+  {
+    "name": "Hawaii Rainbow Wahine",
+    "expected": null
+  },
+  {
+    "name": "UC Irvine Anteaters",
+    "expected": null
+  },
+  {
+    "name": "UC Riverside Highlanders",
+    "expected": null
+  },
+  {
+    "name": "UC Santa Barbara Gauchos",
+    "expected": null
+  },
+  {
+    "name": "Charleston Cougars",
+    "expected": null
+  },
+  {
+    "name": "Delaware Blue Hens",
+    "expected": null
+  },
+  {
+    "name": "Elon Phoenix",
+    "expected": null
+  },
+  {
+    "name": "Hofstra Pride",
+    "expected": null
+  },
+  {
+    "name": "James Madison Dukes",
+    "expected": null
+  },
+  {
+    "name": "Northeastern Huskies",
+    "expected": null
+  },
+  {
+    "name": "Unc Wilmington Seahawks",
+    "expected": null
+  },
+  {
+    "name": "William And Mary Tribe",
+    "expected": null
+  },
+  {
+    "name": "Marshall Herd",
+    "expected": null
+  },
+  {
+    "name": "Middle Tennessee Blue Raiders",
+    "expected": null
+  },
+  {
+    "name": "Rice Owls",
+    "expected": null
+  },
+  {
+    "name": "Southern Miss Lady Eagles",
+    "expected": null
+  },
+  {
+    "name": "Uab Blazers",
+    "expected": null
+  },
+  {
+    "name": "UTSA Roadrunners",
+    "expected": null
+  },
+  {
+    "name": "Western Kentucky Lady Toppers",
+    "expected": null
+  },
+  {
+    "name": "Cleveland State Vikings",
+    "expected": null
+  },
+  {
+    "name": "Green Bay Phoenix",
+    "expected": null
+  },
+  {
+    "name": "IU Indy Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Northern Kentucky Norse",
+    "expected": null
+  },
+  {
+    "name": "Oakland Golden Grizzlies",
+    "expected": null
+  },
+  {
+    "name": "UIC Flames",
+    "expected": null
+  },
+  {
+    "name": "Wright State Raiders",
+    "expected": null
+  },
+  {
+    "name": "Youngstown State Penguins",
+    "expected": null
+  },
+  {
+    "name": "Columbia Lions",
+    "expected": null
+  },
+  {
+    "name": "Cornell Big Red",
+    "expected": null
+  },
+  {
+    "name": "Dartmouth Big Green",
+    "expected": null
+  },
+  {
+    "name": "Yale Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Canisius Golden Griffs",
+    "expected": null
+  },
+  {
+    "name": "Fairfield Stags",
+    "expected": null
+  },
+  {
+    "name": "Iona Gaels",
+    "expected": null
+  },
+  {
+    "name": "Manhattan Jaspers",
+    "expected": null
+  },
+  {
+    "name": "Marist Red Foxes",
+    "expected": null
+  },
+  {
+    "name": "Niagara Purple Eagles",
+    "expected": null
+  },
+  {
+    "name": "Quinnipiac Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Rider Broncs",
+    "expected": null
+  },
+  {
+    "name": "Saint Peters Peacocks",
+    "expected": null
+  },
+  {
+    "name": "Siena Saints",
+    "expected": null
+  },
+  {
+    "name": "Bowling Green Falcons",
+    "expected": null
+  },
+  {
+    "name": "Central Michigan Chippewas",
+    "expected": null
+  },
+  {
+    "name": "Eastern Michigan Eagles",
+    "expected": null
+  },
+  {
+    "name": "Kent State Golden Flashes",
+    "expected": null
+  },
+  {
+    "name": "Miami Ohio Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Ohio Bobcats",
+    "expected": null
+  },
+  {
+    "name": "Coppin State Eagles",
+    "expected": null
+  },
+  {
+    "name": "Delaware State Hornets",
+    "expected": null
+  },
+  {
+    "name": "Florida A&M Rattlers",
+    "expected": null
+  },
+  {
+    "name": "Howard Bison",
+    "expected": null
+  },
+  {
+    "name": "North Carolina A&T Aggies",
+    "expected": null
+  },
+  {
+    "name": "North Carolina Central Eagles",
+    "expected": null
+  },
+  {
+    "name": "South Carolina Gamecocks",
+    "expected": null
+  },
+  {
+    "name": "Bradley Braves",
+    "expected": null
+  },
+  {
+    "name": "Drake Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Evansville Purple Aces",
+    "expected": null
+  },
+  {
+    "name": "Illinois State Redbirds",
+    "expected": null
+  },
+  {
+    "name": "Indiana State Sycamores",
+    "expected": null
+  },
+  {
+    "name": "Loyola Chicago Ramblers",
+    "expected": null
+  },
+  {
+    "name": "Harvard Crimson",
+    "expected": null
+  },
+  {
+    "name": "Southern Illinois Salukis",
+    "expected": null
+  },
+  {
+    "name": "Valparaiso Beacons",
+    "expected": null
+  },
+  {
+    "name": "Air Force Falcons",
+    "expected": null
+  },
+  {
+    "name": "New Haven Chargers",
+    "expected": null
+  },
+  {
+    "name": "Le Moyne Dolphins",
+    "expected": null
+  },
+  {
+    "name": "Stonehill Skyhawks",
+    "expected": null
+  },
+  {
+    "name": "Rutgers-Camden Scarlet Raptors",
+    "expected": null
+  },
+  {
+    "name": "Navy Mids",
+    "expected": null
+  },
+  {
+    "name": "Fresno State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Georgia Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "San Diego State Aztecs",
+    "expected": null
+  },
+  {
+    "name": "California Golden Bears",
+    "expected": null
+  },
+  {
+    "name": "Mississippi State Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Loyola Marymount Lions",
+    "expected": null
+  },
+  {
+    "name": "Portland Pilots",
+    "expected": null
+  },
+  {
+    "name": "St. Thomas (MN) Tommies",
+    "expected": null
+  },
+  {
+    "name": "Alabama State Hornets",
+    "expected": null
+  },
+  {
+    "name": "South Dakota Coyotes",
+    "expected": null
+  },
+  {
+    "name": "Saint Mary\u00b4s Gaels",
+    "expected": null
+  },
+  {
+    "name": "Samford Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Pepperdine Waves",
+    "expected": null
+  },
+  {
+    "name": "Stephen F. Austin Lumberjacks",
+    "expected": null
+  },
+  {
+    "name": "East Tennessee State Bucs",
+    "expected": null
+  },
+  {
+    "name": "Bryant Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Arkansas Razorbacks",
+    "expected": null
+  },
+  {
+    "name": "Sacred Heart Pioneers",
+    "expected": null
+  },
+  {
+    "name": "Fairleigh Dickinson Knights",
+    "expected": null
+  },
+  {
+    "name": "Purdue Fort Wayne Mastodons",
+    "expected": null
+  },
+  {
+    "name": "Grand Canyon Antelopes",
+    "expected": null
+  },
+  {
+    "name": "American Eagles",
+    "expected": null
+  },
+  {
+    "name": "Austin Peay Governors",
+    "expected": null
+  },
+  {
+    "name": "Cal State Bakersfield Roadrunners",
+    "expected": null
+  },
+  {
+    "name": "Loyola Maryland Greyhounds",
+    "expected": null
+  },
+  {
+    "name": "Omaha Mavericks",
+    "expected": null
+  },
+  {
+    "name": "Seattle Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Liu Sharks",
+    "expected": null
+  },
+  {
+    "name": "North Alabama Lions",
+    "expected": null
+  },
+  {
+    "name": "Lehigh Mountain Hawks",
+    "expected": null
+  },
+  {
+    "name": "Eastern Kentucky Colonels",
+    "expected": null
+  },
+  {
+    "name": "North Dakota Fighting Hawks",
+    "expected": null
+  },
+  {
+    "name": "Holy Cross Crusaders",
+    "expected": null
+  },
+  {
+    "name": "Nevada Wolf Pack",
+    "expected": null
+  },
+  {
+    "name": "Tarleton State Texans",
+    "expected": null
+  },
+  {
+    "name": "New Mexico Lobos",
+    "expected": null
+  },
+  {
+    "name": "Southeast Missouri State Redhawks",
+    "expected": null
+  },
+  {
+    "name": "Furman Paladins",
+    "expected": null
+  },
+  {
+    "name": "Wofford Terriers",
+    "expected": null
+  },
+  {
+    "name": "Alabama Crimson Tide",
+    "expected": null
+  },
+  {
+    "name": "UC San Diego Tritons",
+    "expected": null
+  },
+  {
+    "name": "California Baptist Lancers",
+    "expected": null
+  },
+  {
+    "name": "Army Black Knights",
+    "expected": null
+  },
+  {
+    "name": "Houston Christian Huskies",
+    "expected": null
+  },
+  {
+    "name": "Lafayette Leopards",
+    "expected": null
+  },
+  {
+    "name": "Nicholls Colonels",
+    "expected": null
+  },
+  {
+    "name": "LSU New Orleans Privateers",
+    "expected": null
+  },
+  {
+    "name": "Texas A&M\u2013Corpus Christi Islanders",
+    "expected": null
+  },
+  {
+    "name": "Incarnate Word Cardinals",
+    "expected": null
+  },
+  {
+    "name": "Sam Houston State Bearkats",
+    "expected": null
+  },
+  {
+    "name": "Prairie View AM Panthers",
+    "expected": null
+  },
+  {
+    "name": "Georgia Southern Eagles",
+    "expected": null
+  },
+  {
+    "name": "South Alabama Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Southern Jaguars",
+    "expected": null
+  },
+  {
+    "name": "Wyoming Cowgirls",
+    "expected": null
+  },
+  {
+    "name": "Merrimack Warriors",
+    "expected": null
+  },
+  {
+    "name": "Arkansas Little Rock Trojans",
+    "expected": null
+  },
+  {
+    "name": "Western Carolina Catamounts",
+    "expected": null
+  },
+  {
+    "name": "Chattanooga Mocs",
+    "expected": null
+  },
+  {
+    "name": "Jacksonville State Gamecocks",
+    "expected": null
+  },
+  {
+    "name": "Ut Martin Skyhawks",
+    "expected": null
+  },
+  {
+    "name": "Morehead State Eagles",
+    "expected": null
+  },
+  {
+    "name": "East Texas AM Lions",
+    "expected": null
+  },
+  {
+    "name": "McNeese State Cowgirls",
+    "expected": null
+  },
+  {
+    "name": "Alcorn State Lady Braves",
+    "expected": null
+  },
+  {
+    "name": "Alabama Am Bulldogs",
+    "expected": null
+  },
+  {
+    "name": "Southeastern Louisiana Lions",
+    "expected": null
+  },
+  {
+    "name": "Northwestern State Demons",
+    "expected": null
+  },
+  {
+    "name": "Old Dominion Monarchs",
+    "expected": null
+  },
+  {
+    "name": "Southern Indiana Screaming Eagles",
+    "expected": null
+  },
+  {
+    "name": "Bellarmine Knights",
+    "expected": null
+  },
+  {
+    "name": "Lindenwood Lions",
+    "expected": null
+  },
+  {
+    "name": "Queens (NC) Royals",
+    "expected": null
+  },
+  {
+    "name": "Purdue Boilermakers",
+    "expected": "purdue"
+  }
+]
