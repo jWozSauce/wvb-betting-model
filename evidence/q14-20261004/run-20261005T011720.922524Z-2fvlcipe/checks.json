@@ -1,0 +1,7 @@
+{
+  "explicit_false_excluded_from_bets_and_anchors": true,
+  "missing_and_true_unchanged": true,
+  "inactive_real_1xbet_ignored": true,
+  "preserved_capture_same_card": true,
+  "real_calls": 0
+}

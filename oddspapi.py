@@ -176,7 +176,7 @@ def fetch_board(books=None, key: str | None = None, timeout: int = 60):
             fx = fixtures.setdefault(f["fixtureId"],
                                      {"meta": f, "books": {}})
             bo = (f.get("bookmakerOdds") or {}).get(bk)
-            if bo and not bo.get("suspended"):
+            if bo and not bo.get("suspended") and bo.get("bookmakerIsActive") is not False:
                 fx["books"][bk] = _decode_book(bo.get("markets"), mktmap)
 
     games = []

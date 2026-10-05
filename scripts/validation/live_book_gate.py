@@ -27,7 +27,7 @@ def verify_prices(games,cache):
   blob=cache[book]
   for f in blob.get('payload',[]) if blob['status']==200 else []:
    bo=f.get('bookmakerOdds',{}).get(book,{})
-   if f.get('statusId')==0 and not bo.get('suspended'):
+   if f.get('statusId')==0 and not bo.get('suspended') and bo.get('bookmakerIsActive') is not False:
     quotes.setdefault(str(f['fixtureId']),{})[book]=oddspapi._decode_book(bo.get('markets'),oddspapi._markets_map())
  checked=0
  for g in games:
