@@ -1,0 +1,182 @@
+[
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "ml",
+    "side": "away",
+    "model_prob": 0.3029,
+    "blend_prob": 0.4378,
+    "p20": 0.2996,
+    "edge": 0.1033,
+    "stake": 22.5
+  },
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "spread",
+    "side": "away",
+    "model_prob": 0.4476,
+    "blend_prob": 0.4842,
+    "p20": 0.4442,
+    "edge": -0.0406,
+    "stake": 0.0
+  },
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "total",
+    "side": "over",
+    "model_prob": 0.5964,
+    "blend_prob": 0.5372,
+    "p20": 0.5934,
+    "edge": 0.0014,
+    "stake": 0.0
+  },
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "ml",
+    "side": "home",
+    "model_prob": 0.6971,
+    "blend_prob": 0.5622,
+    "p20": 0.6933,
+    "edge": 0.2275,
+    "stake": 22.5
+  },
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "spread",
+    "side": "home",
+    "model_prob": 0.5524,
+    "blend_prob": 0.5158,
+    "p20": 0.5487,
+    "edge": -0.0092,
+    "stake": 0.0
+  },
+  {
+    "matchup": "morgan-st @ nc-central",
+    "market": "total",
+    "side": "under",
+    "model_prob": 0.4036,
+    "blend_prob": 0.4628,
+    "p20": 0.3998,
+    "edge": -0.0505,
+    "stake": 0.0
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "ml",
+    "side": "away",
+    "model_prob": 0.8372,
+    "blend_prob": 0.6204,
+    "p20": 0.8326,
+    "edge": 0.2847,
+    "stake": 22.5
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "spread",
+    "side": "away",
+    "model_prob": 0.9055,
+    "blend_prob": 0.6633,
+    "p20": 0.9024,
+    "edge": 0.1371,
+    "stake": 31.5
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "total",
+    "side": "over",
+    "model_prob": 0.4974,
+    "blend_prob": 0.5072,
+    "p20": 0.4935,
+    "edge": -0.0289,
+    "stake": 0.0
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "ml",
+    "side": "home",
+    "model_prob": 0.1628,
+    "blend_prob": 0.3796,
+    "p20": 0.1593,
+    "edge": 0.0444,
+    "stake": 16.67
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "spread",
+    "side": "home",
+    "model_prob": 0.0945,
+    "blend_prob": 0.3367,
+    "p20": 0.0917,
+    "edge": -0.1893,
+    "stake": 0.0
+  },
+  {
+    "matchup": "butler @ seton-hall",
+    "market": "total",
+    "side": "under",
+    "model_prob": 0.5026,
+    "blend_prob": 0.4928,
+    "p20": 0.4973,
+    "edge": -0.021,
+    "stake": 0.0
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "ml",
+    "side": "away",
+    "model_prob": 0.96,
+    "blend_prob": 0.7218,
+    "p20": 0.9576,
+    "edge": 0.3848,
+    "stake": 22.5
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "spread",
+    "side": "away",
+    "model_prob": 0.9807,
+    "blend_prob": 0.7647,
+    "p20": 0.9796,
+    "edge": 0.2379,
+    "stake": 31.5
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "total",
+    "side": "over",
+    "model_prob": 0.2933,
+    "blend_prob": 0.4422,
+    "p20": 0.2887,
+    "edge": -0.0943,
+    "stake": 0.0
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "ml",
+    "side": "home",
+    "model_prob": 0.04,
+    "blend_prob": 0.2782,
+    "p20": 0.0383,
+    "edge": -0.0578,
+    "stake": 0.0
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "spread",
+    "side": "home",
+    "model_prob": 0.0193,
+    "blend_prob": 0.2353,
+    "p20": 0.0183,
+    "edge": -0.2913,
+    "stake": 0.0
+  },
+  {
+    "matchup": "dayton @ fordham",
+    "market": "total",
+    "side": "under",
+    "model_prob": 0.7067,
+    "blend_prob": 0.5578,
+    "p20": 0.7005,
+    "edge": 0.0434,
+    "stake": 22.22
+  }
+]

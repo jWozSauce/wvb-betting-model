@@ -1,5 +1,6 @@
 """T13 replacement math, no-edit identity, four benchmark removals and actual UI."""
 import copy
+import io
 import hashlib
 import json
 import os
@@ -15,7 +16,24 @@ sys.path.insert(0,str(ROOT/'scripts/audit'))
 import player_model_audit as audit
 from vbstats import rapm_price as rp
 
-rapm,ratings,meta,params=audit.data()
+current_rapm,current_ratings,current_meta,params=audit.data()
+# Dated acceptance benchmark: daily ratings updates can remove the very player
+# this benchmark must deselect (Watson left the latest default lineup).
+BENCHMARK_REF='aafab84'
+def snapshot(name):
+ return subprocess.check_output(['git','show',f'{BENCHMARK_REF}:app_data/{name}'],cwd=ROOT)
+rapm=pd.read_parquet(io.BytesIO(snapshot('rapm.parquet')))
+ratings=pd.read_parquet(io.BytesIO(snapshot('elo_current.parquet'))).set_index('team')
+meta=json.loads(snapshot('rapm_meta.json'))
+read_parquet=pd.read_parquet
+json_load=json.load
+def benchmark_parquet(path,*args,**kwargs):
+ if str(path).endswith('/app_data/rapm.parquet'):return rapm.copy(deep=True)
+ if str(path).endswith('/app_data/elo_current.parquet'):return ratings.reset_index().copy(deep=True)
+ return read_parquet(path,*args,**kwargs)
+def benchmark_json(f,*args,**kwargs):
+ if str(getattr(f,'name','')).endswith('/app_data/rapm_meta.json'):return copy.deepcopy(meta)
+ return json_load(f,*args,**kwargs)
 protected=['app_data/rapm.parquet','app_data/rapm_meta.json','app_data/model_params.json']
 hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in protected}
 source=(ROOT/'streamlit_app.py').read_text()
@@ -89,7 +107,16 @@ for team in rapm.team.unique():
   for weighted in [True,False]:
    got,notes=rp.replacement_strength(rs,sel,init,weighted)
    assert got==rp.lineup_strength(rs,sel,weighted) and not notes
+# Current production coefficients also preserve exact untouched arithmetic.
+for team in current_rapm.team.unique():
+ rs=current_rapm[current_rapm.team==team].to_dict('records');init=audit.defaults(rs)
+ for sel in [init,{r['player'] for r in rs}]:
+  for weighted in [True,False]:
+   got,notes=rp.replacement_strength(rs,sel,init,weighted)
+   assert got==rp.lineup_strength(rs,sel,weighted) and not notes
 with ExitStack() as stack:
+ stack.enter_context(patch('pandas.read_parquet',side_effect=benchmark_parquet))
+ stack.enter_context(patch('json.load',side_effect=benchmark_json))
  guards(stack);stack.enter_context(patch.dict(os.environ,{'WVB_ENABLE_REPLACEMENT_LINEUPS':'1'}))
  old,new=new_app(baseline),new_app(source)
  for row in results:
@@ -133,8 +160,8 @@ with ExitStack() as stack:
  initial=audit.defaults(hrows);removed='Teraya Sigler';added='Skyler Pierce'
  app.multiselect(key='lineup_nebraska').set_value(sorted(initial-{removed}|{added}));check(app.run())
  assert any(f'{removed} → {added}' in m.value for m in app.markdown)
- # Feature omitted => old UI and removal arithmetic.
- os.environ.pop('WVB_ENABLE_REPLACEMENT_LINEUPS')
+ # Explicit rollback => old UI and removal arithmetic after default-on acceptance.
+ os.environ['WVB_ENABLE_REPLACEMENT_LINEUPS']='0'
  off=new_app(source);select_match(off,'nebraska','kansas','Home court')
  element(off.radio,'Pricing model').set_value('Player (RAPM)');check(off.run())
  assert not any(r.label=='Removed minutes go to' for r in off.radio)
@@ -145,5 +172,5 @@ pd.DataFrame(results).to_csv(out/'removals.csv',index=False)
 (out/'checks.json').write_text(json.dumps(dict(exact_unedited_teams=int(rapm.team.nunique()),
  exact_full_roster=True,weighting_modes=2,ui_modes=2,benchmarks=4,ui_label_checks=5,
  redistribution_toggle_exact=True,explicit_sub_override=True,league_fallback=True,
- protected_sha256=hashes,real_paid_calls=0,real_writes=0,default_off=True),indent=2))
+ protected_sha256=hashes,real_paid_calls=0,real_writes=0,explicit_rollback=True,benchmark_ref=BENCHMARK_REF,current_unedited_teams=int(current_rapm.team.nunique())),indent=2))
 print(pd.DataFrame(results).to_string(index=False));print('PASS T13 gates')

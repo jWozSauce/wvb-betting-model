@@ -1,0 +1,21 @@
+{
+  "exact_unedited_teams": 365,
+  "exact_full_roster": true,
+  "weighting_modes": 2,
+  "ui_modes": 2,
+  "benchmarks": 4,
+  "ui_label_checks": 5,
+  "redistribution_toggle_exact": true,
+  "explicit_sub_override": true,
+  "league_fallback": true,
+  "protected_sha256": {
+    "app_data/rapm.parquet": "ba9e2830194c64f4fcea380c4f9fde6573dde14fb85dd81c9d70e2910360c9b6",
+    "app_data/rapm_meta.json": "0e7836f3504ed869e6e021d6d0d090fbab7b03b380a9390d0e6dc9a13b68663a",
+    "app_data/model_params.json": "d315dfd101b6efe9cfcedb5de0b4e409ae1569ea405bde70aa9fdbb8b3a1454a"
+  },
+  "real_paid_calls": 0,
+  "real_writes": 0,
+  "explicit_rollback": true,
+  "benchmark_ref": "aafab84",
+  "current_unedited_teams": 365
+}

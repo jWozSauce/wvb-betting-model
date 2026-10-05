@@ -1,0 +1,21 @@
+{
+  "exact_existing_paste": true,
+  "exact_existing_live_api": true,
+  "one_rematch_model_calls": 501,
+  "three_game_manual_parity": true,
+  "reversed_all_markets": true,
+  "confirmation_required": true,
+  "duplicates_blocked": true,
+  "counts_reconcile": true,
+  "independent_reloads_preserve_decisions": true,
+  "source_date_state": true,
+  "accepted_default_on": true,
+  "explicit_zero_rollback": true,
+  "first_price_model_calls": 1503,
+  "one_venue_change_model_calls": 501,
+  "unchanged_game_rows_exact": true,
+  "schedule_fetches": 2,
+  "mock_logged_rows": 3,
+  "real_writes": 0,
+  "real_paid_calls": 0
+}

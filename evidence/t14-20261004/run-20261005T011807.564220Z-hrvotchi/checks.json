@@ -1,0 +1,15 @@
+{
+  "ui_first_confirm_prices": true,
+  "fresh_session_persisted_prices": true,
+  "id_precedence": true,
+  "conflict_preserves_other_change": true,
+  "duplicate_team_refused": true,
+  "flag_off_exact": true,
+  "paste_exact": true,
+  "real_sheet_writes": 0,
+  "paid_calls": 0,
+  "github_cas_mock": true,
+  "provider_ids_and_line_shop": true,
+  "ncaa_participants": 338,
+  "needs_confirmation": 228
+}

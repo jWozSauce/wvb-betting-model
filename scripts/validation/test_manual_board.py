@@ -73,7 +73,7 @@ with ExitStack() as stack:
  paste_card = pasted.session_state.best_card.copy()
  with patch('oddspapi.fetch_board', return_value=(games, 0)), patch('oddspapi.account', return_value={}):
   for target in (old,pasted):
-   element(target.radio,'Odds source').set_value('Live API (Pinnacle/DK/FD/BetOnline)');check(target.run())
+   element(target.radio,'Odds source').set_value(next(o for o in element(target.radio,'Odds source').options if o.startswith('Live API')));check(target.run())
    element(target.button,'Fetch odds & evaluate').click();check(target.run())
   pd.testing.assert_frame_equal(old.session_state.best_card,pasted.session_state.best_card,check_exact=True)
  numeric=['model_prob','mkt_prob','blend_prob','p20','edge','stake','fair_odds','market','side','point','bet','odds','⚕ absent','⚕opp']
