@@ -355,7 +355,7 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
         + "</div>",
         unsafe_allow_html=True)
 
-    replacement_enabled = os.environ.get("WVB_ENABLE_REPLACEMENT_LINEUPS", "0") == "1"
+    replacement_enabled = os.environ.get("WVB_ENABLE_REPLACEMENT_LINEUPS", "1") == "1"
     model_mode = st.radio(
         "Pricing model",
         ["Team Elo", "Hybrid (Elo + lineup adjust)", "Player (RAPM)"],
@@ -746,7 +746,7 @@ with tab_best:
     st.subheader("Best bets")
     schedule_enabled = os.environ.get("WVB_ENABLE_NCAA_SCHEDULE", "1") == "1"
     manual_enabled = os.environ.get("WVB_ENABLE_MANUAL_BOARD", "1") == "1"
-    books_enabled = os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1"
+    books_enabled = os.environ.get("WVB_ENABLE_BOOK_SELECTION", "1") == "1"
     source_b = st.radio(
         "Odds source",
         ["Live API (choose books)" if books_enabled else "Live API (Pinnacle/DK/FD/BetOnline)", "Paste a board"]
@@ -765,7 +765,7 @@ with tab_best:
     else:
         manual_mode = source_b == "Schedule + board (manual match)"
         live_mapping_enabled = (source_b.startswith("Live API") and
-            os.environ.get("WVB_ENABLE_LIVE_TEAM_MAP", "0") == "1")
+            os.environ.get("WVB_ENABLE_LIVE_TEAM_MAP", "1") == "1")
         import oddspapi
         api_books = oddspapi.LEGACY_BOOKS
         if source_b.startswith("Live API") and books_enabled:

@@ -70,7 +70,7 @@ def order_books(selected):
         sorted(chosen - set(ANCHOR_PRIORITY)))
 
 def default_books():
-    return BOOKS if os.environ.get("WVB_ENABLE_BOOK_SELECTION", "0") == "1" else LEGACY_BOOKS
+    return BOOKS if os.environ.get("WVB_ENABLE_BOOK_SELECTION", "1") == "1" else LEGACY_BOOKS
 
 HERE = Path(__file__).resolve().parent
 LOCAL_KEY = HERE / "oddspapi_key.txt"  # gitignored
