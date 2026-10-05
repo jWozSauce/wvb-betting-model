@@ -99,3 +99,68 @@ def lineup_strength(rapm_rows, selected, playtime_weighted=True):
     rc = sum(w * r["recv"] for w, r in zip(weights, rows))
     fitted = sum(1 for r in rows if r["serve"] or r["recv"])
     return sv, rc, fitted / len(rows)
+
+
+def replacement_lineup(rapm_rows, selected, rotation):
+    """Keep removed rotation players' shares; assign replacements to those slots.
+
+    Rotation is the panel's initial lineup, not the hybrid season reference.
+    Bench means fitted roster members outside that rotation and outside the selected
+    lineup, with starts strictly below half the team maximum (Q9 ruling).
+    Explicit additions replace removed slots, same position first, then
+    roster order. Extra additions retain their own playing-time weights.
+    """
+    selected, rotation = set(selected), set(rotation)
+    removed = [r for r in rapm_rows if r['player'] in rotation - selected]
+    if not removed:
+        return rapm_rows, selected, []  # untouched arithmetic and ordering
+    additions = [r for r in rapm_rows if r['player'] in selected - rotation]
+    cutoff = max((r.get('sets_started_cur', 0) for r in rapm_rows), default=0) / 2
+    bench = [r for r in rapm_rows if r['player'] not in rotation | selected
+             and (r['serve'] or r['recv'])
+             and r.get('sets_started_cur', 0) < cutoff]
+    assignments = {}
+    # Reserve position-matched explicit substitutes before cross-position ones.
+    for r in removed:
+        candidate = next((a for a in additions if r.get('position') and
+                          a.get('position') == r.get('position')), None)
+        if candidate is not None:
+            assignments[r['player']] = candidate
+            additions.remove(candidate)
+    for r in removed:
+        if r['player'] not in assignments and additions:
+            assignments[r['player']] = additions.pop(0)
+    consumed = {r['player'] for r in assignments.values()}
+    replacements, notes = {}, []
+    for r in removed:
+        actual = assignments.get(r['player'])
+        if actual is not None:
+            sv, rc = actual['serve'], actual['recv']
+            tier, members = 'selected player', [actual['player']]
+            target = actual['player']
+        else:
+            pool = [b for b in bench if r.get('position') and b.get('position') == r.get('position')]
+            tier = 'position bench'
+            if not pool:
+                pool, tier = bench, 'team bench'
+            if not pool:
+                sv, rc, tier = 0., 0., 'league average'
+            else:
+                sv = float(np.mean([b['serve'] for b in pool]))
+                rc = float(np.mean([b['recv'] for b in pool]))
+            members = [b['player'] for b in pool]
+            target = (f"bench {r['position']} avg" if tier == 'position bench' else
+                      'team bench avg' if tier == 'team bench' else 'league avg')
+        # Retain original identity/order and sets weight while replacing coefficients.
+        replacements[r['player']] = dict(r, serve=sv, recv=rc)
+        notes.append(dict(player=r['player'], target=target, tier=tier, members=members,
+                          serve=float(sv), recv=float(rc),
+                          impact_per_set=20.4 * (float(sv) + float(rc))))
+    assembled = [replacements.get(r['player'], r) for r in rapm_rows
+                 if r['player'] not in consumed]
+    return assembled, (selected - consumed) | {r['player'] for r in removed}, notes
+
+
+def replacement_strength(rapm_rows, selected, rotation, playtime_weighted=True):
+    rows, names, notes = replacement_lineup(rapm_rows, selected, rotation)
+    return lineup_strength(rows, names, playtime_weighted), notes

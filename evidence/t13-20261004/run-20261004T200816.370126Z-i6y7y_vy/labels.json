@@ -1,0 +1,72 @@
+[
+  {
+    "player": "Harper Murray",
+    "target": "bench OH avg",
+    "tier": "position bench",
+    "members": [
+      "Skyler Pierce",
+      "Gabby DiVita",
+      "Jayden Robinson"
+    ],
+    "serve": 0.0030929869521536357,
+    "recv": 0.0014676663763310966,
+    "impact_per_set": 0.09303732790108853
+  },
+  {
+    "player": "Olivia Babcock",
+    "target": "bench OH avg",
+    "tier": "position bench",
+    "members": [
+      "Sophia Gregoire",
+      "Marina Pezelj",
+      "Lola Sageer"
+    ],
+    "serve": 0.008563167511621856,
+    "recv": 0.007986701239737238,
+    "impact_per_set": 0.3376173225277255
+  },
+  {
+    "player": "Teraya Sigler",
+    "target": "bench OH avg",
+    "tier": "position bench",
+    "members": [
+      "Skyler Pierce",
+      "Gabby DiVita",
+      "Jayden Robinson"
+    ],
+    "serve": 0.0030929869521536357,
+    "recv": 0.0014676663763310966,
+    "impact_per_set": 0.09303732790108853
+  },
+  {
+    "player": "Ayanna Watson",
+    "target": "bench OH avg",
+    "tier": "position bench",
+    "members": [
+      "Sophia Gregoire",
+      "Marina Pezelj",
+      "Lola Sageer"
+    ],
+    "serve": 0.008563167511621856,
+    "recv": 0.007986701239737238,
+    "impact_per_set": 0.3376173225277255
+  },
+  {
+    "player": "Ryan Hunter",
+    "target": "team bench avg",
+    "tier": "team bench",
+    "members": [
+      "Bergen Reilly",
+      "Virginia Adriano",
+      "Laney Choboy",
+      "Skyler Pierce",
+      "Kenna Cogill",
+      "Keri Leimbach",
+      "Gabby DiVita",
+      "Jayden Robinson"
+    ],
+    "serve": 0.00730151169603322,
+    "recv": 0.01025970278028295,
+    "impact_per_set": 0.35824877531684984
+  }
+]
