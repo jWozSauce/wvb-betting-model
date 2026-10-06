@@ -1,0 +1,12 @@
+{
+  "release_commit": "551e963",
+  "implementation": "101dff5",
+  "defaults": "5ec2a1f",
+  "ratings_base": "0c84c7b",
+  "local_health": "ok",
+  "default_tab_asserted": true,
+  "hosted_cloud_verified": false,
+  "provider_calls_in_tests": 0,
+  "catalog_activation": "held under Q16",
+  "temporary_server": "stopped"
+}

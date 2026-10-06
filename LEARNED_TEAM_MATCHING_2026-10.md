@@ -1,8 +1,12 @@
 # T16 — Bulk identity review and conservative learning
 
-Implementation complete, awaiting planner acceptance. Branch:
-`codex/learned-team-matching`; `WVB_ENABLE_LEARNED_MATCHING=0` by default.
-Production T13/T14/T15 remains at `b367dcc`; none of T16 is deployed.
+Accepted by the planner on 2026-10-05 and pushed to production main in
+`551e963`, after rebasing on the ratings bot's `0c84c7b`. The separate
+`5ec2a1f` switch commit enables `WVB_ENABLE_LEARNED_MATCHING=1` by default;
+set it to `0` for rollback. The Team matching tab is included in this release.
+Local AppTest and server health passed; hosted-cloud startup was not observed.
+Cloud mapping-token setup remains owner-deferred, so durable cloud confirmations
+remain unavailable until the owner configures that credential.
 
 The review tab lists all 228 currently unresolved names in the cached NCAA
 inventory of 338 participant IDs. Suggestions use exact school prefixes where
