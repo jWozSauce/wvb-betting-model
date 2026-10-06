@@ -1,0 +1,1354 @@
+[
+  {
+    "participant_id": "1074744",
+    "name": "Utah Tech Trailblazers"
+  },
+  {
+    "participant_id": "1088295",
+    "name": "Bowie State Bulldogs"
+  },
+  {
+    "participant_id": "1179139",
+    "name": "West Georgia Wolves"
+  },
+  {
+    "participant_id": "1192083",
+    "name": "Mercyhurst Lakers"
+  },
+  {
+    "participant_id": "1267282",
+    "name": "Vanderbilt Commodores"
+  },
+  {
+    "participant_id": "1375582",
+    "name": "West Florida Argonauts"
+  },
+  {
+    "participant_id": "287441",
+    "name": "Maryland Eastern Shore Hawks"
+  },
+  {
+    "participant_id": "287443",
+    "name": "Kansas City Roos"
+  },
+  {
+    "participant_id": "290570",
+    "name": "Toledo Rockets"
+  },
+  {
+    "participant_id": "290628",
+    "name": "Denver Pioneers"
+  },
+  {
+    "participant_id": "290630",
+    "name": "Western Illinois Leathernecks"
+  },
+  {
+    "participant_id": "290632",
+    "name": "Davidson Wildcats"
+  },
+  {
+    "participant_id": "290634",
+    "name": "George Mason Patriots"
+  },
+  {
+    "participant_id": "290636",
+    "name": "UCLA Bruins"
+  },
+  {
+    "participant_id": "290640",
+    "name": "Arizona Wildcats"
+  },
+  {
+    "participant_id": "290642",
+    "name": "Siu Edwardsville Cougards"
+  },
+  {
+    "participant_id": "290644",
+    "name": "Murray State Racers"
+  },
+  {
+    "participant_id": "290648",
+    "name": "Northern Illinois Huskies"
+  },
+  {
+    "participant_id": "290656",
+    "name": "Georgia State Panthers"
+  },
+  {
+    "participant_id": "290664",
+    "name": "Appalachian State Mountaineers"
+  },
+  {
+    "participant_id": "290902",
+    "name": "Campbell Camels"
+  },
+  {
+    "participant_id": "292330",
+    "name": "Virginia Cavaliers"
+  },
+  {
+    "participant_id": "292332",
+    "name": "Nothern Iowa Panthers"
+  },
+  {
+    "participant_id": "292356",
+    "name": "Central Connecticut Blue Devils"
+  },
+  {
+    "participant_id": "294052",
+    "name": "UTRGV Vaqueros"
+  },
+  {
+    "participant_id": "294098",
+    "name": "Robert Morris Colonials"
+  },
+  {
+    "participant_id": "295874",
+    "name": "Norfolk State Spartans"
+  },
+  {
+    "participant_id": "296276",
+    "name": "Louisiana Ragin Cajuns"
+  },
+  {
+    "participant_id": "297488",
+    "name": "Morgan State Bears"
+  },
+  {
+    "participant_id": "298860",
+    "name": "NC State Wolfpack"
+  },
+  {
+    "participant_id": "300230",
+    "name": "North Carolina Tar Heels"
+  },
+  {
+    "participant_id": "300576",
+    "name": "Texas State Bobcats"
+  },
+  {
+    "participant_id": "300578",
+    "name": "Coastal Carolina Chanticleers"
+  },
+  {
+    "participant_id": "300580",
+    "name": "UT Arlington Mavs"
+  },
+  {
+    "participant_id": "300582",
+    "name": "Arkansas State Red Wolves"
+  },
+  {
+    "participant_id": "300700",
+    "name": "Colgate Raiders"
+  },
+  {
+    "participant_id": "337295",
+    "name": "Purdue Boilermakers"
+  },
+  {
+    "participant_id": "375186",
+    "name": "Georgia Tech Yellow Jackets"
+  },
+  {
+    "participant_id": "375192",
+    "name": "Xavier Musketeers"
+  },
+  {
+    "participant_id": "377444",
+    "name": "Florida Atlantic Owls"
+  },
+  {
+    "participant_id": "377446",
+    "name": "Stetson Hatters"
+  },
+  {
+    "participant_id": "377770",
+    "name": "BYU Cougars"
+  },
+  {
+    "participant_id": "379730",
+    "name": "San Francisco Dons"
+  },
+  {
+    "participant_id": "379788",
+    "name": "Louisiana Monroe Warhawks"
+  },
+  {
+    "participant_id": "379790",
+    "name": "Akron Zips"
+  },
+  {
+    "participant_id": "379794",
+    "name": "Penn Quakers"
+  },
+  {
+    "participant_id": "383406",
+    "name": "UC Davis Aggies"
+  },
+  {
+    "participant_id": "383408",
+    "name": "Cal State Northridge Matadors"
+  },
+  {
+    "participant_id": "383658",
+    "name": "Bucknell Bison"
+  },
+  {
+    "participant_id": "386138",
+    "name": "San Jose State Spartans"
+  },
+  {
+    "participant_id": "393588",
+    "name": "Georgetown Hoyas"
+  },
+  {
+    "participant_id": "393590",
+    "name": "Providence Friars"
+  },
+  {
+    "participant_id": "396378",
+    "name": "Washington Huskies"
+  },
+  {
+    "participant_id": "396388",
+    "name": "Miami Hurricanes"
+  },
+  {
+    "participant_id": "397472",
+    "name": "Long Beach State Beach"
+  },
+  {
+    "participant_id": "399555",
+    "name": "Tulsa Golden Hurricane"
+  },
+  {
+    "participant_id": "399557",
+    "name": "Charlotte 49ers"
+  },
+  {
+    "participant_id": "399561",
+    "name": "Saint Louis Billikens"
+  },
+  {
+    "participant_id": "399567",
+    "name": "Utah Utes"
+  },
+  {
+    "participant_id": "462175",
+    "name": "University At Albany Great Danes"
+  },
+  {
+    "participant_id": "462181",
+    "name": "Binghamton Bearcats"
+  },
+  {
+    "participant_id": "462191",
+    "name": "New Hampshire Wildcats"
+  },
+  {
+    "participant_id": "462193",
+    "name": "Stony Brook Seawolves"
+  },
+  {
+    "participant_id": "462197",
+    "name": "Umbc Retrievers"
+  },
+  {
+    "participant_id": "462199",
+    "name": "Cincinnati Bearcats"
+  },
+  {
+    "participant_id": "462201",
+    "name": "Connecticut Huskies"
+  },
+  {
+    "participant_id": "462203",
+    "name": "East Carolina Pirates"
+  },
+  {
+    "participant_id": "462205",
+    "name": "Houston Cougars"
+  },
+  {
+    "participant_id": "462209",
+    "name": "Memphis Tigers"
+  },
+  {
+    "participant_id": "462211",
+    "name": "Smu Mustangs"
+  },
+  {
+    "participant_id": "462213",
+    "name": "South Florida Bulls"
+  },
+  {
+    "participant_id": "462215",
+    "name": "Temple Owls"
+  },
+  {
+    "participant_id": "462217",
+    "name": "Tulane Green Wave"
+  },
+  {
+    "participant_id": "462239",
+    "name": "Ucf Knights"
+  },
+  {
+    "participant_id": "462241",
+    "name": "Wichita State Shockers"
+  },
+  {
+    "participant_id": "462243",
+    "name": "Florida Gulf Coast Eagles"
+  },
+  {
+    "participant_id": "462245",
+    "name": "Jacksonville Dolphins"
+  },
+  {
+    "participant_id": "462247",
+    "name": "Kennesaw State Owls"
+  },
+  {
+    "participant_id": "462249",
+    "name": "Liberty Lady Flames"
+  },
+  {
+    "participant_id": "462251",
+    "name": "Lipscomb Bisons"
+  },
+  {
+    "participant_id": "462253",
+    "name": "Njit Highlanders"
+  },
+  {
+    "participant_id": "462257",
+    "name": "North Florida Ospreys"
+  },
+  {
+    "participant_id": "462259",
+    "name": "Dayton Flyers"
+  },
+  {
+    "participant_id": "462261",
+    "name": "Duquesne Dukes"
+  },
+  {
+    "participant_id": "462263",
+    "name": "Fordham Rams"
+  },
+  {
+    "participant_id": "462265",
+    "name": "George Washington Revolutionaries"
+  },
+  {
+    "participant_id": "462269",
+    "name": "Rhode Island Rams"
+  },
+  {
+    "participant_id": "462271",
+    "name": "Vcu Rams"
+  },
+  {
+    "participant_id": "462273",
+    "name": "Boston College Eagles"
+  },
+  {
+    "participant_id": "462281",
+    "name": "Clemson Tigers"
+  },
+  {
+    "participant_id": "462283",
+    "name": "Duke Blue Devils"
+  },
+  {
+    "participant_id": "462285",
+    "name": "Florida State Seminoles"
+  },
+  {
+    "participant_id": "462289",
+    "name": "Louisville Cardinals"
+  },
+  {
+    "participant_id": "462293",
+    "name": "Notre Dame Fighting Irish"
+  },
+  {
+    "participant_id": "462295",
+    "name": "Pittsburgh Panthers"
+  },
+  {
+    "participant_id": "462299",
+    "name": "Syracuse Orange"
+  },
+  {
+    "participant_id": "462301",
+    "name": "Virginia Tech Hokies"
+  },
+  {
+    "participant_id": "462303",
+    "name": "Wake Forest Demon Deacons"
+  },
+  {
+    "participant_id": "462311",
+    "name": "Baylor Bears"
+  },
+  {
+    "participant_id": "462313",
+    "name": "Iowa State Cyclones"
+  },
+  {
+    "participant_id": "462315",
+    "name": "Kansas Jayhawks"
+  },
+  {
+    "participant_id": "462317",
+    "name": "Kansas State Wildcats"
+  },
+  {
+    "participant_id": "462319",
+    "name": "Oklahoma Sooners"
+  },
+  {
+    "participant_id": "462321",
+    "name": "Tcu Horned Frogs"
+  },
+  {
+    "participant_id": "462323",
+    "name": "Texas Longhorns"
+  },
+  {
+    "participant_id": "462325",
+    "name": "Texas Tech Red Raiders"
+  },
+  {
+    "participant_id": "462327",
+    "name": "West Virginia Mountaineers"
+  },
+  {
+    "participant_id": "462329",
+    "name": "Butler Bulldogs"
+  },
+  {
+    "participant_id": "462331",
+    "name": "Creighton Bluejays"
+  },
+  {
+    "participant_id": "462333",
+    "name": "Depaul Blue Demons"
+  },
+  {
+    "participant_id": "462345",
+    "name": "Marquette Golden Eagles"
+  },
+  {
+    "participant_id": "462347",
+    "name": "Seton Hall Pirates"
+  },
+  {
+    "participant_id": "462349",
+    "name": "St. John's Red Storm"
+  },
+  {
+    "participant_id": "462351",
+    "name": "Villanova Wildcats"
+  },
+  {
+    "participant_id": "462355",
+    "name": "Idaho Vandals"
+  },
+  {
+    "participant_id": "462357",
+    "name": "Idaho State Bengals"
+  },
+  {
+    "participant_id": "462359",
+    "name": "Montana Grizzlies"
+  },
+  {
+    "participant_id": "462363",
+    "name": "Montana State Bobcats"
+  },
+  {
+    "participant_id": "462365",
+    "name": "Northern Arizona Lumberjacks"
+  },
+  {
+    "participant_id": "462367",
+    "name": "Northern Colorado Bears"
+  },
+  {
+    "participant_id": "462369",
+    "name": "Portland State Viks"
+  },
+  {
+    "participant_id": "462371",
+    "name": "Sacramento State Hornets"
+  },
+  {
+    "participant_id": "462373",
+    "name": "Southern Utah Thunderbirds"
+  },
+  {
+    "participant_id": "462375",
+    "name": "Weber State Wildcats"
+  },
+  {
+    "participant_id": "462381",
+    "name": "Charleston Southern Bucs"
+  },
+  {
+    "participant_id": "462383",
+    "name": "Gardner Webb Runnin Bulldogs"
+  },
+  {
+    "participant_id": "462385",
+    "name": "Hampton Pirates"
+  },
+  {
+    "participant_id": "462387",
+    "name": "High Point Panthers"
+  },
+  {
+    "participant_id": "462389",
+    "name": "Radford Highlanders"
+  },
+  {
+    "participant_id": "462393",
+    "name": "Unc Asheville Bulldogs"
+  },
+  {
+    "participant_id": "462395",
+    "name": "Usc Upstate Spartans"
+  },
+  {
+    "participant_id": "462397",
+    "name": "Winthrop Eagles"
+  },
+  {
+    "participant_id": "462399",
+    "name": "Illinois Fighting Illini"
+  },
+  {
+    "participant_id": "462401",
+    "name": "Indiana Hoosiers"
+  },
+  {
+    "participant_id": "462403",
+    "name": "Iowa Hawkeyes"
+  },
+  {
+    "participant_id": "462405",
+    "name": "Maryland Terrapins"
+  },
+  {
+    "participant_id": "462409",
+    "name": "Michigan Wolverines"
+  },
+  {
+    "participant_id": "462415",
+    "name": "Michigan State Spartans"
+  },
+  {
+    "participant_id": "462417",
+    "name": "Minnesota Golden Gophers"
+  },
+  {
+    "participant_id": "462419",
+    "name": "Nebraska Huskers"
+  },
+  {
+    "participant_id": "462421",
+    "name": "Northwestern Wildcats"
+  },
+  {
+    "participant_id": "462423",
+    "name": "Ohio State Buckeyes"
+  },
+  {
+    "participant_id": "462427",
+    "name": "Penn State Nittany Lions"
+  },
+  {
+    "participant_id": "462435",
+    "name": "Rutgers Scarlet Knights"
+  },
+  {
+    "participant_id": "462437",
+    "name": "Wisconsin Badgers"
+  },
+  {
+    "participant_id": "462443",
+    "name": "Cal Poly Mustangs"
+  },
+  {
+    "participant_id": "462447",
+    "name": "Cal State Fullerton Titans"
+  },
+  {
+    "participant_id": "462453",
+    "name": "Hawaii Rainbow Wahine"
+  },
+  {
+    "participant_id": "462457",
+    "name": "UC Irvine Anteaters"
+  },
+  {
+    "participant_id": "462471",
+    "name": "UC Riverside Highlanders"
+  },
+  {
+    "participant_id": "462475",
+    "name": "UC Santa Barbara Gauchos"
+  },
+  {
+    "participant_id": "462477",
+    "name": "Charleston Cougars"
+  },
+  {
+    "participant_id": "462485",
+    "name": "Delaware Blue Hens"
+  },
+  {
+    "participant_id": "462489",
+    "name": "Elon Phoenix"
+  },
+  {
+    "participant_id": "462493",
+    "name": "Hofstra Pride"
+  },
+  {
+    "participant_id": "462495",
+    "name": "James Madison Dukes"
+  },
+  {
+    "participant_id": "462497",
+    "name": "Northeastern Huskies"
+  },
+  {
+    "participant_id": "462501",
+    "name": "Towson Tigers"
+  },
+  {
+    "participant_id": "462505",
+    "name": "Unc Wilmington Seahawks"
+  },
+  {
+    "participant_id": "462507",
+    "name": "William And Mary Tribe"
+  },
+  {
+    "participant_id": "462509",
+    "name": "Fiu Panthers"
+  },
+  {
+    "participant_id": "462517",
+    "name": "Marshall Herd"
+  },
+  {
+    "participant_id": "462519",
+    "name": "Middle Tennessee Blue Raiders"
+  },
+  {
+    "participant_id": "462521",
+    "name": "North Texas Mean Green"
+  },
+  {
+    "participant_id": "462523",
+    "name": "Rice Owls"
+  },
+  {
+    "participant_id": "462525",
+    "name": "Southern Miss Lady Eagles"
+  },
+  {
+    "participant_id": "462527",
+    "name": "Uab Blazers"
+  },
+  {
+    "participant_id": "462529",
+    "name": "UTEP Miners"
+  },
+  {
+    "participant_id": "462531",
+    "name": "UTSA Roadrunners"
+  },
+  {
+    "participant_id": "462535",
+    "name": "Western Kentucky Lady Toppers"
+  },
+  {
+    "participant_id": "462539",
+    "name": "Cleveland State Vikings"
+  },
+  {
+    "participant_id": "462541",
+    "name": "Green Bay Phoenix"
+  },
+  {
+    "participant_id": "462543",
+    "name": "IU Indy Jaguars"
+  },
+  {
+    "participant_id": "462545",
+    "name": "Milwaukee Panthers"
+  },
+  {
+    "participant_id": "462547",
+    "name": "Northern Kentucky Norse"
+  },
+  {
+    "participant_id": "462551",
+    "name": "Oakland Golden Grizzlies"
+  },
+  {
+    "participant_id": "462555",
+    "name": "UIC Flames"
+  },
+  {
+    "participant_id": "462559",
+    "name": "Wright State Raiders"
+  },
+  {
+    "participant_id": "462563",
+    "name": "Youngstown State Penguins"
+  },
+  {
+    "participant_id": "462565",
+    "name": "Brown Bears"
+  },
+  {
+    "participant_id": "462567",
+    "name": "Columbia Lions"
+  },
+  {
+    "participant_id": "462569",
+    "name": "Cornell Big Red"
+  },
+  {
+    "participant_id": "462571",
+    "name": "Dartmouth Big Green"
+  },
+  {
+    "participant_id": "462593",
+    "name": "Princeton Tigers"
+  },
+  {
+    "participant_id": "462595",
+    "name": "Yale Bulldogs"
+  },
+  {
+    "participant_id": "462597",
+    "name": "Canisius Golden Griffs"
+  },
+  {
+    "participant_id": "462599",
+    "name": "Fairfield Stags"
+  },
+  {
+    "participant_id": "462601",
+    "name": "Iona Gaels"
+  },
+  {
+    "participant_id": "462603",
+    "name": "Manhattan Jaspers"
+  },
+  {
+    "participant_id": "462605",
+    "name": "Marist Red Foxes"
+  },
+  {
+    "participant_id": "462607",
+    "name": "Niagara Purple Eagles"
+  },
+  {
+    "participant_id": "462609",
+    "name": "Quinnipiac Bobcats"
+  },
+  {
+    "participant_id": "462611",
+    "name": "Rider Broncs"
+  },
+  {
+    "participant_id": "462613",
+    "name": "Saint Peters Peacocks"
+  },
+  {
+    "participant_id": "462615",
+    "name": "Siena Saints"
+  },
+  {
+    "participant_id": "462617",
+    "name": "Ball State Cardinals"
+  },
+  {
+    "participant_id": "462619",
+    "name": "Bowling Green Falcons"
+  },
+  {
+    "participant_id": "462621",
+    "name": "Buffalo Bulls"
+  },
+  {
+    "participant_id": "462623",
+    "name": "Central Michigan Chippewas"
+  },
+  {
+    "participant_id": "462625",
+    "name": "Eastern Michigan Eagles"
+  },
+  {
+    "participant_id": "462627",
+    "name": "Kent State Golden Flashes"
+  },
+  {
+    "participant_id": "462629",
+    "name": "Miami Ohio Redhawks"
+  },
+  {
+    "participant_id": "462631",
+    "name": "Ohio Bobcats"
+  },
+  {
+    "participant_id": "462633",
+    "name": "Western Michigan Broncos"
+  },
+  {
+    "participant_id": "462637",
+    "name": "Coppin State Eagles"
+  },
+  {
+    "participant_id": "462639",
+    "name": "Delaware State Hornets"
+  },
+  {
+    "participant_id": "462641",
+    "name": "Florida A&M Rattlers"
+  },
+  {
+    "participant_id": "462643",
+    "name": "Howard Bison"
+  },
+  {
+    "participant_id": "462645",
+    "name": "North Carolina A&T Aggies"
+  },
+  {
+    "participant_id": "462647",
+    "name": "North Carolina Central Eagles"
+  },
+  {
+    "participant_id": "462651",
+    "name": "South Carolina Gamecocks"
+  },
+  {
+    "participant_id": "462653",
+    "name": "Bradley Braves"
+  },
+  {
+    "participant_id": "462655",
+    "name": "Drake Bulldogs"
+  },
+  {
+    "participant_id": "462657",
+    "name": "Evansville Purple Aces"
+  },
+  {
+    "participant_id": "462659",
+    "name": "Illinois State Redbirds"
+  },
+  {
+    "participant_id": "462661",
+    "name": "Indiana State Sycamores"
+  },
+  {
+    "participant_id": "462663",
+    "name": "Loyola Chicago Ramblers"
+  },
+  {
+    "participant_id": "462667",
+    "name": "Harvard Crimson"
+  },
+  {
+    "participant_id": "462669",
+    "name": "Missouri State Bears"
+  },
+  {
+    "participant_id": "462673",
+    "name": "Southern Illinois Salukis"
+  },
+  {
+    "participant_id": "462675",
+    "name": "Valparaiso Beacons"
+  },
+  {
+    "participant_id": "462677",
+    "name": "Air Force Falcons"
+  },
+  {
+    "participant_id": "497554",
+    "name": "New Haven Chargers"
+  },
+  {
+    "participant_id": "497560",
+    "name": "Le Moyne Dolphins"
+  },
+  {
+    "participant_id": "497564",
+    "name": "Stonehill Skyhawks"
+  },
+  {
+    "participant_id": "500584",
+    "name": "Rutgers-Camden Scarlet Raptors"
+  },
+  {
+    "participant_id": "502902",
+    "name": "Navy Mids"
+  },
+  {
+    "participant_id": "502904",
+    "name": "Lsu Tigers"
+  },
+  {
+    "participant_id": "502906",
+    "name": "Abilene Christian Wildcats"
+  },
+  {
+    "participant_id": "502908",
+    "name": "Fresno State Bulldogs"
+  },
+  {
+    "participant_id": "502912",
+    "name": "Tennessee Tech Golden Eagles"
+  },
+  {
+    "participant_id": "502914",
+    "name": "Kentucky Wildcats"
+  },
+  {
+    "participant_id": "502916",
+    "name": "Florida Gators"
+  },
+  {
+    "participant_id": "502918",
+    "name": "Georgia Bulldogs"
+  },
+  {
+    "participant_id": "502920",
+    "name": "San Diego State Aztecs"
+  },
+  {
+    "participant_id": "502922",
+    "name": "Oregon State Beavers"
+  },
+  {
+    "participant_id": "502924",
+    "name": "Utah Valley Wolverines"
+  },
+  {
+    "participant_id": "504952",
+    "name": "Colorado Buffaloes"
+  },
+  {
+    "participant_id": "504954",
+    "name": "California Golden Bears"
+  },
+  {
+    "participant_id": "504956",
+    "name": "Stanford Cardinal"
+  },
+  {
+    "participant_id": "505804",
+    "name": "Mississippi State Bulldogs"
+  },
+  {
+    "participant_id": "505806",
+    "name": "South Dakota State Jackrabbits"
+  },
+  {
+    "participant_id": "505810",
+    "name": "Arizona State Sun Devils"
+  },
+  {
+    "participant_id": "505812",
+    "name": "USC Trojans"
+  },
+  {
+    "participant_id": "507534",
+    "name": "Loyola Marymount Lions"
+  },
+  {
+    "participant_id": "507536",
+    "name": "Portland Pilots"
+  },
+  {
+    "participant_id": "509148",
+    "name": "St. Thomas (MN) Tommies"
+  },
+  {
+    "participant_id": "512088",
+    "name": "Washington State Cougars"
+  },
+  {
+    "participant_id": "513398",
+    "name": "Oregon Ducks"
+  },
+  {
+    "participant_id": "522728",
+    "name": "Alabama State Hornets"
+  },
+  {
+    "participant_id": "522730",
+    "name": "Tennessee Lady Volunteers"
+  },
+  {
+    "participant_id": "522732",
+    "name": "Colorado State Rams"
+  },
+  {
+    "participant_id": "522736",
+    "name": "South Dakota Coyotes"
+  },
+  {
+    "participant_id": "522738",
+    "name": "Saint Mary\u00b4s Gaels"
+  },
+  {
+    "participant_id": "522740",
+    "name": "Samford Bulldogs"
+  },
+  {
+    "participant_id": "522742",
+    "name": "San Diego Toreros"
+  },
+  {
+    "participant_id": "522744",
+    "name": "Pepperdine Waves"
+  },
+  {
+    "participant_id": "522746",
+    "name": "Stephen F. Austin Lumberjacks"
+  },
+  {
+    "participant_id": "522752",
+    "name": "Missouri Tigers"
+  },
+  {
+    "participant_id": "522754",
+    "name": "East Tennessee State Bucs"
+  },
+  {
+    "participant_id": "522758",
+    "name": "New Mexico State Aggies"
+  },
+  {
+    "participant_id": "522762",
+    "name": "Bryant Bulldogs"
+  },
+  {
+    "participant_id": "529445",
+    "name": "Arkansas Razorbacks"
+  },
+  {
+    "participant_id": "529447",
+    "name": "Auburn Tigers"
+  },
+  {
+    "participant_id": "529451",
+    "name": "Sacred Heart Pioneers"
+  },
+  {
+    "participant_id": "529453",
+    "name": "Fairleigh Dickinson Knights"
+  },
+  {
+    "participant_id": "530311",
+    "name": "Purdue Fort Wayne Mastodons"
+  },
+  {
+    "participant_id": "566203",
+    "name": "Grand Canyon Antelopes"
+  },
+  {
+    "participant_id": "592395",
+    "name": "American Eagles"
+  },
+  {
+    "participant_id": "592401",
+    "name": "Austin Peay Governors"
+  },
+  {
+    "participant_id": "592405",
+    "name": "Boise State Broncos"
+  },
+  {
+    "participant_id": "592443",
+    "name": "Cal State Bakersfield Roadrunners"
+  },
+  {
+    "participant_id": "592469",
+    "name": "Eastern Illinois Panthers"
+  },
+  {
+    "participant_id": "593094",
+    "name": "Loyola Maryland Greyhounds"
+  },
+  {
+    "participant_id": "593100",
+    "name": "Omaha Mavericks"
+  },
+  {
+    "participant_id": "593102",
+    "name": "Pacific Tigers"
+  },
+  {
+    "participant_id": "593450",
+    "name": "Santa Clara Broncos"
+  },
+  {
+    "participant_id": "593462",
+    "name": "Seattle Redhawks"
+  },
+  {
+    "participant_id": "593478",
+    "name": "Texas A&M Aggies"
+  },
+  {
+    "participant_id": "593492",
+    "name": "UNLV Rebels"
+  },
+  {
+    "participant_id": "597640",
+    "name": "Liu Sharks"
+  },
+  {
+    "participant_id": "613130",
+    "name": "North Alabama Lions"
+  },
+  {
+    "participant_id": "621574",
+    "name": "Grambling State Tigers"
+  },
+  {
+    "participant_id": "621576",
+    "name": "Lehigh Mountain Hawks"
+  },
+  {
+    "participant_id": "621592",
+    "name": "Eastern Kentucky Colonels"
+  },
+  {
+    "participant_id": "623928",
+    "name": "Utah State Aggies"
+  },
+  {
+    "participant_id": "623930",
+    "name": "North Dakota Fighting Hawks"
+  },
+  {
+    "participant_id": "623934",
+    "name": "Holy Cross Crusaders"
+  },
+  {
+    "participant_id": "624476",
+    "name": "Nevada Wolf Pack"
+  },
+  {
+    "participant_id": "624654",
+    "name": "Tarleton State Texans"
+  },
+  {
+    "participant_id": "625202",
+    "name": "New Mexico Lobos"
+  },
+  {
+    "participant_id": "625204",
+    "name": "Southeast Missouri State Redhawks"
+  },
+  {
+    "participant_id": "625206",
+    "name": "Furman Paladins"
+  },
+  {
+    "participant_id": "625950",
+    "name": "Wofford Terriers"
+  },
+  {
+    "participant_id": "626122",
+    "name": "Alabama Crimson Tide"
+  },
+  {
+    "participant_id": "626134",
+    "name": "UC San Diego Tritons"
+  },
+  {
+    "participant_id": "626716",
+    "name": "California Baptist Lancers"
+  },
+  {
+    "participant_id": "626934",
+    "name": "Army Black Knights"
+  },
+  {
+    "participant_id": "627948",
+    "name": "Houston Christian Huskies"
+  },
+  {
+    "participant_id": "628576",
+    "name": "Lafayette Leopards"
+  },
+  {
+    "participant_id": "628586",
+    "name": "Nicholls Colonels"
+  },
+  {
+    "participant_id": "628588",
+    "name": "LSU New Orleans Privateers"
+  },
+  {
+    "participant_id": "628596",
+    "name": "Texas Southern Tigers"
+  },
+  {
+    "participant_id": "629226",
+    "name": "Texas A&M\u2013Corpus Christi Islanders"
+  },
+  {
+    "participant_id": "629620",
+    "name": "Mercer Bears"
+  },
+  {
+    "participant_id": "631802",
+    "name": "Ole Miss Rebels"
+  },
+  {
+    "participant_id": "633050",
+    "name": "Incarnate Word Cardinals"
+  },
+  {
+    "participant_id": "633052",
+    "name": "Sam Houston State Bearkats"
+  },
+  {
+    "participant_id": "633056",
+    "name": "Prairie View AM Panthers"
+  },
+  {
+    "participant_id": "633058",
+    "name": "Georgia Southern Eagles"
+  },
+  {
+    "participant_id": "633060",
+    "name": "South Alabama Jaguars"
+  },
+  {
+    "participant_id": "636776",
+    "name": "Lamar Cardinals"
+  },
+  {
+    "participant_id": "636778",
+    "name": "Tennessee State Tigers"
+  },
+  {
+    "participant_id": "638084",
+    "name": "Southern Jaguars"
+  },
+  {
+    "participant_id": "638094",
+    "name": "Central Arkansas Bears"
+  },
+  {
+    "participant_id": "640402",
+    "name": "Wyoming Cowgirls"
+  },
+  {
+    "participant_id": "641186",
+    "name": "Merrimack Warriors"
+  },
+  {
+    "participant_id": "644826",
+    "name": "Troy Trojans"
+  },
+  {
+    "participant_id": "651922",
+    "name": "Arkansas Little Rock Trojans"
+  },
+  {
+    "participant_id": "773154",
+    "name": "Belmont Bruins"
+  },
+  {
+    "participant_id": "777650",
+    "name": "Western Carolina Catamounts"
+  },
+  {
+    "participant_id": "777652",
+    "name": "Chattanooga Mocs"
+  },
+  {
+    "participant_id": "781568",
+    "name": "Jacksonville State Gamecocks"
+  },
+  {
+    "participant_id": "781742",
+    "name": "Ut Martin Skyhawks"
+  },
+  {
+    "participant_id": "787730",
+    "name": "Morehead State Eagles"
+  },
+  {
+    "participant_id": "787732",
+    "name": "Jackson State Tigers"
+  },
+  {
+    "participant_id": "825452",
+    "name": "East Texas AM Lions"
+  },
+  {
+    "participant_id": "832460",
+    "name": "McNeese State Cowgirls"
+  },
+  {
+    "participant_id": "834516",
+    "name": "Unc Greensboro Spartans"
+  },
+  {
+    "participant_id": "834860",
+    "name": "Alcorn State Lady Braves"
+  },
+  {
+    "participant_id": "842972",
+    "name": "Alabama Am Bulldogs"
+  },
+  {
+    "participant_id": "931551",
+    "name": "Southeastern Louisiana Lions"
+  },
+  {
+    "participant_id": "931553",
+    "name": "Northwestern State Demons"
+  },
+  {
+    "participant_id": "931555",
+    "name": "Old Dominion Monarchs"
+  },
+  {
+    "participant_id": "936403",
+    "name": "Southern Indiana Screaming Eagles"
+  },
+  {
+    "participant_id": "937741",
+    "name": "Bellarmine Knights"
+  },
+  {
+    "participant_id": "938073",
+    "name": "Lindenwood Lions"
+  },
+  {
+    "participant_id": "953047",
+    "name": "Queens (NC) Royals"
+  }
+]

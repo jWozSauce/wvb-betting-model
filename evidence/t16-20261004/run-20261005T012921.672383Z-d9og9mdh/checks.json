@@ -1,0 +1,20 @@
+{
+  "bulk_confirmed_in_one_session": 20,
+  "one_batch_write": true,
+  "refused_before": 228,
+  "refused_after": 208,
+  "actual_owner_confirmations": 0,
+  "validation_cases": 1845,
+  "wrong": 0,
+  "known_corpus_exact": 1596,
+  "persisted_id_precedence": true,
+  "stale_batch_refused": true,
+  "synthetic_suffix_generalizes": true,
+  "ambiguous_campus_refused": true,
+  "contradicted_rule_rejected": true,
+  "missing_gate_fails_closed": true,
+  "default_off_rollback": true,
+  "real_provider_calls": 0,
+  "real_mapping_writes": 0,
+  "real_sheet_writes": 0
+}
