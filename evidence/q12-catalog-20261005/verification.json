@@ -1,0 +1,11 @@
+{
+  "budget_mock_pass": true,
+  "after_account_429_mock_pass": true,
+  "no_automatic_account_retry": true,
+  "cached_ui_options": 363,
+  "default_books": 5,
+  "selection_change_without_fetch": true,
+  "real_calls_in_validation": 0,
+  "production_catalog_installed": false,
+  "failed_test_corrected": "Compared formatted anchor-only labels instead of raw slugs; no app change"
+}
