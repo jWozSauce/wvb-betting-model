@@ -1,0 +1,68 @@
+{
+  "aliases": {
+    "bowiestatebulldogs": [
+      "bowie-st"
+    ],
+    "campbellcamels": [
+      "campbell"
+    ],
+    "denverpioneers": [
+      "denver"
+    ],
+    "georgemasonpatriots": [
+      "george-mason"
+    ],
+    "kansascityroos": [
+      "umkc"
+    ],
+    "louisianaragincajuns": [
+      "la-lafayette"
+    ],
+    "marylandeasternshorehawks": [
+      "umes"
+    ],
+    "mercyhurstlakers": [
+      "mercyhurst"
+    ],
+    "murraystateracers": [
+      "murray-st"
+    ],
+    "northernillinoishuskies": [
+      "northern-ill"
+    ],
+    "robertmorriscolonials": [
+      "robert-morris"
+    ],
+    "siuedwardsvillecougards": [
+      "siu-edwardsville"
+    ],
+    "texasstatebobcats": [
+      "texas-st"
+    ],
+    "toledorockets": [
+      "toledo"
+    ],
+    "utahtechtrailblazers": [
+      "utah-tech"
+    ],
+    "utrgvvaqueros": [
+      "utrgv"
+    ],
+    "virginiacavaliers": [
+      "virginia"
+    ],
+    "westernillinoisleathernecks": [
+      "western-ill"
+    ],
+    "westfloridaargonauts": [
+      "west-florida"
+    ],
+    "westgeorgiawolves": [
+      "west-ga"
+    ]
+  },
+  "suffixes": [],
+  "rejected": [],
+  "validation_cases": 1845,
+  "confirmed_ids": 20
+}

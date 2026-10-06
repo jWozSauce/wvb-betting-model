@@ -686,7 +686,7 @@ def render_pricing_panel(home_team, away_team, venue_mode, key_prefix="",
                      f"venue option prices at the average of the two.")
 
 
-learned_matching_enabled = os.environ.get("WVB_ENABLE_LEARNED_MATCHING", "0") == "1"
+learned_matching_enabled = os.environ.get("WVB_ENABLE_LEARNED_MATCHING", "1") == "1"
 all_tabs = st.tabs(["Price a match", "Best bets", "Rankings", "Player ranks", "Results",
                     "Bet log"] + (["Team matching"] if learned_matching_enabled else []))
 tab_price, tab_best, tab_rank, tab_players, tab_results, tab_log = all_tabs[:6]

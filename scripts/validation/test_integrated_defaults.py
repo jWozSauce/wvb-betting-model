@@ -23,12 +23,14 @@ with ExitStack() as stack:
     guards(stack)
     stack.enter_context(patch.dict(os.environ, dict(os.environ)))
     for key in ('WVB_ENABLE_REPAIRS', 'WVB_ENABLE_NCAA_SCHEDULE',
-                'WVB_ENABLE_INLINE_DRILL_IN', 'WVB_ENABLE_SCHEDULE_INJURIES'):
+                'WVB_ENABLE_INLINE_DRILL_IN', 'WVB_ENABLE_SCHEDULE_INJURIES',
+                'WVB_ENABLE_LEARNED_MATCHING'):
         os.environ.pop(key, None)
     assert repair_flags.enabled()
     fetch = stack.enter_context(patch('schedule_pricing.fetch_slate', return_value=copy.deepcopy(slate)))
     sp.point_price.clear()
     app, baseline = new_app(source), new_app(old)
+    assert any(tab.label == 'Team matching' for tab in app.tabs)
     assert sp.SOURCE in element(app.radio, 'Odds source').options
     element(app.radio, 'Odds source').set_value(sp.SOURCE)
     check(app.run())
@@ -61,7 +63,7 @@ with ExitStack() as stack:
     rollback = new_app(source)
     assert sp.SOURCE not in element(rollback.radio, 'Odds source').options
 out = new_run(ROOT/'evidence/integration-20261001')
-(out/'defaults.json').write_text(json.dumps(dict(defaults_boot=True, rollback_boot=True,
+(out/'defaults.json').write_text(json.dumps(dict(defaults_boot=True, learned_matching_default_on=True, rollback_boot=True,
     schedule_games=len(slate['priced']), unpriced_games=len(slate['unpriced']),
     drill_in_parity=rows, venue_change_model_calls=single_game_calls,
     slate_fetches=fetch.call_count, external_io='mocked'), indent=2))
