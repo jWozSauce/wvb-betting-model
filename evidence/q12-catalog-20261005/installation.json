@@ -1,0 +1,8 @@
+{
+  "source_raw_sha256": "3194a4510a066023fa38af96ac25cecd86df0ef969773e5044a108ca0f69c453",
+  "installed_sha256": "2081232d33860536402c760e632347411cc1812da4bd002afe0131eec7476c1f",
+  "rows": 363,
+  "target": "app_data/oddspapi_bookmakers.json",
+  "source_retrieved_at": "2026-10-06T01:25:11.322794+00:00",
+  "new_billable_calls": 0
+}
