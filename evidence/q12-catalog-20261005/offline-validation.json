@@ -1,0 +1,8 @@
+{
+  "catalog_books": 363,
+  "unique_slugs": 363,
+  "all_five_defaults_present": true,
+  "raw_sha256": "3194a4510a066023fa38af96ac25cecd86df0ef969773e5044a108ca0f69c453",
+  "status": "offline valid; installation held for quota accounting ruling",
+  "checked_at": "2026-10-06T01:28:02.736361+00:00"
+}
