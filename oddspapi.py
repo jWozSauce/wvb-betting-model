@@ -151,16 +151,41 @@ def _pair_key(mk: str, side: str, point):
     return (mk, point)
 
 
-def fetch_board(books=None, key: str | None = None, timeout: int = 60):
+def _response_payload(response):
+    try:
+        return response.json()
+    except ValueError:
+        return None
+
+
+def fetch_board(books=None, key: str | None = None, timeout: int = 60,
+                include_diagnostics: bool = False):
     """One API request per book. Returns (games, n_requests) with games in
     paste_odds.parse_board shape + extras: each market has book / mkt_prob /
     devig_book, each game has date (ET) alongside time."""
     books = default_books() if books is None else tuple(dict.fromkeys(books))
     if not books:
-        return [], 0
+        empty = []
+        if include_diagnostics:
+            return empty, 0, {
+                "generated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+                "endpoint": "/v4/odds-by-tournaments",
+                "tournamentIds": TOURNAMENT_NCAAW,
+                "books": [],
+                "per_book": [],
+            }
+        return empty, 0
     key = key or api_key()
     mktmap, names = _markets_map(), _participants()
     fixtures: dict = {}
+    diagnostics = {
+        "generated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "endpoint": "/v4/odds-by-tournaments",
+        "tournamentIds": TOURNAMENT_NCAAW,
+        "oddsFormat": "american",
+        "books": list(books),
+        "per_book": [],
+    }
     for i, bk in enumerate(books):
         if i:
             time.sleep(1.1)  # endpoint has a ~1s per-call cooldown
@@ -169,10 +194,18 @@ def fetch_board(books=None, key: str | None = None, timeout: int = 60):
                                  "tournamentIds": TOURNAMENT_NCAAW,
                                  "bookmaker": bk, "oddsFormat": "american"},
                          timeout=timeout)
+        payload = _response_payload(r)
+        if include_diagnostics:
+            diagnostics["per_book"].append({
+                "book": bk,
+                "status_code": r.status_code,
+                "fixture_count": len(payload) if isinstance(payload, list) else 0,
+                "payload": payload,
+            })
         if r.status_code == 404:  # FIXTURE_NOT_FOUND: book has no board now
             continue
         r.raise_for_status()
-        for f in r.json():
+        for f in payload or []:
             fx = fixtures.setdefault(f["fixtureId"],
                                      {"meta": f, "books": {}})
             bo = (f.get("bookmakerOdds") or {}).get(bk)
@@ -229,6 +262,10 @@ def fetch_board(books=None, key: str | None = None, timeout: int = 60):
     games.sort(key=lambda g: g.pop("_start"))
     for i, g in enumerate(games):
         g["board_pos"] = i + 1
+    if include_diagnostics:
+        diagnostics["decoded_games"] = len(games)
+        diagnostics["decoded_fixture_ids"] = [g["fixture_id"] for g in games]
+        return games, len(books), diagnostics
     return games, len(books)
 
 

@@ -865,7 +865,12 @@ with tab_best:
                                              "per book)…")
         def cached_api_board(books):
             import oddspapi
-            games_, nreq_ = oddspapi.fetch_board(books=books)
+            fetched = oddspapi.fetch_board(books=books, include_diagnostics=True)
+            if len(fetched) == 3:
+                games_, nreq_, support_json = fetched
+            else:
+                games_, nreq_ = fetched
+                support_json = None
             try:
                 acct = oddspapi.account()
                 used = acct.get("requests_used", acct.get("request_count", "?"))
@@ -873,7 +878,7 @@ with tab_best:
                 quota = f"{used}/{lim} requests used this month"
             except Exception:
                 quota = ""
-            return games_, nreq_, quota
+            return games_, nreq_, quota, support_json
 
         card_context = dict(pricing_context("Team Elo"),
                             venue_mode="per-game" if manual_mode else VENUE_SHORT.get(venue_b, venue_b))
@@ -911,7 +916,8 @@ with tab_best:
             fc = st.columns([2, 5])
             if fc[0].button("Fetch odds & evaluate", type="primary", disabled=not (set(api_books) - oddspapi.ANCHOR_ONLY_BOOKS)):
                 try:
-                    games, nreq, quota = cached_api_board(api_books)
+                    games, nreq, quota, support_json = cached_api_board(api_books)
+                    st.session_state.live_fetch_support_json = support_json
                     if live_mapping_enabled:
                         live_mapping = live_team_map.refresh(ratings.team.tolist(), live_team_map.credential())
                         st.session_state.live_mapping = live_mapping
@@ -922,6 +928,14 @@ with tab_best:
                     run_eval = True
                 except Exception as e:
                     st.error(f"OddsPapi fetch failed: {safe_http.public_error(e)}")
+            if st.session_state.get("live_fetch_support_json"):
+                fc[1].download_button(
+                    "Download OddsPapi support JSON",
+                    data=json.dumps(st.session_state.live_fetch_support_json,
+                                    indent=2, sort_keys=True),
+                    file_name="oddspapi-live-fetch-support.json",
+                    mime="application/json",
+                    key="live_fetch_support_download")
         if live_mapping_enabled:
             live_mapping, changed = live_team_map.render(
                 st.session_state.get("live_games", []), ratings, live_mapping)
