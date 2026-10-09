@@ -1,0 +1,24 @@
+{
+  "worksheets": {
+    "Vball_Bet_Log": {
+      "rows": 55,
+      "settled_rows": 48,
+      "flags": 0,
+      "before_start_flags": 0,
+      "date_slop_same_day_fixture_flags": 0,
+      "unusable": 1
+    },
+    "Vball_Paper_Log": {
+      "rows": 159,
+      "settled_rows": 159,
+      "flags": 0,
+      "before_start_flags": 0,
+      "date_slop_same_day_fixture_flags": 0,
+      "unusable": 0
+    }
+  },
+  "flagged_rows": 0,
+  "private_row_report": "/tmp/wvb-t18-sweep-private-rows.json",
+  "raw_schedule_cache_available": false,
+  "writes": 0
+}

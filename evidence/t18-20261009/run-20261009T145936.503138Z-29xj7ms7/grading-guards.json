@@ -1,0 +1,7 @@
+{
+  "future_start_with_only_prior_result_stays_pending": true,
+  "exact_date_final_grades_against_exact_date": true,
+  "legitimate_date_slop_without_same_day_fixture_still_grades": true,
+  "same_day_schedule_fixture_blocks_neighbor_result": true,
+  "real_sheet_writes": 0
+}

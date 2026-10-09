@@ -1,0 +1,25 @@
+{
+  "worksheet": "Vball_Bet_Log",
+  "sheet_row": 50,
+  "target_keys": {
+    "logged_at": "2026-10-09 8:40",
+    "game_date": "2026-10-09",
+    "matchup": "ga-southern @ appalachian-st",
+    "bet": "appalachian-st +1.5 sets"
+  },
+  "before": {
+    "status": "won",
+    "profit": 25.94,
+    "graded_at": "2026-10-09 9:11"
+  },
+  "after": {
+    "status": "pending",
+    "profit": "",
+    "graded_at": ""
+  },
+  "changed_columns": [
+    "status",
+    "profit",
+    "graded_at"
+  ]
+}

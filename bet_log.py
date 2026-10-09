@@ -16,6 +16,8 @@ Market encoding (columns market / side / point):
   five   side=yes|no                point empty (match goes 5 sets)
 """
 import os
+import json
+from pathlib import Path
 
 import pandas as pd
 import repair_flags
@@ -147,6 +149,88 @@ def _find_result(results, home, away, date):
     return finder(results, home, away, date)
 
 
+def _game_start_et(game_date, game_time):
+    if game_date in (None, "") or game_time in (None, ""):
+        return None
+    text = str(game_time).strip()
+    if not text or text.upper() in {"TBA", "TBD"}:
+        return None
+    try:
+        return pd.Timestamp(f"{game_date} {text}", tz="America/New_York")
+    except (ValueError, TypeError):
+        try:
+            parsed = pd.to_datetime(f"{game_date} {text}")
+        except (ValueError, TypeError):
+            return None
+        if pd.isna(parsed):
+            return None
+        return pd.Timestamp(parsed).tz_localize("America/New_York")
+
+
+def _result_day(result):
+    try:
+        return pd.Timestamp(result.date).normalize()
+    except (AttributeError, ValueError, TypeError):
+        return None
+
+
+def _same_pair(home, away, row_home, row_away):
+    return ((str(row_home) == str(home) and str(row_away) == str(away)) or
+            (str(row_home) == str(away) and str(row_away) == str(home)))
+
+
+def _raw_schedule_pairs_for_date(day):
+    try:
+        date = pd.Timestamp(day).date()
+    except (ValueError, TypeError):
+        return set()
+    path = Path(__file__).resolve().parent / "data" / "raw" / str(date.year) / "contests" / f"{date}.json"
+    if not path.exists():
+        return set()
+    try:
+        contests = json.loads(path.read_text())
+    except (OSError, ValueError, TypeError):
+        return set()
+    pairs = set()
+    for contest in contests:
+        teams = contest.get("teams") or []
+        home = next((t.get("seoname") for t in teams if t.get("isHome") is True), None)
+        away = next((t.get("seoname") for t in teams if t.get("isHome") is False), None)
+        if home and away:
+            pairs.add((str(date), str(home), str(away)))
+    return pairs
+
+
+def _same_day_fixture_exists(results, home, away, date, schedule_pairs=None):
+    try:
+        day = pd.Timestamp(date).normalize()
+    except (ValueError, TypeError):
+        return False
+    if "date" in results.columns and not results.empty:
+        dates = pd.to_datetime(results.date, errors="coerce").dt.normalize()
+        same_day = results[dates == day]
+        for row in same_day.itertuples():
+            if _same_pair(home, away, row.home_seo, row.away_seo):
+                return True
+    pairs = set(schedule_pairs or ()) | _raw_schedule_pairs_for_date(day)
+    date_key = str(day.date())
+    return ((date_key, str(home), str(away)) in pairs or
+            (date_key, str(away), str(home)) in pairs)
+
+
+def _date_slop_allowed(results, result, home, away, date, schedule_pairs=None):
+    result_day = _result_day(result)
+    try:
+        bet_day = pd.Timestamp(date).normalize()
+    except (ValueError, TypeError):
+        return False
+    if result_day is None:
+        return False
+    if result_day == bet_day:
+        return True
+    return not _same_day_fixture_exists(results, home, away, date, schedule_pairs)
+
+
 def _settle(market, side, point, home_sets, away_sets):
     """Returns (won, push)."""
     total = home_sets + away_sets
@@ -164,13 +248,19 @@ def _settle(market, side, point, home_sets, away_sets):
     raise ValueError(f"unknown market {market!r}")
 
 
-def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
+def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET, now=None, schedule_pairs=None):
     """Grade pending bets against the results table. Returns (n, message)."""
     ws = _ws(worksheet)
     recs = ws.get_all_records()
     if not recs:
         return 0, "log is empty"
-    now = pd.Timestamp.now(tz="America/New_York").strftime("%Y-%m-%d %H:%M")
+    now_ts = now if now is not None else pd.Timestamp.now(tz="America/New_York")
+    now_ts = pd.Timestamp(now_ts)
+    if now_ts.tzinfo is None:
+        now_ts = now_ts.tz_localize("America/New_York")
+    else:
+        now_ts = now_ts.tz_convert("America/New_York")
+    graded_at = now_ts.strftime("%Y-%m-%d %H:%M")
     updates, graded = [], 0
     for i, r in enumerate(recs):
         status = str(r.get("status", "")).lower()
@@ -180,9 +270,15 @@ def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
                         and str(r.get("profit", "")).strip() == "")
         if status != "pending" and not half_written:
             continue
+        start = _game_start_et(r.get("game_date"), r.get("game_time"))
+        if start is not None and now_ts < start:
+            continue
         g, flipped = _find_result(results, r["home_team"], r["away_team"],
                                   str(r["game_date"]))
         if g is None:
+            continue
+        if not _date_slop_allowed(results, g, r["home_team"], r["away_team"],
+                                  str(r["game_date"]), schedule_pairs):
             continue
         # sets in the bet's own frame: hs = sets won by the bet's home_team
         hs, as_ = ((int(g.away_sets), int(g.home_sets)) if flipped
@@ -194,7 +290,7 @@ def grade_pending(results: pd.DataFrame, worksheet=WORKSHEET):
         profit = 0.0 if push else (
             stake * (odds / 100 if odds > 0 else 100 / -odds) if won else -stake)
         status = "push" if push else ("won" if won else "lost")
-        updates.append((i + 2, status, round(profit, 2), now))
+        updates.append((i + 2, status, round(profit, 2), graded_at))
         graded += 1
     if updates:
         # single batched write — per-cell writes trip the Sheets API's
